@@ -1,4 +1,4 @@
-{
+﻿{
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
   "name": "Kashfy Docs",
@@ -123,23 +123,23 @@
   "logo": {
     "light": "/logo/logo-dark.svg",
     "dark": "/logo/logo-light.svg",
-    "href": "https://kashfy.com"
+    "href": "https://kashfy.site"
   },
   "navbar": {
     "links": [
       {
         "label": "Pricing",
-        "href": "https://kashfy.com/pricing"
+        "href": "https://kashfy.site/pricing"
       },
       {
         "label": "Support",
-        "href": "mailto:support@kashfy.com"
+        "href": "mailto:support@kashfy.site"
       }
     ],
     "primary": {
       "type": "button",
       "label": "Open App",
-      "href": "https://app.kashfy.com"
+      "href": "https://kashfy.site"
     }
   },
   "footer": {
