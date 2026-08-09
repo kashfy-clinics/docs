@@ -1,0 +1,78 @@
+---
+title: 'AI Agent'
+description: 'How Kashfy's AI receptionist works and what it can do for your clinic'
+---
+
+Kashfy's AI agent is the core of the product. It's the conversational AI that talks to your patients via WhatsApp and your website widget — booking appointments, answering questions, and handling cancellations automatically.
+
+## What the AI can do
+
+<AccordionGroup>
+  <Accordion icon="calendar-plus" title="Book appointments">
+    The AI checks your doctors' live availability and offers open slots to the patient. When the patient picks a slot and confirms, the appointment is created instantly in the dashboard.
+  </Accordion>
+
+  <Accordion icon="calendar-x" title="Cancel appointments">
+    If a patient asks to cancel a booking, the AI finds their appointment and cancels it. The status updates automatically in the dashboard.
+  </Accordion>
+
+  <Accordion icon="clock" title="Check availability">
+    Patients can ask "when is Dr. Ahmed free?" or "do you have anything tomorrow morning?" and the AI will look up the schedule and respond with accurate, real-time availability.
+  </Accordion>
+
+  <Accordion icon="circle-dollar-sign" title="Answer questions about fees">
+    The AI knows each doctor's consultation fee and can share it when patients ask.
+  </Accordion>
+
+  <Accordion icon="map-pin" title="Share clinic location">
+    When patients ask for the clinic address or directions, the AI shares the address you have on file.
+  </Accordion>
+
+  <Accordion icon="book" title="Answer from your knowledge base">
+    If you've uploaded PDF documents (price lists, service info, doctor profiles), the AI reads them and answers patient questions from that content.
+  </Accordion>
+
+  <Accordion icon="user" title="Remember the patient">
+    The AI keeps track of the last 30 messages from each patient, so conversations feel continuous. A patient can reference a previous booking and the AI will understand the context.
+  </Accordion>
+</AccordionGroup>
+
+## What the AI cannot do
+
+- Provide medical advice or diagnoses
+- Process payments
+- Access patient medical records or history outside of Kashfy
+- Send files or images to patients (it can receive images but does not process them as medical input)
+
+## How the AI responds
+
+The AI responds in **Egyptian Arabic dialect** by default. If a patient writes in English, it will switch to English automatically. The tone is friendly, helpful, and professional — like a well-trained clinic receptionist.
+
+You can customize the AI's behavior and tone through [Custom Instructions](/ai-agent/custom-instructions).
+
+## Testing the AI
+
+Before going live, test the AI from **Dashboard → AI → Test Chat**. This lets you simulate a patient conversation and see exactly how the AI responds based on your current clinic setup.
+
+<Tip>
+  Test the AI every time you change your doctors' schedules, fees, or custom instructions to make sure it responds as expected.
+</Tip>
+
+## The AI and your dashboard
+
+Every action the AI takes — booking or cancelling an appointment — is immediately reflected in your dashboard. You don't need to do anything. If you ever need to check a conversation, go to **Dashboard → Conversations** to see the full chat history.
+
+<CardGroup cols={2}>
+  <Card title="Connect WhatsApp" icon="message" href="/ai-agent/whatsapp-setup">
+    Link your WhatsApp number so the AI can start responding to patients.
+  </Card>
+  <Card title="Knowledge Base" icon="book" href="/ai-agent/knowledge-base">
+    Upload documents so the AI can answer detailed questions.
+  </Card>
+  <Card title="Custom Instructions" icon="sliders" href="/ai-agent/custom-instructions">
+    Control the AI's tone, focus, and behavior.
+  </Card>
+  <Card title="Website Widget" icon="browser" href="/widget/overview">
+    Add the AI to your website as a chat widget.
+  </Card>
+</CardGroup>

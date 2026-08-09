@@ -1,0 +1,56 @@
+---
+title: 'Website Widget'
+description: 'Add an AI-powered booking chat to your clinic website with a single script tag'
+---
+
+The Kashfy widget is a floating chat button that sits in the corner of your clinic website. When patients click it, a booking conversation opens right on the page — powered by the same AI agent that handles your WhatsApp.
+
+## What the widget looks like
+
+The widget appears as a small floating button (bottom-right by default) with the Kashfy chat icon. When clicked, it opens a chat panel:
+
+- **Desktop:** Opens as a 360×560px floating panel
+- **Mobile:** Opens full screen for easy thumb navigation
+
+The chat panel is fully responsive and supports both Arabic (RTL) and English (LTR) layouts, switching automatically based on the patient's language.
+
+## What patients can do in the widget
+
+Everything the WhatsApp AI agent can do:
+
+- Book an appointment with any available doctor
+- Check available time slots
+- Ask about fees and services
+- Get the clinic's address
+- Cancel an existing booking (if they have a booking reference)
+
+## How patients are identified
+
+Patients using the widget are tracked by a **session key** (a browser cookie). This means:
+
+- The AI remembers the conversation context within the same browser session
+- If a patient returns on the same device and browser, the AI may remember previous interactions
+- No login or account is required for patients
+
+## Widget vs. WhatsApp
+
+| Feature | WhatsApp | Widget |
+|---------|----------|--------|
+| Patient identification | Phone number | Browser session |
+| Conversation history | Full, persistent | Per session |
+| Availability | 24/7 | 24/7 |
+| Reminder messages | Yes (day before) | No |
+| Setup required | QR code scan | Script tag on website |
+
+<Tip>
+  Offer both channels. Many patients prefer WhatsApp — it's on their phone. But the widget is great for capturing patients browsing your website who haven't yet saved your number.
+</Tip>
+
+<CardGroup cols={2}>
+  <Card title="Install the Widget" icon="code" href="/widget/installation">
+    Add the widget to your website in minutes.
+  </Card>
+  <Card title="WhatsApp Setup" icon="message" href="/ai-agent/whatsapp-setup">
+    Connect WhatsApp for the primary booking channel.
+  </Card>
+</CardGroup>

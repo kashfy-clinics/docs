@@ -1,0 +1,84 @@
+---
+title: 'Knowledge Base'
+description: 'Upload documents so the AI can answer detailed patient questions from your own content'
+---
+
+The knowledge base lets you give the AI additional information about your clinic beyond the basic profile fields. Upload any PDF document — a price list, service brochure, doctor bios, or FAQ — and the AI will read it and use it when answering patient questions.
+
+## What to upload
+
+Any document that contains information patients commonly ask about is a good candidate:
+
+- **Price lists** — consultation fees, procedure costs, lab test prices
+- **Service descriptions** — what treatments or procedures your clinic offers
+- **Doctor bios** — education, experience, and areas of expertise for each doctor
+- **FAQ documents** — common questions your receptionist already answers manually
+- **Preparation instructions** — what patients need to do before certain visits
+
+<Info>
+  The AI does not read image-only PDFs (scanned documents without selectable text). Make sure your PDFs have actual text content, not just images of text.
+</Info>
+
+## Uploading a document
+
+<Steps>
+  <Step title="Go to the knowledge base">
+    Navigate to **Dashboard → Knowledge Base** (or **Dashboard → AI → Knowledge**).
+  </Step>
+  <Step title="Click Upload">
+    Click the upload button and select a PDF file from your computer.
+  </Step>
+  <Step title="Wait for processing">
+    Kashfy extracts and indexes the text from the PDF. This usually takes under a minute.
+  </Step>
+  <Step title="Test it">
+    Go to **Dashboard → AI → Test Chat** and ask a question that should be answered from your document. Verify the AI responds correctly.
+  </Step>
+</Steps>
+
+## How the AI uses documents
+
+When a patient asks a question, the AI:
+
+1. Checks if your knowledge base documents contain relevant information
+2. If yes, references that content in its answer
+3. If no, falls back to the clinic profile and doctor data it already has
+
+The AI does not quote documents verbatim — it uses the information to compose natural-sounding responses.
+
+## Managing documents
+
+From **Dashboard → Knowledge Base** you can:
+
+- **View** all uploaded documents with their upload date
+- **Delete** documents you no longer want the AI to reference
+
+<Warning>
+  Deleting a document removes it from the AI's knowledge immediately. If a document contained information patients frequently ask about, removing it may cause the AI to say it doesn't know the answer.
+</Warning>
+
+## Tips for better results
+
+<Tip>
+  Keep documents focused. A PDF dedicated to "Pricing" will perform better than a single large file covering everything. The AI is better at finding specific information in shorter, well-structured documents.
+</Tip>
+
+<Tip>
+  Use clear headings and organized formatting in your PDFs. The AI reads the text linearly, so well-structured content is easier for it to use accurately.
+</Tip>
+
+## Limitations
+
+- **Maximum file size:** Documents must be under 10MB per file
+- **File format:** Only PDF is supported currently
+- **Language:** Documents can be in Arabic or English. The AI handles both.
+- **Scanned PDFs:** Not supported — the text must be selectable
+
+<CardGroup cols={2}>
+  <Card title="Custom Instructions" icon="sliders" href="/ai-agent/custom-instructions">
+    Control the AI's behavior beyond documents.
+  </Card>
+  <Card title="AI Agent Overview" icon="robot" href="/ai-agent/overview">
+    Understand how the AI uses all its available context.
+  </Card>
+</CardGroup>

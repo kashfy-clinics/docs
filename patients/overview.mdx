@@ -1,0 +1,72 @@
+---
+title: 'Patients'
+description: 'View and manage your clinic's patient records, booking history, and contact information'
+---
+
+Every person who books an appointment through Kashfy — whether via WhatsApp or the widget — is automatically added as a patient record. You can also add patients manually.
+
+## The patients list
+
+Navigate to **Dashboard → Patients** to see all patients who have interacted with your clinic through Kashfy.
+
+Each patient record shows:
+
+- **Name** and **phone number**
+- **Channel** they came through (WhatsApp or widget)
+- **Total appointments** at your clinic
+- **Last visit date**
+- **Registration date** (when they first booked)
+
+## Patient details
+
+Click any patient to open their full record:
+
+<AccordionGroup>
+  <Accordion icon="user" title="Contact information">
+    Name, phone number, and the channel through which they first contacted the clinic.
+  </Accordion>
+  <Accordion icon="calendar" title="Appointment history">
+    A full list of all their appointments at your clinic — past, upcoming, completed, and cancelled.
+  </Accordion>
+  <Accordion icon="messages" title="Conversation history">
+    All WhatsApp or widget conversations this patient has had with your AI agent. Click any conversation to read the full chat.
+  </Accordion>
+  <Accordion icon="info" title="Patient notes">
+    Any internal notes your staff has added to this patient's record. Not visible to the patient.
+  </Accordion>
+</AccordionGroup>
+
+## Adding patients manually
+
+To add a patient without them having messaged your clinic:
+
+1. Go to **Dashboard → Patients**
+2. Click **Add Patient**
+3. Enter their name and phone number
+4. Optionally book an appointment directly from their record
+
+## Patient identity
+
+Kashfy identifies patients primarily by their **phone number**:
+
+- WhatsApp patients: identified by their WhatsApp phone number
+- Widget patients: identified by a browser session key (no phone required)
+
+If the same patient contacts your clinic via both WhatsApp and the website widget, they will appear as two separate records (since the widget session doesn't require a phone number). Merging is not yet supported.
+
+## Searching for a patient
+
+Use the search bar at the top of the patients list to find a patient by name or phone number.
+
+## Privacy and data
+
+Patient data stored in Kashfy includes only what is needed for appointment management: name, phone number, booking history, and conversation logs. No medical records or clinical data are stored.
+
+<CardGroup cols={2}>
+  <Card title="Conversations" icon="messages" href="/patients/conversations">
+    Read the full WhatsApp and widget chat histories.
+  </Card>
+  <Card title="Appointments" icon="calendar" href="/appointments/overview">
+    View all bookings associated with patients.
+  </Card>
+</CardGroup>

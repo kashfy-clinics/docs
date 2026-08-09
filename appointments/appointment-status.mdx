@@ -1,0 +1,82 @@
+---
+title: 'Appointment Statuses'
+description: 'A reference for every appointment status in Kashfy and when to use each one'
+---
+
+Every appointment in Kashfy has a status that reflects where it is in the visit lifecycle. Staff and doctors can update statuses manually from the dashboard.
+
+## Status reference
+
+<AccordionGroup>
+  <Accordion icon="clock" title="Reserved">
+    The default status when an appointment is first created — either by the AI or manually. The patient has a confirmed slot but has not yet arrived.
+
+    **When it's set:** Automatically when the AI books an appointment or when staff creates one manually.
+
+    **Next step:** Update to **Arrived** when the patient shows up at the clinic.
+  </Accordion>
+
+  <Accordion icon="user-check" title="Arrived">
+    The patient is at the clinic and waiting to be seen.
+
+    **When to set it:** When the receptionist confirms the patient has physically arrived.
+
+    **Next step:** Update to **Completed** after the doctor's session ends.
+  </Accordion>
+
+  <Accordion icon="circle-check" title="Completed">
+    The appointment has been fully completed. The patient was seen by the doctor.
+
+    **When to set it:** After the consultation or visit ends.
+
+    **Effect on billing:** Completed appointments count toward your monthly booking quota.
+  </Accordion>
+
+  <Accordion icon="x-circle" title="Cancelled">
+    The appointment was cancelled — either by the patient or by your staff.
+
+    **When to set it:** When a patient calls to cancel or when your clinic needs to cancel a slot.
+
+    **Effect on billing:** Cancelled appointments do **not** count toward your monthly quota. This is intentional so that cancellations don't penalize your account.
+
+    <Tip>
+      If the AI cancels an appointment during a WhatsApp conversation (because the patient requests it), the status is automatically set to Cancelled.
+    </Tip>
+  </Accordion>
+
+  <Accordion icon="user-x" title="No Show">
+    The patient did not arrive for their scheduled appointment and did not cancel in advance.
+
+    **When to set it:** At the end of the appointment window when the patient has not appeared and there was no cancellation.
+
+    **Effect on billing:** No-shows do count toward your quota, as the slot was held and unavailable to other patients.
+  </Accordion>
+</AccordionGroup>
+
+## Status flow
+
+The typical lifecycle of an appointment:
+
+```
+Reserved → Arrived → Completed
+```
+
+If things go differently:
+
+```
+Reserved → Cancelled      (patient or clinic cancels)
+Reserved → No Show        (patient doesn't appear)
+```
+
+## Who can update statuses
+
+| Role | Can update |
+|------|-----------|
+| Owner | All appointments |
+| Admin | All appointments |
+| Employee | All appointments at their assigned branch |
+| Doctor | Their own appointments only |
+
+<Info>
+  The AI can also update statuses during conversations — for example, it sets an appointment to Cancelled if a patient asks to cancel via WhatsApp.
+</Info>

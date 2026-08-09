@@ -1,0 +1,67 @@
+---
+title: 'Availability Overrides'
+description: 'Block specific dates for holidays, vacations, or exceptions without changing the regular schedule'
+---
+
+Availability overrides let you block a doctor's calendar for specific dates — holidays, conferences, vacations, or any reason — without permanently changing their regular working hours schedule.
+
+## When to use overrides
+
+| Situation | Solution |
+|-----------|---------|
+| Doctor is on vacation for a week | Add an override for each day of the vacation |
+| Public holiday (clinic closed) | Add overrides for all doctors on that date |
+| Doctor has a late start one morning | Add a partial override for that morning |
+| Doctor is doing rounds, not consulting | Add a full-day override |
+
+## Adding an availability override
+
+From **Dashboard → Doctors**, open a doctor's profile and go to **Availability Overrides**:
+
+<Steps>
+  <Step title="Click Add Override">
+    Click the **Add Override** button in the doctor's availability section.
+  </Step>
+  <Step title="Select the date">
+    Pick the date (or date range) you want to block.
+  </Step>
+  <Step title="Choose the type">
+    Select **Full Day** to block the entire day, or **Custom Hours** to block only a portion of the day.
+  </Step>
+  <Step title="Save">
+    The override is active immediately. Any slot within the blocked period will no longer be offered by the AI.
+  </Step>
+</Steps>
+
+## What patients see
+
+When a patient asks for availability and the doctor is blocked by an override, the AI simply skips those dates and offers the next available ones. The AI does not explain why those dates are unavailable — it just presents the open options.
+
+## Existing bookings on overridden dates
+
+Adding an override does **not** automatically cancel or move existing appointments. If a doctor already has booked appointments on the date you're blocking, you need to handle those manually:
+
+1. Go to **Dashboard → Appointments**
+2. Filter by the doctor and the affected date
+3. Reach out to patients to reschedule or cancel as needed
+
+<Warning>
+  Always check for existing appointments before adding a full-day override for a date that's already been shared with patients.
+</Warning>
+
+## Removing an override
+
+Go to **Dashboard → Doctors → [Doctor Profile] → Availability Overrides** and delete the override. The blocked slots become available again immediately.
+
+## Recurring closures
+
+For closures that happen every week on the same day (e.g., Friday), configure the regular schedule instead of using overrides — simply disable Friday in the doctor's working hours. Overrides are best for non-recurring, one-off exceptions.
+
+<CardGroup cols={2}>
+  <Card title="Doctor Schedules" icon="calendar" href="/doctors/schedules">
+    Set the regular weekly working hours.
+  </Card>
+  <Card title="Appointments" icon="calendar-days" href="/appointments/overview">
+    Manage bookings that exist on blocked dates.
+  </Card>
+</CardGroup>

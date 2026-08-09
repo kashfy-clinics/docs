@@ -1,0 +1,69 @@
+---
+title: 'Invoices'
+description: 'View, download, and manage your Kashfy billing invoices'
+---
+
+Kashfy generates an invoice at the end of each billing cycle. The invoice includes your plan subscription fee and any overage charges if your clinic exceeded its monthly booking limit.
+
+## Viewing invoices
+
+Navigate to **Dashboard → Finance** (or **Dashboard → Settings → Billing**) to see your invoice history.
+
+Each invoice shows:
+
+- **Billing period** — the month the invoice covers
+- **Plan fee** — your base subscription cost
+- **Overage charges** — additional bookings beyond your plan's included quota
+- **Total amount** in EGP
+- **Status** — Paid, Pending, or Overdue
+
+## Invoice status
+
+| Status | Meaning |
+|--------|---------|
+| **Pending** | Invoice generated, payment not yet due |
+| **Paid** | Payment received successfully |
+| **Overdue** | Payment was due but not received |
+
+## Overdue invoices
+
+If an invoice becomes overdue, Kashfy will:
+
+1. Send you a notification via the dashboard and email
+2. Display an overdue banner on your dashboard
+3. Potentially suspend your clinic's AI agent until the balance is settled
+
+<Warning>
+  If your clinic's AI is suspended due to an overdue invoice, patients will no longer receive responses via WhatsApp or the widget. Settling the overdue invoice restores service immediately.
+</Warning>
+
+## Downloading invoices
+
+To download an invoice as a PDF:
+
+1. Go to **Dashboard → Finance**
+2. Find the invoice in the list
+3. Click **Download** next to the invoice
+
+## Invoice breakdown
+
+Each invoice line item shows:
+
+- Base plan fee for the month
+- Number of included bookings in your plan
+- Number of bookings used (if over the limit)
+- Overage fee per extra booking × number of extra bookings
+- Total due
+
+## Questions about an invoice
+
+If you believe an invoice is incorrect, contact [support@kashfy.com](mailto:support@kashfy.com) with your invoice number and the issue. The Kashfy team reviews billing disputes manually.
+
+<CardGroup cols={2}>
+  <Card title="Plans" icon="layers" href="/billing/plans">
+    Review your plan's included bookings and limits.
+  </Card>
+  <Card title="Payments" icon="credit-card" href="/billing/payments">
+    Pay an overdue invoice or update your payment method.
+  </Card>
+</CardGroup>

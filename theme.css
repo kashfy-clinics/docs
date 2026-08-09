@@ -1,0 +1,28 @@
+@font-face {
+  font-family: 'KashfySans';
+  src: url('/fonts/KashfySansBody.woff2') format('woff2');
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+:root {
+  --font-body: 'KashfySans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-heading: 'KashfySans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-code: 'Consolas', 'Courier New', monospace;
+}
+
+body,
+p,
+li,
+td,
+th {
+  font-family: var(--font-body) !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading) !important;
+}
+
+code, pre, kbd, samp {
+  font-family: var(--font-code) !important;
+}

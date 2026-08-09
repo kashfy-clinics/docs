@@ -1,0 +1,71 @@
+---
+title: 'Doctors'
+description: 'Add and manage the doctors at your clinic so the AI can book patients with them accurately'
+---
+
+Doctors are at the center of Kashfy's scheduling system. Every appointment is tied to a specific doctor, and the AI can only offer slots that fall within the doctor's defined working hours.
+
+## Adding a doctor
+
+Navigate to **Dashboard → Doctors** and click **Add Doctor**.
+
+<Steps>
+  <Step title="Enter basic information">
+    Fill in the doctor's name in Arabic and English, their specialty, and a short bio (optional). The AI uses the name and specialty when discussing the doctor with patients.
+  </Step>
+  <Step title="Set the consultation fee">
+    Enter the standard consultation fee in Egyptian Pounds (EGP). The AI will share this when patients ask "how much does a session cost?"
+  </Step>
+  <Step title="Set appointment duration">
+    Define how long each appointment lasts in minutes (e.g., 15, 20, 30). This determines how many slots are available per day.
+  </Step>
+  <Step title="Set working hours">
+    Configure which days the doctor works and their start/end times for each day. See [Doctor Schedules](/doctors/schedules) for details.
+  </Step>
+  <Step title="Assign to a branch (if applicable)">
+    If your clinic has multiple branches, assign the doctor to their branch(es). Patients at each branch see only the doctors available there.
+  </Step>
+</Steps>
+
+## Doctor profile fields
+
+| Field | Required | Description |
+|-------|----------|-------------|
+| Name (Arabic) | Yes | Used by the AI in Arabic conversations |
+| Name (English) | Yes | Used in the dashboard and English conversations |
+| Specialty | Yes | Shown to patients asking about specific specialties |
+| Consultation fee | Yes | Shared when patients ask about pricing |
+| Appointment duration | Yes | Controls how many slots are available per day |
+| Bio | No | Optional background info the AI can reference |
+| Photo | No | Displayed in the patient-facing clinic page |
+
+## Editing a doctor
+
+Click on any doctor in the list to open their profile and make changes. Changes take effect immediately — the AI will reflect updated fees, hours, and availability right away.
+
+## Deactivating a doctor
+
+If a doctor is temporarily unavailable (on leave, for example), you can deactivate them rather than deleting their profile. Deactivated doctors:
+
+- Will not appear in the AI's available doctor list
+- Will not have their slots offered to patients
+- Retain all their profile data and past appointments
+
+To deactivate, open the doctor's profile and toggle the **Active** switch.
+
+## Deleting a doctor
+
+Deleting a doctor removes their profile permanently. Their past appointments remain in the system linked to the patient records but the doctor slot is gone.
+
+<Warning>
+  Deleting a doctor cannot be undone. If you want to preserve their data, deactivate them instead.
+</Warning>
+
+<CardGroup cols={2}>
+  <Card title="Doctor Schedules" icon="calendar" href="/doctors/schedules">
+    Configure working hours for each doctor.
+  </Card>
+  <Card title="Availability Overrides" icon="calendar-off" href="/doctors/availability">
+    Handle holidays, time off, and special exceptions.
+  </Card>
+</CardGroup>

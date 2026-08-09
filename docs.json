@@ -1,0 +1,153 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "mint",
+  "name": "Kashfy Docs",
+  "description": "Documentation for Kashfy — the AI-powered clinic receptionist for Egyptian clinics",
+  "favicon": "favicon.ico",
+  "colors": {
+    "primary": "#2563eb",
+    "light": "#3b82f6",
+    "dark": "#1d4ed8"
+  },
+  "background": {
+    "decoration": "windows"
+  },
+  "css": "/theme.css",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Home",
+        "icon": "house",
+        "pages": [
+          "index"
+        ]
+      },
+      {
+        "tab": "Documentation",
+        "icon": "book-open",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "quickstart",
+              "getting-started/introduction",
+              "getting-started/clinic-setup"
+            ]
+          },
+          {
+            "group": "Appointments",
+            "pages": [
+              "appointments/overview",
+              "appointments/managing-appointments",
+              "appointments/appointment-status"
+            ]
+          },
+          {
+            "group": "AI Agent",
+            "pages": [
+              "ai-agent/overview",
+              "ai-agent/whatsapp-setup",
+              "ai-agent/knowledge-base",
+              "ai-agent/custom-instructions"
+            ]
+          },
+          {
+            "group": "Website Widget",
+            "pages": [
+              "widget/overview",
+              "widget/installation"
+            ]
+          },
+          {
+            "group": "Doctors & Staff",
+            "pages": [
+              "doctors/overview",
+              "doctors/schedules",
+              "doctors/availability"
+            ]
+          },
+          {
+            "group": "Patients",
+            "pages": [
+              "patients/overview",
+              "patients/conversations"
+            ]
+          },
+          {
+            "group": "Billing & Plans",
+            "pages": [
+              "billing/plans",
+              "billing/invoices",
+              "billing/payments"
+            ]
+          },
+          {
+            "group": "Team Management",
+            "pages": [
+              "team/members",
+              "team/roles"
+            ]
+          },
+          {
+            "group": "Settings",
+            "pages": [
+              "settings/clinic",
+              "settings/notifications",
+              "settings/whatsapp"
+            ]
+          },
+          {
+            "group": "Need Help?",
+            "pages": [
+              "support",
+              "status"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "What's New",
+        "icon": "newspaper",
+        "groups": [
+          {
+            "group": "Updates",
+            "pages": [
+              "updates/whats-new",
+              "updates/roadmap"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "logo": {
+    "light": "/logo/logo-dark.svg",
+    "dark": "/logo/logo-light.svg",
+    "href": "https://kashfy.com"
+  },
+  "navbar": {
+    "links": [
+      {
+        "label": "Pricing",
+        "href": "https://kashfy.com/pricing"
+      },
+      {
+        "label": "Support",
+        "href": "mailto:support@kashfy.com"
+      }
+    ],
+    "primary": {
+      "type": "button",
+      "label": "Open App",
+      "href": "https://app.kashfy.com"
+    }
+  },
+  "footer": {
+    "socials": {
+      "linkedin": "https://www.linkedin.com/company/kashfy"
+    }
+  },
+  "seo": {
+    "indexing": "all"
+  }
+}

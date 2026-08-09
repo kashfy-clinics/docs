@@ -1,0 +1,87 @@
+---
+title: 'WhatsApp Setup'
+description: 'Connect your clinic's WhatsApp number so patients can book appointments through it automatically'
+---
+
+WhatsApp is the primary channel through which patients interact with Kashfy's AI. Once your number is connected, every incoming message to that number goes through the AI agent — automatically.
+
+## Before you start
+
+- You need a **WhatsApp number** dedicated to your clinic (can be a mobile or landline with WhatsApp enabled)
+- The number must **not** be logged in on a phone at the same time — Kashfy takes over the WhatsApp session
+- Make sure the number is **not** actively being used by staff for manual conversations during the connection process
+
+<Warning>
+  Once connected to Kashfy, the WhatsApp number is controlled by the AI. Staff should not use WhatsApp Web or the WhatsApp app on that number simultaneously, as this will disconnect the session.
+</Warning>
+
+## Connecting your WhatsApp number
+
+<Steps>
+  <Step title="Go to WhatsApp settings">
+    Navigate to **Dashboard → WhatsApp** (or **Dashboard → Settings → WhatsApp**).
+  </Step>
+  <Step title="Scan the QR code">
+    A QR code will appear on screen. Open WhatsApp on the phone with your clinic number, go to **Linked Devices**, and scan the QR code.
+  </Step>
+  <Step title="Wait for confirmation">
+    The dashboard will show a confirmation when the connection is successful. This usually takes 10–30 seconds.
+  </Step>
+  <Step title="Test the connection">
+    Send a test message to your clinic's WhatsApp number from another phone. The AI should respond automatically.
+  </Step>
+</Steps>
+
+## Connection status
+
+The WhatsApp connection status is shown at the top of the WhatsApp settings page:
+
+| Status | Meaning |
+|--------|---------|
+| **Connected** | The AI is active and handling messages |
+| **Disconnected** | The session has ended — rescan the QR code |
+| **Connecting** | In progress — wait a moment |
+
+## Why connections drop
+
+The WhatsApp session can disconnect for several reasons:
+
+- The WhatsApp app on the connected phone was used (logged in on device)
+- The phone ran out of battery or lost internet for an extended period
+- WhatsApp revoked the linked session automatically (this happens periodically)
+
+If the session drops, simply go back to **Dashboard → WhatsApp** and scan the QR code again.
+
+<Tip>
+  Keep the phone with your clinic's WhatsApp number charged and connected to the internet. Avoid opening WhatsApp on that phone to prevent disconnections.
+</Tip>
+
+## What happens when the AI receives a message
+
+1. The message arrives at your clinic's WhatsApp number
+2. Kashfy receives it and routes it to the AI agent
+3. The AI reads the patient's message and your clinic's context (doctors, availability, knowledge base)
+4. The AI composes a response and sends it back via WhatsApp — typically within a few seconds
+5. The conversation is logged in **Dashboard → Conversations**
+
+## Handling messages the AI cannot answer
+
+If a patient asks something the AI is not equipped to handle (e.g., a very specific clinical question), the AI will politely inform the patient and suggest they call the clinic directly. Your clinic's phone number (from the clinic profile) is shared in these cases.
+
+## Disconnecting WhatsApp
+
+To disconnect your WhatsApp number from Kashfy:
+
+1. Go to **Dashboard → WhatsApp**
+2. Click **Disconnect**
+
+After disconnecting, the AI will no longer respond to messages on that number.
+
+<CardGroup cols={2}>
+  <Card title="AI Agent Overview" icon="robot" href="/ai-agent/overview">
+    Understand what the AI does with incoming messages.
+  </Card>
+  <Card title="Conversations" icon="messages" href="/patients/conversations">
+    View all WhatsApp conversations your AI has handled.
+  </Card>
+</CardGroup>

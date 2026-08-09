@@ -1,0 +1,78 @@
+---
+title: 'Doctor Schedules'
+description: 'Configure working days and hours for each doctor so the AI only offers valid appointment slots'
+---
+
+Doctor schedules define when each doctor is available to see patients. The AI strictly respects these schedules — it will never offer a slot outside the hours you define.
+
+## Setting working hours
+
+Open a doctor's profile from **Dashboard → Doctors** and go to the **Working Hours** section.
+
+For each day of the week, you can:
+
+- **Enable or disable** the day (toggle on/off)
+- **Set a start time** for the first appointment of the day
+- **Set an end time** after which no new appointments are scheduled
+
+The appointment duration you set on the doctor's profile determines how slots are carved up within these hours.
+
+**Example:**
+
+```
+Doctor: Dr. Nada
+Appointment duration: 20 minutes
+Working hours: Saturday 9:00 AM – 1:00 PM
+
+Available slots: 9:00, 9:20, 9:40, 10:00, 10:20 ... 12:40 AM
+```
+
+<Info>
+  The end time is when the last appointment starts, not when it ends. If a doctor works until 2:00 PM with 20-minute slots, the last slot is 1:40 PM (ending at 2:00 PM).
+</Info>
+
+## Days of the week
+
+Kashfy follows the Egyptian work week. All 7 days are configurable. A typical Egyptian clinic schedule might be:
+
+| Day | Status |
+|-----|--------|
+| Saturday | Open |
+| Sunday | Open |
+| Monday | Open |
+| Tuesday | Open |
+| Wednesday | Open |
+| Thursday | Open |
+| Friday | Closed |
+
+You can configure any combination of days per doctor — different doctors can have different working days.
+
+## Multiple time blocks per day
+
+If a doctor has a split schedule (e.g., morning session and evening session), you can add multiple time blocks for the same day:
+
+- Morning: 9:00 AM – 1:00 PM
+- Evening: 5:00 PM – 9:00 PM
+
+The AI will offer slots from both blocks when patients ask about availability.
+
+## Checking booked vs. available slots
+
+From **Dashboard → Appointments**, filter by doctor to see their full schedule for any given day — which slots are booked, which are open, and which are complete.
+
+<Tip>
+  Doctors can also see their own schedule in the Doctor Portal. When logged in with a doctor account, they see a daily view of their upcoming appointments.
+</Tip>
+
+## What happens when a day is fully booked
+
+When all slots for a specific doctor on a specific day are taken, the AI will not offer that day and will instead suggest the next available date. It never overbooks.
+
+<CardGroup cols={2}>
+  <Card title="Availability Overrides" icon="calendar-off" href="/doctors/availability">
+    Block specific dates for holidays or time off without changing the regular schedule.
+  </Card>
+  <Card title="Doctor Overview" icon="stethoscope" href="/doctors/overview">
+    Go back to the doctor setup overview.
+  </Card>
+</CardGroup>

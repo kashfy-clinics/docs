@@ -1,0 +1,68 @@
+---
+title: 'Clinic Settings'
+description: 'Update your clinic's profile, branding, and operational details'
+---
+
+Clinic settings control how your clinic is presented to patients and how the AI represents you in conversations. Keep this information accurate — the AI pulls from it constantly.
+
+## Accessing clinic settings
+
+Navigate to **Dashboard → Settings → Clinic**.
+
+## General information
+
+<AccordionGroup>
+  <Accordion icon="building" title="Clinic name">
+    Your clinic's name in Arabic and English. The AI uses the Arabic name in patient conversations. Both are required.
+  </Accordion>
+
+  <Accordion icon="stethoscope" title="Specialty">
+    The primary medical specialty of your clinic. Helps the AI contextualize conversations ("We are a dermatology clinic...").
+  </Accordion>
+
+  <Accordion icon="phone" title="Phone number">
+    The phone number the AI shares when patients ask to speak to someone directly. This should be your clinic's public-facing phone line.
+  </Accordion>
+
+  <Accordion icon="align-left" title="Description">
+    A short description of your clinic in Arabic and English. The AI may use this when patients ask general questions about your services.
+  </Accordion>
+
+  <Accordion icon="image" title="Logo">
+    Upload your clinic's logo. It appears on the public-facing clinic page and (optionally) in the website widget.
+  </Accordion>
+</AccordionGroup>
+
+## Address & locations
+
+Your clinic's physical address is set here. For multi-branch clinics, each branch has its own address.
+
+- **Street address** — Full address including building number and street name
+- **Area** — Select from the list of areas (used for patient-facing directions and search)
+- **Google Maps link** — Optionally add a Google Maps URL so the AI can share a direct link with patients asking for directions
+
+## Working hours
+
+Set your clinic's overall operating hours. Individual doctor schedules are set separately (in **Dashboard → Doctors**) but cannot extend beyond the clinic's working hours.
+
+## Clinic readiness
+
+The **Readiness** section shows you a checklist of what's been configured and what's still missing before you can go live. Items include:
+
+- Clinic profile complete
+- At least one active doctor with working hours
+- WhatsApp connected (or widget installed)
+- Active subscription
+
+<Info>
+  The AI will not handle patient bookings until your clinic is considered "ready." You can still test it in the AI test chat regardless.
+</Info>
+
+<CardGroup cols={2}>
+  <Card title="Clinic Setup Guide" icon="book" href="/getting-started/clinic-setup">
+    Full walkthrough of setting up your clinic profile.
+  </Card>
+  <Card title="Notifications" icon="bell" href="/settings/notifications">
+    Configure how and when you receive alerts.
+  </Card>
+</CardGroup>

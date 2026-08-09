@@ -1,0 +1,84 @@
+---
+title: 'Payments'
+description: 'Pay your Kashfy invoices and manage your payment method'
+---
+
+Kashfy uses **Kashier** as its payment gateway, supporting Egyptian debit and credit cards. All transactions are in **Egyptian Pounds (EGP)**.
+
+## Paying an invoice
+
+When an invoice is due, you can pay it directly from the dashboard:
+
+<Steps>
+  <Step title="Go to Finance">
+    Navigate to **Dashboard → Finance** and find the invoice with a **Pending** or **Overdue** status.
+  </Step>
+  <Step title="Click Pay">
+    Click the **Pay Now** button next to the invoice.
+  </Step>
+  <Step title="Enter payment details">
+    You'll be redirected to the Kashier payment page. Enter your card details (card number, expiry, CVV).
+  </Step>
+  <Step title="Confirm payment">
+    After successful payment, the invoice status updates to **Paid** and a receipt is available to download.
+  </Step>
+</Steps>
+
+## Supported payment methods
+
+| Method | Supported |
+|--------|-----------|
+| Egyptian debit cards (Visa/Mastercard) | Yes |
+| Egyptian credit cards | Yes |
+| International cards | Varies by bank |
+| Cash / bank transfer | Not supported through the dashboard |
+
+<Info>
+  If you need to pay by bank transfer, contact [support@kashfy.com](mailto:support@kashfy.com) to arrange a manual payment.
+</Info>
+
+## Payment security
+
+All payments are processed through **Kashier**, a PCI-compliant Egyptian payment gateway. Kashfy does not store your card details — they are handled entirely by Kashier's secure infrastructure.
+
+## Failed payments
+
+If a payment fails (declined card, insufficient funds, network issue):
+
+1. The invoice remains in **Pending** or **Overdue** status
+2. You'll see an error message from Kashier explaining the reason
+3. Retry with the same or a different card
+
+Common reasons for failure:
+- Incorrect card details
+- Card not enabled for online payments (contact your bank to enable)
+- Insufficient balance
+- 3D Secure authentication not completed
+
+## Subscription auto-renewal
+
+Subscriptions renew automatically at the end of each billing cycle. You will receive an email notification before the renewal date.
+
+If auto-renewal fails (e.g., card declined), the invoice moves to **Overdue** and you will need to pay manually from the dashboard.
+
+## Cancelling your subscription
+
+To cancel your Kashfy subscription:
+
+1. Go to **Dashboard → Settings → Subscription**
+2. Click **Cancel Subscription**
+
+Your clinic will remain active until the end of the current billing period. After that, the account moves to a read-only state — you can view past data but the AI agent will stop responding.
+
+<Warning>
+  Cancelling your subscription does not delete your data. Your clinic profile, appointments, and conversation history remain accessible. If you reactivate later, everything will be as you left it.
+</Warning>
+
+<CardGroup cols={2}>
+  <Card title="Invoices" icon="file-text" href="/billing/invoices">
+    View and download billing invoices.
+  </Card>
+  <Card title="Plans" icon="layers" href="/billing/plans">
+    Review your current plan and booking quota.
+  </Card>
+</CardGroup>

@@ -1,0 +1,75 @@
+---
+title: 'Custom Instructions'
+description: 'Fine-tune the AI agent's tone, focus, and behavior for your specific clinic'
+---
+
+Custom instructions let you give the AI specific guidance about how to behave — beyond what it learns from your clinic profile and knowledge base. Use them to shape the AI's personality, set restrictions, or give it clinic-specific rules to follow.
+
+## Where to set custom instructions
+
+Navigate to **Dashboard → AI → Custom Instructions** (or **Dashboard → Settings → AI**).
+
+There are two instruction fields:
+
+| Field | Purpose |
+|-------|---------|
+| **Arabic instructions** | Applied when the AI is speaking in Arabic |
+| **English instructions** | Applied when the AI is speaking in English |
+
+You can fill in one or both. If a patient writes in Arabic, the Arabic instructions are active.
+
+## What to write in custom instructions
+
+Think of custom instructions as a briefing you'd give a new receptionist on their first day — clinic-specific rules and style preferences that go beyond the obvious.
+
+**Examples of useful custom instructions:**
+
+```
+- عند سؤال المريض عن دكتور معين مش موجود، أقترح عليه دكتور تاني في نفس التخصص
+- لو المريض بيسأل عن الأسعار، اذكر إن في إمكانية دفع بالتقسيط
+- متقبلش أي حجز لأقل من ساعة من دلوقتي
+- لو المريض بيسأل عن تأمين صحي، قوله إننا بنستقبل [أسماء التأمينات]
+```
+
+```
+- Always greet patients with "Welcome to [Clinic Name]"
+- If a patient asks about insurance, let them know we accept Allianz and AXA
+- Do not discuss anything unrelated to appointments and clinic services
+- If a patient seems to be in an emergency, immediately advise them to call 123
+```
+
+## Instruction best practices
+
+<AccordionGroup>
+  <Accordion icon="list" title="Be specific">
+    Vague instructions like "be polite" don't add much — the AI is already trained to be polite. Specific instructions like "always mention our free parking when a patient is deciding between branches" are far more useful.
+  </Accordion>
+  <Accordion icon="circle-slash" title="Define what NOT to do">
+    The AI responds to negative instructions well. "Do not mention competitor clinics" or "do not book appointments for more than 2 weeks in advance" are practical restrictions.
+  </Accordion>
+  <Accordion icon="languages" title="Write in the same language">
+    Write Arabic instructions in Arabic and English instructions in English. The AI understands mixed-language instructions but performs best when instructions match the conversation language.
+  </Accordion>
+  <Accordion icon="flask" title="Test after every change">
+    After saving new instructions, go to **Dashboard → AI → Test Chat** and run through a few scenarios to make sure the AI behaves as expected.
+  </Accordion>
+</AccordionGroup>
+
+## What custom instructions cannot do
+
+- Override the AI's core behavior (e.g., you cannot instruct it to give medical advice)
+- Change the AI's fundamental language or tone model
+- Force the AI to ignore real availability data (it will always show accurate slots)
+
+## Resetting instructions
+
+To remove your custom instructions, simply clear the text fields and save. The AI will revert to its default behavior based on your clinic profile alone.
+
+<CardGroup cols={2}>
+  <Card title="Knowledge Base" icon="book" href="/ai-agent/knowledge-base">
+    Upload documents the AI can reference when answering questions.
+  </Card>
+  <Card title="Test the AI" icon="flask" href="/ai-agent/overview">
+    Use the test chat to verify your instructions work.
+  </Card>
+</CardGroup>

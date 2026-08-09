@@ -1,0 +1,85 @@
+---
+title: 'Appointments'
+description: 'View and manage all patient bookings across your clinic in real time'
+---
+
+The Appointments section is your live view of everything booked at your clinic. All bookings — whether made via WhatsApp, the website widget, or manually by your staff — appear here.
+
+## The appointments dashboard
+
+Navigate to **Dashboard → Appointments** to see all bookings.
+
+The view shows appointments organized by date, with columns for:
+
+- **Patient name and phone number**
+- **Doctor**
+- **Date and time**
+- **Status** (reserved, arrived, completed, cancelled, no-show)
+- **Channel** (WhatsApp, widget, manual)
+- **Branch** (if you have multiple locations)
+
+<Tip>
+  Use the date range filter at the top to jump to any specific day or period. Today's schedule is shown by default.
+</Tip>
+
+## Appointment channels
+
+Appointments flow into Kashfy from three sources:
+
+| Channel | How it works |
+|---------|-------------|
+| **WhatsApp** | Patient messages your clinic's WhatsApp, AI books the appointment automatically |
+| **Widget** | Patient uses the chat widget on your website, AI books the appointment |
+| **Manual** | Your staff creates the appointment directly from the dashboard |
+
+## Creating an appointment manually
+
+To add a booking yourself:
+
+<Steps>
+  <Step title="Open the appointments page">
+    Go to **Dashboard → Appointments** and click **New Appointment**.
+  </Step>
+  <Step title="Select the doctor">
+    Choose which doctor the appointment is for. The system will show that doctor's available slots.
+  </Step>
+  <Step title="Pick a date and time">
+    Select an available slot. Unavailable times are greyed out.
+  </Step>
+  <Step title="Enter patient details">
+    Enter the patient's name and phone number. If the patient already exists in your system, their record will be linked automatically.
+  </Step>
+  <Step title="Confirm">
+    Click **Save**. The appointment is created and appears in the list immediately.
+  </Step>
+</Steps>
+
+## Appointment reminders
+
+Kashfy automatically sends a WhatsApp reminder to the patient the day before their appointment. No action required from your staff.
+
+<Info>
+  Reminders are only sent for appointments booked via WhatsApp or the widget, where the patient's phone number is already linked to a WhatsApp account.
+</Info>
+
+## Filtering and searching
+
+Use the filters above the appointments list to narrow down by:
+
+- **Doctor** — see only one doctor's schedule
+- **Date range** — pick a custom period
+- **Status** — filter by reserved, completed, cancelled, etc.
+- **Branch** — relevant if you have multiple locations
+
+## Exporting appointments
+
+Coming soon — appointment data export to CSV.
+
+<CardGroup cols={2}>
+  <Card title="Appointment Statuses" icon="circle-check" href="/appointments/appointment-status">
+    Learn what each status means and how to update it.
+  </Card>
+  <Card title="Managing Appointments" icon="calendar-days" href="/appointments/managing-appointments">
+    Reschedule, cancel, and mark attendance.
+  </Card>
+</CardGroup>

@@ -1,0 +1,68 @@
+---
+title: 'WhatsApp Settings'
+description: 'Manage your clinic's WhatsApp connection and messaging configuration'
+---
+
+WhatsApp settings control how Kashfy connects to your clinic's WhatsApp number and how the AI behaves in those conversations.
+
+## Accessing WhatsApp settings
+
+Navigate to **Dashboard → Settings → WhatsApp** or **Dashboard → WhatsApp**.
+
+## Connection status
+
+The top of the page shows the current connection status:
+
+| Status | What to do |
+|--------|-----------|
+| **Connected** | No action needed — AI is active |
+| **Disconnected** | Scan the QR code to reconnect |
+| **Connecting** | Wait a moment for the handshake to complete |
+
+For detailed steps on connecting or reconnecting, see [WhatsApp Setup](/ai-agent/whatsapp-setup).
+
+## WhatsApp number
+
+Once connected, your linked WhatsApp number is displayed. This is the number patients message to reach your AI agent.
+
+To use a different WhatsApp number:
+1. Disconnect the current number
+2. Scan the QR code with the new number's WhatsApp app
+
+## Message settings
+
+<AccordionGroup>
+  <Accordion icon="clock" title="Response delay">
+    A small artificial delay between when a patient sends a message and when the AI responds. This makes the conversation feel more natural rather than instant.
+
+    The default delay is 1–3 seconds. You can adjust or disable it.
+  </Accordion>
+
+  <Accordion icon="bell" title="Outbound reminders">
+    Automatic WhatsApp reminder messages sent to patients the day before their appointment. Enable or disable this feature here.
+
+    When enabled, every patient with an appointment tomorrow receives a WhatsApp message at a set time (configurable, default: 9:00 AM Cairo time).
+  </Accordion>
+
+  <Accordion icon="message-square-off" title="Out-of-hours behavior">
+    Configure what the AI says when a patient contacts the clinic outside of working hours. Options include:
+
+    - **Acknowledge and offer next available time** (default)
+    - **Only acknowledge and ask them to try again** (if you don't want off-hours bookings)
+  </Accordion>
+</AccordionGroup>
+
+## Best practices for WhatsApp continuity
+
+- **Keep the linked phone charged and connected to the internet.** The WhatsApp session depends on the linked device maintaining connectivity.
+- **Do not open WhatsApp on the linked phone.** If someone opens WhatsApp on the same number's device, it may terminate the Kashfy session.
+- **Enable the "WhatsApp disconnected" notification** so you're alerted immediately if the session drops.
+
+<CardGroup cols={2}>
+  <Card title="WhatsApp Setup Guide" icon="message" href="/ai-agent/whatsapp-setup">
+    Full step-by-step guide to connecting your number.
+  </Card>
+  <Card title="Notifications" icon="bell" href="/settings/notifications">
+    Set up alerts for disconnections and new bookings.
+  </Card>
+</CardGroup>

@@ -1,0 +1,71 @@
+---
+title: 'Conversations'
+description: 'Read and review every AI conversation your clinic has had with patients via WhatsApp and the widget'
+---
+
+Kashfy logs every conversation your AI agent has with patients — whether through WhatsApp or the website widget. The Conversations section gives your team full visibility into what was discussed and what actions the AI took.
+
+## Viewing conversations
+
+Navigate to **Dashboard → Conversations** to see a list of all patient conversations, sorted by most recent activity.
+
+Each row shows:
+- **Patient name** and phone number
+- **Channel** (WhatsApp or widget)
+- **Last message** preview
+- **Last active** timestamp
+- **Number of bookings** made in this conversation
+
+Click any conversation to read the full chat.
+
+## Conversation view
+
+Inside a conversation, you see the full message-by-message exchange between the patient and the AI. You can see:
+
+- Exactly what the patient asked
+- Exactly what the AI responded
+- Any appointments that were booked or cancelled as part of the conversation
+- Timestamps for each message
+
+<Info>
+  Conversations are read-only from the dashboard — you cannot send messages or edit the AI's responses after the fact. If you need to follow up with a patient, message them directly on WhatsApp.
+</Info>
+
+## Filtering conversations
+
+Use the filters at the top of the conversations list to narrow by:
+
+- **Date range** — find conversations from a specific period
+- **Channel** — WhatsApp only, widget only, or both
+- **Doctor mentioned** — conversations that resulted in a booking with a specific doctor
+- **Has bookings** — conversations that led to at least one appointment
+
+## Why review conversations?
+
+Reviewing AI conversations regularly helps you:
+
+- **Catch gaps in the knowledge base** — if the AI says "I don't know" frequently about certain topics, add that info to the knowledge base or custom instructions
+- **Spot misunderstandings** — if patients seem confused by the AI's responses, adjust the custom instructions
+- **Audit AI behavior** — verify the AI is following your clinic's guidelines
+- **Handle complaints** — if a patient is unhappy about how a conversation went, the log gives you full context
+
+## The AI's conversation memory
+
+The AI remembers the last **30 messages** from each patient's conversation history. This means:
+
+- Within a session, the AI knows the full context of the discussion
+- Returning patients who have a history will have that context available (up to 30 messages back)
+- Very old messages beyond 30 may not be referenced by the AI
+
+<Tip>
+  If a patient complains that "the AI forgot something we discussed," it may be because the conversation exceeded 30 messages. This is the current limit of the AI's memory window.
+</Tip>
+
+<CardGroup cols={2}>
+  <Card title="Patients" icon="users" href="/patients/overview">
+    View patient records and their full booking history.
+  </Card>
+  <Card title="AI Agent" icon="robot" href="/ai-agent/overview">
+    Understand how the AI handles conversations.
+  </Card>
+</CardGroup>
