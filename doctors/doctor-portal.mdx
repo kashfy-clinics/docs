@@ -1,0 +1,64 @@
+---
+title: 'Doctor Portal'
+description: 'A dedicated dashboard view for doctors to see their schedule, patients, and conversations'
+---
+
+Doctors at your clinic get their own simplified dashboard — separate from the clinic owner's view — focused entirely on their own appointments and patients. Doctors log in with the same email-and-password flow but land on a clean interface that shows only what's relevant to them.
+
+## What doctors can access
+
+<AccordionGroup>
+  <Accordion icon="calendar-days" title="Today's appointments">
+    A real-time view of every appointment scheduled for the doctor today, sorted by time. Each card shows the patient name, phone number, appointment type, status, and branch. Doctors can update the status of their own appointments (arrived, in progress, completed, no-show) and add clinical notes (symptoms, diagnosis, prescription) directly from this view.
+  </Accordion>
+  <Accordion icon="users" title="My patients">
+    A list of all patients who have ever had an appointment with this doctor. Clicking a patient opens their profile, including contact details, appointment history, and any recorded clinical notes.
+  </Accordion>
+  <Accordion icon="message" title="Conversations">
+    WhatsApp and widget conversation history for the doctor's patients. Doctors can review what the AI discussed with their patients — useful context before an appointment.
+  </Accordion>
+  <Accordion icon="user" title="My profile">
+    Doctors can update their own name (Arabic/English), specialty, bio, and profile photo. They can also change the phone number linked to their account.
+  </Accordion>
+</AccordionGroup>
+
+## What doctors cannot access
+
+The doctor portal intentionally excludes:
+
+- Other doctors' schedules, appointments, or patients
+- Clinic settings, AI configuration, and knowledge base
+- WhatsApp or widget connection settings
+- Billing, invoices, and subscription details
+- Team management and staff information
+
+## Inviting a doctor
+
+Doctors are added through the clinic's team management, not as regular team members. When you add a doctor to the **Doctors** section and enter their phone number, they receive a WhatsApp invitation to activate their account.
+
+See [Team Roles](/team/roles) for a full breakdown of the Doctor role permissions.
+
+## Multi-clinic doctors
+
+A doctor can be a member of more than one clinic in Kashfy — for example, a specialist who consults at two different practices.
+
+When a doctor who belongs to multiple clinics logs in, they see a **clinic switcher** in the sidebar. Switching clinics immediately updates every section of the portal — appointments, patients, and conversations — to show data for the selected clinic only.
+
+<Info>
+  The active clinic selection is remembered in the browser session. Switching to a different clinic does not affect what other team members see.
+</Info>
+
+## Branch restrictions
+
+If a doctor is assigned to a specific branch, their portal only shows appointments and patients at that branch. This is useful in multi-branch clinics where each doctor works at a fixed location.
+
+Branch assignments are set by the clinic owner in **Dashboard → Doctors → [Doctor name] → Branch**.
+
+<CardGroup cols={2}>
+  <Card title="Doctors Overview" icon="stethoscope" href="/doctors/overview">
+    Add and manage doctor profiles.
+  </Card>
+  <Card title="Roles & Permissions" icon="shield-check" href="/team/roles">
+    Full breakdown of what each role can do.
+  </Card>
+</CardGroup>

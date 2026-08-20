@@ -63,14 +63,16 @@
             "pages": [
               "doctors/overview",
               "doctors/schedules",
-              "doctors/availability"
+              "doctors/availability",
+              "doctors/doctor-portal"
             ]
           },
           {
             "group": "Patients",
             "pages": [
               "patients/overview",
-              "patients/conversations"
+              "patients/conversations",
+              "patients/records-portal"
             ]
           },
           {

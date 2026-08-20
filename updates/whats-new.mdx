@@ -7,6 +7,27 @@ Stay up to date with the latest improvements to Kashfy. Major updates are listed
 
 ---
 
+## August 2026
+
+### Patient Records Portal
+
+Patients can now request a secure link to their appointment history directly through WhatsApp. The AI responds with a personal portal link at `patients.kashfy.site/ar/[patient-id]` — protected by a 4-digit PIN the patient sets on the spot.
+
+- Patient asks for records ("ممكن ملفي" / "my records") and receives a secure link
+- Patient sets a 4-digit PIN via WhatsApp on first request
+- Link can be shared with any doctor; the doctor enters the PIN to access the records
+- Portal shows all appointments with dates, doctors, diagnoses, prescriptions, and symptoms
+- `?pin=XXXX` URL parameter auto-verifies on load for one-tap sharing
+- Forgot PIN - patient sends "نسيت الكود" and sets a new 4 digits immediately
+- Brute-force protection: 5 wrong attempts trigger a 30-minute lockout
+- Sessions last 24 hours in the same browser after a correct PIN
+
+### Doctor Portal - multi-clinic support
+
+Doctors who consult at more than one clinic registered on Kashfy now see a clinic switcher in their sidebar. Switching clinics updates all sections - appointments, patients, and conversations - to reflect the selected clinic instantly. The previous behavior showed data from whichever clinic happened to load first, which was incorrect for multi-clinic doctors.
+
+---
+
 ## August 2025
 
 ### AI agent improvements
