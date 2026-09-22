@@ -1,0 +1,34 @@
+---
+title: 'Intake queue'
+description: 'Register walk-in patients for scans and track them through the workflow'
+---
+
+The intake queue lists every walk-in for imaging. Each row is a patient with their scans, total, and current stage.
+
+Navigate to **Dashboard → Radiology → Intake queue**.
+
+## Adding an intake manually
+
+Click **New intake** to open the form and fill in:
+
+- **Patient name** (required)
+- **Patient phone** - used to send the report on WhatsApp
+- **Scans** - the scans being performed (chest X-ray, abdomen ultrasound, etc.)
+- **Total (EGP)** - price the patient is paying; auto-filled from catalogue when picking from the menu
+- **Notes** - technician notes: contrast used, prior scans, referring doctor
+
+## The status cycle
+
+Tap the status pill to advance the intake:
+
+| Status | Meaning |
+|--------|---------|
+| **Pending** | Registered, scan not yet performed |
+| **Collected** | Patient prepped, scan starting |
+| **Processing** | Scan complete, radiologist reviewing |
+| **Ready** | Report is written - upload it to send to the patient |
+| **Delivered** | Report has been sent/handed over |
+
+## QR arrivals
+
+If your branch has a printed QR sticker, patients scanning it are added here automatically with all their details captured. Cards from QR scans show a QR badge to distinguish them from manual entries. See [QR intake](/lab/qr-intake) for the full flow.

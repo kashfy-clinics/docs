@@ -1,0 +1,52 @@
+---
+title: 'QR intake'
+description: 'Let patients register themselves at the counter by scanning a WhatsApp QR sticker'
+---
+
+QR intake turns the patient's phone into the intake terminal. They scan a printed sticker at your counter, WhatsApp opens with a prefilled code, they send it, and Kashfy adds them to your intake queue automatically - name, phone, and arrival time already filled in.
+
+<Info>
+  QR intake is available for both **Lab** and **Radiology** modules. Each branch gets its own QR - so scans are always tagged to the correct location.
+</Info>
+
+## How it works
+
+<Steps>
+  <Step title="Patient scans the QR at your counter">
+    The sticker encodes a short URL like `kashfy.site/s/AB4X7Q`. Any phone camera opens it.
+  </Step>
+  <Step title="WhatsApp opens with a prefilled message">
+    They see a friendly hello and a 6-character code. They just tap **Send**.
+  </Step>
+  <Step title="Kashfy matches the code to your branch">
+    The webhook parses the code out of the incoming WhatsApp message and creates an intake in the correct branch and module (lab or radiology).
+  </Step>
+  <Step title="Card appears on staff dashboard, marked Arrived">
+    Staff see a new card in the intake queue immediately - patient name is pulled from their WhatsApp profile, phone is captured automatically.
+  </Step>
+</Steps>
+
+## What gets captured
+
+When a patient arrives via QR, the intake starts with:
+
+- **Patient name** from their WhatsApp profile
+- **Phone number** automatically
+- **Arrival timestamp**
+- **Branch** it was scanned at
+- **Kind** - lab or radiology, depending on which QR they scanned
+
+Any prescription photos the patient sends after scanning attach to their intake card too, so staff can see what tests were ordered without having to ask.
+
+## Prerequisites
+
+QR intake only works when:
+
+- WhatsApp is connected for your organization (see [WhatsApp setup](/ai-agent/whatsapp-setup))
+- The branch has an intake short-code generated (contact support to enable)
+
+If either isn't set up, the QR redirects to the marketing site as a graceful fallback - it won't show an error page to the patient.
+
+## Fallback: manual intake
+
+If a patient can't or won't scan the QR, you can always add them manually from the [intake queue](/lab/intake). QR and manual intakes live in the same queue - the only difference is the QR badge on scanned cards.

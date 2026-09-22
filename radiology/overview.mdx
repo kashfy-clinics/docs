@@ -1,0 +1,52 @@
+---
+title: 'Radiology'
+description: 'Run your imaging center - scan intake, catalogue, and report delivery - from one dashboard'
+---
+
+The Radiology module is a full workflow for clinics and centers that run imaging: X-ray, ultrasound, CT, MRI, and more. It mirrors the [Lab module](/lab/overview) but tracks scans and reports instead of tests and results.
+
+<Info>
+  The Radiology section only appears if your organization is set up as a radiology center (or has radiology enabled alongside a clinic). Contact support if you don't see it and expect to.
+</Info>
+
+## The radiology dashboard
+
+Navigate to **Dashboard → Radiology** to see the day at a glance.
+
+Three summary cards up top:
+
+- **Today's total** - scans registered today
+- **Pending** - scans waiting to be performed
+- **Reports ready** - scans whose reports are uploaded and ready to hand over
+
+Quick-access tiles below:
+
+<CardGroup cols={3}>
+  <Card title="Intake queue" icon="users" href="/radiology/intake">
+    Today's walk-ins, ordered by arrival time.
+  </Card>
+  <Card title="Scans catalogue" icon="scan" href="/radiology/catalogue">
+    Manage your scan menu and prices.
+  </Card>
+  <Card title="Reports" icon="upload" href="/radiology/results">
+    Upload and send reports to patients.
+  </Card>
+</CardGroup>
+
+## Typical day
+
+<Steps>
+  <Step title="Patient scans the branch QR (or you register them manually)">
+    QR intake works the same way as the lab - see [QR intake](/lab/qr-intake). Manual registration is available from the [intake queue](/radiology/intake).
+  </Step>
+  <Step title="Move the card through the workflow">
+    Advance the intake through pending → collected → processing → ready → delivered as the scan progresses.
+  </Step>
+  <Step title="Upload the report">
+    Attach the report file. Kashfy sends it to the patient on WhatsApp automatically.
+  </Step>
+</Steps>
+
+<Tip>
+  Radiology and Lab intakes share the same branch-level counter view when both are enabled - one queue, two card types, one screen for the receptionist to work.
+</Tip>

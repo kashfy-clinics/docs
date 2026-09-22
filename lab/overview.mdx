@@ -1,0 +1,52 @@
+---
+title: 'Lab'
+description: 'Run your clinic lab end-to-end — intake, catalogue, and results — from one dashboard'
+---
+
+The Lab module is a full workflow for clinics that run their own lab: register walk-ins, price your test menu, and send results back to the patient over WhatsApp.
+
+<Info>
+  The Lab section only appears if your organization is set up as a lab (or has lab enabled alongside a clinic). Contact support if you don't see it and expect to.
+</Info>
+
+## The lab dashboard
+
+Navigate to **Dashboard → Lab** to see the day at a glance.
+
+Three summary cards up top:
+
+- **Today's total** - how many walk-ins have been registered today
+- **Pending** - intakes waiting to be processed (sample not yet collected)
+- **Results ready** - cases with results uploaded and ready to hand over
+
+Below the cards you'll find quick-access tiles for the three lab surfaces:
+
+<CardGroup cols={3}>
+  <Card title="Intake queue" icon="users" href="/lab/intake">
+    Today's walk-ins, ordered by arrival time.
+  </Card>
+  <Card title="Tests catalogue" icon="flask" href="/lab/catalogue">
+    Manage your test menu and prices.
+  </Card>
+  <Card title="Results" icon="upload" href="/lab/results">
+    Upload and send results to patients.
+  </Card>
+</CardGroup>
+
+## Typical lab day
+
+<Steps>
+  <Step title="Patient scans the branch QR (or you register them manually)">
+    The QR sticker at your counter opens WhatsApp with a prefilled code. When the patient sends it, the intake is created and marked **arrived** automatically. If you'd rather add them yourself, use the **New intake** button on the [intake queue](/lab/intake).
+  </Step>
+  <Step title="Move the card through the workflow">
+    On the intake card, tap the status pill to advance through the stages: pending → collected → processing → ready → delivered.
+  </Step>
+  <Step title="Upload the result">
+    From the [Results](/lab/results) page (or the intake card), attach the result PDF. Kashfy sends it to the patient on WhatsApp automatically.
+  </Step>
+</Steps>
+
+<Tip>
+  Set your prices once in the catalogue and every new intake picks them up automatically - no need to re-type totals for repeat tests.
+</Tip>

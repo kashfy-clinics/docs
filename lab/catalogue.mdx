@@ -1,0 +1,47 @@
+---
+title: 'Tests catalogue'
+description: 'Manage your lab test menu, prices, turnaround times, and sample types'
+---
+
+The catalogue is your lab's price list. Every test you run should live here - it keeps intake fast (staff pick from a list instead of retyping) and gives the AI agent an accurate price to quote on WhatsApp.
+
+Navigate to **Dashboard → Lab → Tests catalogue**.
+
+## Adding a test
+
+Click **New test** and fill in:
+
+- **Arabic name** (required) - what patients see
+- **English name** - shown to staff and in reports
+- **Code** - your internal or LOINC code (optional)
+- **Price (EGP)** - what you charge for this test
+- **Turnaround (hours)** - how long from sample to result; used to set expectations with the patient
+- **Sample type** - blood, urine, swab, etc.
+
+## Editing prices in bulk
+
+Ran a supplier price change? Use **Adjust prices** to bump every active test by a percentage in one shot.
+
+<Steps>
+  <Step title="Click Adjust prices">
+    Opens the bulk adjust dialog.
+  </Step>
+  <Step title="Enter a percentage">
+    Positive numbers raise prices, negative numbers lower them. `10` means +10%, `-5` means -5%.
+  </Step>
+  <Step title="Confirm">
+    Kashfy shows how many tests will be affected. Confirm to apply.
+  </Step>
+</Steps>
+
+<Warning>
+  Bulk adjustments only touch **active** tests with a price already set. Tests without a price or that are archived are skipped.
+</Warning>
+
+## Archiving tests
+
+Toggle a test to inactive if you've stopped offering it. Inactive tests stay in your history (so old intakes still resolve correctly) but disappear from the intake picker and the AI agent's answers.
+
+## What the AI does with the catalogue
+
+If a patient asks "بكم تحليل صورة الدم؟" the AI looks up the test in this catalogue and quotes the exact price and turnaround. Keep the catalogue current - every stale price is a bad quote to a patient.

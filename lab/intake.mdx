@@ -1,0 +1,50 @@
+---
+title: 'Intake queue'
+description: 'Register walk-in patients for lab tests and track them through the workflow'
+---
+
+The intake queue is where every walk-in for the lab shows up. Each row is a patient with their tests, total, and current stage.
+
+Navigate to **Dashboard → Lab → Intake queue**.
+
+## Adding an intake manually
+
+Click **New intake** to open the form and fill in:
+
+- **Patient name** (required)
+- **Patient phone** - used to send the result on WhatsApp later
+- **Tests** - the tests being run today, comma-separated or free-text
+- **Total (EGP)** - the price the patient is paying; pulled from the catalogue when you pick from the menu
+- **Notes** - anything the technician needs to remember (fasting status, prior visit, etc.)
+
+<Tip>
+  Phone number is optional but strongly recommended - without it Kashfy can't send the result to the patient automatically.
+</Tip>
+
+## The status cycle
+
+Tap the status pill on any row to advance it. Each intake moves through five stages:
+
+| Status | Meaning |
+|--------|---------|
+| **Pending** | Registered, sample not yet collected |
+| **Collected** | Sample taken from the patient |
+| **Processing** | Test is being run |
+| **Ready** | Result is available - upload it to send to the patient |
+| **Delivered** | Result has been sent/handed over |
+
+Statuses only move forward. If you make a mistake, delete the intake and create a new one.
+
+## QR arrivals
+
+If your branch has a printed QR sticker at the counter, patients who scan it are added to this queue automatically with the arrived status - you don't need to type anything in.
+
+The intake card shows a small **QR** badge so you can tell scanned arrivals apart from manually-added ones.
+
+<Info>
+  QR arrivals only work once WhatsApp is connected for your clinic. See [WhatsApp setup](/ai-agent/whatsapp-setup).
+</Info>
+
+## Multi-branch clinics
+
+If your clinic has more than one branch, the intake queue is scoped to the branch you're currently viewing. Switch branches from the branch picker in the top bar to see another location's queue.
