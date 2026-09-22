@@ -186,7 +186,9 @@
   },
   "footer": {
     "socials": {
-      "linkedin": "https://www.linkedin.com/company/kashfy-ai"
+      "linkedin": "https://www.linkedin.com/company/kashfy-ai",
+      "instagram": "https://www.instagram.com/kashfy.ai",
+      "facebook": "https://www.facebook.com/kashfyai"
     }
   },
   "seo": {
