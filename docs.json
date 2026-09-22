@@ -5,9 +5,9 @@
   "description": "Documentation for Kashfy — the AI-powered clinic receptionist for Egyptian clinics",
   "favicon": "favicon.ico",
   "colors": {
-    "primary": "#2563eb",
-    "light": "#3b82f6",
-    "dark": "#1d4ed8"
+    "primary": "#0D6B5E",
+    "light": "#1A8A78",
+    "dark": "#0A5A4F"
   },
   "background": {
     "decoration": "windows"
@@ -73,6 +73,46 @@
               "patients/overview",
               "patients/conversations",
               "patients/records-portal"
+            ]
+          },
+          {
+            "group": "Services",
+            "pages": [
+              "services/overview"
+            ]
+          },
+          {
+            "group": "Lab",
+            "pages": [
+              "lab/overview",
+              "lab/intake",
+              "lab/catalogue",
+              "lab/results",
+              "lab/qr-intake"
+            ]
+          },
+          {
+            "group": "Radiology",
+            "pages": [
+              "radiology/overview",
+              "radiology/intake",
+              "radiology/catalogue",
+              "radiology/results"
+            ]
+          },
+          {
+            "group": "Finance",
+            "pages": [
+              "finance/overview",
+              "finance/revenue",
+              "finance/expenses",
+              "finance/pnl"
+            ]
+          },
+          {
+            "group": "Reviews",
+            "pages": [
+              "reviews/overview"
             ]
           },
           {
