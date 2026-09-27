@@ -133,8 +133,15 @@
           {
             "group": "Settings",
             "pages": [
+              "settings/overview",
+              "settings/personal",
               "settings/clinic",
+              "settings/insurance",
+              "settings/widget",
               "settings/notifications",
+              "settings/app",
+              "settings/subscription",
+              "settings/billing",
               "settings/whatsapp"
             ]
           },

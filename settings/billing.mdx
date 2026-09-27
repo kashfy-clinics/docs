@@ -1,0 +1,46 @@
+---
+title: 'Billing'
+description: 'View your invoice history and track past payments'
+---
+
+The Billing page shows a list of all invoices generated for your organization. Navigate to **Dashboard → Settings → Billing**.
+
+## What you'll see
+
+Each invoice shows:
+
+- **Billing period** — the month the invoice covers (start and end date)
+- **Bookings** — total confirmed bookings that month, multiplied by the per-booking rate
+- **Amount** — total charged in EGP
+- **Status** — current payment status
+
+## Invoice statuses
+
+| Status | Meaning |
+|--------|---------|
+| **Sent** | Invoice has been issued and is awaiting payment |
+| **Paid** | Invoice has been paid |
+| **Overdue** | Invoice is past its due date and unpaid |
+
+<Tip>
+  Enable the **Invoice overdue** notification under **Settings → Notifications** to get an alert when a payment is past due.
+</Tip>
+
+## How invoices are generated
+
+Invoices are generated automatically at the end of each billing period. The amount is calculated as:
+
+**Plan fee + (extra bookings × overage rate per booking)**
+
+Extra bookings are any confirmed bookings beyond your plan's included monthly quota. The overage rate depends on your plan.
+
+For a live view of your current month's usage and projected cost before the invoice is generated, see [Subscription settings](/settings/subscription).
+
+<CardGroup cols={2}>
+  <Card title="Subscription" icon="star" href="/settings/subscription">
+    See your current plan and live usage.
+  </Card>
+  <Card title="Plans" icon="credit-card" href="/billing/plans">
+    Compare available plans and pricing.
+  </Card>
+</CardGroup>
