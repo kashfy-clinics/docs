@@ -5,22 +5,87 @@ description: 'View and manage all patient bookings across your clinic in real ti
 
 The Appointments section is your live view of everything booked at your clinic. All bookings — whether made via WhatsApp, the website widget, or manually by your staff — appear here.
 
-## The appointments dashboard
+Navigate to **Dashboard → Appointments**.
 
-Navigate to **Dashboard → Appointments** to see all bookings.
+## Three views
 
-The view shows appointments organized by date, with columns for:
+Use the view switcher at the top to switch between:
 
-- **Patient name and phone number**
-- **Doctor**
-- **Date and time**
-- **Status** (reserved, arrived, completed, cancelled, no-show)
-- **Channel** (WhatsApp, widget, manual)
-- **Branch** (if you have multiple locations)
+| View | What it shows |
+|------|--------------|
+| **Board** | Kanban columns by appointment status (default view) |
+| **Calendar** | Week, month, or day calendar with time slots |
+| **Waitlist** | Patients waiting for the next available slot |
 
-<Tip>
-  Use the date range filter at the top to jump to any specific day or period. Today's schedule is shown by default.
-</Tip>
+## Board view (Kanban)
+
+The board has five active columns representing where an appointment is in the visit lifecycle:
+
+| Column | Meaning |
+|--------|---------|
+| **Reserved** | Appointment is booked and upcoming |
+| **Arrived** | Patient is at the clinic, not yet seen |
+| **In Progress** | Doctor is currently with the patient |
+| **Completed** | Visit is done |
+| **No-show** | Patient did not arrive |
+
+Cancelled appointments are hidden by default. Use the **Cancelled** filter chip at the top to show them.
+
+Each card on the board shows the patient's name, doctor, time, and any reported symptoms. Walk-in appointments show a queue number.
+
+**Filters in board view:**
+
+- **Date range** — defaults to today; use the date picker to jump to any day or period
+- **Branch** — filter by location if you have multiple branches
+- **Search** — find by patient name, doctor name, or symptoms
+
+## Calendar view
+
+Switch to **Calendar** to see appointments on a calendar grid. Choose between:
+
+- **Week** — the default; shows all appointments across the week in time slots
+- **Month** — full month overview
+- **Day** — single day with hour-by-hour breakdown
+
+Click any appointment block to open its details. Click an empty time slot to create a new appointment.
+
+## Waitlist
+
+The **Waitlist** holds patients who want to book but couldn't find a suitable slot. When a slot opens up, you can contact them directly and convert them to a confirmed booking.
+
+Each waitlist entry shows the patient's name, phone, preferred doctor, preferred date (if given), and any notes.
+
+**Actions per entry:**
+
+- **Contact** — opens WhatsApp to message the patient
+- **Call** — dials their phone number
+- **Booked** — marks them as booked and removes from the list
+- **Remove** — removes them from the waitlist without booking
+
+To add someone to the waitlist: switch to **Waitlist** view and click **Add to list**.
+
+## Creating an appointment manually
+
+<Steps>
+  <Step title="Open the appointments page">
+    Go to **Dashboard → Appointments** and click **New Appointment**.
+  </Step>
+  <Step title="Select the branch">
+    If you have multiple locations, choose which branch the appointment is at.
+  </Step>
+  <Step title="Select the doctor">
+    Choose which doctor the appointment is for. The system will load that doctor's available slots.
+  </Step>
+  <Step title="Pick a date and time">
+    Select an available date, then choose from the available time slots. Unavailable times are greyed out.
+  </Step>
+  <Step title="Enter patient details">
+    Enter the patient's full name and phone number. Optionally add symptoms or a reason for the visit.
+  </Step>
+  <Step title="Confirm">
+    Click **Confirm booking**. The appointment is created and appears in the board immediately.
+  </Step>
+</Steps>
 
 ## Appointment channels
 
@@ -32,28 +97,6 @@ Appointments flow into Kashfy from three sources:
 | **Widget** | Patient uses the chat widget on your website, AI books the appointment |
 | **Manual** | Your staff creates the appointment directly from the dashboard |
 
-## Creating an appointment manually
-
-To add a booking yourself:
-
-<Steps>
-  <Step title="Open the appointments page">
-    Go to **Dashboard → Appointments** and click **New Appointment**.
-  </Step>
-  <Step title="Select the doctor">
-    Choose which doctor the appointment is for. The system will show that doctor's available slots.
-  </Step>
-  <Step title="Pick a date and time">
-    Select an available slot. Unavailable times are greyed out.
-  </Step>
-  <Step title="Enter patient details">
-    Enter the patient's name and phone number. If the patient already exists in your system, their record will be linked automatically.
-  </Step>
-  <Step title="Confirm">
-    Click **Save**. The appointment is created and appears in the list immediately.
-  </Step>
-</Steps>
-
 ## Appointment reminders
 
 Kashfy automatically sends a WhatsApp reminder to the patient the day before their appointment. No action required from your staff.
@@ -61,19 +104,6 @@ Kashfy automatically sends a WhatsApp reminder to the patient the day before the
 <Info>
   Reminders are only sent for appointments booked via WhatsApp or the widget, where the patient's phone number is already linked to a WhatsApp account.
 </Info>
-
-## Filtering and searching
-
-Use the filters above the appointments list to narrow down by:
-
-- **Doctor** — see only one doctor's schedule
-- **Date range** — pick a custom period
-- **Status** — filter by reserved, completed, cancelled, etc.
-- **Branch** — relevant if you have multiple locations
-
-## Exporting appointments
-
-Coming soon — appointment data export to CSV.
 
 <CardGroup cols={2}>
   <Card title="Appointment Statuses" icon="circle-check" href="/appointments/appointment-status">

@@ -136,6 +136,7 @@
               "settings/overview",
               "settings/personal",
               "settings/clinic",
+              "settings/modules",
               "settings/insurance",
               "settings/widget",
               "settings/notifications",
