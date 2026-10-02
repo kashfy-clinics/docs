@@ -1,58 +1,53 @@
 ---
 title: 'Subscription'
-description: "View your current plan, this month's booking and AI usage, and your projected invoice"
+description: "Your free trial, your plan, this period's usage, and your latest invoice"
 ---
 
-The Subscription page is your real-time view of what you're on and how much of it you've used this month. Navigate to **Dashboard → Settings → Subscription**.
+Navigate to **Dashboard → Settings → Subscription**. Tap **View plans** at the top to compare plans and ask for activation.
 
-## Current plan
+## Free trial
 
-Your active plan is shown at the top, including:
+While you're on the trial, a card shows how many of your **50 free bookings** you've used and how many are left. The bar turns amber at 40 and red at 50. See [how the trial works](/billing/plans#free-trial).
 
-- Plan name and tagline
-- Monthly price in EGP
-- Included bookings per month
-- Maximum number of doctors
-- Overage rate per extra booking (EGP per booking above the quota)
+## Your plan
 
-Use the **View plans** button to compare plans or upgrade.
+Shows the plan name, price per month or year, included bookings, doctor limit, and the price per extra booking. A plan you picked in onboarding shows **Chosen, not active yet** until the Kashfy team activates it. Once active it shows **Current plan** and the activation date.
 
-## This month's usage
+## Usage this period
 
-### Bookings
+Active plans only. Shows bookings counted so far against your plan's included bookings:
 
-A progress bar shows how many confirmed bookings you've made this month against your plan's included quota.
+| Usage | Bar color |
+|-------|-----------|
+| Under 80% | Green |
+| 80 to 99% | Amber |
+| 100% or more | Red |
 
-| Usage level | Bar color |
-|-------------|-----------|
-| Under 80% | Green (primary) |
-| 80 - 99% | Amber |
-| 100%+ | Red |
+Below the bar: the plan fee, any extra bookings times the overage price, and the **projected total**. Monthly plans count the current calendar month and are invoiced on the 1st for the previous month. Yearly plans count the plan year and are invoiced once, after the plan year ends.
 
-The cost breakdown below the bar shows:
-- **Plan fee** — your fixed monthly subscription
-- **Extra bookings** (if any) — number of bookings over quota × overage rate
-- **Projected this month** — total estimated charge at current pace
+See [what counts as a booking](/billing/plans#what-counts-as-a-booking).
 
-### AI messages
+## AI messages
 
-A second progress bar tracks the number of messages your AI agent has processed this month. The monthly cap is calculated as **7 × included bookings** — so a plan with 200 included bookings has a 1,400 message cap.
+A fair-use cap on patient messages the AI handles each month: **7 times your plan's monthly included bookings**.
 
 <Warning>
-  If the AI message cap is reached, the AI assistant is paused for the remainder of the month. The bar turns red and a warning is displayed. Upgrade your plan or wait for the next billing period to resume.
+  When the cap is reached, the AI assistant pauses until the end of the month. You'll see an amber warning from 80%.
 </Warning>
 
 ## Latest invoice
 
-A summary of your most recent invoice is shown at the bottom — period, total bookings, amount, and payment status.
+Your most recent invoice with its period, reference (for example `KSH-1A2B3C4D`), status, and amount. Unpaid invoices show [payment instructions](/billing/payments). Tap **All invoices** for the full history.
 
-For your full invoice history, go to [Billing settings](/settings/billing).
+## Cancel subscription
+
+Owners on an active plan can tap **Request cancellation**. The Kashfy team contacts you to settle the last invoice and stop the subscription. You can **Withdraw request** until then.
 
 <CardGroup cols={2}>
-  <Card title="Billing" icon="credit-card" href="/settings/billing">
-    Full invoice history.
+  <Card title="Plans & Pricing" icon="star" href="/billing/plans">
+    Prices, trial, and limits.
   </Card>
-  <Card title="Plans" icon="star" href="/billing/plans">
-    Upgrade or switch plans.
+  <Card title="Billing" icon="credit-card" href="/settings/billing">
+    All invoices.
   </Card>
 </CardGroup>

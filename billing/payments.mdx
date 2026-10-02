@@ -1,84 +1,44 @@
 ---
 title: 'Payments'
-description: 'Pay your Kashfy invoices and manage your payment method'
+description: 'How to pay Kashfy: transfer, send the receipt on WhatsApp, and the team marks it paid'
 ---
 
-Kashfy uses **Kashier** as its payment gateway, supporting Egyptian debit and credit cards. All transactions are in **Egyptian Pounds (EGP)**.
+Kashfy has **no online card payment**. You pay by transfer, send the receipt on WhatsApp, and the Kashfy team confirms it. All amounts are in **Egyptian Pounds (EGP)**.
 
 ## Paying an invoice
 
-When an invoice is due, you can pay it directly from the dashboard:
-
 <Steps>
-  <Step title="Go to Finance">
-    Navigate to **Dashboard → Finance** and find the invoice with a **Pending** or **Overdue** status.
+  <Step title="Open the invoice">
+    Go to **Dashboard → Settings → Billing**. Every unpaid invoice has a **How to pay** box under it.
   </Step>
-  <Step title="Click Pay">
-    Click the **Pay Now** button next to the invoice.
+  <Step title="Transfer the amount">
+    Use any method listed in the box: **InstaPay**, **mobile wallet**, or **bank transfer**. Each detail has a copy button. Write the invoice **reference** (for example `KSH-1A2B3C4D`) in the transfer notes.
   </Step>
-  <Step title="Enter payment details">
-    You'll be redirected to the Kashier payment page. Enter your card details (card number, expiry, CVV).
+  <Step title="Send the receipt">
+    Tap **Send payment proof on WhatsApp**. It opens a chat with the Kashfy team with the reference and amount already filled in. Attach the transfer screenshot.
   </Step>
-  <Step title="Confirm payment">
-    After successful payment, the invoice status updates to **Paid** and a receipt is available to download.
+  <Step title="Confirmation">
+    The team checks the transfer and marks the invoice **Paid**. If your account was suspended, service resumes.
   </Step>
 </Steps>
 
-## Supported payment methods
-
-| Method | Supported |
-|--------|-----------|
-| Egyptian debit cards (Visa/Mastercard) | Yes |
-| Egyptian credit cards | Yes |
-| International cards | Varies by bank |
-| Cash / bank transfer | Not supported through the dashboard |
-
 <Info>
-  If you need to pay by bank transfer, contact [support@kashfy.site](mailto:support@kashfy.site) to arrange a manual payment.
+  If no payment details are listed in the box, message the team on WhatsApp and they'll send them.
 </Info>
 
-## Payment security
+## Paying to activate a plan
 
-All payments are processed through **Kashier**, a PCI-compliant Egyptian payment gateway. Kashfy does not store your card details — they are handled entirely by Kashier's secure infrastructure.
-
-## Failed payments
-
-If a payment fails (declined card, insufficient funds, network issue):
-
-1. The invoice remains in **Pending** or **Overdue** status
-2. You'll see an error message from Kashier explaining the reason
-3. Retry with the same or a different card
-
-Common reasons for failure:
-- Incorrect card details
-- Card not enabled for online payments (contact your bank to enable)
-- Insufficient balance
-- 3D Secure authentication not completed
-
-## Subscription auto-renewal
-
-Subscriptions renew automatically at the end of each billing cycle. You will receive an email notification before the renewal date.
-
-If auto-renewal fails (e.g., card declined), the invoice moves to **Overdue** and you will need to pay manually from the dashboard.
+Activation works the same way: pick a plan in **View plans**, pay the plan fee by transfer, and send the receipt on WhatsApp. See [Activating a plan](/billing/plans#activating-or-changing-a-plan).
 
 ## Cancelling your subscription
 
-To cancel your Kashfy subscription:
-
-1. Go to **Dashboard → Settings → Subscription**
-2. Click **Cancel Subscription**
-
-Your clinic will remain active until the end of the current billing period. After that, the account moves to a read-only state — you can view past data but the AI agent will stop responding.
-
-<Warning>
-  Cancelling your subscription does not delete your data. Your clinic profile, appointments, and conversation history remain accessible. If you reactivate later, everything will be as you left it.
-</Warning>
+Owners can tap **Request cancellation** on the [Subscription](/settings/subscription#cancel-subscription) page. The team contacts you to settle the last invoice and stop the subscription.
 
 <CardGroup cols={2}>
-  <Card title="Invoices" icon="file-text" href="/billing/invoices">
-    View and download billing invoices.
+  <Card title="Invoices" icon="file-invoice" href="/billing/invoices">
+    When invoices are issued and what's on them.
   </Card>
-  <Card title="Plans" icon="layers" href="/billing/plans">
-    Review your current plan and booking quota.
+  <Card title="Plans & Pricing" icon="layer-group" href="/billing/plans">
+    Prices and the free trial.
   </Card>
 </CardGroup>

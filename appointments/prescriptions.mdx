@@ -1,0 +1,51 @@
+---
+title: 'Prescriptions'
+description: 'Write a prescription, add lab and radiology requests, and send it to the patient on WhatsApp as a PDF'
+---
+
+Doctors write prescriptions inside the appointment. Kashfy turns it into a branded PDF and can send it to the patient on WhatsApp.
+
+## Open the prescription editor
+
+In **Appointments**, click an appointment to open its details. The prescription section is near the bottom, under the diagnosis. Doctors, owners and admins can edit it; other staff can view it.
+
+## Write the prescription
+
+<Steps>
+  <Step title="Add medicines">
+    Search for a drug by name and pick it from the list. If it isn't there, choose **Add "..." manually**.
+  </Step>
+  <Step title="Add instructions">
+    Under each medicine, write how to take it, for example "1 tab every 8h after meals".
+  </Step>
+  <Step title="Request scans or tests (optional)">
+    Use **Select Scans** and **Select Tests** to add radiology and lab requests, each with its own notes box.
+  </Step>
+  <Step title="Save">
+    Click **Save**. Use **Preview** to see the PDF before sending.
+  </Step>
+</Steps>
+
+The PDF includes your clinic logo and name, the date, the doctor, the patient's name and age, the medicines with instructions, any lab and radiology requests, and your clinic addresses and phone. Once created, **Open** and **Print** links appear next to the prescription title.
+
+## Send it on WhatsApp
+
+Click **Send to patient**. You'll see "Prescription sent to the patient on WhatsApp" when it's done.
+
+| Patient's last message to Kashfy | Patient receives |
+|----------------------------------|------------------|
+| Within the last 23 hours | The PDF file directly in the chat |
+| Longer ago, or never | An approved template message from the doctor with a button to download the prescription |
+
+<Warning>
+  The patient needs a valid Egyptian mobile number to receive the prescription. If there isn't one on file, the editor shows **Patient WhatsApp number required to send prescription** with a box to add it. The send button stays disabled until the number is saved and at least one medicine is added.
+</Warning>
+
+<CardGroup cols={2}>
+  <Card title="Managing Appointments" icon="calendar" href="/appointments/managing-appointments">
+    Working with appointment details.
+  </Card>
+  <Card title="Records Portal" icon="folder-lock" href="/patients/records-portal">
+    Where patients see their records.
+  </Card>
+</CardGroup>

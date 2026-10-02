@@ -1,113 +1,56 @@
 ---
 title: 'Roles & Permissions'
-description: 'A reference for every team role in Kashfy and what each one can access'
+description: 'The four team roles in Kashfy and what each one can see and do'
 ---
 
-Kashfy uses four roles to control what each team member can see and do in the dashboard. Assign roles based on each person's responsibilities at your clinic.
-
-## Role overview
+Every member of your organization has one role.
 
 | Role | Who it's for |
 |------|-------------|
-| **Owner** | The clinic account holder — full access to everything |
-| **Admin** | Senior staff managing the clinic operationally |
-| **Employee** | Receptionists and coordinators handling day-to-day appointments |
-| **Doctor** | Physicians who need to see their own schedule and patient info |
+| **Owner** | The account that created the organization |
+| **Admin** | A manager with the same access as the owner |
+| **Employee** | Reception and front desk |
+| **Doctor** | A clinician who sees their own patients in the [Doctor Portal](/doctors/doctor-portal) |
 
-## Permissions by role
+## What each role can do
 
-<AccordionGroup>
-  <Accordion icon="crown" title="Owner">
-    The Owner is automatically assigned to the account that created the clinic. There is one owner per clinic.
+| | Owner | Admin | Employee | Doctor |
+|---|:---:|:---:|:---:|:---:|
+| See appointments | All | All | All (or their branches) | Own only |
+| Create bookings | Yes | Yes | Yes | No |
+| Move appointment stages | Yes | Yes | Yes | Own only |
+| Record payments | Yes | Yes | Yes | No |
+| Void payments | Yes | Yes | No | No |
+| Write diagnosis, prescriptions, lab and scan orders, medical alerts | Yes | Yes | No (read only) | Yes |
+| See patients | All | All | All (or their branches) | Only patients they've seen |
+| Edit doctors, services, clinic settings | Yes | Yes | View only | No |
+| AI Agent, Finance, WhatsApp Ads | Yes | Yes | No | No |
+| Invite and remove employees | Yes | Yes | No | No |
+| Add or remove admins | Yes | No | No | No |
+| Enable lab or radiology modules | Yes | No | No | No |
+| Request subscription cancellation | Yes | No | No | No |
 
-    **Full access to:**
-    - All appointments across all branches and doctors
-    - All patient records and conversations
-    - All team management (invite, remove, change roles)
-    - Billing and subscription settings
-    - Clinic profile and settings
-    - AI agent settings, custom instructions, and knowledge base
-    - WhatsApp and widget configuration
-    - Financial dashboard (invoices, payments, revenue)
-    - Admin features and clinic suspension controls
-
-    The owner cannot be removed by other team members.
-  </Accordion>
-
-  <Accordion icon="shield-check" title="Admin">
-    Admins have nearly the same access as the Owner, except for billing and financial controls.
-
-    **Can do:**
-    - View and manage all appointments
-    - View and manage patient records
-    - Invite and manage team members (except changing Owner)
-    - Update clinic profile and settings
-    - Configure AI, knowledge base, and custom instructions
-    - Manage WhatsApp connection and widget settings
-
-    **Cannot do:**
-    - Access billing and invoices
-    - Change subscription plans
-    - View the financial dashboard
-  </Accordion>
-
-  <Accordion icon="user-cog" title="Employee">
-    Employees are receptionists or clinic coordinators. They can manage appointments and patients but cannot change settings or access sensitive financial data.
-
-    **Can do:**
-    - View and manage appointments (at their assigned branch, if branch-restricted)
-    - View patient records and conversation histories
-    - Create manual appointments
-    - Update appointment statuses
-    - Add notes to appointments and patients
-
-    **Cannot do:**
-    - Change clinic settings, AI instructions, or WhatsApp configuration
-    - View billing or financial data
-    - Invite or manage team members
-    - View doctors' configuration or edit schedules
-
-    If an employee is assigned to a specific branch, they only see appointments and patients for that branch.
-  </Accordion>
-
-  <Accordion icon="stethoscope" title="Doctor">
-    Doctors have a simplified view focused entirely on their own schedule and patients.
-
-    **Can do:**
-    - View their own upcoming and past appointments
-    - See patient names and basic info for their appointments
-    - Update status of their own appointments (arrived, completed, no-show)
-    - Add notes to their own appointments
-
-    **Cannot do:**
-    - View other doctors' schedules or appointments
-    - Access patient records beyond their own patients
-    - View conversations, billing, or clinic settings
-    - Invite team members or change any configuration
-
-    Doctors log in through the same dashboard but see a dedicated simplified view of their schedule only.
-  </Accordion>
-</AccordionGroup>
+<Info>
+  Owners and admins share every management permission. The differences are only the owner-only actions at the bottom of the table.
+</Info>
 
 ## Branch restrictions
 
-Employees (and optionally Doctors) can be **assigned to a specific branch**. When branch-restricted:
+When you invite an employee, or add a doctor, you can choose specific branches. They then only see appointments and patients for those branches. Owners and admins always see every branch.
 
-- They see only appointments for their assigned branch
-- They can only create appointments at their branch
-- Patient records they see are filtered to those who visited their branch
+## Solo-doctor organizations
 
-Owners and Admins always see all branches regardless of any branch setting.
+If your plan allows one doctor, the doctor role isn't offered on the Team page. The owner can write chart notes directly.
 
 ## Changing a role
 
-To change a team member's role:
+Roles are set when you invite someone. To change a role, remove the member in [Team Members](/team/members) and invite them again with the new role.
 
-1. Go to **Dashboard → Settings → Team**
-2. Click the member's current role
-3. Select the new role from the dropdown
-4. The change takes effect immediately
-
-<Warning>
-  Demoting an Admin to Employee will immediately restrict their access. Make sure they don't have any in-progress tasks that require Admin access before changing their role.
-</Warning>
+<CardGroup cols={2}>
+  <Card title="Team Members" icon="users" href="/team/members">
+    Invite and remove staff.
+  </Card>
+  <Card title="Doctor Portal" icon="stethoscope" href="/doctors/doctor-portal">
+    What doctors see.
+  </Card>
+</CardGroup>

@@ -1,69 +1,84 @@
 ---
 title: 'Managing Appointments'
-description: 'Reschedule, cancel, mark attendance, and take notes on patient bookings'
+description: 'The visit sheet: move stages, write the diagnosis and prescription, order lab tests and scans, add notes, and record payments'
 ---
 
-Once appointments are in the system — whether booked by the AI or created manually — your staff manages them from the dashboard.
+Tap any booking on the board or calendar to open its **visit sheet**. Everything about that visit happens here.
 
-## Viewing appointment details
+## What's on the visit sheet
 
-Click any appointment in the list to open its detail panel. You'll see:
+| Section | What you do there | Who |
+|---------|-------------------|-----|
+| **Patient name** | Tap **Patient record** to open the full [patient profile](/patients/patient-profile) | Everyone |
+| **Date & time** | See when the visit is | Everyone |
+| **Patient contact** | Call or message the patient | Everyone |
+| **Symptoms** and **Notes** | What the patient or staff wrote when booking | Everyone |
+| **Stage** | The current [status](/appointments/appointment-status) | Everyone |
+| **Diagnosis** | Type and **Save** | Doctors, owner, admins |
+| **Prescription, scans, lab tests** | See below | Doctors, owner, admins |
+| **Doctor notes** | Chart notes with attachments | Everyone |
+| **Payments** | Record and void payments | Everyone except doctors |
 
-- Patient name, phone number, and booking channel
-- Doctor assigned, date, and time
-- Current status
-- Any notes added by staff
-- Link to the full patient conversation (for WhatsApp and widget bookings)
+## Moving the visit along
 
-## Updating appointment status
+The buttons at the bottom change with the stage:
 
-The status of an appointment tracks where it is in the visit lifecycle. To update it, open the appointment and click the status dropdown.
+| Button | Moves to |
+|--------|----------|
+| **Mark arrived** | Arrived |
+| **Start exam** | In progress |
+| **Mark completed** | Completed |
+| **No-show** | No-show |
+| **Cancel** | Cancelled |
+| **Reopen** | Back to Reserved (cancelled or no-show bookings) |
 
-See [Appointment Statuses](/appointments/appointment-status) for a full breakdown of each status and when to use it.
+You can also drag the card between columns on the board. See [Appointment Statuses](/appointments/appointment-status) for which moves are allowed.
 
-## Rescheduling an appointment
+<Tip>
+  When reception marks an unpaid visit **Completed**, Kashfy asks for the payment right away, pre-filled with the doctor's visit price. Tap **Skip** to record it later.
+</Tip>
 
-<Steps>
-  <Step title="Open the appointment">
-    Click the appointment in the list to open its details.
-  </Step>
-  <Step title="Click Reschedule">
-    Select a new date and time from the available slots for the same doctor.
-  </Step>
-  <Step title="Confirm">
-    Save the change. The appointment is updated instantly. The patient is not automatically notified — notify them manually via WhatsApp if needed.
-  </Step>
-</Steps>
+## Prescription, scans, and lab tests
+
+One editor holds all three and saves them together:
+
+- **Prescription** - search a drug (or add it by name), then write instructions such as "1 tab every 8h after meals". **Preview**, **Print**, or **Send to patient** on WhatsApp. See [Prescriptions](/appointments/prescriptions).
+- **Select Scans** - opens a searchable picker of scans grouped by category. Tick the scans and tap **Confirm**, then add the clinical indication.
+- **Select Tests** - the same picker for lab tests, with notes for the lab.
+
+Orders appear on the patient's profile under **Lab & radiology**, and results show there once a Kashfy lab or radiology centre delivers them. See [Lab](/lab/overview) and [Radiology](/radiology/overview).
+
+## Doctor notes
+
+Write a chart note and tap **Save**. Tap **Attach** to add photos or PDFs (up to 20 MB each). Notes stay on the patient, so you see earlier notes from past visits here too.
+
+## Payments
+
+Tap **Add** in the Payments section (or the **Add payment** button on the card):
+
+- **Amount** and an optional **discount** with a reason
+- **Payment method**: cash, card, InstaPay, transfer, or other
+- **Covered by insurance**: choose the insurance company and the amount it covers. The sheet shows what the patient pays.
+
+If the amount is above the doctor's price, Kashfy asks you to confirm with **Record anyway** (for extra services). Owners and admins can **Void** a payment with a reason. Payments feed [Finance](/finance/revenue).
 
 <Warning>
-  Rescheduling does not automatically send the patient a new confirmation message. If the booking came via WhatsApp, you can open the conversation and message them directly.
+  A paid visit can't be marked cancelled or no-show, or moved out of Completed. Void the payment first.
 </Warning>
 
-## Cancelling an appointment
+## Booking a follow-up
 
-To cancel a booking, open it and select **Cancelled** from the status dropdown, or click **Cancel Appointment** if that button is available.
+Tap **Book follow-up** at the bottom of the sheet. The new booking form opens for the same patient.
 
-<Info>
-  Cancelled appointments do **not** count toward your plan's monthly booking quota. Only confirmed (non-cancelled) bookings are counted.
-</Info>
+## Rescheduling
 
-## Adding notes
-
-Your staff can add internal notes to any appointment. These notes are visible only to your team — not to patients. Use notes to record:
-
-- Special patient requests
-- Pre-visit instructions given
-- Follow-up actions needed
-
-## Doctor view
-
-Doctors with access to the Kashfy doctor portal see a simplified version of this data — only their own appointments, with patient name and time. Doctors can update the status of their own appointments (e.g., marking a patient as arrived or completed).
+There's no reschedule button. Cancel the booking and create a new one, or use **Book follow-up**. The AI can also cancel a booking when the patient asks on WhatsApp.
 
 <CardGroup cols={2}>
   <Card title="Appointment Statuses" icon="circle-check" href="/appointments/appointment-status">
-    A reference for every appointment status.
+    Every stage and allowed move.
   </Card>
-  <Card title="Patients" icon="users" href="/patients/overview">
-    View the full patient record linked to a booking.
+  <Card title="Patient Profile" icon="user" href="/patients/patient-profile">
+    The full record behind each visit.
   </Card>
 </CardGroup>

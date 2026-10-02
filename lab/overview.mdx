@@ -1,52 +1,64 @@
 ---
 title: 'Lab'
-description: 'Run your clinic lab end-to-end — intake, catalogue, and results — from one dashboard'
+description: 'Run your lab from one workspace - intake queue, results on WhatsApp, test catalogue, patients, and finance'
 ---
 
-The Lab module is a full workflow for clinics that run their own lab: register walk-ins, price your test menu, and send results back to the patient over WhatsApp.
+The Lab workspace is built for labs and clinics that run their own lab. Patients check in at the counter (by scanning a QR or being added by staff), you move them through a simple three-column board, and when you upload the result Kashfy sends it to the patient on WhatsApp.
 
 <Info>
-  The Lab section only appears if your organization is set up as a lab (or has lab enabled alongside a clinic). Contact support if you don't see it and expect to.
+  The Lab workspace only appears if your organization has the **Lab** type. The owner can add it from **Settings → Organization → Organisation Types → Enable**. Adding a type does not change your subscription or billing. Removing a type needs Kashfy support.
 </Info>
 
 ## The lab dashboard
 
-Navigate to **Dashboard → Lab** to see the day at a glance.
+Go to **Lab dashboard** in the sidebar to see the day at a glance:
 
-Three summary cards up top:
+| Card | What it counts |
+|------|----------------|
+| **Today's total** | Lab cards created today |
+| **Waiting** | Cards still on the board (Arrived or In progress) |
+| **Completed today** | Cards whose result was uploaded today |
 
-- **Today's total** - how many walk-ins have been registered today
-- **Pending** - intakes waiting to be processed (sample not yet collected)
-- **Results ready** - cases with results uploaded and ready to hand over
+## What's in the Lab sidebar
 
-Below the cards you'll find quick-access tiles for the three lab surfaces:
-
-<CardGroup cols={3}>
+<CardGroup cols={2}>
   <Card title="Intake queue" icon="users" href="/lab/intake">
-    Today's walk-ins, ordered by arrival time.
-  </Card>
-  <Card title="Tests catalogue" icon="flask" href="/lab/catalogue">
-    Manage your test menu and prices.
+    The live board of patients at your branch: Arrived, In progress, Complete.
   </Card>
   <Card title="Results" icon="upload" href="/lab/results">
-    Upload and send results to patients.
+    Every completed case, whether the result reached the patient, and a resend button.
+  </Card>
+  <Card title="Tests catalogue" icon="flask" href="/lab/catalogue">
+    Your test menu and prices. Used by staff at intake and by the AI on WhatsApp.
+  </Card>
+  <Card title="Patients" icon="user" href="/lab/patients">
+    Everyone who has visited, with visit counts and spend.
+  </Card>
+  <Card title="Finance" icon="chart-line" href="/lab/finance">
+    Revenue from completed cases by period, test, and branch. Owners and admins only.
+  </Card>
+  <Card title="QR check-in" icon="qr-code" href="/lab/qr-intake">
+    Patients scan a QR at the counter and appear on the board by themselves.
   </Card>
 </CardGroup>
 
-## Typical lab day
+## A typical lab day
 
 <Steps>
-  <Step title="Patient scans the branch QR (or you register them manually)">
-    The QR sticker at your counter opens WhatsApp with a prefilled code. When the patient sends it, the intake is created and marked **arrived** automatically. If you'd rather add them yourself, use the **New intake** button on the [intake queue](/lab/intake).
+  <Step title="The patient checks in">
+    They scan your branch's [check-in QR](/lab/qr-intake) and send the WhatsApp message, or reception adds them with **New walk-in**. Patients who booked with the AI assistant on WhatsApp are already on the board with a **Booked** badge.
   </Step>
-  <Step title="Move the card through the workflow">
-    On the intake card, tap the status pill to advance through the stages: pending → collected → processing → ready → delivered.
+  <Step title="Collect the prescription and confirm the tests">
+    Prescription photos the patient sends on WhatsApp attach to their card. Open the card to pick the tests from your catalogue and confirm the total.
+  </Step>
+  <Step title="Start processing">
+    Move the card to **In progress** when you start on the sample.
   </Step>
   <Step title="Upload the result">
-    From the [Results](/lab/results) page (or the intake card), attach the result PDF. Kashfy sends it to the patient on WhatsApp automatically.
+    Choose the result file and confirm. The card moves to **Complete** and the result goes to the patient on WhatsApp. If a [referring doctor](/lab/referrals) was added with the patient's consent, they get it too.
   </Step>
 </Steps>
 
 <Tip>
-  Set your prices once in the catalogue and every new intake picks them up automatically - no need to re-type totals for repeat tests.
+  Patients can also ask the AI assistant on WhatsApp "is my result ready?" (نتيجتي جاهزة؟). If the result is uploaded, the AI sends them their secure result link.
 </Tip>

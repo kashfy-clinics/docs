@@ -1,41 +1,42 @@
 ---
 title: 'Personal Settings'
-description: 'Update your personal account details — name, profile photo, and phone number'
+description: 'Your own account: name, profile photo, mobile number, and password'
 ---
 
-Personal settings control your own account profile within Kashfy. These settings are per-user and do not affect your clinic or your team members.
-
-Navigate to **Dashboard → Settings → Personal**.
+Personal settings belong to you, not the clinic. Navigate to **Dashboard → Settings → Personal**, or open **My Account** from the menu under your name.
 
 ## What you can update
 
 <AccordionGroup>
-  <Accordion icon="user" title="Full name">
-    Your display name shown across the dashboard and in team member lists. This is separate from your clinic's name.
-  </Accordion>
-
   <Accordion icon="image" title="Profile photo">
-    Upload a profile picture. Accepted formats: JPEG, PNG, WebP. Recommended size: at least 256 × 256 px.
+    Tap the avatar to upload a new photo, or **Remove photo**.
   </Accordion>
+  <Accordion icon="user" title="Full name">
+    Shown across the dashboard and in the team list. Tap **Save** after editing.
+  </Accordion>
+  <Accordion icon="phone" title="Mobile number">
+    Tap **Add mobile number** (or **Change**), enter an Egyptian mobile number, and tap **Verify on WhatsApp**. You send a prefilled code message from that number and it shows **Verified**. See [verifying your number](/getting-started/sign-in#verifying-your-mobile-number).
 
-  <Accordion icon="phone" title="Phone number">
-    Your personal phone number. This is used for your account only — it is not your clinic's public phone number.
+    A verified number lets you [sign in with WhatsApp](/getting-started/sign-in#sign-in-with-whatsapp). It is your personal number, not the clinic's public phone.
+  </Accordion>
+  <Accordion icon="lock" title="Change password">
+    Tap **Send verification code**, enter the code sent to your email, then set and confirm a new password (at least 8 characters).
   </Accordion>
 </AccordionGroup>
 
 ## Email address
 
-Your email address is shown but **cannot be changed** from this page. It is set when you create your account. Contact support if you need to update it.
+Your email is shown but can't be changed here. Contact [support@kashfy.site](mailto:support@kashfy.site) if you need to change it.
 
-## Demo accounts
-
-Personal settings editing is disabled on the demo account (`demo@kashfy.test`).
+<Note>
+  The demo account can't edit personal settings.
+</Note>
 
 <CardGroup cols={2}>
-  <Card title="Notifications" icon="bell" href="/settings/notifications">
-    Set how you want to be alerted about events.
+  <Card title="Sign-up & Sign-in" icon="key" href="/getting-started/sign-in">
+    All the ways to sign in.
   </Card>
   <Card title="Team" icon="users" href="/team/members">
-    Manage who else has access to your organization.
+    Manage who else has access.
   </Card>
 </CardGroup>

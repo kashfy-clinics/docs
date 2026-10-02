@@ -1,0 +1,60 @@
+---
+title: 'Appointment Reminders'
+description: 'Automatic WhatsApp reminders sent to patients before their visit'
+---
+
+Kashfy can remind every booked patient on WhatsApp before their appointment, with the doctor's name, the clinic, the date and the time.
+
+## Turn reminders on
+
+<Steps>
+  <Step title="Open Settings → Clinic">
+    Open the **Patient Reminders** section.
+  </Step>
+  <Step title="Switch on Remind patients before their visit">
+    Only owners and admins can change this.
+  </Step>
+  <Step title="Choose how many hours before">
+    Any value from 1 to 168 hours (7 days). It starts at 3 hours. The page confirms, for example, "Reminder arrives 3h before each appointment".
+  </Step>
+  <Step title="Click Save">
+    The setting applies to all your doctors and branches.
+  </Step>
+</Steps>
+
+## How it works
+
+- When an appointment is booked (by the AI, your team or your public page), Kashfy schedules its reminder for the time you chose.
+- The reminder goes out at that time from the Kashfy WhatsApp number.
+- If the appointment is booked closer than your setting (for example 1 hour before with a 3-hour setting), the reminder goes out right away.
+
+<Info>
+  The timing is fixed when the appointment is booked. Changing the number of hours applies to appointments booked after the change. Switching reminders **off** stops all reminders that haven't gone out yet.
+</Info>
+
+## What the patient receives
+
+Which message Kashfy sends depends on WhatsApp's 24-hour rule:
+
+| Patient's last message to Kashfy | Reminder sent as |
+|----------------------------------|------------------|
+| Within the last 23 hours | A normal message: the doctor, clinic, day and time, a request to arrive 15 minutes early, and "reply with any message if you need to change the time" |
+| Longer ago, or never | The approved **visit reminder** template with the same details, asking the patient to confirm, with quick-reply buttons to confirm or say they can't come |
+
+When the patient replies, the AI picks up the conversation, so it can confirm, reschedule or cancel for them.
+
+## When no reminder is sent
+
+- The appointment was cancelled, completed or marked no-show
+- The appointment time has already passed
+- The patient has no valid phone number (for example, website widget visitors)
+- Reminders are switched off for your clinic
+
+<CardGroup cols={2}>
+  <Card title="Managing Appointments" icon="calendar" href="/appointments/managing-appointments">
+    Book, move and cancel appointments.
+  </Card>
+  <Card title="WhatsApp" icon="message" href="/ai-agent/whatsapp-setup">
+    The shared number and the 24-hour rule.
+  </Card>
+</CardGroup>

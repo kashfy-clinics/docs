@@ -1,50 +1,87 @@
 ---
 title: 'Intake queue'
-description: 'Register walk-in patients for lab tests and track them through the workflow'
+description: 'The live board where lab and radiology patients move from Arrived to In progress to Complete'
 ---
 
-The intake queue is where every walk-in for the lab shows up. Each row is a patient with their tests, total, and current stage.
+The intake queue is a live board of the patients at your center. Each patient is a card, and each card moves through three columns until the result is sent.
 
-Navigate to **Dashboard → Lab → Intake queue**.
+Go to **Intake queue** in the Lab or Radiology sidebar. It is the same board in both workspaces: if your organization runs both, lab cards and radiology cards show side by side, each with a **Lab** or **Radiology** badge.
 
-## Adding an intake manually
+## The three columns
 
-Click **New intake** to open the form and fill in:
-
-- **Patient name** (required)
-- **Patient phone** - used to send the result on WhatsApp later
-- **Tests** - the tests being run today, comma-separated or free-text
-- **Total (EGP)** - the price the patient is paying; pulled from the catalogue when you pick from the menu
-- **Notes** - anything the technician needs to remember (fasting status, prior visit, etc.)
-
-<Tip>
-  Phone number is optional but strongly recommended - without it Kashfy can't send the result to the patient automatically.
-</Tip>
-
-## The status cycle
-
-Tap the status pill on any row to advance it. Each intake moves through five stages:
-
-| Status | Meaning |
+| Column | Meaning |
 |--------|---------|
-| **Pending** | Registered, sample not yet collected |
-| **Collected** | Sample taken from the patient |
-| **Processing** | Test is being run |
-| **Ready** | Result is available - upload it to send to the patient |
-| **Delivered** | Result has been sent/handed over |
+| **Arrived** | The patient is at the center (or booked with the AI and on the way). Work hasn't started. |
+| **In progress** | You've started: sample taken, scan being done, or result being prepared. |
+| **Complete** | The result was uploaded and sent. |
 
-Statuses only move forward. If you make a mistake, delete the intake and create a new one.
+- Cards are ordered **oldest arrival first**, so you serve patients in order.
+- The board shows **every open card** plus the cards **completed today**. Older completed cases are on the [Results](/lab/results) page.
+- The board **updates live**. When a patient scans the QR, or a colleague moves a card, it appears on your screen without refreshing.
 
-## QR arrivals
+### What a card shows
 
-If your branch has a printed QR sticker at the counter, patients who scan it are added to this queue automatically with the arrived status - you don't need to type anything in.
+Patient name and mobile, the requested tests or scans, the total in EGP, notes, and the arrival time. A paperclip with a number means the patient has sent prescription photos.
 
-The intake card shows a small **QR** badge so you can tell scanned arrivals apart from manually-added ones.
+A **Booked** badge means the patient registered with the AI assistant on WhatsApp and hasn't checked in yet. When they scan the QR at your counter, the same card is marked arrived (no duplicate card).
+
+## Branches
+
+If your organization has more than one branch, use the picker at the top of the board. It starts on **All branches**; pick a branch to see only its patients.
 
 <Info>
-  QR arrivals only work once WhatsApp is connected for your clinic. See [WhatsApp setup](/ai-agent/whatsapp-setup).
+  Cards that aren't linked to any branch yet (for example an AI booking where the patient didn't say which branch) show on every branch's view, so nothing gets missed. Scanning the branch QR links the card to that branch.
 </Info>
 
-## Multi-branch clinics
+## Adding a walk-in
 
-If your clinic has more than one branch, the intake queue is scoped to the branch you're currently viewing. Switch branches from the branch picker in the top bar to see another location's queue.
+Click **New walk-in** and fill in:
+
+- **Lab / Radiology** - shown only if your organization runs both
+- **Branch** - required when you have more than one branch
+- **Patient name** (required)
+- **Mobile number** - Egyptian mobile like `01xxxxxxxxx`. Without it, Kashfy can't send the result on WhatsApp.
+- **Tests / Scans** - search your [catalogue](/lab/catalogue) and pick, or type a name and add it as free text. Each item's price is editable.
+- **Total (EGP)** - fills in automatically from the item prices. You can type a different total.
+- **Referring doctor** (optional) - name, WhatsApp number, and the patient's consent to send them the result. See [Referring doctors](/lab/referrals).
+- **Notes** - anything the team needs to know (fasting, contrast, prior visit)
+
+Click **Add to queue**. The card appears in **Arrived**.
+
+## Moving a card
+
+Use the arrow buttons on the card, or open the card and use the buttons at the bottom:
+
+<Steps>
+  <Step title="Arrived → In progress">
+    Click **Start processing** (or the forward arrow on the card).
+  </Step>
+  <Step title="In progress → Complete">
+    Click **Choose result file**, pick the file, check the patient name, mobile, and file in the confirmation box, then click **Upload & send**. The check button on the card opens this same step. A card can only be completed with a result file.
+  </Step>
+</Steps>
+
+**Back** moves a card one column back. Moving a **Complete** card back to In progress lets you upload a corrected result: the new file replaces the old one and is sent again.
+
+## The card details
+
+Click any card to open it. From here you can:
+
+- **Edit patient & referring doctor** - fix the patient's name or mobile, or add the referring doctor, at any stage
+- **Edit requested tests / scans** - change the items and the total
+- **See the prescription** - photos and files the patient sent on WhatsApp, tap to open full size
+- **Open the result file** and **Resend to patient** once the card is complete
+- **Remove** the card - only while it's in **Arrived** (a mistaken scan or a no-show). Cards that have started or finished can't be removed.
+
+<Tip>
+  A patient arrived without a phone number? Add it with **Edit** before you upload the result, so it goes out on WhatsApp automatically.
+</Tip>
+
+## When the WhatsApp send fails
+
+After upload, the card shows whether the result reached the patient:
+
+- **Result sent to patient on WhatsApp** - done.
+- **Saved, but the WhatsApp send failed:** followed by the reason, for example the patient has no mobile number, or WhatsApp rejected the message.
+
+The result is saved either way. Fix the cause (for example add the mobile number with **Edit**) and click **Resend to patient**. See [Results](/lab/results) for how delivery works.

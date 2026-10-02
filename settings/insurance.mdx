@@ -1,45 +1,35 @@
 ---
 title: 'Insurance & Partners'
-description: 'Configure which insurance companies each of your branches accepts'
+description: 'Choose which insurance companies each lab or radiology branch accepts'
 ---
-
-The Insurance & Partners settings page lets you choose which insurance providers each of your branches works with. Patients can then select their insurer at intake, and staff can record the coverage details.
 
 Navigate to **Dashboard → Settings → Insurance & Partners**.
 
 <Info>
-  This section is only available for accounts that include a **lab** or **radiology centre**. It does not appear for clinic-only accounts.
+  This page only appears for organizations with a **lab** or **radiology centre**, and only lists branches that offer lab or radiology. For clinic visits, choose your insurers in the [Insurance section of Organization Settings](/settings/organization#insurance).
 </Info>
 
-## How it works
+## Choosing insurers per branch
 
-Kashfy maintains a list of insurance providers (sourced from major Egyptian insurers). For each of your branches, you toggle which providers it accepts. A branch can accept multiple insurance companies.
+1. Find the branch in the list. Each one shows how many insurers it accepts.
+2. Toggle the insurance companies that branch works with.
+3. Tap **Save** for that branch.
 
-Once configured, the intake flow for that branch shows the accepted insurers, and staff can record a patient's insurance at the point of intake.
-
-## Selecting insurance providers per branch
-
-1. On the Insurance & Partners page, you will see a list of your branches (lab and radiology branches only).
-2. For each branch, open its section and toggle the insurers it accepts.
-3. Changes are saved automatically.
-
-<Note>
-  Only branches with a **lab** or **radiology** kind are shown. Pure clinic branches do not appear here.
-</Note>
+Accepted insurers are then offered at intake, so reception can record the patient's insurance.
 
 ## Who can edit
 
-Only **Owners** and **Admins** can change insurance settings. Employees with a read-only role will see the settings but cannot toggle providers.
+Owners and admins can change these settings. Other roles can view them.
 
-## Insurance providers list
+## Missing a company?
 
-The list of available providers is managed at the platform level and includes the major Egyptian insurance companies and managed care organizations. If a provider you work with is missing, contact Kashfy support to have it added.
+The provider list is managed by Kashfy. If a company you work with is missing, contact [support@kashfy.site](mailto:support@kashfy.site).
 
 <CardGroup cols={2}>
   <Card title="Lab Intake" icon="flask" href="/lab/intake">
-    How patients are registered for lab tests.
+    Registering patients for lab tests.
   </Card>
-  <Card title="Radiology Intake" icon="scan" href="/radiology/intake">
-    How patients are registered for scans.
+  <Card title="Radiology Intake" icon="x-ray" href="/radiology/intake">
+    Registering patients for scans.
   </Card>
 </CardGroup>

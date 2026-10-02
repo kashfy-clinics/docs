@@ -1,59 +1,57 @@
 ---
 title: 'Notifications'
-description: 'Control how Kashfy notifies you and your team about new bookings and important events'
+description: 'Get alerted on this device about new bookings and patient messages'
 ---
 
-Kashfy can notify your team when important things happen — a new appointment is booked, a patient cancels, or an invoice is overdue. Configure notifications from **Dashboard → Settings → Notifications**.
+Kashfy alerts your team when something needs attention. Alerts show in the dashboard bell, and can also come as browser notifications and a sound.
 
-## Notification channels
+Go to **Settings → Notifications**.
 
-<AccordionGroup>
-  <Accordion icon="bell" title="Browser push notifications">
-    Receive notifications directly in your browser, even when the Kashfy dashboard tab is not in focus.
+<Info>
+  These settings are **per device**. Turning on notifications on your laptop doesn't turn them on for your phone or for a colleague. Each person sets them up on each device they use.
+</Info>
 
-    To enable, click **Allow** when the browser prompts for notification permission. If you previously denied the permission, you'll need to re-enable it in your browser settings.
+## The two options
 
-    Push notifications are **per device** — each team member enables them on their own device.
-  </Accordion>
+| Option | What it does |
+|--------|--------------|
+| **Browser notifications** | Pop-up notifications even when the Kashfy tab is in the background |
+| **Sound alerts** | A beep on new bookings |
 
-  <Accordion icon="smartphone" title="WhatsApp notifications">
-    Receive a WhatsApp message on a designated number when key events occur. This is separate from your clinic's patient-facing WhatsApp number.
+Turn on what you want and click **Save**. When you turn on browser notifications for the first time, your browser asks for permission: click **Allow**.
 
-    Set a notification phone number in the notifications settings to receive these alerts.
-  </Accordion>
-</AccordionGroup>
+<Warning>
+  If you see "Notifications are blocked", your browser or phone refused permission earlier. Allow notifications for the Kashfy site in your browser or system settings, then save again.
+</Warning>
 
-## Notification events
-
-Configure which events trigger a notification:
-
-| Event | Description |
-|-------|-------------|
-| **New booking** | The AI successfully books an appointment |
-| **Cancellation** | A patient cancels an appointment via the AI |
-| **New patient** | A new patient contacts the clinic for the first time |
-| **Invoice overdue** | A billing invoice is past its due date |
-| **WhatsApp disconnected** | The WhatsApp session drops and needs re-linking |
+The first time you open the dashboard on a new device, Kashfy shows an **Enable notifications** prompt with the same two options. Pick **Enable** or **Not now**, and you can change it here any time.
 
 <Tip>
-  Enable the **WhatsApp disconnected** notification so you can quickly re-link your WhatsApp if the session drops — minimizing downtime for your patients.
+  Installing Kashfy as an app on your phone makes notifications more reliable. See [App](/settings/app).
 </Tip>
 
-## Per-member notification preferences
+## What you get notified about
 
-Each team member can set their own notification preferences from **Dashboard → Settings → Personal**. For example, doctors may only want notifications for their own appointments, while owners may want all events.
+| Event | Who gets it |
+|-------|-------------|
+| New booking (by the AI, your team, or your public page) | Owners, admins, staff, and the doctor of the appointment |
+| A patient cancels through the AI | Owners, admins, staff, and the doctor |
+| A patient messages while the AI is paused for them | Owners, admins and staff, plus the assigned doctor |
+| A patient asks to talk to a person | Owners, admins and staff, plus the assigned doctor |
+| A chat is assigned to a doctor | That doctor |
+| New lab or radiology registration by the AI | Owners, admins and staff |
 
-## Appointment reminders (outbound)
+Message alerts for the same patient are grouped, so you won't get one for every message in a burst.
 
-Kashfy automatically sends WhatsApp reminder messages to **patients** the day before their appointment. This is configured separately and is not a notification to your team — it's a patient-facing feature.
+## Patient reminders are separate
 
-See [AI Agent](/ai-agent/overview) for details on automatic patient reminders.
+Reminders that patients receive before their appointment are not team notifications. Set them up in [Appointment Reminders](/appointments/reminders).
 
 <CardGroup cols={2}>
-  <Card title="Personal Settings" icon="user" href="/settings/clinic">
-    Update your personal account preferences.
+  <Card title="Conversations" icon="messages-square" href="/patients/conversations">
+    Where message alerts take you.
   </Card>
-  <Card title="WhatsApp Setup" icon="message" href="/settings/whatsapp">
-    Manage your WhatsApp connection.
+  <Card title="Appointment Reminders" icon="bell" href="/appointments/reminders">
+    Automatic reminders for patients.
   </Card>
 </CardGroup>

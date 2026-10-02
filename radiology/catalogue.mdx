@@ -1,35 +1,46 @@
 ---
 title: 'Scans catalogue'
-description: 'Manage your scan menu, prices, body parts, and imaging modalities'
+description: 'Your scan menu and prices, used at intake and by the AI assistant on WhatsApp'
 ---
 
-The catalogue is your radiology center's price list. Every scan you offer should live here - it makes intake faster and lets the AI agent quote accurate prices on WhatsApp.
+The catalogue is your radiology center's price list. Staff pick scans from it on the intake board (prices fill in automatically), and the AI assistant uses it to answer patients on WhatsApp.
 
-Navigate to **Dashboard → Radiology → Scans catalogue**.
+Go to **Scans catalogue** in the Radiology sidebar.
+
+<Info>
+  Only owners and admins can add scans, change prices, or switch scans on and off. Other team members see the catalogue read-only.
+</Info>
 
 ## Adding a scan
 
-Click **New scan** and fill in:
+Click **+ Add scan** and fill in:
 
-- **Arabic name** (required) - what patients see
-- **English name** - shown to staff and in reports
-- **Code** - your internal or CPT code (optional)
-- **Price (EGP)** - what you charge
-- **Body part** - chest, abdomen, brain, etc.
-- **Modality** - X-ray, ultrasound, CT, MRI, mammography, fluoroscopy
+- **Arabic name** (required) - for example أشعة صدر
+- **English name**
+- **Code** - your internal code (optional)
+- **Price (EGP)**
+- **Modality** - for example X-ray, MRI, CT
+- **Body part** - for example chest, lumbar spine
 
-## Bulk price adjustments
+Click **Save**.
 
-Use **Adjust prices** to move every active scan by a percentage in one step. Positive numbers raise, negative numbers lower. Only priced, active scans are affected - archived scans are skipped.
+## Switching a scan off
+
+Use the switch on a scan to deactivate it when you stop offering it. Inactive scans no longer appear when staff search the catalogue on the intake board, and the AI stops quoting them. Old cards keep their details.
+
+<Note>
+  A saved scan can't be edited from this screen yet. To change one scan's name or price, switch it off and add it again. To change many prices at once, use **Adjust prices**.
+</Note>
+
+## Adjusting prices in bulk
+
+Click **Adjust prices**, enter a percentage (`10` for +10%, `-5` for -5%, allowed range -90 to 500), click **Apply**, and confirm. Only active scans that have a price are changed.
 
 <Warning>
-  Prices update immediately. Kashfy shows how many scans will be affected before applying - review the count before you confirm.
+  Prices change immediately. Kashfy shows how many scans will change before you confirm.
 </Warning>
 
-## Archiving scans
+## How the catalogue is used
 
-Toggle a scan inactive when you stop offering it. Historic intakes stay linked, but the scan disappears from the intake picker and from the AI agent's answers.
-
-## What the AI does with the catalogue
-
-When a patient asks "بكم أشعة الصدر؟" the AI reads this catalogue and quotes the exact price and modality. Keeping the catalogue current is the difference between the AI quoting real prices and quoting stale ones.
+- **At intake** - type part of a scan name in **New walk-in** or a card's **Edit** to pick it with its price. Scans not in the catalogue can be added as free text.
+- **On WhatsApp** - the AI assistant quotes only your active scans and prices, and can register the patient (their card shows **Booked**). It never gives preparation instructions (like fasting or contrast); it tells the patient the center will confirm.

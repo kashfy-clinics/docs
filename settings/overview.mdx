@@ -1,50 +1,35 @@
 ---
 title: 'Settings Overview'
-description: 'A guide to every section in Kashfy settings and what you can configure in each one'
+description: 'Every section in Kashfy settings and what you can configure in each one'
 ---
 
-Settings in Kashfy are organized into sections, accessible from the left sidebar on desktop or a horizontal tab strip on mobile. Navigate to **Dashboard → Settings** to get started.
+Navigate to **Dashboard → Settings**. It opens on **Personal**. On desktop the sections are in a side menu; on mobile they scroll across the top.
 
 ## Settings sections
 
-| Section | Who sees it | What it controls |
-|---------|-------------|-----------------|
-| **Personal** | Everyone | Your name, avatar, and phone number |
-| **Organization** | Everyone | Clinic/lab profile, addresses, working hours, branding |
-| **Modules** | Owner only | Enable Lab or Radiology Centre modules |
-| **Insurance & Partners** | Labs and radiology centres | Which insurance companies each branch accepts |
-| **Widget** | Clinic plan (Team+) | Website chat widget installation and customization |
-| **Notifications** | Everyone | Browser push and WhatsApp notification preferences |
-| **App** | Everyone | Install Kashfy as a PWA on your device |
-| **Subscription** | Everyone | Current plan, monthly usage, and projected cost |
-| **Billing** | Everyone | Invoice history |
-| **Team** | Everyone | Invite and manage team members |
+| Section | Shown to | What it controls |
+|---------|----------|------------------|
+| [Personal](/settings/personal) | Everyone | Your name, photo, mobile number, and password |
+| [Clinic / Organization](/settings/organization) | Everyone (owners and admins edit) | Profile, branding, contact, branches, insurance, reminders, WhatsApp code |
+| [Insurance & Partners](/settings/insurance) | Labs and radiology centres | Which insurers each lab or radiology branch accepts |
+| [Widget](/settings/widget) | Clinics | Website chat widget |
+| [Notifications](/settings/notifications) | Everyone | Alerts you receive |
+| [App](/settings/app) | Everyone | Install Kashfy on your phone or computer |
+| [Subscription](/settings/subscription) | Everyone | Free trial, plan, and usage |
+| [Billing](/settings/billing) | Everyone | Invoices and how to pay them |
+| [Team](/team/members) | Everyone (owners and admins invite) | Staff and admins |
 
 <Info>
-  The **Organization** section label changes based on your account type — it shows "Clinic" for clinic accounts, "Lab" for labs, and "Radiology Centre" for radiology accounts.
+  The **Clinic** label changes with your setup: **Lab**, **Radiology Centre**, or **Organization** when you run more than one type. Enabling a lab or radiology centre is done from that page. See [Modules](/settings/modules).
 </Info>
 
-<Info>
-  **Insurance & Partners** only appears for accounts that include a lab or radiology centre. It is not shown for clinic-only accounts.
-</Info>
-
-## Navigating settings
-
-On desktop, the settings sidebar stays fixed on the left while the content scrolls independently. On mobile, settings sections appear as a horizontally scrollable tab strip at the top.
-
-Settings always opens on **Personal** by default.
+Doctors have their own settings in the [Doctor Portal](/doctors/doctor-portal#settings): **Personal** and **Public Page**.
 
 <CardGroup cols={2}>
-  <Card title="Personal Settings" icon="user" href="/settings/personal">
-    Update your name, avatar, and contact details.
+  <Card title="Organization Settings" icon="building" href="/settings/organization">
+    Your clinic's profile and branches.
   </Card>
   <Card title="Subscription" icon="star" href="/settings/subscription">
-    View your plan, usage, and projected invoice.
-  </Card>
-  <Card title="Notifications" icon="bell" href="/settings/notifications">
-    Configure when and how you get alerted.
-  </Card>
-  <Card title="Team" icon="users" href="/team/members">
-    Invite staff and manage roles.
+    Trial, plan, and usage.
   </Card>
 </CardGroup>

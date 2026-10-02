@@ -1,0 +1,88 @@
+---
+title: 'Campaigns'
+description: 'Create a WhatsApp campaign, get it approved by Meta, and track delivery'
+---
+
+A campaign is one marketing message sent to all your opted-in patients. Each campaign becomes a WhatsApp template that Meta reviews before it can go out.
+
+## Before you start
+
+- You need credits that cover all your opted-in patients. See [Message Packs](/whatsapp-ads/packs).
+- Only owners and admins can create campaigns.
+
+## Create a campaign
+
+Go to **WhatsApp Ads → New Campaign**. A live preview on the side shows how the message will look on a phone.
+
+<Steps>
+  <Step title="Campaign name">
+    English lowercase letters, numbers and underscores only, for example `summer_checkup_offer`. Each name can be used once.
+  </Step>
+  <Step title="Message language">
+    Pick Arabic or English. You'll get a warning if the text doesn't match the language you picked.
+  </Step>
+  <Step title="Media (optional)">
+    Add an image (JPG or PNG), a video (MP4) or a document (PDF). With media, you can't add a text header.
+  </Step>
+  <Step title="Header (optional)">
+    A short line above the message.
+  </Step>
+  <Step title="Body">
+    The main message. Use the toolbar for emoji, *bold*, _italic_, ~strikethrough~ and monospace.
+  </Step>
+  <Step title="Variables (optional)">
+    Use **Add variable** (up to 9) for parts that change per message. Variables can't be the very first or last thing in the body. Fill in a sample for each: samples are only for Meta's review and are never sent to patients.
+  </Step>
+  <Step title="Footer (optional)">
+    A short line below the message.
+  </Step>
+  <Step title="Buttons (optional)">
+    Up to 3: **Call phone number**, **Visit website** (must start with `https://`), or **Quick Reply**.
+  </Step>
+  <Step title="Recipients">
+    Campaigns go to **All opted-in patients**. The current count is shown.
+  </Step>
+  <Step title="Accept the policy and submit">
+    The first time, tick that you agree to the WhatsApp Ads Policy. Then click **Submit for Review**.
+  </Step>
+</Steps>
+
+<Warning>
+  Kashfy checks your credits when you submit. If you don't have enough for all recipients, you'll see how many you have and how many the campaign needs.
+</Warning>
+
+## Campaign statuses
+
+| Status | Meaning |
+|--------|---------|
+| **Awaiting Meta Approval** | Meta is reviewing the template |
+| **Rejected by Meta** | Meta didn't approve it. Create a new campaign with adjusted content and a new name. |
+| **Ready to Send** | Approved and ready to go out |
+| **Sending** | Messages are going out now |
+| **Sent** | Finished |
+| **Cancelled** | Stopped and won't be sent |
+
+The dashboard updates on its own, so you don't need to refresh.
+
+<Tip>
+  Meta approves faster when the message is clear, useful and not overly promotional. Avoid all-caps, misleading claims and vague text.
+</Tip>
+
+## Campaign details
+
+Click a campaign to see:
+
+- **Target**: how many patients it's addressed to
+- **Sent**, **Failed** and **Skipped** counts
+- **Credits** used
+- A sending progress bar while it's going out
+- The full message content (header, body, footer, buttons) and a preview
+
+<CardGroup cols={2}>
+  <Card title="WhatsApp Ads" icon="megaphone" href="/whatsapp-ads/overview">
+    Consent rules and policy.
+  </Card>
+  <Card title="Message Packs" icon="package" href="/whatsapp-ads/packs">
+    Buy more credits.
+  </Card>
+</CardGroup>

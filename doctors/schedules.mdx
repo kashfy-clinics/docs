@@ -1,78 +1,57 @@
 ---
 title: 'Doctor Schedules'
-description: 'Configure working days and hours for each doctor so the AI only offers valid appointment slots'
+description: "Set each doctor's weekly hours per branch and choose time-slot or walk-in queue booking"
 ---
 
-Doctor schedules define when each doctor is available to see patients. The AI strictly respects these schedules — it will never offer a slot outside the hours you define.
+A doctor's schedule decides which times the AI, your widget, and your staff can book. Open the doctor from **Dashboard → Doctors** and go to **Availability**.
 
-## Setting working hours
+## Branches
 
-Open a doctor's profile from **Dashboard → Doctors** and go to the **Working Hours** section.
+Under **Doctor's branches**, tap each branch the doctor works at. Hours are set separately for each branch. If the doctor has several branches, pick one in the branch selector to edit its hours.
 
-For each day of the week, you can:
+## Booking mode
 
-- **Enable or disable** the day (toggle on/off)
-- **Set a start time** for the first appointment of the day
-- **Set an end time** after which no new appointments are scheduled
+Each branch has its own booking mode:
 
-The appointment duration you set on the doctor's profile determines how slots are carved up within these hours.
+| Mode | How patients book |
+|------|-------------------|
+| **By time** | Patients pick a time slot. Slots are cut from the doctor's hours using the **session** length (10, 15, 20, 30, 45, or 60 minutes). |
+| **Walk-in queue** | Patients get a queue number for the day instead of a time. Set **patients/day** to cap how many can book each day. |
 
-**Example:**
+## Weekly hours
+
+Days run **Saturday to Friday**. For each day:
+
+1. Tick the day to open it.
+2. Set **from** and **to** times.
+3. In **By time** mode set the session length; in **Walk-in queue** mode set patients per day.
+
+Each day has one block of hours per branch. A doctor who works mornings at one branch and evenings at another sets each block on its branch.
+
+**Example (By time):**
 
 ```
-Doctor: Dr. Nada
-Appointment duration: 20 minutes
-Working hours: Saturday 9:00 AM – 1:00 PM
-
-Available slots: 9:00, 9:20, 9:40, 10:00, 10:20 ... 12:40 AM
+Saturday 09:00 to 13:00, 20-minute sessions
+Slots: 09:00, 09:20, 09:40 ... 12:40
 ```
 
-<Info>
-  The end time is when the last appointment starts, not when it ends. If a doctor works until 2:00 PM with 20-minute slots, the last slot is 1:40 PM (ending at 2:00 PM).
-</Info>
+<Warning>
+  A doctor can't be in two branches at once. If hours overlap with the doctor's hours at another branch, Kashfy shows the conflict and won't save until you fix it.
+</Warning>
 
-## Days of the week
+## Fully booked days
 
-Kashfy follows the Egyptian work week. All 7 days are configurable. A typical Egyptian clinic schedule might be:
+When every slot (or queue place) on a day is taken, the AI offers the next day with space. It never double-books a slot.
 
-| Day | Status |
-|-----|--------|
-| Saturday | Open |
-| Sunday | Open |
-| Monday | Open |
-| Tuesday | Open |
-| Wednesday | Open |
-| Thursday | Open |
-| Friday | Closed |
+## Checking the day's bookings
 
-You can configure any combination of days per doctor — different doctors can have different working days.
-
-## Multiple time blocks per day
-
-If a doctor has a split schedule (e.g., morning session and evening session), you can add multiple time blocks for the same day:
-
-- Morning: 9:00 AM – 1:00 PM
-- Evening: 5:00 PM – 9:00 PM
-
-The AI will offer slots from both blocks when patients ask about availability.
-
-## Checking booked vs. available slots
-
-From **Dashboard → Appointments**, filter by doctor to see their full schedule for any given day — which slots are booked, which are open, and which are complete.
-
-<Tip>
-  Doctors can also see their own schedule in the Doctor Portal. When logged in with a doctor account, they see a daily view of their upcoming appointments.
-</Tip>
-
-## What happens when a day is fully booked
-
-When all slots for a specific doctor on a specific day are taken, the AI will not offer that day and will instead suggest the next available date. It never overbooks.
+Use **Dashboard → Appointments** with the date picker and search for the doctor's name. Doctors see their own day in the [Doctor Portal](/doctors/doctor-portal).
 
 <CardGroup cols={2}>
-  <Card title="Availability Overrides" icon="calendar-off" href="/doctors/availability">
-    Block specific dates for holidays or time off without changing the regular schedule.
+  <Card title="Time Off" icon="calendar-xmark" href="/doctors/availability">
+    Days off and one-off hours.
   </Card>
-  <Card title="Doctor Overview" icon="stethoscope" href="/doctors/overview">
-    Go back to the doctor setup overview.
+  <Card title="Doctors" icon="stethoscope" href="/doctors/overview">
+    Profiles, prices, and invites.
   </Card>
 </CardGroup>

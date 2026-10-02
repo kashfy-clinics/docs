@@ -1,82 +1,66 @@
 ---
 title: 'Appointment Statuses'
-description: 'A reference for every appointment status in Kashfy and when to use each one'
+description: 'Every appointment stage in Kashfy, which moves are allowed, and how stages affect billing'
 ---
 
-Every appointment in Kashfy has a status that reflects where it is in the visit lifecycle. Staff and doctors can update statuses manually from the dashboard.
+Every appointment has one stage. Staff move it from the board or the visit sheet, and the AI cancels bookings when a patient asks on WhatsApp.
 
-## Status reference
+## Stages
 
 <AccordionGroup>
   <Accordion icon="clock" title="Reserved">
-    The default status when an appointment is first created — either by the AI or manually. The patient has a confirmed slot but has not yet arrived.
-
-    **When it's set:** Automatically when the AI books an appointment or when staff creates one manually.
-
-    **Next step:** Update to **Arrived** when the patient shows up at the clinic.
+    Booked and upcoming. Every new booking starts here, whoever made it.
   </Accordion>
-
   <Accordion icon="user-check" title="Arrived">
-    The patient is at the clinic and waiting to be seen.
-
-    **When to set it:** When the receptionist confirms the patient has physically arrived.
-
-    **Next step:** Update to **Completed** after the doctor's session ends.
+    The patient is at the clinic, waiting to be seen.
   </Accordion>
-
+  <Accordion icon="stethoscope" title="In progress">
+    The patient is with the doctor.
+  </Accordion>
   <Accordion icon="circle-check" title="Completed">
-    The appointment has been fully completed. The patient was seen by the doctor.
-
-    **When to set it:** After the consultation or visit ends.
-
-    **Effect on billing:** Completed appointments count toward your monthly booking quota.
+    The visit is done. Reception is asked to record the payment.
   </Accordion>
-
-  <Accordion icon="x-circle" title="Cancelled">
-    The appointment was cancelled — either by the patient or by your staff.
-
-    **When to set it:** When a patient calls to cancel or when your clinic needs to cancel a slot.
-
-    **Effect on billing:** Cancelled appointments do **not** count toward your monthly quota. This is intentional so that cancellations don't penalize your account.
-
-    <Tip>
-      If the AI cancels an appointment during a WhatsApp conversation (because the patient requests it), the status is automatically set to Cancelled.
-    </Tip>
+  <Accordion icon="user-xmark" title="No-show">
+    The patient didn't come and didn't cancel.
   </Accordion>
-
-  <Accordion icon="user-x" title="No Show">
-    The patient did not arrive for their scheduled appointment and did not cancel in advance.
-
-    **When to set it:** At the end of the appointment window when the patient has not appeared and there was no cancellation.
-
-    **Effect on billing:** No-shows do count toward your quota, as the slot was held and unavailable to other patients.
+  <Accordion icon="circle-xmark" title="Cancelled">
+    Cancelled by the patient, your staff, or the AI. Hidden from the board unless you tap **Cancelled**.
   </Accordion>
 </AccordionGroup>
 
-## Status flow
+## Allowed moves
 
-The typical lifecycle of an appointment:
+| From | Can move to |
+|------|-------------|
+| **Reserved** | Arrived, In progress, Completed, No-show, Cancelled |
+| **Arrived** | Reserved, In progress, Completed, No-show, Cancelled |
+| **In progress** | Arrived, Completed, No-show, Cancelled |
+| **Completed** | In progress only (to fix a mistake) |
+| **No-show** | Reserved, Arrived |
+| **Cancelled** | Reserved |
 
-```
-Reserved → Arrived → Completed
-```
+<Warning>
+  - A **paid** visit can't be cancelled, marked no-show, or moved out of Completed. Void the payment first.
+  - Bringing back a cancelled or no-show booking only works if its time slot is still free. If someone else took it, book a new time.
+</Warning>
 
-If things go differently:
+## Stages and billing
 
-```
-Reserved → Cancelled      (patient or clinic cancels)
-Reserved → No Show        (patient doesn't appear)
-```
+A booking counts toward your plan the first time it reaches **Arrived**, **In progress**, or **Completed**. Bookings that stay Reserved, or end Cancelled or No-show without arriving, are never counted. See [What counts as a booking](/billing/plans#what-counts-as-a-booking).
 
-## Who can update statuses
+## Who can change stages
 
-| Role | Can update |
+| Role | Can change |
 |------|-----------|
-| Owner | All appointments |
-| Admin | All appointments |
-| Employee | All appointments at their assigned branch |
+| Owner, Admin | All appointments |
+| Employee | All appointments, or only their branches if restricted |
 | Doctor | Their own appointments only |
 
-<Info>
-  The AI can also update statuses during conversations — for example, it sets an appointment to Cancelled if a patient asks to cancel via WhatsApp.
-</Info>
+<CardGroup cols={2}>
+  <Card title="Managing Appointments" icon="calendar-days" href="/appointments/managing-appointments">
+    The visit sheet in detail.
+  </Card>
+  <Card title="Roles & Permissions" icon="shield" href="/team/roles">
+    What each role can do.
+  </Card>
+</CardGroup>

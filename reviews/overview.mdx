@@ -1,36 +1,62 @@
 ---
 title: 'Reviews'
-description: 'See patient feedback on your doctors and reply where it matters'
+description: 'How Kashfy collects patient ratings after each visit, and where you see them'
 ---
 
-The Reviews section is where patient ratings and comments land - one place to read what people are saying about your clinic and respond.
+After a visit, Kashfy asks the patient on WhatsApp to rate it from 1 to 5. Their answer shows up in **Reviews** and on your public pages.
 
-Navigate to **Dashboard → Reviews**.
+## How a review is collected
 
-## What a review looks like
+<Steps>
+  <Step title="Mark the appointment Completed">
+    Reviews are only requested for appointments with the **Completed** status.
+  </Step>
+  <Step title="About 2 hours later, the patient gets a message">
+    It wishes them well after their visit with the doctor and asks them to rate it from 1 (needs improvement) to 5 (excellent).
+  </Step>
+  <Step title="The patient replies with a number">
+    The AI saves the score. If the patient adds a comment, the AI saves that too.
+  </Step>
+</Steps>
 
-Each review card shows:
+Each appointment gets one request at most. No request is sent if the patient has no valid phone number.
 
-- **Star rating** - 1 to 5 stars
-- **Doctor** the review was left for
-- **Patient name and phone** - so you can follow up if needed
-- **Comment** - the patient's written feedback
-- **Date** the review was submitted
+<Info>
+  If the patient messaged the Kashfy number in the last 23 hours, the request is a normal WhatsApp message. Otherwise WhatsApp requires an approved template. That template is waiting for Meta's approval, so until it's available, review requests only go to patients who messaged recently.
+</Info>
 
-Click the patient's name to open their record for a full history.
+## The Reviews page
+
+Open **Reviews** in the sidebar (owners, admins and staff; doctors don't see it). The header shows the total number of reviews and the average score. Each review shows:
+
+- Star rating (1 to 5)
+- The doctor the visit was with
+- The date
+- The patient's comment, if any
+- The patient's name, with **Open profile** to see their full record
+
+The page lists the most recent 200 reviews.
 
 ## Hiding a review
 
-If a review is inappropriate, off-topic, or the patient asked you to remove it, toggle it hidden. Hidden reviews stay visible to you (with reduced opacity) but no longer count toward the doctor's public rating.
+Click **Hide** on a review that is inappropriate or off-topic. Hidden reviews stay on this page (faded) and can be shown again with **Show**, but they no longer appear on your public pages.
 
 <Info>
-  Kashfy doesn't let you edit or delete reviews - only hide them. This keeps the record honest: nothing is ever quietly rewritten.
+  Reviews can't be edited or deleted, only hidden. Nothing is quietly rewritten.
 </Info>
 
-## Where reviews come from
+## Where patients see reviews
 
-Reviews come in through the same WhatsApp thread the AI agent uses. After an appointment, patients receive a follow-up asking for feedback. Their rating and comment flow straight into this page.
+- **Your clinic's public page** shows your average rating and recent reviews
+- **Each doctor's public page** (if enabled) shows that doctor's rating and reviews
 
-<Tip>
-  Ratings drive doctor visibility in your website widget - highly-rated doctors are recommended first. Encourage happy patients to leave feedback.
-</Tip>
+Only scored, non-hidden reviews appear publicly.
+
+<CardGroup cols={2}>
+  <Card title="Appointment Status" icon="list-checks" href="/appointments/appointment-status">
+    Marking a visit Completed triggers the review request.
+  </Card>
+  <Card title="AI Agent" icon="robot" href="/ai-agent/overview">
+    How the AI handles patient replies.
+  </Card>
+</CardGroup>

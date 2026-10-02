@@ -2,7 +2,7 @@
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
   "name": "Kashfy Docs",
-  "description": "Documentation for Kashfy — the AI-powered clinic receptionist for Egyptian clinics",
+  "description": "Documentation for Kashfy - the AI-powered clinic receptionist for Egyptian clinics",
   "favicon": "favicon.ico",
   "colors": {
     "primary": "#0D6B5E",
@@ -30,6 +30,7 @@
             "group": "Get Started",
             "pages": [
               "quickstart",
+              "getting-started/sign-in",
               "getting-started/introduction",
               "getting-started/clinic-setup"
             ]
@@ -39,7 +40,9 @@
             "pages": [
               "appointments/overview",
               "appointments/managing-appointments",
-              "appointments/appointment-status"
+              "appointments/appointment-status",
+              "appointments/reminders",
+              "appointments/prescriptions"
             ]
           },
           {
@@ -49,6 +52,14 @@
               "ai-agent/whatsapp-setup",
               "ai-agent/knowledge-base",
               "ai-agent/custom-instructions"
+            ]
+          },
+          {
+            "group": "WhatsApp Ads",
+            "pages": [
+              "whatsapp-ads/overview",
+              "whatsapp-ads/campaigns",
+              "whatsapp-ads/packs"
             ]
           },
           {
@@ -71,6 +82,7 @@
             "group": "Patients",
             "pages": [
               "patients/overview",
+              "patients/patient-profile",
               "patients/conversations",
               "patients/records-portal"
             ]
@@ -86,9 +98,12 @@
             "pages": [
               "lab/overview",
               "lab/intake",
+              "lab/qr-intake",
               "lab/catalogue",
               "lab/results",
-              "lab/qr-intake"
+              "lab/referrals",
+              "lab/patients",
+              "lab/finance"
             ]
           },
           {
@@ -135,7 +150,8 @@
             "pages": [
               "settings/overview",
               "settings/personal",
-              "settings/clinic",
+              "settings/organization",
+              "settings/codes-qr",
               "settings/modules",
               "settings/insurance",
               "settings/widget",
@@ -201,5 +217,11 @@
   },
   "seo": {
     "indexing": "all"
-  }
+  },
+  "redirects": [
+    {
+      "source": "/settings/clinic",
+      "destination": "/settings/organization"
+    }
+  ]
 }

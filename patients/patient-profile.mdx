@@ -1,0 +1,69 @@
+---
+title: 'Patient Profile'
+description: "One page with everything about a patient: medical alerts, visits, prescriptions, lab and radiology results, files, family, payments, and an AI briefing"
+---
+
+Open a profile from **Dashboard → Patients** (tap a patient, then **Profile**), or tap **Patient record** on any visit sheet. Doctors open it from **My Patients** in the [Doctor Portal](/doctors/doctor-portal).
+
+## Header
+
+The patient's name, phone, and badges such as **Allergies** or **Family member**, with quick actions:
+
+| Action | What it does |
+|--------|-------------|
+| **Call** | Dials the patient |
+| **Message** | Opens the patient's chat |
+| **Book** | Books a new appointment (not available to doctors) |
+| **Edit** | Edits the patient's details |
+
+Below it, three numbers at a glance: **Next visit**, **Last visit**, and **Attendance** (visits attended and no-shows). If the patient is on the waiting list, a notice says so.
+
+## Medical alerts
+
+**Allergies**, **chronic conditions**, and **current medications**. Doctors, owners, and admins tap **Edit** to update them (type and press Enter, or pick a suggestion like Penicillin or Diabetes). Anyone with allergies on file gets the **Allergies** badge in the header.
+
+## Details
+
+Date of birth and age, insurance company and ID, who referred them, the assigned doctor, whether they accept WhatsApp messages, and when they became a patient. Tap **Edit** to change the name, gender, date of birth, insurance, or referral.
+
+## Family
+
+Children or relatives seen on the same phone number. Tap **Add member** and enter a name, gender, and date of birth. Each member gets their own profile and visits; the account holder is marked **Account holder**.
+
+## Tabs
+
+<AccordionGroup>
+  <Accordion icon="house" title="Overview">
+    - **Quick briefing** - tap **Summarize** for a few AI-written lines covering allergies, conditions, recurring complaints, the latest prescription, pending tests, and attendance. Tap **Refresh** to update it. It's AI-generated, so double-check before relying on it.
+    - **Visits** - every booking with date, doctor, and stage. Tap one to see the complaint, diagnosis, booking notes, chart notes, prescription, lab and scan orders, payment, and the patient's rating.
+    - **Conversation** - the last message and whether the AI is replying or paused, with **Open chat**.
+  </Accordion>
+  <Accordion icon="clock-rotate-left" title="Timeline">
+    Visits, notes, prescriptions, orders, lab and radiology visits, payments, ratings, and files in one list, grouped by month.
+  </Accordion>
+  <Accordion icon="notes-medical" title="Medical">
+    - **Prescriptions** - with **Open** and **Print** for each
+    - **Lab & radiology** - tests and scans ordered during visits, and visits to your lab or radiology centre with a **Result** link once ready
+    - **Files** - documents and images saved to the patient's file
+  </Accordion>
+  <Accordion icon="receipt" title="Billing">
+    **Total paid**, the number of completed visits with no payment, and every payment with discounts, insurance coverage, and voids. Not shown to doctors.
+  </Accordion>
+</AccordionGroup>
+
+## What doctors see
+
+Doctors see the profile of any patient they've had a booking with, but only their own visits. They can update medical alerts and write clinical notes, and they don't see the Billing tab or the Book button.
+
+## Patient's own access
+
+Patients can view their own records, with a PIN, through the [Records Portal](/patients/records-portal).
+
+<CardGroup cols={2}>
+  <Card title="Managing Appointments" icon="calendar-days" href="/appointments/managing-appointments">
+    Where diagnoses, prescriptions, and payments are recorded.
+  </Card>
+  <Card title="Records Portal" icon="file-medical" href="/patients/records-portal">
+    The patient-facing view.
+  </Card>
+</CardGroup>

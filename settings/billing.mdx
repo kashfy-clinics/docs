@@ -1,46 +1,39 @@
 ---
 title: 'Billing'
-description: 'View your invoice history and track past payments'
+description: 'Your Kashfy invoices and how to pay each one'
 ---
 
-The Billing page shows a list of all invoices generated for your organization. Navigate to **Dashboard → Settings → Billing**.
+Navigate to **Dashboard → Settings → Billing**. Payment is by transfer. Pay each invoice by its due date to keep the AI assistant running.
 
-## What you'll see
+## Each invoice shows
 
-Each invoice shows:
+- **Period** covered and a **reference** such as `KSH-1A2B3C4D`
+- **Amount** in EGP and **status**
+- **Plan fee**
+- **Bookings** counted, with how many your plan includes
+- **Extra bookings** times the overage price, if any
+- **Due date** (unpaid invoices) or **Paid on** date
 
-- **Billing period** — the month the invoice covers (start and end date)
-- **Bookings** — total confirmed bookings that month, multiplied by the per-booking rate
-- **Amount** — total charged in EGP
-- **Status** — current payment status
+Unpaid invoices include the [payment instructions](/billing/payments) right under them.
 
 ## Invoice statuses
 
 | Status | Meaning |
 |--------|---------|
-| **Sent** | Invoice has been issued and is awaiting payment |
-| **Paid** | Invoice has been paid |
-| **Overdue** | Invoice is past its due date and unpaid |
+| **Awaiting payment** | Issued and not yet paid |
+| **Overdue** | Past its due date and still unpaid |
+| **Paid** | The Kashfy team confirmed your payment |
+| **Void** | Cancelled by the Kashfy team |
 
-<Tip>
-  Enable the **Invoice overdue** notification under **Settings → Notifications** to get an alert when a payment is past due.
-</Tip>
-
-## How invoices are generated
-
-Invoices are generated automatically at the end of each billing period. The amount is calculated as:
-
-**Plan fee + (extra bookings × overage rate per booking)**
-
-Extra bookings are any confirmed bookings beyond your plan's included monthly quota. The overage rate depends on your plan.
-
-For a live view of your current month's usage and projected cost before the invoice is generated, see [Subscription settings](/settings/subscription).
+<Warning>
+  If an invoice is still unpaid the day after its due date, your account is suspended: the AI stops replying and new bookings stop. See [Invoices](/billing/invoices#overdue-invoices).
+</Warning>
 
 <CardGroup cols={2}>
-  <Card title="Subscription" icon="star" href="/settings/subscription">
-    See your current plan and live usage.
+  <Card title="Payments" icon="money-bill" href="/billing/payments">
+    How to pay an invoice.
   </Card>
-  <Card title="Plans" icon="credit-card" href="/billing/plans">
-    Compare available plans and pricing.
+  <Card title="Subscription" icon="star" href="/settings/subscription">
+    Live usage and projected cost.
   </Card>
 </CardGroup>

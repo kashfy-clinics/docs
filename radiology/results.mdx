@@ -1,32 +1,31 @@
 ---
 title: 'Reports'
-description: 'Upload radiology reports and send them to patients on WhatsApp automatically'
+description: 'How radiology reports are uploaded, delivered to patients on WhatsApp, and resent'
 ---
 
-The Reports page lists every intake whose status is **Ready** - meaning the radiologist has finished reading and the report is ready to go out.
+Reports are uploaded from the [intake queue](/radiology/intake) when you complete a card. The **Reports** page in the Radiology sidebar lists completed cases so you can check delivery and resend. Delivery works exactly like lab results; see [Results](/lab/results) for the full details.
 
-Navigate to **Dashboard → Radiology → Reports**.
+## Uploading a report
 
-## Sending a report
+Open a card that's **In progress**, click **Choose result file** (PDF, JPG, PNG, WEBP, or HEIC, up to 20 MB), check the details, and click **Upload & send**. The card moves to **Complete**.
 
-Each ready intake shows the patient's name, phone, scans, and arrival time.
+## How the patient receives it
 
-<Steps>
-  <Step title="Attach the report file">
-    Upload the PDF (or image) report to the intake card.
-  </Step>
-  <Step title="Kashfy sends it on WhatsApp">
-    The file goes out immediately with a short cover message. No manual send step.
-  </Step>
-  <Step title="Status moves to Delivered">
-    The intake leaves the Reports queue and is marked delivered in the patient's history.
-  </Step>
-</Steps>
+| Situation | What the patient gets |
+|-----------|-----------------------|
+| The patient messaged Kashfy on WhatsApp in the **last 23 hours** | The **report file itself** on WhatsApp |
+| Otherwise | A WhatsApp message with a button to a **secure results page** with Open and Download buttons, valid for **30 days** |
+
+Report files are private and only reachable from inside Kashfy or through the patient's secure link. If a [referring doctor](/lab/referrals) was added with consent, they get their own link too.
+
+## The Reports page
+
+Each completed case shows the patient, mobile, referring doctor, scans, completion time, and **Sent to patient** or **Not delivered**. Use **View report** to open the file and **Resend** to send it again (up to 3 times per card per hour).
 
 <Info>
-  If the patient didn't provide a phone at intake, the report is stored but not sent. Add a phone later or hand the report over in person.
+  If the patient had no mobile number, the case is completed but nothing is sent. Open the card on the intake queue, add the number with **Edit**, then resend.
 </Info>
 
-## Viewing past reports
+## Fixing a wrong report
 
-Delivered reports stay attached to the patient's record. Open a patient from **Patients** to see every scan they've ever had and download prior reports.
+Open the completed card on the intake queue, click **Back**, and upload the corrected file. It replaces the old one and is sent again.

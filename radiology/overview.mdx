@@ -1,52 +1,64 @@
 ---
 title: 'Radiology'
-description: 'Run your imaging center - scan intake, catalogue, and report delivery - from one dashboard'
+description: 'Run your imaging center from one workspace - intake queue, reports on WhatsApp, scan catalogue, patients, and finance'
 ---
 
-The Radiology module is a full workflow for clinics and centers that run imaging: X-ray, ultrasound, CT, MRI, and more. It mirrors the [Lab module](/lab/overview) but tracks scans and reports instead of tests and results.
+The Radiology workspace works like the [Lab workspace](/lab/overview), for X-ray, ultrasound, CT, MRI, and other scans. Patients check in at the counter, you move them through a three-column board, and when you upload the report Kashfy sends it to the patient on WhatsApp.
 
 <Info>
-  The Radiology section only appears if your organization is set up as a radiology center (or has radiology enabled alongside a clinic). Contact support if you don't see it and expect to.
+  The Radiology workspace only appears if your organization has the **Radiology** type. The owner can add it from **Settings → Organization → Organisation Types → Enable**. Adding a type does not change your subscription or billing. Removing a type needs Kashfy support.
 </Info>
 
 ## The radiology dashboard
 
-Navigate to **Dashboard → Radiology** to see the day at a glance.
+Go to **Radiology dashboard** in the sidebar:
 
-Three summary cards up top:
+| Card | What it counts |
+|------|----------------|
+| **Today's total** | Radiology cards created today |
+| **Waiting** | Cards still on the board (Arrived or In progress) |
+| **Completed today** | Cards whose report was uploaded today |
 
-- **Today's total** - scans registered today
-- **Pending** - scans waiting to be performed
-- **Reports ready** - scans whose reports are uploaded and ready to hand over
+## What's in the Radiology sidebar
 
-Quick-access tiles below:
-
-<CardGroup cols={3}>
+<CardGroup cols={2}>
   <Card title="Intake queue" icon="users" href="/radiology/intake">
-    Today's walk-ins, ordered by arrival time.
-  </Card>
-  <Card title="Scans catalogue" icon="scan" href="/radiology/catalogue">
-    Manage your scan menu and prices.
+    The live board: Arrived, In progress, Complete.
   </Card>
   <Card title="Reports" icon="upload" href="/radiology/results">
-    Upload and send reports to patients.
+    Completed cases, delivery status, and resend.
+  </Card>
+  <Card title="Scans catalogue" icon="layers" href="/radiology/catalogue">
+    Your scan menu and prices.
+  </Card>
+  <Card title="Patients" icon="user" href="/lab/patients">
+    Everyone who has visited, with visits and spend.
+  </Card>
+  <Card title="Finance" icon="chart-line" href="/lab/finance">
+    Revenue from completed cases. Owners and admins only.
+  </Card>
+  <Card title="QR check-in" icon="qr-code" href="/lab/qr-intake">
+    Patients scan at the counter and appear on the board.
   </Card>
 </CardGroup>
 
-## Typical day
+## A typical day
 
 <Steps>
-  <Step title="Patient scans the branch QR (or you register them manually)">
-    QR intake works the same way as the lab - see [QR intake](/lab/qr-intake). Manual registration is available from the [intake queue](/radiology/intake).
+  <Step title="The patient checks in">
+    They scan the branch's radiology [check-in QR](/lab/qr-intake), or reception adds them with **New walk-in**. AI bookings from WhatsApp are already on the board with a **Booked** badge.
   </Step>
-  <Step title="Move the card through the workflow">
-    Advance the intake through pending → collected → processing → ready → delivered as the scan progresses.
+  <Step title="Confirm the scans">
+    Open the card, check the prescription photo the patient sent, pick the scans from your catalogue, and confirm the total.
+  </Step>
+  <Step title="Start processing">
+    Move the card to **In progress** when the scan starts.
   </Step>
   <Step title="Upload the report">
-    Attach the report file. Kashfy sends it to the patient on WhatsApp automatically.
+    Choose the report file and confirm. The card moves to **Complete** and the report goes to the patient on WhatsApp, and to the [referring doctor](/lab/referrals) if the patient agreed.
   </Step>
 </Steps>
 
 <Tip>
-  Radiology and Lab intakes share the same branch-level counter view when both are enabled - one queue, two card types, one screen for the receptionist to work.
+  If your organization runs both a lab and radiology, the intake queue shows both kinds of cards on one board, each with its own badge.
 </Tip>

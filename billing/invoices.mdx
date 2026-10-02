@@ -1,69 +1,61 @@
 ---
 title: 'Invoices'
-description: 'View, download, and manage your Kashfy billing invoices'
+description: 'When Kashfy issues invoices, what they include, and what happens if one is overdue'
 ---
 
-Kashfy generates an invoice at the end of each billing cycle. The invoice includes your plan subscription fee and any overage charges if your clinic exceeded its monthly booking limit.
+Invoices are listed under **Dashboard → Settings → Billing**. Your latest one is also on the [Subscription](/settings/subscription) page.
 
-## Viewing invoices
+## When invoices are issued
 
-Navigate to **Dashboard → Finance** (or **Dashboard → Settings → Billing**) to see your invoice history.
+| Plan | Invoice |
+|------|---------|
+| **Monthly** | On the 1st of each month, for the previous calendar month. If your plan started mid-month, the first invoice charges only the days it was active. |
+| **Yearly** | Once a year, after your plan year ends. The plan year starts on your activation date. |
 
-Each invoice shows:
+Invoices are only issued for active plans. Nothing is invoiced during the free trial.
 
-- **Billing period** — the month the invoice covers
-- **Plan fee** — your base subscription cost
-- **Overage charges** — additional bookings beyond your plan's included quota
-- **Total amount** in EGP
-- **Status** — Paid, Pending, or Overdue
+## What's on an invoice
 
-## Invoice status
+- **Plan fee**
+- **Bookings** counted in the period, and how many your plan includes
+- **Extra bookings** times your plan's extra-booking price
+- **Total** in EGP
+- **Due date** and a **reference** like `KSH-1A2B3C4D`
+
+See [what counts as a booking](/billing/plans#what-counts-as-a-booking).
+
+## Invoice statuses
 
 | Status | Meaning |
 |--------|---------|
-| **Pending** | Invoice generated, payment not yet due |
-| **Paid** | Payment received successfully |
-| **Overdue** | Payment was due but not received |
+| **Awaiting payment** | Issued, not yet paid |
+| **Overdue** | Past the due date and still unpaid |
+| **Paid** | Payment confirmed by the Kashfy team |
+| **Void** | Cancelled by the Kashfy team |
 
 ## Overdue invoices
 
-If an invoice becomes overdue, Kashfy will:
+You can still pay on the due date itself. If the invoice is unpaid the day after:
 
-1. Send you a notification via the dashboard and email
-2. Display an overdue banner on your dashboard
-3. Potentially suspend your clinic's AI agent until the balance is settled
+1. The invoice becomes **Overdue**.
+2. Your account is **suspended**: the AI stops replying to patients and new bookings can't be made, from WhatsApp, the widget, your public page, or the dashboard.
+3. A red banner on the dashboard links to the invoice.
+
+Your data stays available while suspended. Service comes back once the Kashfy team confirms your payment and marks the invoice paid.
 
 <Warning>
-  If your clinic's AI is suspended due to an overdue invoice, patients will no longer receive responses via WhatsApp or the widget. Settling the overdue invoice restores service immediately.
+  Before the due date, a blue banner reminds you of the amount and due date. Pay early to avoid any pause.
 </Warning>
-
-## Downloading invoices
-
-To download an invoice as a PDF:
-
-1. Go to **Dashboard → Finance**
-2. Find the invoice in the list
-3. Click **Download** next to the invoice
-
-## Invoice breakdown
-
-Each invoice line item shows:
-
-- Base plan fee for the month
-- Number of included bookings in your plan
-- Number of bookings used (if over the limit)
-- Overage fee per extra booking × number of extra bookings
-- Total due
 
 ## Questions about an invoice
 
-If you believe an invoice is incorrect, contact [support@kashfy.site](mailto:support@kashfy.site) with your invoice number and the issue. The Kashfy team reviews billing disputes manually.
+Contact [support@kashfy.site](mailto:support@kashfy.site) with the invoice reference.
 
 <CardGroup cols={2}>
-  <Card title="Plans" icon="layers" href="/billing/plans">
-    Review your plan's included bookings and limits.
+  <Card title="Payments" icon="money-bill" href="/billing/payments">
+    How to pay an invoice.
   </Card>
-  <Card title="Payments" icon="credit-card" href="/billing/payments">
-    Pay an overdue invoice or update your payment method.
+  <Card title="Plans & Pricing" icon="layer-group" href="/billing/plans">
+    Included bookings and prices.
   </Card>
 </CardGroup>

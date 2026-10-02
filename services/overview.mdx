@@ -1,55 +1,46 @@
 ---
 title: 'Services'
-description: 'Define and price the services your clinic offers beyond the consultation'
+description: 'List the procedures your clinic offers and their prices so the AI can answer patients'
 ---
 
-The Services module is your clinic's menu of add-on services — things you charge for on top of (or instead of) a plain consultation. Setting these up lets the AI agent quote accurate prices and lets staff bill quickly.
+Services are the procedures you offer besides the consultation, such as ECG, dressings, or injections. The AI uses this list to tell patients whether you do something and what it costs.
 
-Navigate to **Dashboard → Services**.
+Navigate to **Dashboard → Services**. Owners and admins can add and edit services; other roles can view them.
 
 ## Adding a service
 
-Click **Add service** (the **+** button) to open the add form.
+Tap **Add service**.
 
 <Steps>
-  <Step title="Pick from the catalogue or create new">
-    Click the **Select a service** dropdown. Type to search the shared catalogue by English or Arabic name. If your service is in the list, select it — the bilingual name is already filled in.
+  <Step title="Pick a service">
+    Open **Select a service** and search the shared catalogue in English or Arabic. Services you already added aren't shown.
 
-    If your service isn't in the catalogue, type its name and click **Add "[name]" as new service** at the bottom of the dropdown. You'll then enter both an **Arabic name** and an **English name**.
+    Not in the list? Type the name and tap **Add "[name]" as new service**, then enter the **English** and **Arabic** names. New services are only visible to your clinic.
   </Step>
   <Step title="Set the price">
-    Choose one of two pricing options:
-
-    - **Set a price** — enter the amount in EGP. This is what the AI quotes patients when they ask.
-    - **Included in visit** — tick the checkbox. No extra charge; the service is covered by the consultation fee. The price field disables automatically.
+    Enter the price in EGP, or tick **Included in visit** if the consultation fee already covers it.
   </Step>
-  <Step title="Save">
-    Click **Add**. The service appears in your list immediately.
+  <Step title="Tap Add">
+    The service appears in your list straight away.
   </Step>
 </Steps>
 
-## Editing prices
+## Editing a price
 
-Prices can be updated at any time directly from the services list:
-
-1. Click the price badge on any service.
-2. Type the new amount.
-3. Press **✓** to save or **✗** to cancel.
-
-To change a service from priced to "included in visit" (or vice versa), remove it and re-add it.
+Tap the price on any service. Change the amount, or tick or untick **Included in visit**, then save.
 
 ## Removing a service
 
-Click the **trash icon** on any service card. Confirm the prompt to remove it from your clinic's menu.
+Tap the remove icon on the service and confirm.
 
 ## What the AI does with services
 
-When a patient asks "بعمل ايكو؟" (do you do echocardiograms?) the AI checks this list to answer yes/no and quote the price. If a service isn't in the list, the AI says it doesn't offer that service — so add anything you actually do here, even if it's rare.
+When a patient asks "بتعملوا ايكو؟", the AI checks this list to answer and quote the price. If a service isn't listed, the AI says you don't offer it, so add everything you actually do, even rare procedures.
 
 <Tip>
-  Mark diagnostic add-ons like ECG or blood pressure as "included in visit" if your consultation fee covers them — it keeps the AI from double-charging patients when they ask about costs.
+  Mark add-ons your visit price already covers as **Included in visit** so the AI doesn't quote an extra charge.
 </Tip>
 
-## Services vs. Lab / Radiology
+## Services vs. lab and radiology
 
-Services are for clinical procedures done during a doctor visit — dressings, ECG, injections, minor procedures. For lab tests and radiology scans, use the dedicated [Lab catalogue](/lab/catalogue) and [Radiology catalogue](/radiology/catalogue) instead — they carry extra fields like turnaround time and modality.
+Services are procedures done during a doctor's visit. Lab tests and scans have their own catalogues with extra details. See the [Lab catalogue](/lab/catalogue) and [Radiology catalogue](/radiology/catalogue).

@@ -1,105 +1,93 @@
 ---
 title: 'Quick Start'
-description: 'Set up your clinic and go live with AI-powered appointment booking in under 10 minutes'
+description: 'Create your account, set up your clinic, and take your first AI booking'
 ---
 
-This guide walks you through everything you need to start taking bookings automatically — via WhatsApp and your website — using Kashfy's AI receptionist.
+This guide takes you from a new account to your first booking through Kashfy's AI receptionist.
 
 ## What you'll need
 
-- A WhatsApp number for your clinic (an existing number works fine)
-- Your clinic's basic details (name, address, working hours)
-- At least one doctor with a defined schedule
+- An email address (or a Google account)
+- An Egyptian mobile number you use on WhatsApp
+- Your clinic's name, logo, phone number, and address (with a Google Maps link)
+- Each doctor's specialty, visit price, and working hours
 
 ## 1. Create your account
 
-Go to [kashfy.site](https://kashfy.site) and sign up. You start on a **7-day free trial** with no credit card required.
+Go to [app.kashfy.site](https://app.kashfy.site) and choose **Sign up**. You can continue with Google, or enter your name, email, and a password (at least 8 characters). Kashfy emails you an 8-digit code to confirm the address.
 
-<Tip>
-  Sign up with your clinic's email address so your team can easily be added later.
-</Tip>
+See [Sign-up & Sign-in](/getting-started/sign-in) for every way to get in, including signing in with WhatsApp.
 
-## 2. Set up your clinic profile
+## 2. Complete onboarding
 
-After signup, complete your clinic profile:
+After sign-up, a short wizard sets up your organization:
 
 <Steps>
-  <Step title="Enter clinic details">
-    Add your clinic name in Arabic and English, your specialty, phone number, and address. The AI uses this information to answer patient questions.
+  <Step title="What do you run?">
+    Pick **Clinic / Doctors**, **Laboratory**, **Radiology centre**, or any combination (a hospital can enable all three). For a clinic, choose **Personal clinic** (one doctor) or **Group clinic** (several doctors).
   </Step>
-  <Step title="Set your working hours">
-    Define the days and hours your clinic is open. These become the outer bounds for all doctor schedules.
+  <Step title="How many doctors?">
+    Group clinics only. Kashfy uses the number to recommend a plan.
   </Step>
-  <Step title="Add your location">
-    Add your clinic's address and area. When patients ask for directions, the AI shares this information with them.
+  <Step title="Name">
+    The name patients will see in chats and on your public page. You can change it later.
+  </Step>
+  <Step title="Branches">
+    Add each branch with its area, street address (at least 5 characters), a Google Maps link, and what it offers (clinic, lab, radiology).
+  </Step>
+  <Step title="Pick a plan">
+    Choose the plan you intend to use and tap **Start trial**. Nothing is charged: your first 50 bookings are free, with no card and no time limit. See [Plans & Pricing](/billing/plans).
   </Step>
 </Steps>
 
-## 3. Add your doctors
+## 3. Verify your mobile number
 
-Navigate to **Dashboard → Doctors** and add your doctors:
+Go to **Settings → Personal**, add your mobile number, and tap **Verify on WhatsApp**. You send a short prefilled message from that number to Kashfy's WhatsApp, and the number is confirmed automatically. A verified number also lets you [sign in with WhatsApp](/getting-started/sign-in#sign-in-with-whatsapp).
 
-<Steps>
-  <Step title="Create a doctor profile">
-    Enter the doctor's name (Arabic and English), specialty, and consultation fee.
-  </Step>
-  <Step title="Set working hours">
-    Define which days the doctor works and their available time slots. The AI will only book appointments within these hours.
-  </Step>
-  <Step title="Set appointment duration">
-    Set how long each appointment lasts (e.g., 20 minutes). This controls the number of slots available per day.
-  </Step>
-</Steps>
+## 4. Finish your clinic profile
 
-## 4. Connect WhatsApp
+Open **Settings → Clinic** (called **Organization** if you run more than one type). The AI will not reply to patients until these are filled in:
 
-Navigate to **Dashboard → WhatsApp** to connect your clinic's WhatsApp number.
+- Arabic name
+- Public URL
+- Logo
+- Description
+- Phone number
+- At least one address
 
-<Info>
-  Kashfy supports connecting your existing WhatsApp number. Patients can message it directly, and the AI responds on your behalf.
-</Info>
+A yellow banner at the top of the dashboard lists anything still missing. See [Organization Settings](/settings/organization).
 
-See [WhatsApp Setup](/ai-agent/whatsapp-setup) for the full connection guide.
+## 5. Add your doctors
 
-## 5. Test your AI agent
+Go to **Dashboard → Doctors → Add doctor**. Set the specialty, bio, visit price, branches, and weekly hours. Kashfy gives you an invite link to send to the doctor so they can use the [Doctor Portal](/doctors/doctor-portal). See [Doctors](/doctors/overview).
 
-Go to **Dashboard → AI** and use the built-in test chat to simulate a patient conversation. Try messages like:
+## 6. Let patients reach you on WhatsApp
+
+All clinics share Kashfy's official WhatsApp number. Your clinic has its own short code, shown under **Settings → Clinic → Codes & QR**. Patients who send that code reach your AI receptionist directly. See [Codes & QR](/settings/codes-qr) and [WhatsApp Setup](/ai-agent/whatsapp-setup).
+
+## 7. Test the AI
+
+Go to **Dashboard → AI Agent** and use the test chat. Try messages like:
 
 - "عايز أحجز مع الدكتور"
 - "امتى المواعيد المتاحة؟"
 - "كام سعر الكشف؟"
 
-The AI should respond naturally in Egyptian Arabic and offer available time slots.
-
-## 6. (Optional) Install the website widget
-
-If you have a clinic website, add the booking widget so patients can book directly from it:
-
-```html
-<script
-  src="https://kashfy.site/widget/embed.js"
-  data-clinic-id="YOUR_CLINIC_ID"
-  async
-></script>
-```
-
-See [Widget Installation](/widget/installation) for the complete guide.
-
-## You're live!
-
-Your AI receptionist is now active. Every message sent to your WhatsApp number or website widget will be handled automatically — 24/7.
+<Tip>
+  Optional next steps: add the [website widget](/widget/overview), turn on [appointment reminders](/appointments/reminders), and [invite your team](/team/members).
+</Tip>
 
 <CardGroup cols={2}>
-  <Card title="Manage Appointments" icon="calendar" href="/appointments/overview">
-    View and manage all bookings from the dashboard.
+  <Card title="Appointments" icon="calendar" href="/appointments/overview">
+    Run the day from the board, calendar, and waiting list.
   </Card>
-  <Card title="Customize the AI" icon="robot" href="/ai-agent/custom-instructions">
-    Fine-tune the AI's tone, knowledge, and behavior.
+  <Card title="Patient Profile" icon="user" href="/patients/patient-profile">
+    Everything about a patient on one page.
   </Card>
-  <Card title="Add Team Members" icon="users" href="/team/members">
-    Invite your staff and assign roles.
+  <Card title="Team & Roles" icon="users" href="/team/members">
+    Invite reception staff and admins.
   </Card>
-  <Card title="View Plans" icon="credit-card" href="/billing/plans">
-    Review your trial limits and choose the right plan.
+  <Card title="Plans & Pricing" icon="credit-card" href="/billing/plans">
+    How the free trial and plans work.
   </Card>
 </CardGroup>

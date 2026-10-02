@@ -1,56 +1,55 @@
 ---
 title: 'Website Widget'
-description: 'Add an AI-powered booking chat to your clinic website with a single script tag'
+description: 'Put your AI receptionist on your own website with one line of code'
 ---
 
-The Kashfy widget is a floating chat button that sits in the corner of your clinic website. When patients click it, a booking conversation opens right on the page — powered by the same AI agent that handles your WhatsApp.
+The widget is a floating chat button for your clinic's website. Visitors click it and chat with the same AI that answers your WhatsApp: they can book, ask about fees and services, and get your address without leaving your site.
 
-## What the widget looks like
+<Info>
+  The widget is available on the **Team plan and above**. On Solo plans the widget page shows an upgrade prompt, and the widget won't answer on your site.
+</Info>
 
-The widget appears as a small floating button (bottom-right by default) with the Kashfy chat icon. When clicked, it opens a chat panel:
+## What visitors see
 
-- **Desktop:** Opens as a 360×560px floating panel
-- **Mobile:** Opens full screen for easy thumb navigation
+- A round chat button in the bottom corner: **left** for the Arabic widget, **right** for the English one
+- A chat panel (360 x 560 px on desktop). On phones it opens across the full width at the bottom of the screen.
+- The header **Kashfy Assistant** and a greeting, in the language you chose when installing
 
-The chat panel is fully responsive and supports both Arabic (RTL) and English (LTR) layouts, switching automatically based on the patient's language.
-
-## What patients can do in the widget
-
-Everything the WhatsApp AI agent can do:
+## What visitors can do
 
 - Book an appointment with any available doctor
-- Check available time slots
-- Ask about fees and services
-- Get the clinic's address
-- Cancel an existing booking (if they have a booking reference)
+- Check available times
+- Ask about fees, services and anything in your [Knowledge Base](/ai-agent/knowledge-base)
+- Get your clinic address
 
-## How patients are identified
+For privacy, the widget never sends medical records links or PINs, since it can't confirm who is typing. Those stay on WhatsApp.
 
-Patients using the widget are tracked by a **session key** (a browser cookie). This means:
+## How visitors are identified
 
-- The AI remembers the conversation context within the same browser session
-- If a patient returns on the same device and browser, the AI may remember previous interactions
-- No login or account is required for patients
+There is no login. Each visitor gets an anonymous session that lasts while their browser tab is open. Closing the tab starts a fresh conversation next time.
+
+Widget chats appear in [Conversations](/patients/conversations) with a **Widget** label so your team can read them.
 
 ## Widget vs. WhatsApp
 
-| Feature | WhatsApp | Widget |
-|---------|----------|--------|
-| Patient identification | Phone number | Browser session |
-| Conversation history | Full, persistent | Per session |
-| Availability | 24/7 | 24/7 |
-| Reminder messages | Yes (day before) | No |
-| Setup required | QR code scan | Script tag on website |
+| | WhatsApp | Widget |
+|---|----------|--------|
+| Patient identified by | Phone number | Anonymous browser session |
+| Conversation history | Kept across visits | Only while the tab is open |
+| Staff can reply from Conversations | Yes (within 24 hours) | No, read only |
+| Appointment reminders and review requests | Yes | No, there's no phone number |
+| Records link and PIN | Yes | No |
+| Setup | Share your [clinic code](/settings/codes-qr) | One script tag on your site |
 
 <Tip>
-  Offer both channels. Many patients prefer WhatsApp — it's on their phone. But the widget is great for capturing patients browsing your website who haven't yet saved your number.
+  Use both. WhatsApp is where most patients are, and the widget catches people browsing your website.
 </Tip>
 
 <CardGroup cols={2}>
   <Card title="Install the Widget" icon="code" href="/widget/installation">
-    Add the widget to your website in minutes.
+    Add it to your website in minutes.
   </Card>
-  <Card title="WhatsApp Setup" icon="message" href="/ai-agent/whatsapp-setup">
-    Connect WhatsApp for the primary booking channel.
+  <Card title="WhatsApp" icon="message" href="/ai-agent/whatsapp-setup">
+    How patients reach you on WhatsApp.
   </Card>
 </CardGroup>

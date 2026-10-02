@@ -1,0 +1,42 @@
+---
+title: 'Referring doctors'
+description: 'Send the result to the doctor who referred the patient, with the patient consent'
+---
+
+When a doctor sends a patient to your lab or radiology center, you can record that doctor on the patient's card. If the patient agrees, Kashfy sends the doctor the result on WhatsApp as soon as you complete the card. This works the same way for **Lab** and **Radiology**.
+
+## Adding the referring doctor
+
+You can add the doctor when registering the patient, or any time later.
+
+- **On a new walk-in** - fill in the **Referring doctor** box in the **New walk-in** form.
+- **On an existing card** - open the card and click **Edit** next to **Patient & referring doctor**.
+
+The box has three fields:
+
+| Field | Notes |
+|-------|-------|
+| **Doctor's name** | Shown on the card and on the Results page as "Dr. ..." |
+| **Doctor's mobile (WhatsApp)** | Egyptian mobile like `01xxxxxxxxx` |
+| **The patient agrees we send the result to this doctor on WhatsApp** | A switch. It only turns on after you enter the doctor's mobile. |
+
+<Warning>
+  Only turn the consent switch on after asking the patient. Without consent, the doctor's name is saved for your records but nothing is sent to them.
+</Warning>
+
+The card then shows the doctor with either **gets the result** or **not sent**.
+
+## What the doctor receives
+
+When you upload the result and the card moves to **Complete**, and the card has both the patient's consent and the doctor's mobile:
+
+1. The doctor gets a WhatsApp message (the `referral_result` template) with a button that opens the patient's result on a secure page. The link stays valid for 30 days.
+2. If the doctor's mobile matches a doctor who has a Kashfy account, they also get an in-app notification, **Referral result ready**, that opens the result.
+
+The card shows **Also sent to the referring doctor**, or **Sending to the referring doctor failed** if WhatsApp didn't deliver it.
+
+## Limits to know
+
+- **There is no "resend to doctor" button yet.** The **Resend** buttons only send to the patient.
+- The doctor is sent the result **at the moment the card is completed**. If you add the doctor or turn on consent after the card is already complete, they won't receive it automatically. To send it, open the card, click **Back** to move it to In progress, and upload the result again. Note that this also sends the result to the patient again.
+- If the doctor's number is removed, the consent switch turns off.

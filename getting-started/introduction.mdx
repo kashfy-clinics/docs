@@ -5,81 +5,69 @@ description: 'What Kashfy is, how it works, and who it is for'
 
 ## What is Kashfy?
 
-Kashfy is an AI-powered clinic receptionist that automates appointment booking through WhatsApp and your website — operating 24/7 without any manual effort from your staff.
+Kashfy is a clinic management system with an AI receptionist built in. Patients book on WhatsApp or your website in Egyptian Arabic, and your team runs the day from one dashboard: appointments, patient files, prescriptions, payments, and finance.
 
-Patients message your clinic's WhatsApp number in natural **Egyptian Arabic dialect**, and Kashfy's AI agent responds like a trained receptionist: answering questions, checking doctor availability, and confirming bookings in real time.
+Kashfy also supports **labs** and **radiology centres**, on their own or alongside a clinic.
 
-## How it works
+## How a booking works
 
 <Steps>
   <Step title="Patient sends a message">
-    A patient messages your clinic's WhatsApp number (or the widget on your website) in Arabic.
+    The patient messages Kashfy's WhatsApp number with your clinic code, or uses the chat widget on your website.
   </Step>
-  <Step title="AI understands the intent">
-    Kashfy's AI agent — powered by Google Gemini — understands what the patient wants: book an appointment, ask about a doctor, inquire about fees, or cancel a booking.
+  <Step title="The AI understands the request">
+    It answers questions about doctors, prices, and location, and offers open slots.
   </Step>
-  <Step title="AI checks availability">
-    The agent looks up the requested doctor's live schedule, finds available slots, and proposes options to the patient.
+  <Step title="Booking confirmed">
+    Once the patient confirms, the appointment appears on your board instantly.
   </Step>
-  <Step title="Booking confirmed automatically">
-    Once the patient confirms, the appointment is created instantly in your dashboard without any staff involvement.
-  </Step>
-  <Step title="Reminders sent automatically">
-    The day before the appointment, Kashfy automatically sends the patient a WhatsApp reminder.
+  <Step title="Visit day">
+    Reception marks the patient arrived, the doctor writes notes and a prescription, and staff record the payment.
   </Step>
 </Steps>
 
 ## Who is Kashfy for?
 
-Kashfy is built for Egyptian clinics and healthcare practices that want to:
+Egyptian clinics, labs, and radiology centres that want to:
 
-- **Stop missing patient inquiries** that arrive outside working hours
-- **Reduce receptionist workload** by automating repetitive booking conversations
-- **Serve patients in their language** — Egyptian Arabic dialect, not formal Modern Standard Arabic
-- **Manage multiple doctors** under one clinic without complex scheduling tools
-
-Whether you run a single-doctor dermatology clinic or a multi-specialty center with several branches, Kashfy adapts to your structure.
+- **Stop missing patient messages** that arrive after hours
+- **Reduce reception workload** by automating booking conversations
+- **Talk to patients in their own dialect**, not formal Arabic
+- **Keep every patient's history in one place**
 
 ## Key capabilities
 
 <AccordionGroup>
-  <Accordion icon="robot" title="AI that speaks Egyptian Arabic">
-    The AI is tuned specifically for Egyptian Arabic dialect (عامية مصرية), not formal Arabic. Patients can write casually and the AI understands naturally.
+  <Accordion icon="robot" title="AI receptionist in Egyptian Arabic">
+    Books and cancels appointments and answers questions 24/7. See [AI Agent](/ai-agent/overview).
   </Accordion>
-  <Accordion icon="message" title="WhatsApp as the booking channel">
-    No app downloads required. Patients use WhatsApp — the app they already have on their phones.
+  <Accordion icon="calendar" title="Appointments">
+    A live board, calendar, and waiting list, with time-slot or walk-in queue booking per doctor. See [Appointments](/appointments/overview).
   </Accordion>
-  <Accordion icon="browser" title="Website widget">
-    A floating chat bubble you can embed on any website with a single script tag. It opens a booking conversation right on your site.
-  </Accordion>
-  <Accordion icon="calendar" title="Real-time availability">
-    The AI only offers slots that are genuinely open. It checks live doctor schedules and never double-books.
-  </Accordion>
-  <Accordion icon="book" title="Knowledge base">
-    Upload PDFs (price lists, service descriptions, doctor bios) and the AI will answer patient questions from them.
-  </Accordion>
-  <Accordion icon="users" title="Multi-doctor & multi-branch">
-    Add multiple doctors with independent schedules. If you have more than one location, each branch has its own setup.
+  <Accordion icon="user" title="Patient profiles">
+    Medical alerts, visits, prescriptions, lab and radiology results, files, family members, payments, and an AI summary. See [Patient Profile](/patients/patient-profile).
   </Accordion>
   <Accordion icon="bell" title="Automatic reminders">
-    Kashfy sends WhatsApp appointment reminders the day before, reducing no-shows without any staff effort.
+    WhatsApp reminders before each visit. See [Reminders](/appointments/reminders).
   </Accordion>
   <Accordion icon="file-medical" title="Patient records portal">
-    Doctors can record symptoms, diagnoses, and prescriptions against each appointment. Patients can request a secure link via WhatsApp to view their full appointment history and share it with any doctor using a 4-digit PIN.
+    Patients get a PIN-protected link to their own records. See [Records Portal](/patients/records-portal).
+  </Accordion>
+  <Accordion icon="calculator" title="Finance">
+    Revenue, expenses (including recurring ones), and profit and loss. See [Finance](/finance/overview).
   </Accordion>
 </AccordionGroup>
 
 ## What Kashfy does not do
 
-- Kashfy is **not a full EHR/EMR system**. It stores appointment-level clinical notes (symptoms, diagnosis, prescription) but does not support lab results, imaging, or complex medical record workflows.
-- Kashfy does **not handle payments** on behalf of patients. Fee collection happens at the clinic as normal.
-- The AI handles **booking and records conversations only** — it does not provide medical advice.
+- Kashfy does **not collect money from patients** online. Your team records payments taken at the clinic.
+- The AI handles **bookings and questions only**. It does not give medical advice.
 
 <CardGroup cols={2}>
   <Card title="Quick Start" icon="rocket" href="/quickstart">
-    Go live in 10 minutes.
+    Set up your clinic step by step.
   </Card>
-  <Card title="Clinic Setup" icon="building" href="/getting-started/clinic-setup">
-    Configure your clinic profile in detail.
+  <Card title="Sign-up & Sign-in" icon="key" href="/getting-started/sign-in">
+    Email, Google, and WhatsApp sign-in.
   </Card>
 </CardGroup>

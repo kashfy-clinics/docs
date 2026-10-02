@@ -1,34 +1,41 @@
 ---
 title: 'Intake queue'
-description: 'Register walk-in patients for scans and track them through the workflow'
+description: 'The live board where radiology patients move from Arrived to In progress to Complete'
 ---
 
-The intake queue lists every walk-in for imaging. Each row is a patient with their scans, total, and current stage.
+Radiology uses the same intake board as the lab. Go to **Intake queue** in the Radiology sidebar. For the full guide, see [Intake queue](/lab/intake).
 
-Navigate to **Dashboard → Radiology → Intake queue**.
+## The columns
 
-## Adding an intake manually
-
-Click **New intake** to open the form and fill in:
-
-- **Patient name** (required)
-- **Patient phone** - used to send the report on WhatsApp
-- **Scans** - the scans being performed (chest X-ray, abdomen ultrasound, etc.)
-- **Total (EGP)** - price the patient is paying; auto-filled from catalogue when picking from the menu
-- **Notes** - technician notes: contrast used, prior scans, referring doctor
-
-## The status cycle
-
-Tap the status pill to advance the intake:
-
-| Status | Meaning |
+| Column | Meaning |
 |--------|---------|
-| **Pending** | Registered, scan not yet performed |
-| **Collected** | Patient prepped, scan starting |
-| **Processing** | Scan complete, radiologist reviewing |
-| **Ready** | Report is written - upload it to send to the patient |
-| **Delivered** | Report has been sent/handed over |
+| **Arrived** | The patient is at the center (or booked with the AI). The scan hasn't started. |
+| **In progress** | The scan is being done or the report is being written. |
+| **Complete** | The report was uploaded and sent. |
 
-## QR arrivals
+Cards are oldest arrival first and update live. The board shows every open card plus those completed today. Cards with a **Booked** badge came from the AI assistant on WhatsApp.
 
-If your branch has a printed QR sticker, patients scanning it are added here automatically with all their details captured. Cards from QR scans show a QR badge to distinguish them from manual entries. See [QR intake](/lab/qr-intake) for the full flow.
+## Adding a walk-in
+
+Click **New walk-in** (choose **Radiology** if your organization also runs a lab) and fill in the patient name, mobile number, the **Scans** from your [catalogue](/radiology/catalogue), the total, and any notes such as contrast or prior scans. Add the [referring doctor](/lab/referrals) here too.
+
+## Completing a scan
+
+<Steps>
+  <Step title="Start processing">
+    Open the card and click **Start processing**, or use the arrow on the card.
+  </Step>
+  <Step title="Upload the report">
+    Click **Choose result file** (PDF, JPG, PNG, WEBP, or HEIC, up to 20 MB), check the details, and click **Upload & send**.
+  </Step>
+</Steps>
+
+The report goes to the patient on WhatsApp. See [Reports](/radiology/results) for how delivery works.
+
+## Other things you can do on a card
+
+- **Edit** the patient's name, mobile, or referring doctor at any stage
+- **Edit** the requested scans and total
+- See the **prescription** photos the patient sent
+- **Remove** a card that's still in Arrived (a mistaken scan or no-show)
+- Move a completed card **Back** to upload a corrected report

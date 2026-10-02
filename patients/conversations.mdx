@@ -1,71 +1,88 @@
 ---
 title: 'Conversations'
-description: 'Read and review every AI conversation your clinic has had with patients via WhatsApp and the widget'
+description: 'Read every patient chat, pause the AI, assign chats to doctors, and reply on WhatsApp'
 ---
 
-Kashfy logs every conversation your AI agent has with patients — whether through WhatsApp or the website widget. The Conversations section gives your team full visibility into what was discussed and what actions the AI took.
+**Conversations** is your clinic's inbox. Every chat the AI has with patients on WhatsApp, Instagram and the website widget lands here, live.
 
-## Viewing conversations
+## The inbox
 
-Navigate to **Dashboard → Conversations** to see a list of all patient conversations, sorted by most recent activity.
+The list on the left shows one row per patient, newest activity first. Each row shows:
 
-Each row shows:
-- **Patient name** and phone number
-- **Channel** (WhatsApp or widget)
-- **Last message** preview
-- **Last active** timestamp
-- **Number of bookings** made in this conversation
+- Patient name (or **Unnamed**)
+- A WhatsApp or widget icon
+- The last message, with **AI:** or **You:** in front when it was a reply
+- How long ago it was, and an unread count
+- **AI paused** if the AI is off for this patient
+- The doctor's name if the chat is assigned to one
 
-Click any conversation to read the full chat.
+Use the search box to find a patient by name or phone. Click a row to open the chat.
 
-## Conversation view
+## Inside a chat
 
-Inside a conversation, you see the full message-by-message exchange between the patient and the AI. You can see:
+You see every message from the patient, the AI and your staff (with the staff member's name), plus timeline notes like "Sara disabled AI" or "Sara assigned Dr. Ahmed" so everyone knows who did what.
 
-- Exactly what the patient asked
-- Exactly what the AI responded
-- Any appointments that were booked or cancelled as part of the conversation
-- Timestamps for each message
+The header has the patient's name and number, a link to their details, and these controls:
+
+| Control | What it does |
+|---------|--------------|
+| **AI on/off switch** | Pause the AI to reply yourself, or turn it back on |
+| **Assign** | Hand the chat to a doctor. The AI pauses and the doctor gets a notification. |
+| **Unassign** | Remove the doctor. The AI starts replying again. |
+
+## Replying to a patient
+
+<Steps>
+  <Step title="Pause the AI">
+    The reply box is locked while the AI is on, so you and the AI never answer at the same time. Flip the switch to pause it.
+  </Step>
+  <Step title="Write and send">
+    Type your reply and press **Send** (or Enter). It goes to the patient on WhatsApp from the Kashfy number.
+  </Step>
+  <Step title="Turn the AI back on when done">
+    Otherwise the AI stays paused for this patient, and their new messages wait for your team.
+  </Step>
+</Steps>
 
 <Info>
-  Conversations are read-only from the dashboard — you cannot send messages or edit the AI's responses after the fact. If you need to follow up with a patient, message them directly on WhatsApp.
+  You can only reply to WhatsApp chats. Widget and Instagram chats are read only from Conversations.
 </Info>
 
-## Filtering conversations
+If a message fails to send, it's removed from the chat and your text is put back in the box so you can try again.
 
-Use the filters at the top of the conversations list to narrow by:
+## The 24-hour window
 
-- **Date range** — find conversations from a specific period
-- **Channel** — WhatsApp only, widget only, or both
-- **Doctor mentioned** — conversations that resulted in a booking with a specific doctor
-- **Has bookings** — conversations that led to at least one appointment
+WhatsApp only allows normal messages within **24 hours of the patient's last message**. When that time has passed, the reply box is replaced with a notice:
 
-## Why review conversations?
+> The patient's last message was more than 24 hours ago, and WhatsApp doesn't allow regular messages after that. You can reply here as soon as they message again.
 
-Reviewing AI conversations regularly helps you:
-
-- **Catch gaps in the knowledge base** — if the AI says "I don't know" frequently about certain topics, add that info to the knowledge base or custom instructions
-- **Spot misunderstandings** — if patients seem confused by the AI's responses, adjust the custom instructions
-- **Audit AI behavior** — verify the AI is following your clinic's guidelines
-- **Handle complaints** — if a patient is unhappy about how a conversation went, the log gives you full context
-
-## The AI's conversation memory
-
-The AI remembers the last **30 messages** from each patient's conversation history. This means:
-
-- Within a session, the AI knows the full context of the discussion
-- Returning patients who have a history will have that context available (up to 30 messages back)
-- Very old messages beyond 30 may not be referenced by the AI
+There is no way to send a template from Conversations. This is on purpose: patients expect fast answers, so reply while the window is open. As soon as the patient writes again, the reply box comes back.
 
 <Tip>
-  If a patient complains that "the AI forgot something we discussed," it may be because the conversation exceeded 30 messages. This is the current limit of the AI's memory window.
+  Turn on [browser notifications](/settings/notifications) so you see new patient messages quickly, especially for chats where the AI is paused.
 </Tip>
 
+## When your team gets alerted
+
+- A patient messages while the AI is paused for them
+- A patient asks the AI to talk to a person (the AI pauses itself)
+- A chat is assigned to a doctor (that doctor is notified)
+
+Alerts for the same patient are grouped, so a burst of messages doesn't flood you.
+
+## Doctors
+
+Doctors see only the chats assigned to them, under **Conversations** in their own portal. They can reply and use **End conversation** to hand the chat back to the AI. Only owners, admins and staff can assign or unassign.
+
+## What the AI remembers
+
+The AI reads the recent messages in the chat before every reply, so patients don't have to repeat themselves. Very long chats are summarized automatically so the important context isn't lost.
+
 <CardGroup cols={2}>
-  <Card title="Patients" icon="users" href="/patients/overview">
-    View patient records and their full booking history.
+  <Card title="WhatsApp" icon="message" href="/ai-agent/whatsapp-setup">
+    How patients reach your clinic.
   </Card>
   <Card title="AI Agent" icon="robot" href="/ai-agent/overview">
-    Understand how the AI handles conversations.
+    What the AI does and when it pauses.
   </Card>
 </CardGroup>

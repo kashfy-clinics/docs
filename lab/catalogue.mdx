@@ -1,47 +1,60 @@
 ---
 title: 'Tests catalogue'
-description: 'Manage your lab test menu, prices, turnaround times, and sample types'
+description: 'Your lab test menu and prices, used at intake and by the AI assistant on WhatsApp'
 ---
 
-The catalogue is your lab's price list. Every test you run should live here - it keeps intake fast (staff pick from a list instead of retyping) and gives the AI agent an accurate price to quote on WhatsApp.
+The catalogue is your lab's price list. Staff pick tests from it on the intake board (prices fill in automatically), and the AI assistant uses it to answer patients on WhatsApp.
 
-Navigate to **Dashboard → Lab → Tests catalogue**.
+Go to **Tests catalogue** in the Lab sidebar.
+
+<Info>
+  Only owners and admins can add tests, change prices, or switch tests on and off. Other team members see the catalogue read-only.
+</Info>
 
 ## Adding a test
 
-Click **New test** and fill in:
+Click **+ Add test** and fill in:
 
-- **Arabic name** (required) - what patients see
-- **English name** - shown to staff and in reports
-- **Code** - your internal or LOINC code (optional)
-- **Price (EGP)** - what you charge for this test
-- **Turnaround (hours)** - how long from sample to result; used to set expectations with the patient
-- **Sample type** - blood, urine, swab, etc.
+- **Arabic name** (required) - for example صورة دم كاملة
+- **English name**
+- **Code** - your internal code (optional)
+- **Price (EGP)**
+- **Turnaround (hrs)** - how long the result usually takes
+- **Sample type** - for example venous blood, urine
 
-## Editing prices in bulk
+Click **Save**.
 
-Ran a supplier price change? Use **Adjust prices** to bump every active test by a percentage in one shot.
+## Switching a test off
+
+Use the switch on a test to deactivate it when you stop offering it. Inactive tests no longer appear when staff search the catalogue on the intake board, and the AI stops quoting them. Old cards that used the test keep their details.
+
+<Note>
+  A saved test can't be edited from this screen yet. To change one test's name or price, switch it off and add it again with the right details. To change many prices at once, use **Adjust prices**.
+</Note>
+
+## Adjusting prices in bulk
+
+Prices went up? **Adjust prices** changes every active test that has a price, by a percentage, in one step.
 
 <Steps>
   <Step title="Click Adjust prices">
-    Opens the bulk adjust dialog.
+    The **Bulk price adjustment** box opens.
   </Step>
   <Step title="Enter a percentage">
-    Positive numbers raise prices, negative numbers lower them. `10` means +10%, `-5` means -5%.
+    `10` raises prices by 10%. A negative number lowers them, for example `-5`. Allowed range: -90 to 500.
   </Step>
-  <Step title="Confirm">
-    Kashfy shows how many tests will be affected. Confirm to apply.
+  <Step title="Apply and confirm">
+    Click **Apply**. Kashfy tells you how many tests will change and asks you to confirm.
   </Step>
 </Steps>
 
 <Warning>
-  Bulk adjustments only touch **active** tests with a price already set. Tests without a price or that are archived are skipped.
+  Tests without a price and inactive tests are skipped. Prices change immediately.
 </Warning>
 
-## Archiving tests
+## How the catalogue is used
 
-Toggle a test to inactive if you've stopped offering it. Inactive tests stay in your history (so old intakes still resolve correctly) but disappear from the intake picker and the AI agent's answers.
+- **At intake** - in **New walk-in** or a card's **Edit**, type part of a test name to search the catalogue. Picking a test adds it with its price, and the total updates. Anything not in the catalogue can still be added as free text.
+- **On WhatsApp** - when a patient asks about a test or its price, the AI assistant answers only from your active tests and prices, and can register the patient. Their card appears on the board with a **Booked** badge. The AI doesn't give preparation instructions (like fasting); it tells the patient the lab will confirm.
 
-## What the AI does with the catalogue
-
-If a patient asks "بكم تحليل صورة الدم؟" the AI looks up the test in this catalogue and quotes the exact price and turnaround. Keep the catalogue current - every stale price is a bad quote to a patient.
+Keep prices current: a stale price here is a wrong quote to a patient.

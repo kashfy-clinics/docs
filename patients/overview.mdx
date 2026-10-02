@@ -1,96 +1,49 @@
 ---
 title: 'Patients'
-description: "View and manage your clinic's patient records, booking history, and contact information"
+description: "Find any patient, filter the list, and open a quick look or their full profile"
 ---
 
-Every person who books an appointment through Kashfy — whether via WhatsApp or the website widget — is automatically added as a patient record. You can also add patients manually.
+A patient record is created automatically the first time someone books, whether on WhatsApp, the widget, your public page, or a manual booking by your staff. Navigate to **Dashboard → Patients**.
 
 ## The patients list
 
-Navigate to **Dashboard → Patients** to see all patients who have interacted with your clinic through Kashfy.
+Each row shows the patient's **name**, **phone**, **age** (when the date of birth is known), the **channel** they first came from (WhatsApp, Widget, or Manual), and the date they **joined**. The list is split into pages.
 
-Each patient record shows:
-
-- **Name** and **phone number**
-- **Age** (calculated from date of birth, if recorded)
-- **Channel** they came through (WhatsApp, Widget, or Manual)
-- **Joined date** (when they first appeared in your system)
-
-## Filtering patients
-
-Use the filters at the top of the patients list to narrow down who you see:
+## Search and filters
 
 | Filter | Options |
 |--------|---------|
-| **Channel** | All channels · WhatsApp · Widget · Manual |
-| **Gender** | All genders · Male · Female · Not specified |
+| **Search** | Name or phone |
+| **Channel** | All channels, WhatsApp, Widget, Manual |
+| **Gender** | All genders, Male, Female, Not specified |
+| **Joined date** | Any date range |
 
-Use the **search bar** to find a patient by name or phone number.
+## Quick look and full profile
 
-## Adding patients manually
+Tap a patient to open a **quick look** panel with their details, alerts, and recent activity, without leaving the list. Tap **Profile** in the panel to open the full [Patient Profile](/patients/patient-profile).
 
-To add a patient without them having messaged your clinic:
+<Info>
+  There's no separate "add patient" form. To add someone new, book them an appointment. See [Booking manually](/appointments/overview#booking-an-appointment-manually).
+</Info>
 
-<Steps>
-  <Step title="Open the Patients page">
-    Go to **Dashboard → Patients**.
-  </Step>
-  <Step title="Click Add Patient">
-    Click the **Add Patient** button in the top right.
-  </Step>
-  <Step title="Enter their details">
-    Fill in the patient's name and phone number. These are the only required fields.
-  </Step>
-  <Step title="Save">
-    Click **Save**. The patient appears in the list immediately.
-  </Step>
-</Steps>
+## Family members
 
-## Patient details
+Relatives who use the same phone number, such as children, can be added to one family from the patient's profile. Each family member has their own record and visits. See [Family](/patients/patient-profile#family).
 
-Click any patient to open their full record in a side panel.
+## Who sees which patients
 
-<AccordionGroup>
-  <Accordion icon="user" title="Contact information">
-    Name, phone number, and the channel through which they first contacted the clinic. You can edit all contact fields here.
-  </Accordion>
-  <Accordion icon="pencil" title="Editable profile fields">
-    - **Name**
-    - **Gender** — Male / Female / Not specified
-    - **Date of birth** — used to calculate age
-    - **Referred by** — e.g. "Dr. Ahmed", "Google", "friend"
-    - **Insurance provider** — e.g. MetLife, AXA
-    - **Insurance ID** — policy / member number
-  </Accordion>
-  <Accordion icon="calendar" title="Appointment history">
-    A full list of all their appointments at your clinic — past, upcoming, completed, and cancelled.
-  </Accordion>
-  <Accordion icon="messages" title="Conversation history">
-    All WhatsApp or widget conversations this patient has had with your AI agent. Click any conversation to read the full chat.
-  </Accordion>
-  <Accordion icon="info" title="Patient notes">
-    Any internal notes your staff has added to this patient's record. Not visible to the patient.
-  </Accordion>
-</AccordionGroup>
+- Owners, admins, and employees see all patients.
+- Doctors see only patients who have had a booking with them, under **My Patients** in the [Doctor Portal](/doctors/doctor-portal).
 
-## Patient identity
+## How patients are identified
 
-Kashfy identifies patients primarily by their **phone number**:
-
-- WhatsApp patients: identified by their WhatsApp phone number
-- Widget patients: identified by a browser session key (no phone required)
-
-If the same patient contacts your clinic via both WhatsApp and the website widget, they will appear as two separate records (since the widget session doesn't require a phone number). Merging is not yet supported.
-
-## Privacy and data
-
-Patient data stored in Kashfy includes only what is needed for appointment management: name, phone number, booking history, and conversation logs. No medical records or clinical data are stored.
+Patients are matched by phone number, so a returning WhatsApp patient lands on their existing record. Widget chats that never share a phone number may create a separate record.
 
 <CardGroup cols={2}>
-  <Card title="Conversations" icon="messages" href="/patients/conversations">
-    Read the full WhatsApp and widget chat histories.
+  <Card title="Patient Profile" icon="user" href="/patients/patient-profile">
+    Everything about one patient.
   </Card>
-  <Card title="Appointments" icon="calendar" href="/appointments/overview">
-    View all bookings associated with patients.
+  <Card title="Records Portal" icon="file-medical" href="/patients/records-portal">
+    The patient's own PIN-protected view.
   </Card>
 </CardGroup>

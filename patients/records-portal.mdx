@@ -1,92 +1,77 @@
 ---
 title: 'Patient Records Portal'
-description: 'Give patients secure access to their appointment history and medical notes via a PIN-protected link'
+description: 'Patients get a PIN-protected link to their own visits, diagnoses, prescriptions, notes, and files'
 ---
 
-The Patient Records Portal lets patients access their complete appointment history — including diagnoses, prescriptions, and doctor notes — through a secure, PIN-protected link they can share with any doctor.
+The Records Portal lets a patient see their own medical history, and share it with any doctor, through a personal link protected by a 4-digit PIN. No app or account is needed.
 
 ## How it works
 
 <Steps>
-  <Step title="Patient requests their records via WhatsApp">
-    The patient sends a message to your clinic's WhatsApp number asking for their file — for example: "ممكن ملفي" or "my records". The AI responds with a personal link to their portal.
+  <Step title="Patient asks on WhatsApp">
+    The patient asks for their file, for example "ممكن ملفي". If the phone number has family members, the AI asks whose file they want.
   </Step>
-  <Step title="Patient sets a 4-digit PIN">
-    If this is the patient's first time requesting a link, the AI asks them to choose a 4-digit PIN. This PIN protects their records from unauthorized access.
+  <Step title="Patient sets a PIN">
+    The first time, the AI asks the patient to choose a 4-digit PIN.
   </Step>
-  <Step title="Patient shares link and PIN with their doctor">
-    The patient can copy the link and share it however they choose — WhatsApp, SMS, in person. They share the PIN separately to keep access secure.
+  <Step title="Patient gets the link">
+    The AI sends a personal link on `patients.kashfy.site`.
   </Step>
-  <Step title="Doctor opens the link and enters the PIN">
-    The doctor opens `patients.kashfy.site/ar/[patient-id]` in any browser and enters the 4-digit PIN. Once verified, they see the patient's full records.
+  <Step title="Open and enter the PIN">
+    Anyone with the link and the PIN can open the records in a browser.
   </Step>
 </Steps>
 
 ## What the portal shows
 
-The records portal displays everything Kashfy has on file for that patient:
-
 | Section | Contents |
 |---------|----------|
-| **Patient info** | Name, phone number, gender, date of birth, insurance details |
-| **Appointments** | All past and upcoming appointments with date, time, doctor, branch, and status |
-| **Clinical notes** | Symptoms, diagnosis, and prescription recorded by the doctor for each visit |
-| **Prescriptions** | Prescribed medications with dosage, linked to each appointment |
+| **Patient info** | Name, gender, date of birth or age, insurance details |
+| **Appointments** | Past and upcoming visits (not cancelled ones) with date, doctor, symptoms, diagnosis, and prescription, including the prescription PDF when there is one |
+| **Doctor notes** | Chart notes written by the clinic's doctors |
+| **Files** | Documents and images saved to the patient's file |
 
-## Accessing via direct link with PIN
+The portal is read-only. Records are only changed by the clinic in the dashboard.
 
-Doctors and other authorized people can also open the portal with the PIN pre-filled in the URL:
+## Link with the PIN included
+
+Adding `?pin=1234` to the link verifies automatically when it opens, then removes the PIN from the address bar:
 
 ```
-https://patients.kashfy.site/ar/[patient-id]?pin=1234
+https://patients.kashfy.site/ar/<patient-id>?pin=1234
 ```
-
-This lets patients share a single tap-to-open link that verifies automatically on load — no manual PIN entry required.
 
 <Info>
-  The portal is available in Arabic (`/ar/`) and English (`/en/`). The language defaults to Arabic when the patient requests the link via WhatsApp.
+  The portal is available in Arabic (`/ar/`) and English (`/en/`). Links from WhatsApp open in Arabic.
 </Info>
 
-## Resetting a forgotten PIN
+## Forgotten PIN
 
-If a patient forgets their PIN, they can reset it directly from WhatsApp:
+The patient sends something like "نسيت الكود" to the clinic on WhatsApp. The AI clears the old PIN and asks for a new 4 digits. Anyone already viewing with the old PIN is signed out.
 
-1. Patient sends "نسيت الكود" or "forgot pin" to your clinic's WhatsApp number
-2. The AI resets the old PIN and asks the patient to send a new 4-digit code
-3. Patient sends any 4 digits and the new PIN is set immediately
-
-The old PIN is invalidated as soon as the reset is triggered. Anyone who had the old PIN can no longer access the portal until the patient shares the new one.
-
-## Security details
+## Security
 
 <AccordionGroup>
-  <Accordion icon="lock" title="PIN hashing">
-    PINs are never stored as plain text. Kashfy stores a cryptographic hash of the PIN that is specific to each patient — it cannot be reversed or used across accounts.
+  <Accordion icon="lock" title="PINs aren't stored as plain text">
+    Kashfy stores a one-way hash of the PIN, tied to that patient.
   </Accordion>
-  <Accordion icon="clock" title="Session duration">
-    After a correct PIN is entered, the portal session lasts 24 hours in the same browser. After 24 hours, the PIN must be re-entered.
+  <Accordion icon="clock" title="24-hour sessions">
+    After a correct PIN, the browser stays signed in for 24 hours. Resetting the PIN ends all sessions.
   </Accordion>
-  <Accordion icon="shield-x" title="Brute-force protection">
-    After 5 consecutive wrong PIN attempts, the portal locks out the requester for 30 minutes. This prevents automated PIN guessing.
-  </Accordion>
-  <Accordion icon="eye-off" title="No account required">
-    The portal requires no login, app download, or account creation. Access is controlled entirely by knowing the patient-specific link and PIN.
+  <Accordion icon="shield" title="Lockout after wrong guesses">
+    After 5 wrong PINs, the portal locks for 30 minutes. Repeated guessing from one device is also blocked.
   </Accordion>
 </AccordionGroup>
 
-## What patients see vs. what the clinic sees
-
-The records portal is a **read-only view** for patients and doctors who access it. Nothing can be edited through the portal — clinical data is only added or modified by clinic staff and doctors through the Kashfy dashboard.
-
 <Warning>
-  The portal link is permanent and patient-specific. If a patient wants to revoke access from someone they shared it with, they should reset their PIN. Once the PIN changes, the old PIN stops working immediately.
+  The link itself doesn't change. To stop someone you shared it with, the patient resets their PIN.
 </Warning>
 
 <CardGroup cols={2}>
-  <Card title="Conversations" icon="message" href="/patients/conversations">
-    View the AI conversation history for each patient.
+  <Card title="Patient Profile" icon="user" href="/patients/patient-profile">
+    The clinic's full view of the patient.
   </Card>
-  <Card title="Appointments" icon="calendar" href="/appointments/overview">
-    Manage appointments and add clinical notes.
+  <Card title="Conversations" icon="messages" href="/patients/conversations">
+    The patient's chat history.
   </Card>
 </CardGroup>

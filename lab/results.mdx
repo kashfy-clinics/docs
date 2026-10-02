@@ -1,32 +1,63 @@
 ---
 title: 'Results'
-description: 'Upload lab result files and send them to patients on WhatsApp automatically'
+description: 'How results are uploaded, delivered to patients on WhatsApp, and resent'
 ---
 
-The Results page lists every intake whose status is **Ready** - meaning the test has run and the report needs to go out to the patient.
+Results are uploaded from the [intake queue](/lab/intake), not from a separate screen. When you complete a card with a result file, Kashfy saves the file privately and sends it to the patient on WhatsApp. The **Results** page is where you check what was delivered and resend.
 
-Navigate to **Dashboard → Lab → Results**.
-
-## Sending a result
-
-Each ready intake shows the patient's name, phone, tests, and the time they were registered.
+## Uploading a result
 
 <Steps>
-  <Step title="Attach the result file">
-    Upload the result PDF (or image) to the intake card. Kashfy stores it against the patient's record.
+  <Step title="Open a card that's In progress">
+    Only In progress cards can be completed. Move the card there first if needed.
   </Step>
-  <Step title="Kashfy sends it on WhatsApp">
-    As soon as the file is uploaded, it goes out on WhatsApp with a short cover message. No manual send step.
+  <Step title="Click Choose result file">
+    Accepted files: **PDF, JPG, PNG, WEBP, or HEIC**, up to **20 MB**.
   </Step>
-  <Step title="Status moves to Delivered">
-    The intake disappears from the Results queue and is marked delivered in the patient's history.
+  <Step title="Confirm and send">
+    Check the patient name, mobile, and file in the **Send this result?** box, then click **Upload & send**. The card moves to **Complete**.
   </Step>
 </Steps>
 
+<Warning>
+  If the card has no mobile number, the card is completed but nothing is sent. Add the number with **Edit** first, or add it afterwards and use **Resend to patient**.
+</Warning>
+
+## How the patient receives it
+
+Kashfy picks the delivery method automatically:
+
+| Situation | What the patient gets |
+|-----------|-----------------------|
+| The patient messaged Kashfy on WhatsApp in the **last 23 hours** (for example after scanning the QR) | The **result file itself** on WhatsApp, with a short caption |
+| Otherwise | A WhatsApp message saying the result is ready, with a button that opens a **secure results page** |
+
+The secure results page (a link starting with `/r/`) shows the patient name, your center's name, and the date, with **Open** and **Download** buttons. The link stays valid for **30 days**. After that the patient sees a message asking them to contact you for a new link, and resending gives them a fresh one.
+
 <Info>
-  If the patient didn't provide a phone number at intake, the result file is stored but not sent. You'll need to hand it over in person or add a phone later.
+  Result files are private. They are never posted on a public link: staff open them from inside Kashfy, and patients open them only through their secure link.
 </Info>
 
-## Viewing past results
+If a [referring doctor](/lab/referrals) was added with the patient's consent, they get their own link to the result at the same time.
 
-Once an intake is marked delivered, its result file stays attached to the patient's record. Open the patient from **Patients** to see every historical result.
+## The Results page
+
+Go to **Results** (Lab) or **Reports** (Radiology) in the sidebar. It lists completed cases, newest first, with:
+
+- Patient name, mobile, referring doctor, and the tests or scans
+- When it was completed
+- **Sent to patient** or **Not delivered**
+- **View result** to open the file
+- **Resend** to send it to the patient again
+
+## Resending
+
+Use **Resend** on the Results page or **Resend to patient** inside the card. Each resend is a new WhatsApp message, so it's limited to **3 resends per card per hour**. Resending only goes to the patient; see [Referring doctors](/lab/referrals) for the doctor.
+
+## Fixing a wrong result
+
+Open the completed card and click **Back** to move it to In progress, then upload the corrected file. The new file replaces the old one and is sent to the patient again.
+
+## Patients asking the AI
+
+If a patient asks the AI assistant on WhatsApp whether their result is ready, the AI checks their latest lab or radiology card. If the result is uploaded, it sends them their secure result link. If not, it tells them it isn't ready yet.

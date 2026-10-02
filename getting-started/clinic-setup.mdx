@@ -1,87 +1,61 @@
 ---
 title: 'Clinic Setup'
-description: 'Configure your clinic profile so the AI agent can accurately represent you to patients'
+description: 'The checklist that gets your clinic ready for patients and the AI receptionist'
 ---
 
-Your clinic profile is the foundation of the AI agent's knowledge. The more complete and accurate it is, the better the AI performs when answering patient questions.
+Most setup happens in onboarding (see [Quick Start](/quickstart)). This page is the checklist for everything after that.
 
-## Clinic profile fields
+## Required before the AI replies
 
-Navigate to **Dashboard → Settings → Clinic** to edit your clinic profile.
+Kashfy will not let the AI answer patients, and your public page stays offline, until these are filled in under **Settings → Clinic**:
 
-<AccordionGroup>
-  <Accordion icon="building" title="Clinic name">
-    Enter your clinic name in both **Arabic** and **English**. The AI uses the Arabic name when speaking with patients and the English name for system labels in the dashboard.
+| Item | Where |
+|------|-------|
+| Arabic name | Clinic Info |
+| Public URL | Clinic Info |
+| Logo | Brand |
+| Description | Clinic Info |
+| Phone number | Contact |
+| At least one address | Addresses |
 
-    <Info>
-      Both language fields are required. If your clinic only operates in Arabic, you can duplicate the Arabic name in the English field.
-    </Info>
-  </Accordion>
+Owners and admins see a yellow banner at the top of the dashboard that lists what is missing, with an **Open settings** button.
 
-  <Accordion icon="stethoscope" title="Specialty">
-    Select your clinic's primary specialty (e.g., dermatology, cardiology, general practice). This helps the AI contextualize conversations and answer specialty-specific questions appropriately.
-  </Accordion>
+<Info>
+  While required items are missing, patients who message you get a polite reply instead of the AI. You can still try the AI in **Dashboard → AI Agent**.
+</Info>
 
-  <Accordion icon="phone" title="Contact phone number">
-    The phone number patients can call if they prefer to speak with someone directly. The AI shares this when patients ask for a phone number.
-  </Accordion>
+## Recommended next steps
 
-  <Accordion icon="map-pin" title="Address & area">
-    Enter your clinic's full street address and select your area from the list. When patients ask "where are you located?" the AI will share this information along with directions if available.
-
-    If you have multiple locations, each branch can have its own address. See [Branches](#branches) below.
-  </Accordion>
-
-  <Accordion icon="clock" title="Working hours">
-    Set the days and hours your clinic operates. These are the outer limits — individual doctors can have narrower schedules within these hours.
-
-    Example: Clinic open Saturday–Thursday 9am–9pm. Dr. Amira available Saturday–Tuesday 10am–2pm.
-  </Accordion>
-
-  <Accordion icon="align-left" title="Clinic description">
-    A short description of your clinic (in Arabic and English) that the AI can share with patients who ask general questions about what services you offer.
-  </Accordion>
-</AccordionGroup>
+<Steps>
+  <Step title="Add doctors and their hours">
+    Every booking needs a doctor with hours at a branch. See [Doctors](/doctors/overview) and [Schedules](/doctors/schedules).
+  </Step>
+  <Step title="Add your services">
+    List the procedures you offer with their prices so the AI can answer. See [Services](/services/overview).
+  </Step>
+  <Step title="Choose your insurance companies">
+    Pick the insurers you accept and their coverage. See [Organization Settings](/settings/organization#insurance).
+  </Step>
+  <Step title="Turn on reminders">
+    Set how many hours before a visit patients get a WhatsApp reminder. See [Reminders](/appointments/reminders).
+  </Step>
+  <Step title="Verify your mobile number">
+    Needed for signing in with WhatsApp. See [Sign-up & Sign-in](/getting-started/sign-in#verifying-your-mobile-number).
+  </Step>
+  <Step title="Invite your team">
+    Reception staff and admins by email, doctors by invite link. See [Team Members](/team/members).
+  </Step>
+</Steps>
 
 ## Branches
 
-If your clinic operates from more than one location, you can add multiple branches.
-
-Navigate to **Dashboard → Settings → Clinic → Branches** to add a new branch. Each branch has:
-
-- Its own name and address
-- Its own set of assigned doctors
-- Separate appointment tracking
-
-<Tip>
-  When patients ask which branch to go to, the AI will help them based on which doctors are available at each location.
-</Tip>
-
-## Clinic readiness checklist
-
-Kashfy shows a **readiness checklist** in the dashboard to help you complete your setup before going live. The checklist tracks:
-
-| Item | Why it matters |
-|------|---------------|
-| Clinic profile complete | AI needs basic info to answer patient questions |
-| At least one doctor added | Without doctors, the AI cannot offer slots |
-| Doctor has working hours set | Required for availability checks |
-| WhatsApp connected | Required for WhatsApp booking to work |
-| Subscription active | Required to go live after the free trial |
-
-<Warning>
-  The AI will not accept booking requests until all critical checklist items are complete. You can still test it in the **Dashboard → AI** test chat.
-</Warning>
-
-## What the AI says about your clinic
-
-When a patient asks a question like "what's your address?" or "do you have a cardiologist?", the AI answers based on your clinic profile. To see exactly what context the AI has, go to **Dashboard → AI → Test** and ask a general question about your clinic.
+Each branch has its own address, area, and Google Maps link, and lists what it offers (clinic, lab, radiology). Doctors choose which branches they work at, and staff can be limited to specific branches. Manage branches in [Organization Settings](/settings/organization#addresses).
 
 <CardGroup cols={2}>
-  <Card title="Add Doctors" icon="stethoscope" href="/doctors/overview">
-    Add doctors and configure their schedules.
+  <Card title="Organization Settings" icon="building" href="/settings/organization">
+    Every field on the clinic settings page.
   </Card>
-  <Card title="Connect WhatsApp" icon="message" href="/ai-agent/whatsapp-setup">
-    Link your clinic's WhatsApp number.
+  <Card title="Add Doctors" icon="stethoscope" href="/doctors/overview">
+    Profiles, prices, and invite links.
   </Card>
 </CardGroup>

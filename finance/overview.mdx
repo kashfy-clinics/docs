@@ -1,34 +1,30 @@
 ---
 title: 'Finance'
-description: 'Track revenue, expenses, and profit across your clinic in one dashboard'
+description: 'Revenue, expenses, and profit for your clinic in one place'
 ---
 
-The Finance module is your clinic's books - a single dashboard covering money in, money out, and what's left. It replaces the spreadsheets clinics normally keep on the side.
-
-Navigate to **Dashboard → Finance**.
-
-## Three tabs
+Finance is your clinic's books: money in, money out, and what's left. Navigate to **Dashboard → Finance**.
 
 <CardGroup cols={3}>
-  <Card title="Revenue" icon="trending-up" href="/finance/revenue">
-    Payments received, split by method and insurance status.
+  <Card title="Revenue" icon="arrow-trend-up" href="/finance/revenue">
+    Payments recorded on visits.
   </Card>
   <Card title="Expenses" icon="receipt" href="/finance/expenses">
-    Add and categorize spending, including recurring bills.
+    Spending, including recurring bills.
   </Card>
   <Card title="P&amp;L" icon="calculator" href="/finance/pnl">
-    Net profit and expense breakdown for any date range.
+    Net profit and where the money goes.
   </Card>
 </CardGroup>
 
 ## Date range
 
-A date picker at the top scopes every tab. Pick a week, a month, a quarter, or a custom range - all three tabs refresh together. Defaults to the current month.
-
-<Tip>
-  Set the range to "This year" once a quarter and export the P&amp;L for your accountant.
-</Tip>
+The date picker at the top applies to all three tabs. It starts on the **last 30 days**; pick any range you like.
 
 ## Who sees Finance
 
-Finance is a manager-level feature - staff and doctor roles don't see it. If a team member needs access, promote them to manager in [Team → Members](/team/members).
+Only the **owner** and **admins**. Employees and doctors don't see it in the menu. See [Roles & Permissions](/team/roles).
+
+<Info>
+  Labs and radiology centres have their own Finance page inside their section. See [Lab & radiology finance](/lab/finance).
+</Info>

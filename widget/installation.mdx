@@ -1,129 +1,90 @@
 ---
 title: 'Widget Installation'
-description: 'Add the Kashfy booking widget to your clinic website in under 5 minutes'
+description: 'Copy your widget snippet and paste it into your website'
 ---
 
-Installing the Kashfy widget on your website requires adding a single `<script>` tag to your HTML. No backend changes, no complex setup.
+Installing the widget means pasting one `<script>` tag into your website. No other setup is needed.
 
-## Step 1: Get your Clinic ID
+## Step 1: Copy your snippet
 
-Your Clinic ID is a unique identifier that links the widget to your clinic's AI agent and appointment system.
+Go to **Settings → Widget** and click **Copy** on the code card. The snippet already contains your clinic ID.
 
-Find it in **Dashboard → Settings → Widget** (or **Dashboard → Widget**).
-
-<Info>
-  Your Clinic ID is safe to include in public website code — it only allows reading clinic data and booking appointments through the widget. It does not grant access to your dashboard or admin features.
-</Info>
-
-## Step 2: Add the script tag
-
-Paste the following code into your website's HTML, just before the closing `</body>` tag:
+It looks like this:
 
 ```html
 <script
   src="https://kashfy.site/widget/embed.js"
   data-clinic-id="YOUR_CLINIC_ID"
+  data-lang="ar"
   async
 ></script>
 ```
 
-Replace `YOUR_CLINIC_ID` with the ID from Step 1.
+<Tip>
+  Always copy the snippet from your dashboard rather than typing it, so the clinic ID is exactly right.
+</Tip>
 
-## Platform-specific instructions
+| Attribute | What it does |
+|-----------|--------------|
+| `data-clinic-id` | Links the widget to your clinic. Required. |
+| `data-lang` | `ar` for an Arabic widget (button on the left), `en` for English (button on the right). The snippet uses the language your dashboard was in when you copied it. |
+
+Your clinic ID is safe to put in public website code. It only lets visitors chat with your AI, not access your dashboard.
+
+## Step 2: Paste it before `</body>`
 
 <AccordionGroup>
   <Accordion icon="globe" title="WordPress">
-    1. Go to **Appearance → Theme File Editor** (or use a plugin like **Insert Headers and Footers**)
-    2. Find your theme's `footer.php` file
-    3. Paste the script tag before `</body>`
-    4. Save the file
-
-    Alternatively, use the **Insert Headers and Footers** plugin:
-    1. Install and activate the plugin
-    2. Go to **Settings → Insert Headers and Footers**
-    3. Paste the script in the "Scripts in Footer" section
+    Use a plugin like **WPCode** or **Insert Headers and Footers** and paste the snippet in the footer section. Or add it to your theme's `footer.php` just before `</body>`.
   </Accordion>
 
   <Accordion icon="layers" title="Wix">
-    1. Go to your Wix dashboard
-    2. Open **Settings → Custom Code**
-    3. Click **+ Add Custom Code**
-    4. Paste the script tag and set placement to **Body - end**
-    5. Apply to **All Pages**
-    6. Save and publish
+    1. Open **Settings → Custom Code**
+    2. Click **+ Add Custom Code** and paste the snippet
+    3. Set placement to **Body - end** and apply to **All Pages**
+    4. Save and publish
   </Accordion>
 
   <Accordion icon="shopping-bag" title="Shopify">
-    1. Go to **Online Store → Themes**
-    2. Click **Actions → Edit Code** on your active theme
-    3. Open `layout/theme.liquid`
-    4. Paste the script tag before `</body>`
-    5. Save
+    1. Go to **Online Store → Themes → Edit code**
+    2. Open `layout/theme.liquid`
+    3. Paste the snippet just before `</body>` and save
   </Accordion>
 
   <Accordion icon="code" title="Custom HTML site">
-    Open your HTML file and paste the script tag just before the closing `</body>` tag:
-
-    ```html
-    <!-- Kashfy Booking Widget -->
-    <script
-      src="https://kashfy.site/widget/embed.js"
-      data-clinic-id="YOUR_CLINIC_ID"
-      async
-    ></script>
-    </body>
-    ```
+    Paste the snippet just before the closing `</body>` tag on every page where you want the widget.
   </Accordion>
 </AccordionGroup>
 
-## Step 3: Verify the widget appears
+## Step 3: Check it works
 
-After saving your changes, visit your website. You should see a floating chat icon in the bottom-right corner of the page. Click it to open the chat and test a booking conversation.
-
-<Tip>
-  Clear your browser cache or open an incognito window if the widget doesn't appear immediately after installation.
-</Tip>
-
-## Customization options
-
-The widget's appearance can be configured with optional data attributes on the script tag:
-
-```html
-<script
-  src="https://kashfy.site/widget/embed.js"
-  data-clinic-id="YOUR_CLINIC_ID"
-  async
-></script>
-```
-
-Additional customization (colors, position, welcome message) is managed from **Dashboard → Settings → Widget** in your Kashfy dashboard.
+Open your website. You should see the chat button in the bottom corner. Click it and ask a question, then check that the chat appears in **Conversations**.
 
 ## Troubleshooting
 
 <AccordionGroup>
-  <Accordion icon="eye-off" title="Widget is not showing">
-    - Make sure the script tag is placed before `</body>`, not `</head>`
-    - Check that `YOUR_CLINIC_ID` is replaced with your actual ID
-    - Clear your browser cache and try in an incognito window
-    - Check your browser console for JavaScript errors
+  <Accordion icon="eye-off" title="The button doesn't show">
+    - Make sure the snippet is before `</body>` and was published
+    - Make sure `data-clinic-id` wasn't changed
+    - Try a private/incognito window to skip the browser cache
   </Accordion>
 
-  <Accordion icon="x-circle" title="Widget shows but AI doesn't respond">
-    - Verify your WhatsApp or widget channel is active in the dashboard
-    - Check that your clinic has at least one doctor with working hours configured
-    - Look at **Dashboard → Conversations** to see if messages are arriving
+  <Accordion icon="x-circle" title="The chat opens but the AI doesn't reply">
+    - Check your plan: the widget doesn't answer on Solo plans
+    - Check that your subscription is active
+    - Complete your clinic profile (name, public URL, logo, description, phone and at least one address). The AI waits until these are filled in.
   </Accordion>
 
-  <Accordion icon="globe-2" title="Widget conflicts with other chat tools">
-    If you already have another chat widget on your site, they may overlap. Remove the other widget or use CSS positioning to separate them. Contact support if you need help adjusting widget position.
+  <Accordion icon="layers" title="It overlaps another chat button">
+    Remove the other chat tool, or switch `data-lang` so the Kashfy button sits on the other side.
   </Accordion>
 </AccordionGroup>
 
 <CardGroup cols={2}>
   <Card title="Widget Overview" icon="browser" href="/widget/overview">
-    Learn what the widget can do for patients.
+    What the widget does for patients.
   </Card>
   <Card title="Support" icon="life-ring" href="/support">
-    Get help with installation issues.
+    Get help with installation.
   </Card>
 </CardGroup>
