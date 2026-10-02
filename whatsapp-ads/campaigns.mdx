@@ -31,7 +31,7 @@ Go to **WhatsApp Ads → New Campaign**. A live preview on the side shows how th
     The main message. Use the toolbar for emoji, *bold*, _italic_, ~strikethrough~ and monospace.
   </Step>
   <Step title="Variables (optional)">
-    Use **Add variable** (up to 9) for parts that change per message. Variables can't be the very first or last thing in the body. Fill in a sample for each: samples are only for Meta's review and are never sent to patients.
+    Use **Add variable** (up to 9) for parts like an offer or a date. Variables can't be the very first or last thing in the body. Fill in a value for each: Meta reviews the message with these values, and the same values are sent to every patient.
   </Step>
   <Step title="Footer (optional)">
     A short line below the message.
@@ -42,19 +42,43 @@ Go to **WhatsApp Ads → New Campaign**. A live preview on the side shows how th
   <Step title="Recipients">
     Campaigns go to **All opted-in patients**. The current count is shown.
   </Step>
-  <Step title="Accept the policy and submit">
-    The first time, tick that you agree to the WhatsApp Ads Policy. Then click **Submit for Review**.
+  <Step title="Save as draft or submit">
+    **Save as draft** keeps the campaign without sending anything to Meta. You can submit it later from the campaign page with **Submit to Meta**.
+
+    **Submit for Review** sends the message to Meta. The first time, tick that you agree to the WhatsApp Ads Policy.
   </Step>
 </Steps>
 
 <Warning>
-  Kashfy checks your credits when you submit. If you don't have enough for all recipients, you'll see how many you have and how many the campaign needs.
+  Kashfy checks your credits when you submit. If you don't have enough for all recipients, you'll see how many you have and how many the campaign needs. A draft can be saved without credits.
 </Warning>
+
+## Send a campaign
+
+Once Meta approves the message, the campaign shows **Ready to Send**.
+
+<Steps>
+  <Step title="Open the campaign">
+    Under the **Start sending** button you'll see how many opted-in patients it will reach.
+  </Step>
+  <Step title="Click Start sending and confirm">
+    Kashfy checks your credits again, then starts sending. A large campaign goes out in batches over a few minutes.
+  </Step>
+  <Step title="Watch the progress">
+    The campaign page shows **Sent**, **Failed** and **Skipped** as it goes. When everything is done the status changes to **Sent**.
+  </Step>
+</Steps>
+
+- Each message that's delivered to WhatsApp uses one credit. Failed messages don't use credits.
+- A patient who opted out after you started is skipped.
+- If your credits run out while sending, the remaining patients are skipped.
+- Each patient gets the campaign once, even if you click twice.
 
 ## Campaign statuses
 
 | Status | Meaning |
 |--------|---------|
+| **Draft** | Saved, not sent to Meta yet |
 | **Awaiting Meta Approval** | Meta is reviewing the template |
 | **Rejected by Meta** | Meta didn't approve it. Create a new campaign with adjusted content and a new name. |
 | **Ready to Send** | Approved and ready to go out |
