@@ -1,6 +1,6 @@
 ---
 title: 'Prescriptions'
-description: 'Write a prescription, add lab and radiology requests, and send it to the patient on WhatsApp as a PDF'
+description: 'Write, handwrite or dictate a prescription, add lab and radiology requests, and send it to the patient on WhatsApp as a PDF'
 ---
 
 Doctors write prescriptions inside the appointment. Kashfy turns it into a branded PDF and can send it to the patient on WhatsApp.
@@ -29,6 +29,50 @@ It has three matching blocks: **Medicines**, **Lab tests** and **Radiology**, ea
 </Steps>
 
 The PDF includes your clinic logo and name, the date, the doctor, the patient's name and age, the medicines with instructions, any lab and radiology requests, and your clinic addresses and phone. Medicines, lab tests and radiology each get their own page. Once created, **Open** and **Print** buttons appear next to the title.
+
+## Handwrite or dictate it
+
+Instead of adding drugs one by one, you can write the prescription by hand or say it out loud, and Kashfy's AI reads it for you. Both buttons, **Handwrite it** and **Dictate it**, sit above **Medicines** for doctors, owners and admins.
+
+<Tabs>
+  <Tab title="Handwrite it">
+    <Steps>
+      <Step title="Write">
+        Tap **Handwrite it** and write on the pad with a stylus or your finger, the way you would on paper: drugs, doses, tests and scans. **Undo** removes the last stroke and **Clear** starts over.
+      </Step>
+      <Step title="Read it">
+        Tap **Read it**. A pen traces over your writing while Kashfy reads it. This takes a few seconds.
+      </Step>
+    </Steps>
+  </Tab>
+  <Tab title="Dictate it">
+    <Steps>
+      <Step title="Record">
+        Tap **Dictate it**, then tap the microphone and say the prescription. Egyptian Arabic with English drug names works, for example "Augmentin 1 gram, one tab every 12 hours for a week, and a CBC". Tap stop when you're done. A recording can be up to 1:30. The browser asks for microphone access the first time.
+      </Step>
+      <Step title="Read it">
+        Tap **Read it**, or **Record again** to start over.
+      </Step>
+    </Steps>
+  </Tab>
+</Tabs>
+
+### Review before it's added
+
+Nothing joins the prescription until you confirm. Kashfy shows what it read or heard, then everything it found:
+
+- **Medicines** with their instructions. Each is marked **In list** when it matched a drug in the list, or **New name** when it didn't, so you can double-check it. You can edit the instructions here.
+- **Lab tests** and **scans**, matched to the names in the pickers.
+
+Untick anything you don't want and tap **Add ... to the prescription**. The items land in the blocks below and save automatically, like anything you type. A drug that's already on the prescription isn't added twice; if it had no instructions, the new ones fill in. New drug names are saved to your clinic's drug list for next time. If the result isn't right, tap **Try again** to go back to your writing or recording.
+
+<Tip>
+  Instructions come back in your dashboard language: natural Egyptian Arabic when the dashboard is in Arabic, English when it's in English.
+</Tip>
+
+<Note>
+  Kashfy doesn't keep the drawing or the recording. Only the items you add are saved. If you read many in a row, you may be asked to wait a minute before the next one.
+</Note>
 
 ## Prescription code
 
