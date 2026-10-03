@@ -7,30 +7,36 @@ Doctors write prescriptions inside the appointment. Kashfy turns it into a brand
 
 ## Open the prescription editor
 
-In **Appointments**, click an appointment to open its details. The prescription section is near the bottom, under the diagnosis. Doctors, owners and admins can edit it; other staff can view it.
+In **Appointments**, click an appointment to open its details. **Prescription & orders** is in the **Visit** card, under the diagnosis. Doctors, owners and admins can edit it; other staff can view it.
+
+It has three matching blocks: **Medicines**, **Lab tests** and **Radiology**, each with a count of what's added.
 
 ## Write the prescription
 
 <Steps>
   <Step title="Add medicines">
-    Search for a drug by name and pick it from the list. If it isn't there, choose **Add "..." manually**.
+    Search for a drug by name and pick it from the list. If it isn't there, choose **Add "..." manually**. You can use the keyboard: **↑ / ↓** to move, **Enter** to add, **Esc** to close. A drug that's already added shows **Added** and isn't added twice.
   </Step>
   <Step title="Add instructions">
-    Under each medicine, write how to take it, for example "1 tab every 8h after meals".
+    Under each medicine, write how to take it, or tap a shortcut such as **1 tab 3× daily after meals**, **Once daily**, **Before sleep**, **When needed**, **For 5 days** or **For 1 week**. Shortcuts add to what's already written.
   </Step>
-  <Step title="Request scans or tests (optional)">
-    Use **Select Scans** and **Select Tests** to add radiology and lab requests, each with its own notes box.
+  <Step title="Add lab tests or scans (optional)">
+    Tap **Add tests** or **Add scans** to open the picker, tick what you need, and add notes for the lab or the clinical indication.
   </Step>
-  <Step title="Save">
-    Click **Save**. Use **Preview** to see the PDF before sending.
+  <Step title="It saves by itself">
+    Everything saves automatically a moment after you stop typing. You'll see **Saving...** and then **Saved** next to the title. Closing the visit sheet straight away still saves. Use **Preview** to see the PDF before sending.
   </Step>
 </Steps>
 
-The PDF includes your clinic logo and name, the date, the doctor, the patient's name and age, the medicines with instructions, any lab and radiology requests, and your clinic addresses and phone. Once created, **Open** and **Print** links appear next to the prescription title.
+The PDF includes your clinic logo and name, the date, the doctor, the patient's name and age, the medicines with instructions, any lab and radiology requests, and your clinic addresses and phone. Medicines, lab tests and radiology each get their own page. Once created, **Open** and **Print** buttons appear next to the title.
+
+## Prescription code
+
+Every prescription has a short code, printed as **كود الروشتة** (for example `RX-1A2B3C4D`). When a patient sends this prescription back on WhatsApp, for example to a Kashfy lab or radiology centre, the AI recognises it and uses what was prescribed. It only does this when the prescription belongs to the patient who sent it.
 
 ## Send it on WhatsApp
 
-Click **Send to patient**. You'll see "Prescription sent to the patient on WhatsApp" when it's done.
+Click **Send to patient**. You'll see "Prescription sent to the patient on WhatsApp" when it's done. You can send lab tests or scans on their own, without any medicines.
 
 | Patient's last message to Kashfy | Patient receives |
 |----------------------------------|------------------|
@@ -38,7 +44,7 @@ Click **Send to patient**. You'll see "Prescription sent to the patient on Whats
 | Longer ago, or never | An approved template message from the doctor with a button to download the prescription |
 
 <Warning>
-  The patient needs a valid Egyptian mobile number to receive the prescription. If there isn't one on file, the editor shows **Patient WhatsApp number required to send prescription** with a box to add it. The send button stays disabled until the number is saved and at least one medicine is added.
+  The patient needs a valid Egyptian mobile number to receive the prescription. If there isn't one on file, the editor shows **Patient WhatsApp number required to send prescription** with a box to add it. The send button stays disabled until the number is saved and at least one medicine, test or scan is added.
 </Warning>
 
 <CardGroup cols={2}>

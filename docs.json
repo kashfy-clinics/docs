@@ -84,6 +84,7 @@
               "patients/overview",
               "patients/patient-profile",
               "patients/conversations",
+              "patients/private-notes",
               "patients/records-portal"
             ]
           },

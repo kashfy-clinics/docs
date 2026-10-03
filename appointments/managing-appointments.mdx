@@ -5,23 +5,35 @@ description: 'The visit sheet: move stages, write the diagnosis and prescription
 
 Tap any booking on the board or calendar to open its **visit sheet**. Everything about that visit happens here.
 
+## The booking card
+
+Each card on the board shows the patient, the doctor and the time (or queue number), and:
+
+- **Follow-up** when it's a follow-up visit
+- **Late 12m** when a booked patient's time has passed and they haven't been marked arrived
+- The phone number and branch
+- When it was booked
+- Small icons when the visit has a prescription, lab tests or scans
+- **Add payment**, or **Paid** once paid
+
+All times are Cairo time. You can also reach a card with **Tab** and open it with **Enter**.
+
 ## What's on the visit sheet
+
+The top of the sheet stays in place while you scroll: the patient's name and stage, the date, time and doctor, and buttons for **Patient record**, calling and WhatsApp.
 
 | Section | What you do there | Who |
 |---------|-------------------|-----|
-| **Patient name** | Tap **Patient record** to open the full [patient profile](/patients/patient-profile) | Everyone |
-| **Date & time** | See when the visit is | Everyone |
-| **Patient contact** | Call or message the patient | Everyone |
-| **Symptoms** and **Notes** | What the patient or staff wrote when booking | Everyone |
-| **Stage** | The current [status](/appointments/appointment-status) | Everyone |
-| **Diagnosis** | Type and **Save** | Doctors, owner, admins |
-| **Prescription, scans, lab tests** | See below | Doctors, owner, admins |
+| **Stage tracker** | Shows Booked → Arrived → In exam → Done (or that the visit was cancelled or missed) | Everyone |
+| **Booking** | The complaint and booking notes the patient or staff wrote | Everyone |
+| **Diagnosis** | Type it; it saves by itself when you click away and shows **Saved** | Doctors, owner, admins |
+| **Prescription & orders** | Medicines, lab tests and scans. See below | Doctors, owner, admins |
 | **Doctor notes** | Chart notes with attachments | Everyone |
 | **Payments** | Record and void payments | Everyone except doctors |
 
 ## Moving the visit along
 
-The buttons at the bottom change with the stage:
+The action bar stays at the bottom of the sheet. The main button is always the next step for this visit:
 
 | Button | Moves to |
 |--------|----------|
@@ -40,11 +52,11 @@ You can also drag the card between columns on the board. See [Appointment Status
 
 ## Prescription, scans, and lab tests
 
-One editor holds all three and saves them together:
+One editor holds all three and saves them automatically:
 
-- **Prescription** - search a drug (or add it by name), then write instructions such as "1 tab every 8h after meals". **Preview**, **Print**, or **Send to patient** on WhatsApp. See [Prescriptions](/appointments/prescriptions).
-- **Select Scans** - opens a searchable picker of scans grouped by category. Tick the scans and tap **Confirm**, then add the clinical indication.
-- **Select Tests** - the same picker for lab tests, with notes for the lab.
+- **Medicines** - search a drug (or add it by name), then write instructions or tap a shortcut. **Preview**, **Print**, or **Send to patient** on WhatsApp. See [Prescriptions](/appointments/prescriptions).
+- **Lab tests** - tap **Add tests** for a searchable picker grouped by category, then add notes for the lab.
+- **Radiology** - tap **Add scans** for the same picker, then add the clinical indication.
 
 Orders appear on the patient's profile under **Lab & radiology**, and results show there once a Kashfy lab or radiology centre delivers them. See [Lab](/lab/overview) and [Radiology](/radiology/overview).
 
