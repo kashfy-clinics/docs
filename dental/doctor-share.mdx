@@ -1,0 +1,34 @@
+---
+title: 'Doctor Share'
+description: "Each doctor's percentage of their work, what's paid out and what's still owed, month by month"
+---
+
+Many clinics pay doctors a percentage of their work. **Doctor share** works it out each month.
+
+Owners and admins open it from **Doctor share** in the sidebar. Each doctor sees their own numbers under **My share** in the doctor portal.
+
+## Setting it up
+
+- **Percentage**: type each doctor's percentage in the table. It saves when you click away. A doctor without a percentage gets no share.
+- **On collected** or **On billed**:
+  - **Collected** is the money actually paid for the doctor's work: visit payments for their appointments and payments on their treatment plans.
+  - **Billed** is the work done: the prices of plan lines they marked done, plus what was paid for their other visits.
+- **Deduct lab cost first**: takes the doctor's [dental lab](/dental/dental-lab) costs for the month off before the percentage.
+
+## Reading the table
+
+For the chosen month, each doctor has:
+
+| Column | Meaning |
+|--------|---------|
+| **Collected** or **Billed** | The base, depending on your setting |
+| **Lab** | Their lab costs this month, faded when not deducted |
+| **Share** | (Base − lab) × percentage |
+| **Paid out** | What's been paid to them for this month |
+| **Owed** | Share minus paid out |
+
+Use the arrows to move between months.
+
+## Paying a doctor
+
+Click **Pay** next to the doctor. The amount starts at what's owed. Pick the method and confirm. The payout is recorded as an expense under **Doctor shares** in [Finance](/finance/expenses).

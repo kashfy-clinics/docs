@@ -89,6 +89,19 @@
             ]
           },
           {
+            "group": "Dental",
+            "pages": [
+              "dental/overview",
+              "dental/tooth-chart",
+              "dental/treatment-plans",
+              "dental/patient-account",
+              "dental/prices",
+              "dental/dental-lab",
+              "dental/inventory",
+              "dental/doctor-share"
+            ]
+          },
+          {
             "group": "Services",
             "pages": [
               "services/overview"
