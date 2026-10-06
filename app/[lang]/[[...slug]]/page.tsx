@@ -5,14 +5,24 @@ import {
   DocsPage,
   DocsTitle,
   MarkdownCopyButton,
-  ViewOptionsPopover,
-} from 'fumadocs-ui/layouts/docs/page';
+} from 'fumadocs-ui/layouts/notebook/page';
 import { notFound } from 'next/navigation';
-import { getMDXComponents } from '@/components/mdx';
+import { Card, getMDXComponents } from '@/components/mdx';
+import { PageActions } from '@/components/page-actions';
 import type { Metadata } from 'next';
+import type { ComponentProps } from 'react';
 import { createRelativeLink } from 'fumadocs-ui/mdx';
-import { getPageMarkdownUrl, gitConfig } from '@/lib/shared';
+import { getPageMarkdownUrl } from '@/lib/shared';
 import { dirOf, i18n } from '@/lib/i18n';
+
+/** Content links are written as "/lab/intake"; keep readers in their language. */
+function localizeHref(href: string | undefined, lang: string) {
+  if (!href || lang === i18n.defaultLanguage || !href.startsWith('/') || href.startsWith('//')) return href;
+  if (href === `/${lang}` || href.startsWith(`/${lang}/`) || href.startsWith(`/${lang}#`)) return href;
+  // Static files (images, icons) are not localized.
+  if (/\.[a-z0-9]+$/i.test(href.split('#')[0])) return href;
+  return href === '/' ? `/${lang}` : `/${lang}${href}`;
+}
 
 export default async function Page(props: PageProps<'/[lang]/[[...slug]]'>) {
   const { lang, slug } = await props.params;
@@ -26,6 +36,7 @@ export default async function Page(props: PageProps<'/[lang]/[[...slug]]'>) {
   const translated = lang === i18n.defaultLanguage || page.path.endsWith(`.${lang}.mdx`);
   const contentLang = translated ? lang : i18n.defaultLanguage;
   const contentDir = dirOf(contentLang);
+  const RelativeLink = createRelativeLink(source, page);
 
   return (
     <DocsPage toc={page.data.toc} full={page.data.full}>
@@ -35,15 +46,13 @@ export default async function Page(props: PageProps<'/[lang]/[[...slug]]'>) {
       </div>
       <div className="flex flex-row gap-2 items-center border-b pb-6">
         <MarkdownCopyButton markdownUrl={markdownUrl} />
-        <ViewOptionsPopover
-          markdownUrl={markdownUrl}
-          githubUrl={`https://github.com/${gitConfig.user}/${gitConfig.repo}/blob/${gitConfig.branch}/content/docs/${page.path}`}
-        />
+        <PageActions lang={lang} markdownUrl={markdownUrl} />
       </div>
       <DocsBody lang={contentLang} dir={contentDir}>
         <MDX
           components={getMDXComponents({
-            a: createRelativeLink(source, page),
+            a: (p) => <RelativeLink {...p} href={localizeHref(p.href, lang)} />,
+            Card: (p: ComponentProps<typeof Card>) => <Card {...p} href={localizeHref(p.href, lang)} />,
           })}
         />
       </DocsBody>
@@ -59,6 +68,7 @@ export async function generateMetadata(props: PageProps<'/[lang]/[[...slug]]'>):
   const { lang, slug } = await props.params;
   const page = source.getPage(slug, lang);
   if (!page) notFound();
+  const enPath = `/${page.slugs.join('/')}`;
 
   return {
     // The home page keeps the plain site name.
@@ -66,6 +76,11 @@ export async function generateMetadata(props: PageProps<'/[lang]/[[...slug]]'>):
     description: page.data.description,
     alternates: {
       canonical: page.url,
+      languages: {
+        en: enPath,
+        ar: enPath === '/' ? '/ar' : `/ar${enPath}`,
+        'x-default': enPath,
+      },
     },
   };
 }

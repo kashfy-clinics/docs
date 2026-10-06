@@ -1,5 +1,3 @@
-import { createGetUrl } from 'fumadocs-core/source';
-
 export const appName = 'Kashfy Docs';
 export const siteUrl = 'https://docs.kashfy.site';
 export const docsContentRoute = '/llms.mdx';
@@ -10,10 +8,9 @@ export const gitConfig = {
   branch: 'main',
 };
 
-const getContentUrl = createGetUrl(docsContentRoute);
-
+/** Raw Markdown of a page, served by app/llms.mdx/[lang]/[[...slug]]. */
 export function getPageMarkdownUrl(page: { slugs: string[]; locale?: string }) {
   const segments = [...page.slugs, 'content.md'];
 
-  return { segments, url: getContentUrl(segments, page.locale) };
+  return { segments, url: `${docsContentRoute}/${page.locale ?? 'en'}/${segments.join('/')}` };
 }

@@ -25,6 +25,11 @@
   --color-fd-ring: #1a8a78;
 }
 
+/* Our toggle sits by the logo (components/sidebar-toggle.tsx); hide the layout's default one at the end of the top bar. */
+#nd-subnav button[aria-controls='nd-sidebar'][data-collapsed]:not([data-kashfy-sidebar-toggle]) {
+  display: none;
+}
+
 html {
   scrollbar-gutter: stable;
 }

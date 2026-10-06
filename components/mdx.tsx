@@ -22,7 +22,7 @@ function CardGroup({ cols = 2, children }: { cols?: number; children?: ReactNode
   return <FdCards className={GRID_COLS[cols] ?? GRID_COLS[2]}>{children}</FdCards>;
 }
 
-function Card({
+export function Card({
   title,
   icon,
   href,
