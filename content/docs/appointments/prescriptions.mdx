@@ -34,8 +34,8 @@ The PDF includes your clinic logo and name, the date, the doctor, the patient's 
 
 Instead of adding drugs one by one, you can write the prescription by hand or say it out loud, and Kashfy's AI reads it for you. Both buttons, **Handwrite it** and **Dictate it**, sit above **Medicines** for doctors, owners and admins.
 
-<Tabs>
-  <Tab title="Handwrite it">
+<Tabs items={["Handwrite it", "Dictate it"]}>
+  <Tab value="Handwrite it">
     <Steps>
       <Step title="Write">
         Tap **Handwrite it** and write on the pad with a stylus or your finger, the way you would on paper: drugs, doses, tests and scans. **Undo** removes the last stroke and **Clear** starts over.
@@ -45,7 +45,7 @@ Instead of adding drugs one by one, you can write the prescription by hand or sa
       </Step>
     </Steps>
   </Tab>
-  <Tab title="Dictate it">
+  <Tab value="Dictate it">
     <Steps>
       <Step title="Record">
         Tap **Dictate it**, then tap the microphone and say the prescription. Egyptian Arabic with English drug names works, for example "Augmentin 1 gram, one tab every 12 hours for a week, and a CBC". Tap stop when you're done. A recording can be up to 1:30. The browser asks for microphone access the first time.
