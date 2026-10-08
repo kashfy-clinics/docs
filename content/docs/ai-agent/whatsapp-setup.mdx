@@ -1,17 +1,24 @@
 ---
 title: 'WhatsApp'
-description: 'How patients reach your clinic on the shared Kashfy WhatsApp number'
+description: 'How patients reach your clinic on WhatsApp: the shared Kashfy number or your own number'
 ---
 
-Kashfy uses the official WhatsApp Business API. All clinics share **one Kashfy WhatsApp number**, so there is nothing to connect: no QR scan, no phone to keep online, and no session that can drop.
+Kashfy uses the official WhatsApp Business API, so there is no QR to scan, no phone to keep online and no session that can drop. Patients can reach your clinic in one of two ways. You choose in **Settings → WhatsApp**.
 
-Your job is to send patients to that number with your **clinic code**, so Kashfy knows the message is for you.
+| | **Kashfy number** (default) | **Your own number** |
+|---|---|---|
+| Patients message | The shared Kashfy number, with your clinic code, link or QR | Your clinic's WhatsApp number directly |
+| Setup | None | Connect your Meta app, or let us do it. See [WhatsApp Settings](/settings/whatsapp). |
+| The assistant introduces itself as | Kashfy's assistant for your clinic | Your clinic's assistant, with no mention of Kashfy |
+| Meta message fees | Included in Kashfy | Billed by Meta to your account |
 
-<Info>
-  Prefer your own WhatsApp number? You can connect it in **Settings → WhatsApp**: patients then message your number directly and no code is needed. See [WhatsApp Settings](/settings/whatsapp).
-</Info>
+Everything else works the same on both: the AI, bookings, [Conversations](/patients/conversations), reminders, results and prescriptions.
 
-## Your clinic code
+## On the Kashfy number
+
+All clinics on the shared number are told apart by a **clinic code**, so send patients to the number with yours.
+
+### Your clinic code
 
 Every clinic has a short code. When a patient sends `كود` followed by your code (for example `كود A7X2K`), they go straight to your assistant.
 
@@ -25,7 +32,7 @@ Find your code in **Settings → Clinic**, in the **Codes & QR** card. It gives 
   Put the link on your Facebook page, Instagram bio and Google Maps listing, and the printed QR at reception. Every patient who uses it lands with your assistant, not another clinic's. Full details in [Codes & QR](/settings/codes-qr).
 </Tip>
 
-## How Kashfy picks the clinic
+### How Kashfy picks the clinic
 
 Because the number is shared, each incoming message is matched to a clinic in this order:
 
@@ -49,12 +56,28 @@ Because the number is shared, each incoming message is matched to a clinic in th
 
 This means returning patients usually don't need the code again. New patients, or patients who visit more than one clinic on Kashfy, should use the code or your link.
 
+## On your own number
+
+Patients message your clinic's number and reach your assistant directly, with no code and no clinic picking. Connect it in [WhatsApp Settings](/settings/whatsapp), yourself or with our paid setup.
+
+Once your own number is in use:
+
+- Your clinic link and printed QR from **Codes & QR** open a chat with your number, so posters you already printed keep working.
+- Patients who still message the Kashfy number with your code get a short reply pointing them to your number.
+- If the Kashfy desk sends a patient to your clinic, it gives them your number's WhatsApp link.
+- You can switch back to the Kashfy number at any time from **Settings → WhatsApp**.
+
+<Warning>
+  A number connected to the WhatsApp Business API stops working in the WhatsApp Business app on the phone. Use a number you don't need in the app, or a new one.
+</Warning>
+
 ## What happens with each message
 
-1. The patient messages the Kashfy number.
+1. The patient messages the Kashfy number or your own number.
 2. Kashfy matches the message to your clinic and to the patient's record (a new patient record is created on the first message).
-3. The AI replies, typically within seconds, using your doctors, availability, knowledge base and instructions.
-4. The chat appears in [Conversations](/patients/conversations), where your team can read it, pause the AI and reply.
+3. Photos, voice notes, videos and files are read automatically, so the AI understands a prescription photo, a lab result PDF or a voice question.
+4. The AI waits a few seconds so a patient who sends several messages in a row gets one reply, then answers using your doctors, availability, knowledge base and instructions.
+5. The chat appears in [Conversations](/patients/conversations), where your team can read it, pause the AI and reply.
 
 If the AI can't answer (for example the subscription isn't active or the clinic profile is incomplete), the message is still saved for your team. See [When the AI stops answering](/ai-agent/overview#when-the-ai-stops-answering).
 
@@ -67,14 +90,14 @@ WhatsApp only allows normal messages to a patient for **24 hours after their las
 - Reminders, review requests and prescriptions switch to approved templates automatically when the window is closed. See [Reminders](/appointments/reminders) and [Prescriptions](/appointments/prescriptions).
 
 <Info>
-  The window belongs to the Kashfy number, not to your clinic. If a patient messaged any clinic on Kashfy in the last 24 hours, the window is open.
+  The window belongs to the number the patient wrote to. On the Kashfy number, a message to any clinic on Kashfy in the last 24 hours keeps it open. On your own number, only messages to your number count, and template messages need templates approved on your own account (see [Message templates](/settings/whatsapp#message-templates)).
 </Info>
 
 <CardGroup cols={2}>
+  <Card title="WhatsApp Settings" icon="gear" href="/settings/whatsapp">
+    Choose the Kashfy number or your own.
+  </Card>
   <Card title="Codes & QR" icon="qrcode" href="/settings/codes-qr">
     Get your code, link and printable QR.
-  </Card>
-  <Card title="Conversations" icon="messages-square" href="/patients/conversations">
-    Read chats and reply to patients.
   </Card>
 </CardGroup>
