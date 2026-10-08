@@ -1,11 +1,79 @@
 ---
 title: 'WhatsApp Settings'
-description: 'Where to find every WhatsApp-related setting now that all clinics share one Kashfy number'
+description: 'Choose the number patients message: the shared Kashfy number, or your own WhatsApp number'
 ---
 
-Kashfy runs on the official WhatsApp Business API with **one shared Kashfy number** for all clinics. There is no number to connect, no QR to scan and no connection status to watch, so there is no separate WhatsApp settings page. Old links to it open **Settings → Clinic**.
+Go to **Settings → WhatsApp**. Owners and admins can change it; other team members can only view it.
 
-Here is where each WhatsApp setting lives:
+The page has two cards. The one marked **In use** is the number your patients reach you on right now.
+
+| | **Kashfy number** | **Your own number** |
+|---|---|---|
+| Patients message | The shared Kashfy number, with your clinic code or QR | Your clinic's WhatsApp number directly |
+| Setup | None | Connect your own Meta app (or let us do it) |
+| Meta message fees | Included in Kashfy | Billed by Meta to your own account |
+| Assistant introduces itself as | Kashfy's assistant for your clinic | Your clinic's assistant |
+
+<Warning>
+  A number connected to the WhatsApp Business API stops working in the WhatsApp Business app on the phone. Use a number you don't need in the app, or a new one.
+</Warning>
+
+## Kashfy number
+
+This is the default and needs nothing from you. Patients reach you with your clinic code, link or QR. See [Codes & QR](/settings/codes-qr) and [WhatsApp](/ai-agent/whatsapp-setup).
+
+## Connect your own number yourself
+
+You need an app on Meta for Developers with your WhatsApp number added to it. The **How to get these details** list on the page walks through it:
+
+<Steps>
+  <Step title="Create the Meta app">
+    On developers.facebook.com, create a Business app, add the WhatsApp product and add your number.
+  </Step>
+  <Step title="Create a system user and token">
+    In **Business settings → Users → System users**, add an Admin system user and give it your app and your WhatsApp account with full control. Generate a token for the app with expiry **Never** and the permissions `whatsapp_business_messaging` and `whatsapp_business_management`.
+  </Step>
+  <Step title="Copy the details">
+    From **App settings → Basic**, copy the **App secret**. From **WhatsApp → API setup**, copy the **WhatsApp Business Account ID** and the **Phone number ID**.
+  </Step>
+  <Step title="Connect">
+    Paste the four values and click **Connect number**. Kashfy checks the number with Meta and switches your patients to it. The token and secret are stored encrypted and never shown again.
+  </Step>
+  <Step title="Set the webhook in your app">
+    After the first connect, the page shows **Webhook details for your app**: a **Callback URL** and a **Verify token**. In your Meta app, open **WhatsApp → Configuration**, paste both, click **Verify and save**, and subscribe to `messages` and `message_template_status_update`.
+  </Step>
+  <Step title="Go live">
+    Switch your Meta app to **Live**. Meta doesn't deliver every message while the app is in Development.
+  </Step>
+</Steps>
+
+To change the details later, enter the new values and click **Save and test**. Leave the token or secret empty to keep the saved one.
+
+## Let us connect it for you
+
+If you'd rather not set up the Meta app, Kashfy does it for **500 EGP**, paid offline:
+
+1. Open business.facebook.com → **Settings → Users → People → Add**.
+2. Add `integrations@kashfy.site` with **Full control** (Admin).
+3. Fill in **Phone to reach you** (and notes if you like) and click **Send request**.
+
+The card then shows the request status. We call you to confirm payment, connect the number, and let you know when it's done. You can cancel the request until it's paid.
+
+## Message templates
+
+Once your own number is in use, the **Message templates** card lists the templates on your WhatsApp account and their status (**Approved**, **Pending review**, **Rejected**).
+
+Reminders, results and review requests sent more than 24 hours after a patient's last message need an approved template on your account. Until Meta approves one, that message isn't sent from your number. Click **Refresh** to update the statuses and to submit Kashfy's templates to Meta for review.
+
+## Switching back
+
+- **Use the Kashfy number** moves patients back to the shared number. Your number's details stay saved.
+- **Use your own number** switches back to your number without entering anything again.
+- **Remove credentials** deletes the saved token and secret and moves patients back to the Kashfy number. Past conversations stay either way.
+
+When you're on your own number, your clinic link and QR open your number directly, and patients who message the Kashfy number with your code are pointed to it.
+
+## Where other WhatsApp settings live
 
 | What you want to do | Where |
 |---------------------|-------|
@@ -18,11 +86,11 @@ Here is where each WhatsApp setting lives:
 
 ## The clinic phone number
 
-The phone number in **Settings → Clinic → Contact** is your clinic's own number. It is not the WhatsApp number patients message. The AI shares it when patients ask for a phone number, and it appears in the short "assistant isn't available" message if the AI can't answer.
+The phone number in **Settings → Clinic → Contact** is your clinic's contact number. The AI shares it when patients ask for a phone number, and it appears in the short "assistant isn't available" message if the AI can't answer. It isn't used to connect WhatsApp.
 
 <CardGroup cols={2}>
   <Card title="WhatsApp" icon="message" href="/ai-agent/whatsapp-setup">
-    How patients reach your clinic on the shared number.
+    How patients reach your clinic.
   </Card>
   <Card title="Codes & QR" icon="qrcode" href="/settings/codes-qr">
     Your code, link and poster.
