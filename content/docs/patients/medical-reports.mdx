@@ -1,0 +1,78 @@
+---
+title: 'Medical Reports'
+description: 'Write a medical report for a patient, let the AI fix spelling only, then save and print it on your clinic header'
+---
+
+A medical report is a free-text document a doctor writes for a patient: a sick leave, a referral, a fitness certificate, or a general "to whom it may concern" report. You write it in your own words. The AI never writes it for you; it only fixes spelling when you ask.
+
+## Who can write a report [#who-can-write]
+
+| Person | Write a report | Edit or delete it | Open and print it |
+|--------|----------------|-------------------|-------------------|
+| A doctor (or an owner / admin who is one of the clinic's doctors) | Yes | Only the reports they wrote | Yes |
+| Owner and admins who aren't doctors | No | No | Yes |
+| Reception and other staff | No | No | Yes |
+
+A doctor member sees only the reports they wrote. Owners, admins and staff see every report on the patient, so reception can print one for the patient at the desk.
+
+## Where to write one [#where-to-write]
+
+The same **Write MR** window opens from three places:
+
+- **Patients list (doctor view):** every row has a **Write MR** button. On phones it is the pen icon at the end of the row.
+- **Patient page:** the **Medical reports** card on the **Overview** tab has a **Write MR** button.
+- **Visit page:** the top bar has a **Write MR** button, and the **Medical reports** card sits in the side column. A report written here is linked to that visit.
+
+## Writing the report [#writing]
+
+<Steps>
+  <Step title="Pick a title">
+    The title starts as **Medical Report**. Tap a suggestion (**Medical Report**, **Sick Leave**, **Referral**, **Fitness Certificate**) or type your own.
+  </Step>
+  <Step title="Write the report">
+    Write it in Arabic, English or both. Line breaks are kept exactly as you type them, on screen and on the printout.
+  </Step>
+  <Step title="Review (optional)">
+    Tap **[AI] Review** at the top of the window. See [AI Review](#ai-review) below.
+  </Step>
+  <Step title="Save">
+    Tap **Save**. The report appears in the patient's **Medical reports** card.
+  </Step>
+</Steps>
+
+<Tip>
+  If you close the window before saving a new report, your text is kept on this device. Open **Write MR** again for the same patient and it comes back.
+</Tip>
+
+## AI Review [#ai-review]
+
+**Review** sends your text to the AI with one instruction: fix spelling mistakes and typos, including misspelled medical terms, drug names and anatomy. It does not rephrase, reorder, add or remove anything, and it never changes numbers, doses, dates, names or the language you wrote in.
+
+- If it fixed something, the text is replaced and a bar shows **Spelling fixed**. Read the report over, then save. Tap **Undo** to go back to exactly what you wrote.
+- If there was nothing to fix, you see **No spelling mistakes found** and the text stays as it is.
+
+<Info>
+  Nothing is saved until you tap **Save**. The AI only sees the report text, not the patient's file.
+</Info>
+
+## PDF, printing and sending [#printing]
+
+After saving, the bottom of the window has the same buttons as a prescription:
+
+- **Create PDF** - turns the report into a PDF and keeps it in the patient's files. It is greyed out while the PDF already matches the report; edit and save the report and it lights up again.
+- **Open** - opens the PDF.
+- **Print** - opens the PDF and the print dialog. If there is no up-to-date PDF yet, it makes one first. The printer icon next to a report in the **Medical reports** card does the same.
+- **Send to patient** - sends the PDF to the patient on your clinic's WhatsApp number (the visit's branch number when the report belongs to a visit). Needs a connected WhatsApp number and a valid patient phone.
+
+The PDF is an A4 page with:
+
+- your clinic's name, logo and phone, and the doctor's name at the top
+- the title, the patient's name, age, gender and the report date
+- the report text, with your line breaks
+- a signature line with the doctor's name
+
+A report written mostly in Arabic gets an Arabic page; otherwise the page is in English.
+
+## Editing and deleting [#editing-and-deleting]
+
+Open a report from the **Medical reports** card. The doctor who wrote it can change the title or text and tap **Save**, or tap **Delete** to remove it for good. Everyone else opens it read-only and can print it.

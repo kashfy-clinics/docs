@@ -39,6 +39,7 @@
     "patients/patient-profile",
     "patients/conversations",
     "patients/private-notes",
+    "patients/medical-reports",
     "patients/records-portal",
     "---Dental---",
     "dental/overview",
