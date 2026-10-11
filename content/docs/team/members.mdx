@@ -1,6 +1,6 @@
 ---
 title: 'Team Members'
-description: 'Invite reception staff and admins, limit them to branches, and remove access'
+description: 'Invite reception staff and admins, limit them to branches, change roles, transfer ownership, and remove access'
 ---
 
 Navigate to **Dashboard → Settings → Team**. Owners and admins can invite and remove members. Everyone else sees the list.
@@ -40,13 +40,39 @@ Tap the remove (trash) icon next to the member and confirm. They lose access imm
 
 You can't remove the owner or yourself, and only the owner can remove an admin.
 
+## Changing a member's role
+
+Owners and admins can switch a member between **Admin** and **Member** (employee) using the role dropdown in the team list. The change applies right away.
+
+- Only the owner can make someone an admin, or change an admin's role.
+- You can't change your own role or the owner's role.
+- A doctor's role can't be changed here, because it is tied to their doctor profile.
+
 <Note>
-  Roles and branch access are set when you invite. To change someone's role, remove them and invite them again with the new role.
+  Branch access is set when you invite. To change someone's branches, remove them and invite them again.
 </Note>
 
 ## Clinic owner
 
-The owner is the account that created the organization. Ownership transfer isn't available in the dashboard. Contact [support@kashfy.site](mailto:support@kashfy.site) if you need it.
+The owner is the account that created the organization. The owner can hand the organization to another member.
+
+### Transferring ownership
+
+<Steps>
+  <Step title="Tap the crown next to the member">
+    **Make owner** (the crown icon) appears next to every other member. Only the owner sees it.
+  </Step>
+  <Step title="Choose your new role">
+    Under **And you become:**, pick **Admin** (same as owner) or **Member** (reception / bookings).
+  </Step>
+  <Step title="Tap Transfer">
+    The member becomes the owner, with every permission including billing, and you get the role you chose. The page reloads with your new permissions.
+  </Step>
+</Steps>
+
+<Warning>
+  Once you transfer, only the new owner can transfer ownership back.
+</Warning>
 
 <CardGroup cols={2}>
   <Card title="Roles & Permissions" icon="shield" href="/team/roles">

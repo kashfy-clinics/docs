@@ -1,0 +1,105 @@
+---
+title: 'Prescription Design'
+description: 'Design the prescription paper patients get: clone your printed paper from a photo, or build it from scratch'
+---
+
+The prescription design is the look of the prescription patients get as a PDF, on WhatsApp, and in print. Clone your printed paper from a photo, or design it from scratch, and watch a live preview as you go.
+
+Navigate to **Dashboard → Settings → Prescription**. Doctors find it in the doctor view under **Settings → Prescription**.
+
+## Who can edit
+
+| Role | What they can do |
+|------|------------------|
+| **Owner / Admin** | Choose **One design for all doctors** or **A design for each doctor**, and edit any of them |
+| **Doctor** | Edit their own design |
+| **Everyone else** | See the design (read only) |
+
+### One design or one per doctor
+
+Owners and admins pick one of two options at the top:
+
+- **One design for all doctors**: a single shared paper. Each doctor's own name fills in wherever `{doctor}` is written.
+- **A design for each doctor**: every doctor gets their own paper. Pick the doctor from **Choose a doctor** to edit theirs.
+
+A doctor with no design of their own starts from the clinic's shared design. The page says **This is the clinic's shared design. Saving makes it this doctor's own.**
+
+## Clone your paper from a photo
+
+The quickest way to start is to copy the paper you already print.
+
+<Steps>
+  <Step title="Take a photo of your printed prescription paper">
+    A clear, straight photo works best. JPG, PNG or WEBP, up to 10 MB.
+  </Step>
+  <Step title="Tap Upload a photo">
+    Under **Clone your paper from a photo**. While it shows **Reading your paper…**, Kashfy reads the page size, the main color, the Arabic and English sides of the header, the logo position, the title and R/ mark, the fill-in fields and their labels, and the footer (addresses, phones, website, email, colored band and a faint background logo).
+  </Step>
+  <Step title="Logo cut out">
+    Kashfy cuts the logo out of the photo and uses it as the paper's logo.
+  </Step>
+  <Step title="Review, then tap Save design">
+    Check every detail in the preview and fix anything it misread. Nothing is saved until you tap **Save design**.
+  </Step>
+</Steps>
+
+<Tip>
+  When you clone a shared clinic design, the doctor's name on the paper is replaced with `{doctor}` so it works for every doctor. For a doctor's own design, the name is kept as printed.
+</Tip>
+
+## Designing from scratch
+
+Every part of the paper can be changed. The preview on the side updates as you type, using sample patient details.
+
+<AccordionGroup>
+  <Accordion icon="sliders" title="Page and color">
+    Choose **A4** or **A5**, and pick one of the preset colors or a custom color. The color is used for headings, lines and the footer band.
+  </Accordion>
+  <Accordion icon="user" title="Header">
+    The header has an **Arabic side** (right) and an **English side** (left). Each side has a name line and up to 8 lines under it, such as your specialty and credentials.
+
+    Write `{doctor}` for the name so each doctor's own name shows, for example `Dr. {doctor}` or `د. {doctor}`.
+  </Accordion>
+  <Accordion icon="image" title="Logo">
+    Place the logo **Left**, **Center** or **Right**, or choose **None**. Drag the slider to change its size, and tap **Replace logo** to upload a different image. Without one, the clinic logo is used.
+
+    Turn on **Faint logo in the background** for a light copy of the logo behind the page.
+  </Accordion>
+  <Accordion icon="file-medical" title="Title and fields">
+    Set the title above the patient details (for example **Prescription**) and turn the **R/** mark on or off.
+
+    The fields are **Date**, **Patient Name**, **Age**, **Diagnosis**, **Doctor** and **Rx code**. Turn each one on or off, rename its label, and use the up and down arrows to reorder them.
+  </Accordion>
+  <Accordion icon="building" title="Footer">
+    Add your **Addresses (one per line)**, up to 6, and your **Booking numbers**, website and email. Turn on **Colored band** to put the footer on a band of the paper's color.
+  </Accordion>
+</AccordionGroup>
+
+When you're done, tap **Save design**. New prescriptions use it straight away. **Unsaved changes** shows while you have edits that aren't saved.
+
+### The default design
+
+If nothing has been designed yet, Kashfy starts from a default: A4, dark blue, `Dr. {doctor}` / `د. {doctor}` in the header, the logo in the center, the **Prescription** title with R/, the Date, Patient Name, Age, Diagnosis and Rx code fields, and a colored footer band with your branch addresses and clinic phone filled in.
+
+## Reset to default
+
+Tap **Reset to default** and confirm to remove the design you're editing. New prescriptions then use the next design in line (see below).
+
+## Which design a prescription uses
+
+When a prescription is made, Kashfy uses:
+
+1. The visit doctor's own design, if they have one
+2. Otherwise, the clinic's shared design
+3. Otherwise, the default design
+
+This is true whichever option the owner picked at the top: a doctor's own saved design always comes first.
+
+<CardGroup cols={2}>
+  <Card title="Prescriptions" icon="file-medical" href="/appointments/prescriptions">
+    Writing and sending prescriptions.
+  </Card>
+  <Card title="Doctor Portal" icon="stethoscope" href="/doctors/doctor-portal">
+    The doctor's own settings.
+  </Card>
+</CardGroup>

@@ -1,0 +1,73 @@
+---
+title: 'WhatsApp Booking Link'
+description: 'The booking page patients open from WhatsApp: pick the doctor, day and time, enter age and gender, and get the confirmation in the chat'
+---
+
+When a patient asks to book on WhatsApp, the assistant can send a message with a **Book a visit** button. The button opens a booking page made for that patient, where they pick the doctor, day and time themselves. The booking lands on your [board](/appointments/overview) and the confirmation arrives in the same WhatsApp chat.
+
+This is the default booking style. You can switch between the booking page and booking inside the chat in **Settings → WhatsApp**, under **How do patients book?**. See [WhatsApp settings](/settings/whatsapp).
+
+<Info>
+  The booking page needs your clinic's own WhatsApp number. Labs and radiology centres always book inside the chat.
+</Info>
+
+## What the patient sees
+
+The page opens full screen with your clinic's logo and name at the top (or the clinic's first letter if there's no logo) and **Book a visit** under it. It follows the language the patient writes in, Arabic or English. There's no close or "back to WhatsApp" button: the patient simply closes the page when done.
+
+The page doesn't ask for a phone number. The link already knows who the patient is and which number they wrote from.
+
+## Booking steps
+
+<Steps>
+  <Step title="Doctor">
+    The patient picks the doctor, with their specialty and visit price. If your clinic has one doctor, this step is skipped.
+  </Step>
+  <Step title="Branch">
+    Shown only when you have more than one branch.
+  </Step>
+  <Step title="Date">
+    The patient picks a day, then a time grouped under **Morning**, **Afternoon** and **Evening**. For walk-in (queue) doctors there are no times: the page shows **Your queue number** and how many spots are left. If a day is full, the page says so and suggests another day.
+  </Step>
+  <Step title="Details">
+    The patient chooses **For me** or **Someone else**, then fills in the name, age and gender, and optionally the reason for the visit. Then they tap **Confirm booking**.
+  </Step>
+</Steps>
+
+## Age and gender are required
+
+**Confirm booking** stays disabled until the patient enters an **Age** and picks a **Gender** (**Male** or **Female**).
+
+- Age is in years, from 0 to 120.
+- For a children's doctor (pediatrics or pediatric surgery), the patient first picks **Days**, **Months** or **Years**, so a newborn can be booked as "10 days" or "4 months". Days go up to 365 and months up to 72.
+
+**For me** fills in the name Kashfy already has for this number and updates the patient's age and gender. **Someone else** asks for the patient's full name and books them as a family member under the same phone number, with their own record. See [Family](/patients/patient-profile#family).
+
+## After booking
+
+The page shows **Booking confirmed!** with the doctor, the day and time (or the queue number), the branch address, and a short reminder: "Please arrive 15 minutes before your slot", or "Arrive early to secure your spot in the queue" for a queue. It adds that the confirmation was sent on WhatsApp and the page can be closed.
+
+## One booking per link
+
+Each link books once. After the booking is made:
+
+- Reloading or reopening the link shows the same booking, never the form again. This works even after the link has expired.
+- If the booking is later cancelled, the link shows "This booking was cancelled" and asks the patient to message the clinic for a new link.
+- To book another visit, or for another family member, the patient asks again on WhatsApp and gets a new link.
+
+## Picks are remembered
+
+If the patient leaves the page or reloads it before booking, their choices are kept on that phone: the doctor, branch, day, time, and the details they typed. When they come back to the same link, the page resumes where they stopped. The saved picks are cleared once the booking is made.
+
+## When a link expires
+
+A link works for 2 hours. After that, if nothing was booked with it, the page shows "This booking link has expired. Message the clinic on WhatsApp for a new one." The assistant sends a fresh link the next time the patient asks.
+
+<CardGroup cols={2}>
+  <Card title="Appointments" icon="calendar-days" href="/appointments/overview">
+    Where WhatsApp bookings appear.
+  </Card>
+  <Card title="WhatsApp Settings" icon="message" href="/settings/whatsapp">
+    Choose how patients book.
+  </Card>
+</CardGroup>

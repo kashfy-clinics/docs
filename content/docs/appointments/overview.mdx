@@ -31,9 +31,20 @@ Drag a card to another column, or open it and use the buttons. Cancelled booking
 
 Each card shows the patient's name and phone, the time (or queue number for walk-in doctors), doctor, branch, symptoms, when it was booked, and whether it's **Paid** (or an **Add payment** button).
 
+A **First visit** badge sits at the top of the card when this is the patient's first visit to your clinic (earlier cancelled or missed bookings don't count). The same badge shows on the appointment sheet and the visit page.
+
 ## Calendar
 
 Switch to **Calendar** and choose **Month**, **Week**, or **Day**. Use the arrows to move and **Today** to jump back. Tap a booking to open it.
+
+## Opening a booking
+
+What opens when you tap a card on the board or a booking on the calendar depends on your role:
+
+| Role | What opens |
+|------|-----------|
+| **Doctor** | The [visit page](/appointments/visit): the patient's page, full screen, with earlier visits, the visit record, prescription and **End visit** |
+| **Reception, admins, owner** | The [appointment sheet](/appointments/managing-appointments): stages, payments and procedures, with the clinical side read-only and an **Open visit** button |
 
 ## Waiting list
 
@@ -55,13 +66,13 @@ For patients who want the next free slot with a doctor.
     The doctor's open slots load for the date you pick.
   </Step>
   <Step title="Pick date and time">
-    Only free times are shown. For walk-in queue doctors, the patient gets the next queue number.
+    Only free times are shown. For walk-in (queue) doctors there are no times: the **Time** box becomes **Queue number** and shows the number the patient will get (for example `#7`), with how many places are left. If the day is full or already over, it shows **Closed**.
   </Step>
   <Step title="Enter the patient">
     Full name and phone number, plus symptoms if you like.
   </Step>
   <Step title="Tap Confirm booking">
-    The booking appears on the board straight away. If the phone number is new, a patient record is created.
+    The booking appears on the board straight away. For a queue doctor, the confirmation shows the patient's **Queue number**. If the phone number is new, a patient record is created.
   </Step>
 </Steps>
 
@@ -74,8 +85,11 @@ For patients who want the next free slot with a doctor.
 Kashfy can send each patient a WhatsApp reminder a set number of hours before their visit. See [Reminders](/appointments/reminders).
 
 <CardGroup cols={2}>
+  <Card title="The Visit Page" icon="stethoscope" href="/appointments/visit">
+    Where doctors work the visit, full screen.
+  </Card>
   <Card title="Managing Appointments" icon="calendar-days" href="/appointments/managing-appointments">
-    The visit sheet: stages, notes, prescriptions, orders, payments.
+    The appointment sheet: stages, payments, procedures.
   </Card>
   <Card title="Appointment Statuses" icon="circle-check" href="/appointments/appointment-status">
     Every stage and which moves are allowed.

@@ -1,0 +1,80 @@
+---
+title: 'Telegram Settings'
+description: 'Connect a Telegram bot for your clinic (or one per branch) so the assistant answers and books on Telegram too'
+---
+
+Go to **Settings → Telegram**. Owners and admins can connect and manage bots; other team members see **Only a clinic manager can connect a Telegram bot.**
+
+A Telegram bot works alongside your [WhatsApp number](/settings/whatsapp). The assistant answers and books there too, and its chats land in [Conversations](/patients/conversations) like WhatsApp chats.
+
+<Info>
+  Telegram messages are free. There is no per-message charge, no 24-hour window and no templates, so your team can reply to a Telegram chat at any time.
+</Info>
+
+## Create a bot and connect it [#connect-a-bot]
+
+<Steps>
+  <Step title="Create the bot with BotFather">
+    Open Telegram and send `/newbot` to **@BotFather**.
+  </Step>
+  <Step title="Name it">
+    Pick a name for the bot (for example the clinic name), then a username ending in `bot`.
+  </Step>
+  <Step title="Copy the token">
+    BotFather sends a token like `123456789:AA...`. Copy it.
+  </Step>
+  <Step title="Paste and connect">
+    In the **Connect a Telegram bot** card, paste the token and click **Connect bot**. Kashfy checks it with Telegram and starts receiving the bot's messages. The token is stored encrypted and never shown again.
+  </Step>
+</Steps>
+
+If the token is refused, the card says why, for example **That token doesn't work. Copy it again from BotFather.**, **This bot is already connected to another clinic.** or **This bot is already connected to another of your branches.**
+
+## Your bot [#your-bot]
+
+Once connected, the bot's card shows:
+
+- The bot's username (**@yourbot**), which opens it in Telegram
+- **Bot link for patients**: `t.me/yourbot`. Share it on your social media or website.
+- **Connected** and **Last message** times
+- The last error from Telegram, if there is one
+
+| Control | What it does |
+|---------|--------------|
+| **On/off switch** | Turns the bot off (the token stays saved) or back on. While it's off, the assistant doesn't answer on it. |
+| **Change bot** | Paste a new token in the **Change the bot** card to replace the bot. The old bot stops sending messages to Kashfy. |
+| **Disconnect bot** | Forgets the bot. The assistant stops answering on Telegram; past chats stay in the inbox. |
+
+## Main bot and one bot per branch [#bots-per-branch]
+
+Bots follow the same model as WhatsApp numbers. A clinic can have **a main bot** that serves every branch, and/or **one bot per branch**.
+
+When your clinic has more than one branch (or more than one bot), the page starts with a **Your bots** bar:
+
+- Each chip shows the branch name (or **Main bot**), the bot's username and a status dot. Click a chip to open that bot.
+- **Add a bot** asks **This bot is for**: **All branches (main bot)** or one of your branches. Then connect it with its own BotFather token.
+- **This bot serves** moves the open bot to another branch or makes it the main bot.
+- **Remove bot** removes the open bot (only when you have more than one). The assistant stops answering on it; past chats stay in Conversations.
+
+Patients who chat with a branch's bot are booked at that branch by default. If they ask for another branch, the assistant books that one instead in the same chat.
+
+## What the assistant does on Telegram [#what-the-assistant-does]
+
+- **Welcomes the patient** when they tap **Start**, and introduces itself as the clinic's assistant.
+- **Asks for the phone number** with a **Share my number** button. The patient can tap **Not now** and keep chatting, but the number is required before any booking. If your clinic already has a patient with that number, the Telegram chat joins that patient's record (bookings, files and WhatsApp history).
+- **Books appointments**, showing available times as buttons the patient can tap.
+- **Sends your location as a venue card** (branch name, address and a map) after a booking or when the patient asks where you are.
+- **Understands voice notes, photos and files**, the same as on WhatsApp.
+
+## Where Telegram chats show up [#telegram-chats]
+
+Telegram chats appear in [Conversations](/patients/conversations) with a Telegram icon. You can pause the AI, assign the chat and reply exactly as on WhatsApp. Replies go to the patient's Telegram chat when that's where they last wrote.
+
+<CardGroup cols={2}>
+  <Card title="WhatsApp Settings" icon="message" href="/settings/whatsapp">
+    Your clinic's WhatsApp numbers.
+  </Card>
+  <Card title="Conversations" icon="messages" href="/patients/conversations">
+    Read and reply to every chat.
+  </Card>
+</CardGroup>

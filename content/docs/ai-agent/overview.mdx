@@ -3,9 +3,17 @@ title: 'AI Agent'
 description: "What Kashfy's AI receptionist does for your patients, and when it steps aside"
 ---
 
-Kashfy's AI agent answers your patients on WhatsApp and your website widget. It books, reschedules and cancels appointments, answers questions about your clinic, and hands the chat to your team when needed.
+Kashfy's AI agent answers your patients on WhatsApp, Telegram and your website widget. It books, reschedules and cancels appointments, answers questions about your clinic, and hands the chat to your team when needed.
 
 Everything it does shows up in your dashboard right away: bookings in **Appointments**, chats in **Conversations**.
+
+## Where the AI works [#channels]
+
+- **WhatsApp**: on your clinic's own WhatsApp number. Without a connected number there is no WhatsApp. See [WhatsApp Settings](/settings/whatsapp).
+- **Telegram**: on your clinic's Telegram bot, with free messages. See [Telegram Settings](/settings/telegram).
+- **Website widget**: on your own website. See [Website Widget](/widget/overview).
+
+A clinic can have a main number (or bot) for every branch and one per branch. When a patient writes to a **branch's** number or bot, the AI treats that branch as theirs: it offers that branch's doctors, days and address first and books there. If the patient asks for another branch, it books that one instead, in the same chat, and names the branch in the confirmation.
 
 ## What the AI can do
 
@@ -91,12 +99,12 @@ The AI pauses on its own in these cases. Your patients' messages still reach **C
 | Monthly fair-use limit for your plan reached | A message that the assistant isn't available this month and the clinic team will reply |
 
 <Warning>
-  Complete your clinic profile before sharing your WhatsApp code. The AI won't answer patients until the required fields are filled in. See [Billing & Plans](/billing/plans) for subscription states.
+  Complete your clinic profile before sharing your WhatsApp number or clinic link. The AI won't answer patients until the required fields are filled in. See [Billing & Plans](/billing/plans) for subscription states.
 </Warning>
 
 <CardGroup cols={2}>
-  <Card title="WhatsApp" icon="message" href="/ai-agent/whatsapp-setup">
-    How patients reach your clinic on the shared Kashfy number.
+  <Card title="WhatsApp" icon="message" href="/settings/whatsapp">
+    Connect your clinic's own WhatsApp number.
   </Card>
   <Card title="Knowledge Base" icon="book" href="/ai-agent/knowledge-base">
     Add info the AI can answer from.

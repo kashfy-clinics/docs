@@ -7,9 +7,9 @@ Doctors write prescriptions inside the appointment. Kashfy turns it into a brand
 
 ## Open the prescription editor
 
-In **Appointments**, click an appointment to open its details. **Prescription & orders** is in the **Visit** card, under the diagnosis. Doctors, owners and admins can edit it; other staff can view it.
+Doctors write the prescription on the [visit page](/appointments/visit): in **Appointments**, tap the booking, and **Prescription & orders** is its own section under **Management plan**. Only the visit's doctor can edit it. Reception, admins and the owner see it read-only on the appointment sheet, and only once something has been added.
 
-It has three matching blocks: **Medicines**, **Lab tests** and **Radiology**, each with a count of what's added.
+It has three matching blocks: **Medicines**, **Lab tests** and **Radiology**, each with a count of what's added. Tap a block's header to collapse or expand it; the count stays visible when it's collapsed.
 
 ## Write the prescription
 
@@ -24,15 +24,25 @@ It has three matching blocks: **Medicines**, **Lab tests** and **Radiology**, ea
     Tap **Add tests** or **Add scans** to open the picker, tick what you need, and add notes for the lab or the clinical indication.
   </Step>
   <Step title="It saves by itself">
-    Everything saves automatically a moment after you stop typing. You'll see **Saving...** and then **Saved** next to the title. Closing the visit sheet straight away still saves. Use **Preview** to see the PDF before sending.
+    Everything saves automatically a moment after you stop typing. You'll see **Saving...** and then **Saved** next to the title. Leaving straight away still saves. Use **Preview** to see a draft of the PDF at any time.
   </Step>
 </Steps>
 
-The PDF includes your clinic logo and name, the date, the doctor, the patient's name and age, the medicines with instructions, any lab and radiology requests, and your clinic addresses and phone. Medicines, lab tests and radiology each get their own page. Once created, **Open** and **Print** buttons appear next to the title.
+## Create the prescription
+
+When the prescription is ready, tap **Create prescription** under the blocks. The button spins while Kashfy builds the final PDF, then you'll see "Prescription created" and **Open** and **Print** buttons appear, next to the title and next to the action buttons. Creating the PDF doesn't send anything to the patient.
+
+**Create prescription** stays disabled until something is added, and again after a PDF is made, until you change the prescription. Change a medicine, test or scan and it turns back on, so you can make a fresh PDF.
+
+The PDF includes your clinic logo and name, the date, the doctor, the patient's name and age, the medicines with instructions, any lab and radiology requests, and your clinic addresses and phone. Medicines, lab tests and radiology each get their own page.
+
+<Tip>
+  To change how the PDF looks, go to **Settings → Prescription**. See [Prescription design](/settings/prescription).
+</Tip>
 
 ## Handwrite or dictate it
 
-Instead of adding drugs one by one, you can write the prescription by hand or say it out loud, and Kashfy's AI reads it for you. Both buttons, **Handwrite it** and **Dictate it**, sit above **Medicines** for doctors, owners and admins.
+Instead of adding drugs one by one, you can write the prescription by hand or say it out loud, and Kashfy's AI reads it for you. Both buttons, **Handwrite it** and **Dictate it**, sit above **Medicines** for the visit's doctor.
 
 <Tabs items={["Handwrite it", "Dictate it"]}>
   <Tab value="Handwrite it">
@@ -91,9 +101,13 @@ Click **Send to patient**. You'll see "Prescription sent to the patient on Whats
   The patient needs a valid Egyptian mobile number to receive the prescription. If there isn't one on file, the editor shows **Patient WhatsApp number required to send prescription** with a box to add it. The send button stays disabled until the number is saved and at least one medicine, test or scan is added.
 </Warning>
 
+<Info>
+  If your clinic hasn't connected its own WhatsApp number, **Send to patient** stays disabled. Use **Create prescription** and print it, and patients who checked in with your clinic QR can download it on their phone. To send on WhatsApp, connect your number in [Settings → WhatsApp](/settings/whatsapp).
+</Info>
+
 <CardGroup cols={2}>
-  <Card title="Managing Appointments" icon="calendar" href="/appointments/managing-appointments">
-    Working with appointment details.
+  <Card title="The Visit Page" icon="stethoscope" href="/appointments/visit">
+    Where doctors write the visit and the prescription.
   </Card>
   <Card title="Records Portal" icon="folder-lock" href="/patients/records-portal">
     Where patients see their records.

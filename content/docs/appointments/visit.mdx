@@ -1,0 +1,113 @@
+---
+title: 'The Visit Page'
+description: "The doctor's full-screen workspace for a visit: earlier visits, the visit record, prescription and orders, procedures, Facts, and the AI briefing"
+---
+
+The visit page is where a doctor works a visit from start to finish. It puts the patient, their history, and everything you write for this visit on one screen, and it updates live while reception works on the same patient.
+
+## Opening a visit
+
+As a doctor, tap any booking on the **Board** or **Calendar** in **Appointments** (or in the [Doctor Portal](/doctors/doctor-portal)). The patient's page opens straight on the visit, full width.
+
+Reception, admins and the owner don't land here when they tap a card. They get the [appointment sheet](/appointments/managing-appointments) instead, which has an **Open visit** button that opens this page read-only.
+
+<Info>
+  A doctor can only open their own visits. If you are an owner or admin who is also a doctor, you can write on the visits that are booked with you.
+</Info>
+
+## The top bar
+
+The top bar stays in view while you scroll.
+
+- The patient's **name**, the visit **status** (**Reserved**, **Arrived**, **In exam**, **Completed**, **Cancelled** or **No-show**), a **First visit** badge when this is the patient's first visit to your clinic, and the **queue number** (for example `#4`) for walk-in doctors.
+- Gender, age, phone, the visit date, the time (for timed bookings), and the doctor.
+- **Assistant** - opens the Kashfy assistant in a side drawer, already set to this patient. Ask about the patient or attach a paper (a lab result, an old prescription), and it files uploads to this patient. See [Doctor Assistant](/doctors/assistant).
+- **Full record** - switches to the patient's full profile with all its tabs. Tap **Back to the visit** to return; what you typed is kept.
+- **End visit** - marks the visit **Completed** and takes you back to Appointments. Once completed, the button is replaced by **Visit completed**.
+
+A second row shows the patient at a glance:
+
+| Item | What it shows |
+|------|---------------|
+| **Earlier visits** | How many visits the patient had before this one, or **None** |
+| **Last visit** | The date of the most recent earlier visit |
+| **Total paid** | Everything the patient has paid your clinic |
+| Allergy chips | Each recorded allergy, in red |
+| Chronic condition chips | Each recorded chronic condition, in amber |
+
+<Tip>
+  When the patient is already marked **Arrived** for today and the doctor opens the visit, it moves to **In exam** by itself. You don't need to tap **Start exam**.
+</Tip>
+
+## Previous visits
+
+Under the top bar, **Previous visits** shows each earlier visit as a card, newest first, with a count in the header. Tap the header to collapse or expand the row; it starts open.
+
+Each card shows the date, the doctor, the branch, and what was paid. Below that are the first sections that were recorded: complaint, examination, lab and radiology results (including the tests and scans ordered), provisional diagnosis, management plan, procedures, and the prescription. Tap **All details** to see everything on the card, and **Less** to fold it again.
+
+For a new patient the row reads "This is the patient's first visit, no earlier visits."
+
+## This visit
+
+The main column holds the visit itself, under **This visit**. If the patient or reception wrote a complaint or notes when booking, they appear on top as **Complaint when booking** and **Booking notes**.
+
+The sections follow the order of a clinical note:
+
+| Section | What you write |
+|---------|----------------|
+| **Complaint** | The patient's complaint. The booking complaint shows as a hint until you type. |
+| **Examination** | Examination findings |
+| **Investigation results** | Two boxes: **Lab** and **Radiology** |
+| **Provisional diagnosis** | Your working diagnosis |
+| **Management plan** | The treatment plan |
+| **Prescription & orders** | Medicines, lab tests and scans. See [Prescriptions](/appointments/prescriptions). |
+| **Procedures** | Procedures done in the visit, from your catalog |
+
+### Autosave
+
+There is no save button. Each box saves when you click or tap away from it. You'll see **Saving...** and then **Saved** next to the box, or **Not saved** if something went wrong (type again and click away to retry). **End visit** saves the box you are typing in before it closes the visit.
+
+### Procedures
+
+Tap **Add procedure**, search your clinic's catalog, and pick one. It is added at its catalog price, which you can change for this visit. Tap a procedure to see the items it uses and adjust their quantities, and tap the cross to remove it. If the catalog is empty, use **Add procedures** to set it up. See [Procedures](/services/procedures).
+
+Under the list, a bill box shows **Visit fee**, **Procedures**, **Total**, **Paid**, and **Remaining** when something is still owed. Once a visit is fully paid, only a manager can change its procedures.
+
+### Visit notes
+
+Below the sections, **Doctor notes** holds chart notes with attachments (photos or PDFs). Write a note, tap **Attach** if needed, then **Save**. Notes from earlier visits appear here too.
+
+## The side column
+
+Next to the visit (below it on phones):
+
+- **Facts** - the patient's lasting history, such as "Diabetic since 2020" or "Appendectomy 2015". Facts you add here are linked to this visit. See [Facts](/patients/patient-profile#facts).
+- **Quick briefing** - tap **Summarize** for a short AI briefing built from the patient's whole record. See [AI briefing](/patients/patient-profile#ai-briefing).
+- **Medical alerts** - allergies, chronic conditions and current medications, with **Edit**.
+- The patient's **Assigned doctor**, when one is set.
+
+## Live updates
+
+You never need to refresh. The visit status, the sections, earlier visits, payments, procedures, prescriptions, orders, Facts, visit notes and the patient's details all update as soon as anyone changes them. If a box changes elsewhere while you are typing in it, your unsaved typing is kept.
+
+## Who can edit
+
+| Who | What they can do |
+|-----|------------------|
+| The visit's doctor | Write every section, the prescription and orders, Facts, and end the visit |
+| Reception, admins, owner | Read the visit (sections show as plain text). They can still add procedures and record payments from the [appointment sheet](/appointments/managing-appointments). |
+
+## Ending the visit and booking a follow-up
+
+Tap **End visit** when you're done. You'll see "Visit completed" and return to Appointments.
+
+Follow-ups are booked by reception from the appointment sheet with **Book follow-up**. The new booking is saved as a follow-up of this visit, with the same doctor, and is priced at the doctor's follow-up fee instead of the full visit fee.
+
+<CardGroup cols={2}>
+  <Card title="Prescriptions" icon="file-medical" href="/appointments/prescriptions">
+    Medicines, tests, scans and the prescription PDF.
+  </Card>
+  <Card title="Patient Profile" icon="user" href="/patients/patient-profile">
+    The full record behind each visit.
+  </Card>
+</CardGroup>

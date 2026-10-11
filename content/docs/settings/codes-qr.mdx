@@ -1,31 +1,53 @@
 ---
 title: 'Codes & QR'
-description: 'Your organization WhatsApp code and the check-in QR codes for each lab and radiology branch'
+description: 'Your clinic QR and link (WhatsApp chat, or the check-in page when you have no WhatsApp number), and the check-in QR codes for each lab and radiology branch'
 ---
-
-All Kashfy centers share one Kashfy WhatsApp number. The codes on this card tell Kashfy which center a patient is trying to reach, and, for labs and radiology, which branch they just walked into.
 
 Go to **Settings → Organization** and scroll to **Codes & QR**.
 
 ## Your organization code
 
-Every organization has a short code. When a patient messages the Kashfy WhatsApp number with `كود` followed by your code (for example `كود A7X2K`), they go straight to your assistant instead of being asked which center they want.
-
-The card gives you:
+Every organization has a short code. The card gives you:
 
 - **The code**, with a copy button
-- **A WhatsApp link** that opens a chat with the message already filled in. Copy it for your Facebook page, Instagram bio, or website.
-- **A QR** of that link, and **Print** for a ready poster titled "Message us on WhatsApp" with your name and code
+- **A link** ending in `/c/` and your code, with a copy button. Put it on your Facebook page, Instagram bio or website.
+- **A QR** of that link, and **Print** for a ready poster with your name and code
 
-<Tip>
-  Put this QR on flyers, your door, or your social media. Anyone who scans it lands in a chat with your assistant.
-</Tip>
+What the link and QR open depends on whether your clinic has a WhatsApp number connected in [WhatsApp Settings](/settings/whatsapp):
+
+| Your clinic | The QR and link open | Poster title |
+|-------------|----------------------|--------------|
+| Has a WhatsApp number | A WhatsApp chat with your clinic's number, with a booking message already filled in | "Message us on WhatsApp" |
+| Has no WhatsApp number | Your clinic's [check-in page](#clinic-check-in) | "Check in · Download your prescription" |
+
+Because the QR points to your Kashfy link, not straight to WhatsApp, posters you already printed keep working when you connect or change a number.
 
 If the card says **No code yet. Contact Kashfy support.**, reach out to [support](/support).
 
+## Clinic check-in page (no WhatsApp number) [#clinic-check-in]
+
+For clinics without a WhatsApp number, the QR opens a check-in page instead. Print it and put it up in the clinic. Patients scan it with their phone camera; nothing to install. The page has two choices:
+
+### Check in
+
+Booked, or walking in. The patient enters **Your mobile number** (the number they booked with, or theirs if it's their first visit):
+
+- **Booked today**: they see **We found your booking for today** with the doctor and time, and tap **I've arrived**. The appointment is marked as arrived.
+- **No booking**: they tap **I don't have a booking**, choose **Who's seeing the doctor?** (an existing family member or **Someone new**), pick the **Doctor**, fill in name, age and gender if needed, and tap **Take a number**. A walk-in visit is created as arrived.
+
+Either way the patient gets a ticket with **Your number** (their queue number), the doctor and the time, and your team gets a notification that the patient arrived and checked in on their phone.
+
+### Download your prescription
+
+After the visit, when the doctor has written the prescription, the patient opens the same page on **the same phone they checked in with**, taps **Download your prescription**, and downloads it. Until then it shows **The doctor hasn't written it yet**.
+
 <Info>
-  On your own WhatsApp number (see [WhatsApp Settings](/settings/whatsapp)), the same link and printed QR open a chat with your number directly, so posters you already printed keep working.
+  A phone number alone never proves who someone is, so the page shows only first names, never overwrites details already in a patient's file, and lets a phone download prescriptions only for the visits it checked in. A booking checked in from one phone can't be checked in again from another: the patient is asked to see reception.
 </Info>
+
+<Tip>
+  Ask Kashfy support for a ready **A4 QR poster** (PDF) with your clinic's name and QR, ready to print and hang on the wall.
+</Tip>
 
 ## Branch check-in QR (lab and radiology)
 
@@ -43,6 +65,8 @@ This section appears if your organization has the Lab or Radiology type. Each ac
   </Step>
 </Steps>
 
+The message goes to the branch's own WhatsApp number, or your main number if the branch has none. Branch check-in QR needs a connected WhatsApp number.
+
 <Warning>
   Each QR belongs to one branch and one service. Put the lab QR at the lab counter and the radiology QR at the radiology counter, or patients will land on the wrong board.
 </Warning>
@@ -51,9 +75,9 @@ See [QR check-in](/lab/qr-intake) for what the patient sees and how scans are ma
 
 ## Organization code vs. check-in QR
 
-| | Organization code | Branch check-in QR |
-|--|-------------------|--------------------|
-| **Used for** | Starting a WhatsApp chat with your assistant | Checking in at the counter |
-| **Where to put it** | Anywhere: social media, flyers, website | At the reception desk of that branch |
-| **What happens** | The patient talks to your AI assistant | The patient's card appears in **Arrived** on that branch's board |
+| | Organization QR | Branch check-in QR |
+|--|-----------------|--------------------|
+| **Used for** | Starting a WhatsApp chat with your assistant, or checking in at a clinic without WhatsApp | Checking in at the lab or radiology counter |
+| **Where to put it** | Social media, flyers, website, or the clinic wall | At the reception desk of that branch |
+| **What happens** | The patient talks to your assistant, or checks in and later downloads their prescription | The patient's card appears in **Arrived** on that branch's board |
 | **Available for** | Every organization | Lab and radiology branches |

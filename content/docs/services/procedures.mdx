@@ -1,0 +1,96 @@
+---
+title: 'Procedures'
+description: "Your clinic's procedures with patient prices and item costs, added to a visit's bill on top of the visit fee"
+---
+
+Procedures are the things you do during a visit and charge for, such as a knee injection or a cast. Each one has the price the patient pays and the items it uses with their cost to the clinic. Add procedures to a visit and they go on the visit's bill on top of the visit fee.
+
+Navigate to **Dashboard → Procedures** (under **Services** in the sidebar). In the doctor view, **Procedures** is in the sidebar above **Settings**.
+
+Everyone in the clinic can see the list. Owners, admins and doctors can add and edit procedures.
+
+<Info>
+  [Services](/services/overview) are a different list: they tell the AI what you offer and what it costs so it can answer patients. Procedures are what you actually bill on a visit.
+</Info>
+
+## Creating a procedure
+
+Tap **New procedure**.
+
+<Steps>
+  <Step title="Procedure name">
+    Enter the name in Arabic and English, for example "Knee injection".
+  </Step>
+  <Step title="Patient price (EGP)">
+    What the patient pays for this procedure.
+  </Step>
+  <Step title="Items used (optional)">
+    Tap **Add item** for each thing the procedure uses, such as a syringe, an ampoule or a splint. For each item enter the **Qty** and the **Unit cost** (what it costs the clinic). The **Total** for each row is worked out for you. You can add up to 50 items.
+  </Step>
+  <Step title="Check the cost and margin, then tap Save">
+    Under the items, Kashfy shows the **Cost** (all items added up) and the **Margin** (patient price minus cost). A negative margin shows in red.
+  </Step>
+</Steps>
+
+Each procedure in the list shows its items, **Price**, **Cost** and **Margin**. Tap **Edit** to change it.
+
+<Note>
+  Changes here never affect past visits or their bills.
+</Note>
+
+## Turning a procedure off
+
+Use the switch on a procedure to turn it off. It's marked **Inactive** and no longer appears when adding procedures to a visit. Turn it back on any time. Procedures can't be deleted, so past visits always keep their history.
+
+## Adding procedures to a visit
+
+Open the visit and find the **Procedures** section.
+
+<Steps>
+  <Step title="Tap Add procedure">
+    Search the list with **Search procedures...** and tap a procedure to add it. Only active procedures are shown.
+  </Step>
+  <Step title="Adjust the price for this visit (optional)">
+    Each added procedure has its own price box. Changing it only affects this visit. When it differs from the list price, the row shows the catalog price next to it.
+  </Step>
+  <Step title="Adjust item quantities (optional)">
+    Tap the procedure to expand it and change how much of each item was used. Below the items you see the **Items cost to the clinic**.
+  </Step>
+</Steps>
+
+To take a procedure off the visit, tap **Remove procedure** (x) on its row.
+
+## The visit's bill
+
+Under the procedures, the visit shows its bill:
+
+| Line | What it is |
+|------|------------|
+| **Visit fee** | The doctor's visit or follow-up fee |
+| **Procedures** | The prices of the procedures added to this visit |
+| **Total** | Visit fee + procedures |
+| **Paid** | Payments recorded for the visit |
+| **Remaining** | What the patient still owes |
+
+<Warning>
+  Item costs are the clinic's own cost, used to show your margin. They are never added to the patient's bill.
+</Warning>
+
+## When procedures are locked
+
+- Once a visit is **fully paid**, only owners and admins can change its procedures. Others see **This visit is fully paid; only a manager can change its procedures.**
+- Procedures can't be added to cancelled or no-show visits.
+- Doctors can only change procedures on their own visits.
+
+## Past visits keep their snapshot
+
+When you add a procedure to a visit, the visit keeps its own copy of the name, price and items at that moment. Editing or turning off the procedure later never changes visits that already have it, or their bills.
+
+<CardGroup cols={2}>
+  <Card title="Services" icon="layer-group" href="/services/overview">
+    What the AI tells patients you offer.
+  </Card>
+  <Card title="Revenue" icon="money-bill" href="/finance/revenue">
+    Every payment recorded on a visit.
+  </Card>
+</CardGroup>

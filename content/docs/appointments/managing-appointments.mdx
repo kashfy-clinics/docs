@@ -1,16 +1,22 @@
 ---
 title: 'Managing Appointments'
-description: 'The visit sheet: move stages, write the diagnosis and prescription, order lab tests and scans, add notes, and record payments'
+description: 'The appointment sheet for reception and managers: move stages, see the visit, add procedures and notes, record payments, and book follow-ups'
 ---
 
-Tap any booking on the board or calendar to open its **visit sheet**. Everything about that visit happens here.
+When reception, an admin or the owner taps a booking on the board or calendar, the **appointment sheet** opens. It's where the front desk runs the visit: stages, payments, procedures and follow-ups.
+
+<Info>
+  Doctors don't get this sheet. When a doctor taps a booking, the [visit page](/appointments/visit) opens instead, where they write the visit record and prescription.
+</Info>
 
 ## The booking card
 
 Each card on the board shows the patient, the doctor and the time (or queue number), and:
 
+- **First visit** when it's the patient's first visit to your clinic
 - **Follow-up** when it's a follow-up visit
 - **Late 12m** when a booked patient's time has passed and they haven't been marked arrived
+- A phone icon when the patient checked in on their phone with your clinic QR
 - The phone number and branch
 - When it was booked
 - Small icons when the visit has a prescription, lab tests or scans
@@ -18,18 +24,26 @@ Each card on the board shows the patient, the doctor and the time (or queue numb
 
 All times are Cairo time. You can also reach a card with **Tab** and open it with **Enter**.
 
-## What's on the visit sheet
+## What's on the appointment sheet
 
-The top of the sheet stays in place while you scroll: the patient's name and stage, the date, time and doctor, and buttons for **Patient record**, calling and WhatsApp.
+The top of the sheet stays in place while you scroll: the patient's name, the stage, a **First visit** badge when it applies, the date, time and doctor, and buttons for **Patient record**, calling and WhatsApp.
 
-| Section | What you do there | Who |
-|---------|-------------------|-----|
-| **Stage tracker** | Shows Booked → Arrived → In exam → Done (or that the visit was cancelled or missed) | Everyone |
-| **Booking** | The complaint and booking notes the patient or staff wrote | Everyone |
-| **Diagnosis** | Type it; it saves by itself when you click away and shows **Saved** | Doctors, owner, admins |
-| **Prescription & orders** | Medicines, lab tests and scans. See below | Doctors, owner, admins |
+| Section | What it shows | Who can change it |
+|---------|---------------|-------------------|
+| **Stage tracker** | Booked → Arrived → In exam → Done (or that the visit was cancelled or missed) | Everyone, with the buttons at the bottom |
+| **Checked in on the phone** | Shown when the patient checked in with your clinic QR, so that phone can download the prescription. **Unlink phone** removes it if it was someone else's phone. | Everyone |
+| **Booking** | The complaint and booking notes the patient or staff wrote | Read-only |
+| **Provisional diagnosis** | What the doctor wrote, or "Not written yet", with an **Open visit** button | Read-only here |
+| **Prescription & orders** | Medicines, lab tests and scans the doctor added, with **Open** and **Print** once the PDF is made | Read-only here |
 | **Doctor notes** | Chart notes with attachments | Everyone |
+| **Procedures** | Procedures done in the visit and the bill | Everyone (see below) |
 | **Payments** | Record and void payments | Everyone except doctors |
+
+The clinical side (diagnosis, prescription, orders, and the rest of the visit record) is written by the visit's doctor on the [visit page](/appointments/visit). Tap **Open visit** to see the full visit there, read-only.
+
+<Note>
+  For dentists, the sheet opens full screen with the dental chart and treatment plan. See [Dental](/dental/overview).
+</Note>
 
 ## Moving the visit along
 
@@ -47,18 +61,12 @@ The action bar stays at the bottom of the sheet. The main button is always the n
 You can also drag the card between columns on the board. See [Appointment Statuses](/appointments/appointment-status) for which moves are allowed.
 
 <Tip>
-  When reception marks an unpaid visit **Completed**, Kashfy asks for the payment right away, pre-filled with the doctor's visit price. Tap **Skip** to record it later.
+  When reception marks an unpaid visit **Completed**, Kashfy asks for the payment right away, pre-filled with the doctor's price plus any procedures (the follow-up price for a follow-up visit). Tap **Skip** to record it later.
 </Tip>
 
-## Prescription, scans, and lab tests
+## Procedures
 
-One editor holds all three and saves them automatically:
-
-- **Medicines** - search a drug (or add it by name), then write instructions or tap a shortcut. **Preview**, **Print**, or **Send to patient** on WhatsApp. See [Prescriptions](/appointments/prescriptions).
-- **Lab tests** - tap **Add tests** for a searchable picker grouped by category, then add notes for the lab.
-- **Radiology** - tap **Add scans** for the same picker, then add the clinical indication.
-
-Orders appear on the patient's profile under **Lab & radiology**, and results show there once a Kashfy lab or radiology centre delivers them. See [Lab](/lab/overview) and [Radiology](/radiology/overview).
+Reception can add procedures from the sheet too, for example when the doctor tells the front desk what was done. Tap **Add procedure**, search the clinic's catalog, and pick one. Its price can be changed for this visit, and the bill below shows **Visit fee**, **Procedures**, **Total**, **Paid**, and **Remaining**. Procedures aren't available on cancelled or no-show bookings, and once a visit is fully paid only a manager can change them.
 
 ## Doctor notes
 
@@ -72,7 +80,7 @@ Tap **Add** in the Payments section (or the **Add payment** button on the card):
 - **Payment method**: cash, card, InstaPay, transfer, or other
 - **Covered by insurance**: choose the insurance company and the amount it covers. The sheet shows what the patient pays.
 
-If the amount is above the doctor's price, Kashfy asks you to confirm with **Record anyway** (for extra services). Owners and admins can **Void** a payment with a reason. Payments feed [Finance](/finance/revenue).
+If the amount is above the visit's price, Kashfy asks you to confirm with **Record anyway** (for extra services). Owners and admins can **Void** a payment with a reason. Payments feed [Finance](/finance/revenue).
 
 <Warning>
   A paid visit can't be marked cancelled or no-show, or moved out of Completed. Void the payment first.
@@ -80,17 +88,17 @@ If the amount is above the doctor's price, Kashfy asks you to confirm with **Rec
 
 ## Booking a follow-up
 
-Tap **Book follow-up** at the bottom of the sheet. The new booking form opens for the same patient.
+Tap **Book follow-up** at the bottom of the sheet. The booking form opens for the same patient with the same doctor and branch. Pick the date and time (or take the next queue number) and tap **Confirm booking**. The new booking is saved as a follow-up of this visit and priced at the doctor's follow-up fee.
 
 ## Rescheduling
 
 There's no reschedule button. Cancel the booking and create a new one, or use **Book follow-up**. The AI can also cancel a booking when the patient asks on WhatsApp.
 
 <CardGroup cols={2}>
+  <Card title="The Visit Page" icon="stethoscope" href="/appointments/visit">
+    Where doctors write the visit and the prescription.
+  </Card>
   <Card title="Appointment Statuses" icon="circle-check" href="/appointments/appointment-status">
     Every stage and allowed move.
-  </Card>
-  <Card title="Patient Profile" icon="user" href="/patients/patient-profile">
-    The full record behind each visit.
   </Card>
 </CardGroup>

@@ -1,22 +1,33 @@
 ---
 title: 'Conversations'
-description: 'Read every patient chat, pause the AI, assign chats to doctors, and reply on WhatsApp'
+description: 'Read every patient chat, pause the AI, assign chats to doctors, and reply on WhatsApp or Telegram'
 ---
 
-**Conversations** is your clinic's inbox. Every chat the AI has with patients on WhatsApp and the website widget lands here, live.
+**Conversations** is your clinic's inbox. Every chat the AI has with patients on WhatsApp, Telegram and the website widget lands here, live.
 
 ## The inbox
 
 The list on the left shows one row per patient, newest activity first. Each row shows:
 
 - Patient name (or **Unnamed**)
-- A WhatsApp or widget icon
+- A WhatsApp, Telegram or widget icon
 - The last message, with **AI:** or **You:** in front when it was a reply
 - How long ago it was, and an unread count
 - **AI paused** if the AI is off for this patient
 - The doctor's name if the chat is assigned to one
+- **Imported** if the chat holds old messages [imported from the clinic's phone](/settings/whatsapp#import-chat-history)
+- The number's name, when your clinic has more than one WhatsApp number (see below)
 
 Use the search box to find a patient by name or phone. Click a row to open the chat.
+
+## Several WhatsApp numbers [#several-numbers]
+
+If your clinic has more than one WhatsApp number (a main number and/or [one per branch](/settings/whatsapp#several-numbers)), the inbox shows which number each chat is on. Clinics with a single number see none of this.
+
+- **On each chat in the list**: a chip with the branch name, or **Main number**, for the number the patient last wrote to.
+- **Number filter**: pills above the list, **All numbers** and one per number, show only the chats on that number.
+- **In the chat header**: next to the patient's phone, a chip with the number they wrote to.
+- **On each message**: when a patient wrote to two or more of your numbers, each of their messages carries a chip with the number it went to (and the header shows no chip).
 
 ## Inside a chat
 
@@ -43,7 +54,7 @@ The header has the patient's name and number, a link to their details, and these
     The reply box is locked while the AI is on, so you and the AI never answer at the same time. Flip the switch to pause it.
   </Step>
   <Step title="Write and send">
-    Type your reply and press **Send** (or Enter). It goes to the patient on WhatsApp from the Kashfy number.
+    Type your reply and press **Send** (or Enter). It goes to the patient where they last wrote: on WhatsApp from the clinic number they last wrote to (a branch's number or the main one), or in their Telegram chat.
   </Step>
   <Step title="Turn the AI back on when done">
     Otherwise the AI stays paused for this patient, and their new messages wait for your team.
@@ -51,14 +62,14 @@ The header has the patient's name and number, a link to their details, and these
 </Steps>
 
 <Info>
-  You can only reply to WhatsApp chats. Widget chats are read only from Conversations.
+  You can reply to WhatsApp and Telegram chats. Widget chats are read only from Conversations.
 </Info>
 
 If a message fails to send, it's removed from the chat and your text is put back in the box so you can try again.
 
 ## The 24-hour window
 
-WhatsApp only allows normal messages within **24 hours of the patient's last message**. When that time has passed, the reply box is replaced with a notice:
+WhatsApp only allows normal messages within **24 hours of the patient's last message** to the number you reply from. Telegram has no such limit. When that time has passed on WhatsApp, the reply box is replaced with a notice:
 
 > The patient's last message was more than 24 hours ago, and WhatsApp doesn't allow regular messages after that. You can reply here as soon as they message again.
 
@@ -85,8 +96,8 @@ Doctors see only the chats assigned to them, under **Conversations** in their ow
 The AI reads the recent messages in the chat before every reply, so patients don't have to repeat themselves. Very long chats are summarized automatically so the important context isn't lost.
 
 <CardGroup cols={2}>
-  <Card title="WhatsApp" icon="message" href="/ai-agent/whatsapp-setup">
-    How patients reach your clinic.
+  <Card title="WhatsApp Settings" icon="message" href="/settings/whatsapp">
+    Your clinic's numbers and how replies are routed.
   </Card>
   <Card title="AI Agent" icon="robot" href="/ai-agent/overview">
     What the AI does and when it pauses.

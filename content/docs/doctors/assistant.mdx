@@ -1,0 +1,123 @@
+---
+title: 'Doctor Assistant'
+description: 'Ask about your patients, visits, files, schedule and payments, and file lab and scan papers to the right patient'
+---
+
+The Assistant is an AI colleague for doctors. Ask it about your patients and your day in plain words, and it looks the answer up in Kashfy. Attach a photo or PDF of a lab result or scan, and it files the paper to the right patient once you confirm.
+
+## Who can use it
+
+The Assistant is for **doctors only**:
+
+- **Doctors** see only their own patients, the same as in **My Patients**.
+- **Owners and admins who are also one of the clinic's doctors** can use it too, and see the whole clinic.
+
+Reception staff (members) can't use it.
+
+You'll find it in two places:
+
+| Where | What it does |
+|-------|--------------|
+| **Assistant** in the doctor view's sidebar (`/doctor/assistant`) | The full page, with your conversation history. |
+| **Assistant** button on the visit page | Opens a side panel about that patient. It reopens your latest conversation about them, and a paper with no printed name is filed to them by default. Tap **New chat** (+) to start over. |
+
+## Conversations
+
+The full page keeps every conversation in a history list on the side.
+
+- **New chat** starts an empty conversation.
+- **Search…** filters conversations by title. Press **Ctrl+K** (or **⌘K** on a Mac) to jump to it.
+- Hover a conversation (or tap it on a phone) to **Rename** (pencil) or **Delete** (trash) it. Deleting asks first. Files already saved to patients stay on their records.
+
+On a phone, tap the menu icon at the top to open the history.
+
+## Linking a patient
+
+Tap **+ Link a patient** beside the paperclip and search by **Patient name or phone** (2 letters or more). Once linked:
+
+- The Assistant talks about that patient, so "she" or "the patient" means them.
+- Papers with no name printed on them are filed to that patient.
+
+Tap the patient's name to change it, or the x to unlink.
+
+## What you can ask
+
+Ask in Arabic or English. A few examples from the start screen: **Who do I have today?**, **Who's my next patient?**, **Which of my patients has allergies?**
+
+| Ask about | Examples |
+|-----------|----------|
+| **Patients** | Find a patient by name or phone, their allergies, chronic conditions and facts |
+| **Visits** | The last visit, the most recent diagnosis, complaints, plans, procedures and drugs |
+| **Files** | A patient's test results, scans, prescriptions and uploads |
+| **Schedule** | Today's appointments or any other day |
+| **Payments** | What a patient paid, discounts, and what they still owe, visit by visit |
+
+While it works you see what it's doing (for example **Finding the patient** or **Checking the schedule**). You can tap the stop button to cancel an answer.
+
+<Info>
+  The Assistant only reports what is in the record. It never gives a new diagnosis or treatment advice, and it can't change anything: it only reads.
+</Info>
+
+## Rich cards
+
+Instead of long text, answers come with cards:
+
+| Card | Shows |
+|------|-------|
+| **Patient** | Name, age, phone, alerts and facts |
+| **Search results** | Matching patients, each opening the patient's record |
+| **Visits** | The patient's visits with complaint, diagnosis, plan, procedures and drugs, plus **Open the full record** |
+| **Schedule** | The day's appointments with time, status, and **First** for first visits |
+| **Files** | The patient's files, each opening the file |
+| **Payments** | **Total paid**, **Discounts**, **Outstanding**, and each visit's **Bill**, **Paid** and **Left** |
+
+## Uploading lab and scan papers
+
+<Steps>
+  <Step title="Attach the paper">
+    Tap the paperclip (**Attach an image or PDF**), or the **Upload a test or scan for a patient** suggestion. You can attach JPG, PNG, WEBP, HEIC or PDF files, up to 15 MB each and up to 5 per message.
+  </Step>
+  <Step title="Kashfy reads and sorts it">
+    While it shows **Reading the paper…**, Kashfy sorts the paper as **Lab result**, **Scan** or **File** (anything else), gives it a short title such as "CBC" or "MRI right knee", and reads the patient name and date printed on it.
+  </Step>
+  <Step title="Send the message">
+    You can add a question or send the paper alone.
+  </Step>
+  <Step title="Confirm the patient">
+    The Assistant asks **Does this paper belong to:** and lists the best matches for the printed name (or the linked patient when there is no name). Tap **Yes, save** next to the right patient. If it's none of them, tap **Someone else** and search, or tap **Don't save** to discard the paper.
+  </Step>
+</Steps>
+
+The saved paper appears in the patient's files with its title and type, and the chat shows **Saved to [patient]'s record**.
+
+<Warning>
+  Nothing is saved to a patient until you tap to confirm. The Assistant never reads, describes or interprets the results on the paper: it only sorts it and matches it to a patient.
+</Warning>
+
+## Tokens
+
+Every answer, and sorting every paper, uses AI tokens.
+
+- Each doctor gets **100K tokens per month**. The allowance resets on the **1st of each month** (Cairo time). Unused tokens don't carry over.
+- The line under the input shows what's left, for example **Kashfy AI can make mistakes. 84K tokens remaining**.
+
+### Buying more tokens
+
+When your tokens run out, you can't send new messages and papers are filed unsorted. The line under the input turns into a **Buy more tokens** button. Tap it and pick a pack:
+
+| Pack | Price |
+|------|-------|
+| 100K tokens | EGP 50 |
+| 200K tokens | EGP 100 |
+| 500K tokens | EGP 250 |
+
+The tokens are added instantly and last until the end of the month. The pack is billed on the clinic's next [invoice](/billing/invoices).
+
+<CardGroup cols={2}>
+  <Card title="Doctor Portal" icon="stethoscope" href="/doctors/doctor-portal">
+    The doctor's own workspace.
+  </Card>
+  <Card title="Patient Profile" icon="user" href="/patients/patient-profile">
+    Where saved papers appear.
+  </Card>
+</CardGroup>

@@ -1,30 +1,30 @@
 ---
 title: 'WhatsApp Settings'
-description: 'Choose the number patients message: the shared Kashfy number, or your own WhatsApp number'
+description: "Connect your clinic's own WhatsApp number (or one per branch), and manage templates, usage, booking style and imported chats"
 ---
 
 Go to **Settings → WhatsApp**. Owners and admins can change it; other team members can only view it.
 
-The page has two cards. The one marked **In use** is the number your patients reach you on right now.
-
-| | **Kashfy number** | **Your own number** |
-|---|---|---|
-| Patients message | The shared Kashfy number, with your clinic code or QR | Your clinic's WhatsApp number directly |
-| Setup | None | Connect your own Meta app (or let us do it) |
-| Meta message fees | Included in Kashfy | Billed by Meta to your own account |
-| Assistant introduces itself as | Kashfy's assistant for your clinic | Your clinic's assistant |
+Your clinic talks to patients on **its own WhatsApp number**. The assistant answers and books on it in your clinic's name, and Meta bills message fees to your own Meta account. Until a number is connected, your clinic has no WhatsApp: the assistant doesn't answer there, and nothing is sent to patients on WhatsApp.
 
 <Warning>
-  A number connected to the WhatsApp Business API stops working in the WhatsApp Business app on the phone. Use a number you don't need in the app, or a new one.
+  A number connected to the WhatsApp Business API stops working in the WhatsApp Business app on the phone, and its chats leave the app with it. [Import your old chats](#import-chat-history) first, or use a new number.
 </Warning>
 
-## Kashfy number
+## Your clinic's WhatsApp number
 
-This is the default and needs nothing from you. Patients reach you with your clinic code, link or QR. See [Codes & QR](/settings/codes-qr) and [WhatsApp](/ai-agent/whatsapp-setup).
+The first card shows the number that is open and its status:
 
-## Connect your own number yourself
+| Status | Meaning |
+|--------|---------|
+| **Connected** | The number is live. Patients reach your assistant on it. |
+| **Not connected** | No details saved yet, or the number isn't working. If Meta reported an error, it's shown in red under the card. |
 
-You need an app on Meta for Developers with your WhatsApp number added to it. The **How to get these details** list on the page walks through it:
+When connected, the card shows the phone number and its verified name. If the number was switched off while its details are still saved, owners and admins see **Turn your number back on**.
+
+## Connect your number yourself
+
+You need an app on Meta for Developers with your WhatsApp number added to it. Open the **Connect your number yourself** card; its **How to get these details** list walks through it:
 
 <Steps>
   <Step title="Create the Meta app">
@@ -37,62 +37,159 @@ You need an app on Meta for Developers with your WhatsApp number added to it. Th
     From **App settings → Basic**, copy the **App secret**. From **WhatsApp → API setup**, copy the **WhatsApp Business Account ID** and the **Phone number ID**.
   </Step>
   <Step title="Connect">
-    Paste the four values and click **Connect number**. Kashfy checks the number with Meta and switches your patients to it. The token and secret are stored encrypted and never shown again.
+    Paste the **Access token**, **App secret**, **WhatsApp Business Account ID** and **Phone number ID**, then click **Connect number**. Kashfy checks the number with Meta and points its messages to your account. The token and secret are stored encrypted and never shown again.
   </Step>
   <Step title="Set the webhook in your app">
-    The page shows **Webhook details for your app**: a **Callback URL** and a **Verify token**. In your Meta app, open **WhatsApp → Configuration**, paste both, click **Verify and save**, and subscribe to `messages` and `message_template_status_update`. As soon as Meta verifies it, the page shows a green **Success** with the time. You can do this step before or after connecting.
+    The card shows **Webhook details for your app**: a **Callback URL** and a **Verify token**, each with a copy button. In your Meta app, open **WhatsApp → Configuration**, paste both, click **Verify and save**, and subscribe to `messages` and `message_template_status_update`. While Kashfy waits it shows **Waiting for Meta to verify the webhook...**; as soon as Meta verifies it, you see a green **Success** with the time and the **Last event**. You can do this step before or after connecting.
   </Step>
   <Step title="Go live">
     Switch your Meta app to **Live**. Meta doesn't deliver every message while the app is in Development.
   </Step>
 </Steps>
 
-To change the details later, enter the new values and click **Save and test**. Leave the token or secret empty to keep the saved one.
+Once a number is connected, this card is called **Your number's connection** and stays folded until you open it. To change the details, enter the new values and click **Save and test**. Leave the token or secret empty to keep the saved one.
+
+**Remove credentials** deletes the saved token and secret. The assistant stops answering on WhatsApp until you connect the number again. Past conversations stay.
+
+If connecting fails, the card tells you why, for example **This number is connected to another Kashfy account.** or **This Phone number ID doesn't belong to that WABA ID.**
 
 ## Let us connect it for you
 
-If you'd rather not set up the Meta app, Kashfy does it for **500 EGP**, paid offline:
+If you'd rather not set up the Meta app, Kashfy does it for **500 EGP**, paid offline. The **Let us connect it for you (500 EGP)** card is shown while the number isn't connected:
 
 1. Open business.facebook.com → **Settings → Users → People → Add**.
 2. Add `integrations@kashfy.site` with **Full control** (Admin).
-3. Fill in **Phone to reach you** (and notes if you like) and click **Send request**.
+3. Fill in **Phone to reach you** (and **Notes (optional)**) and click **Send request**.
 
-The card then shows the request status. We call you to confirm payment, connect the number, and let you know when it's done. You can cancel the request until it's paid.
+The card then shows the request status. We call you to confirm payment, connect the number, and let you know when it's done. You can **Cancel request** until it's paid.
+
+## Several numbers: main and per branch [#several-numbers]
+
+A clinic with more than one branch can have:
+
+- **A main number** that serves every branch, and/or
+- **One number per branch**.
+
+When your clinic has more than one branch (or more than one number), the page starts with a **Your numbers** bar. Each chip shows the branch name (or **Main number**), the phone number, and a status dot: green for live, amber for waiting to be connected, red for an error, grey for switched off. Click a chip to open that number; everything below it (connection, webhook details, templates, usage, Flows and chat import) belongs to the number that is open.
+
+<Steps>
+  <Step title="Add a number">
+    Click **Add a number** and choose who it is for under **This number is for**: **All branches (main number)**, or one of your branches. Each branch can have one number, and there is one main number.
+  </Step>
+  <Step title="Connect it">
+    The new number gets its own **Callback URL** and **Verify token**. Connect it exactly like the first one, with its own Meta details.
+  </Step>
+  <Step title="Change what it serves">
+    Under the bar, **This number serves** lets you move the open number to another branch or make it the main number.
+  </Step>
+</Steps>
+
+**Remove number** removes the open number from Kashfy (only when you have more than one). The assistant stops answering on it, and its templates and Flows are removed from Kashfy.
+
+### How messages are routed [#how-routing-works]
+
+| Situation | What happens |
+|-----------|--------------|
+| A patient writes to a branch's number | The assistant treats that branch as theirs: it offers that branch's doctors, days and address first, and books there by default. If the patient asks for another branch, it books that branch instead, in the same chat. |
+| A patient writes to the main number | The assistant works with all your branches. |
+| Reminders, review requests and prescriptions for an appointment | Sent from the number of the appointment's branch. If that branch has no number, from the main number. |
+| Your team replies from [Conversations](/patients/conversations) | Sent from the number the patient last wrote to. |
+
+<Info>
+  WhatsApp's 24-hour window is per number: a patient's message to one of your numbers doesn't open the window on another.
+</Info>
 
 ## Message templates
 
-Once your own number is in use, the **Message templates** card lists the templates on your WhatsApp account and their status (**Approved**, **Pending review**, **Rejected**).
+Once the open number is connected, the **Message templates** card lists the Kashfy templates on that number's WhatsApp account and their status: **Approved**, **Pending review** or **Rejected**. Other templates on your Meta account aren't listed, only counted ("not used by Kashfy").
 
-Reminders, results and review requests sent more than 24 hours after a patient's last message need an approved template on your account. Until Meta approves one, that message isn't sent from your number. Click **Refresh** to update the statuses and to submit Kashfy's templates to Meta for review.
+Reminders, results and review requests sent more than 24 hours after a patient's last message need an approved template on your account. Until Meta approves one, that message isn't sent. Click **Refresh** to update the statuses and to submit Kashfy's templates to Meta for review.
 
-## Switching back
+## WhatsApp messages this month [#usage]
 
-- **Use the Kashfy number** moves patients back to the shared number. Your number's details stay saved.
-- **Use your own number** switches back to your number without entering anything again.
-- **Remove credentials** deletes the saved token and secret and moves patients back to the Kashfy number. Past conversations stay either way.
+For a connected number, the **WhatsApp messages in (month)** card shows what Meta counts on that number:
 
-When you're on your own number, your clinic link and QR open your number directly, and patients who message the Kashfy number with your code are pointed to it.
+- **Free replies**: Meta gives every number **1,000 free replies a month**, then charges per reply. The bar turns amber near the limit and red when it's used up.
+- **Charged messages and cost** (fold-out): the **Charged messages** by category (**Replies** beyond the free 1,000, **Utility**, **Marketing**, **Authentication**) and the **Estimated cost** in USD, with an EGP estimate at Meta's Egypt rates.
+
+Utility and marketing templates are charged from the first one.
+
+<Warning>
+  Once the free replies are used, make sure a payment method is set in Meta Billing Hub, or Meta stops delivering replies.
+</Warning>
+
+## How patients book [#booking-style]
+
+The **How do patients book?** card (clinics only) chooses how the assistant books patients on WhatsApp. You can change it any time; it applies to all your numbers.
+
+| Option | How it works |
+|--------|--------------|
+| **In-chat booking page** (Default) | The assistant sends a button that opens the booking page, and the patient picks the doctor and time themselves. About 2 messages per booking. |
+| **In-chat messages** | The assistant talks the patient through it with regular messages until the visit is booked. The patient never leaves the chat, but it takes more messages (can reach 10). |
+
+### WhatsApp Flows
+
+Under the options, the **WhatsApp Flows** box shows whether the open number can show the booking form inside WhatsApp:
+
+- **Eligible**: **The booking form opens inside WhatsApp (WhatsApp Flow)**. Patients book, change appointments and rate visits without leaving WhatsApp.
+- **Not eligible** or **Not checked**: **The booking form opens as a Kashfy page in the browser**. The box says why (for example your Meta Business account isn't verified yet, or your number's display name isn't approved) and lists Meta's checks: **Business verification**, **Account review**, **Display name**, **Number quality** and **Number status**.
+
+Kashfy checks right after you connect a number and switches to WhatsApp automatically once it is eligible. Click **Check WhatsApp Flows eligibility** to check again.
+
+## Import your old WhatsApp chats [#import-chat-history]
+
+Connecting a number to Kashfy removes it from the WhatsApp Business app, chats included. Use the **Import your old WhatsApp chats** card (owners and admins) to move them first. Imported chats show on the [Conversations](/patients/conversations) page tagged **Imported**, and new messages from the same patient continue below them.
+
+The chats are imported into **the number that is open**. With several numbers, the card shows **Importing into:** and the number's name, so open the right number in the **Your numbers** bar first.
+
+Pick **Android** or **iPhone** and open **Steps**:
+
+<Tabs items={['Android', 'iPhone']}>
+  <Tab value="Android">
+    1. In WhatsApp Business: **Settings > Chats > Chat backup > End-to-end encrypted backup > Turn on**. When it asks for a password, choose **Use 64-digit encryption key instead**, then copy the key and keep it.
+    2. Tap **Back up** and wait for it to finish.
+    3. Open this page in Chrome on the same phone, tap **Choose backup file**, and pick `Android › media › com.whatsapp.w4b › WhatsApp Business › Databases › msgstore.db.crypt15`.
+    4. Paste the key and tap **Read backup**.
+  </Tab>
+  <Tab value="iPhone">
+    1. In WhatsApp Business: **Settings > Chats > Chat Backup**. If **End-to-end encrypted backup** is on, turn it off.
+    2. On a computer, back up the iPhone with Apple Devices (or iTunes) on Windows, or Finder on a Mac. Leave **Encrypt local backup** off.
+    3. Open this page on that computer in Chrome or Edge, click **Choose backup folder**, and select the backup folder (the card shows the path to paste).
+  </Tab>
+</Tabs>
+
+No computer, or just a few chats? Click **No computer, or just a few chats? Export them one by one**, use WhatsApp's **Export chat > Without media** for each chat, then **Choose files**.
+
+Kashfy lists the chats it found. Untick any you don't want (personal chats, for example), fill in **Patient's number** or **Who is the patient?** where asked, and click **Import**. Keep the page open until it finishes.
+
+<Info>
+  The backup and key never leave your device: they're read in the browser, and only the chats you pick are sent. Photos and files aren't moved; the chat shows where one was sent. Uploading the same file again never adds a chat twice.
+</Info>
+
+<Warning>
+  Don't delete the WhatsApp account or connect the number until the import is done.
+</Warning>
 
 ## Where other WhatsApp settings live
 
 | What you want to do | Where |
 |---------------------|-------|
-| Get your clinic code, WhatsApp link and printable QR | **Settings → Clinic → Codes & QR**. See [Codes & QR](/settings/codes-qr). |
-| Turn appointment reminders on or off, and set how many hours before | **Settings → Clinic → Patient Reminders**. See [Reminders](/appointments/reminders). |
+| Get your clinic link and printable QR | **Settings → Clinic → Codes & QR**. See [Codes & QR](/settings/codes-qr). |
+| Connect a Telegram bot as well | **Settings → Telegram**. See [Telegram Settings](/settings/telegram). |
+| Turn appointment reminders on or off | **Settings → Clinic → Patient Reminders**. See [Reminders](/appointments/reminders). |
 | Pause the AI for one patient and reply yourself | **Conversations**. See [Conversations](/patients/conversations). |
 | Change how the AI talks to patients | **AI Agent → Training**. See [Custom Instructions](/ai-agent/custom-instructions). |
-| Get alerts for new messages and bookings | **Settings → Notifications**. See [Notifications](/settings/notifications). |
 | Send marketing messages to opted-in patients | **WhatsApp Ads**. See [WhatsApp Ads](/whatsapp-ads/overview). |
 
 ## The clinic phone number
 
-The phone number in **Settings → Clinic → Contact** is your clinic's contact number. The AI shares it when patients ask for a phone number, and it appears in the short "assistant isn't available" message if the AI can't answer. It isn't used to connect WhatsApp.
+The phone number in **Settings → Clinic → Contact** is your clinic's contact number. The AI shares it when patients ask for a phone number, and it appears in the short "assistant isn't available" message. It isn't used to connect WhatsApp.
 
 <CardGroup cols={2}>
-  <Card title="WhatsApp" icon="message" href="/ai-agent/whatsapp-setup">
-    How patients reach your clinic.
+  <Card title="Telegram" icon="send" href="/settings/telegram">
+    Add a Telegram bot next to WhatsApp.
   </Card>
   <Card title="Codes & QR" icon="qrcode" href="/settings/codes-qr">
-    Your code, link and poster.
+    Your clinic link and poster.
   </Card>
 </CardGroup>
