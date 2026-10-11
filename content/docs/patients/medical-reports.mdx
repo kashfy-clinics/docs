@@ -41,8 +41,22 @@ The same **Write MR** window opens from three places:
 </Steps>
 
 <Tip>
-  If you close the window before saving a new report, your text is kept on this device. Open **Write MR** again for the same patient and it comes back.
+  A new report is kept as a draft while you type, on your account, so it follows you to any device. If you close the window before saving, a short note says the draft is saved, and **Write MR** shows a yellow dot until you save it. Open **Write MR** again for the same patient (and the same visit) and it comes back. Drafts are only visible to you.
 </Tip>
+
+## Formatting [#formatting]
+
+The bar under the text has **Bold**, **Underline**, **Bullet points** and **Numbered list**. Formatting shows as you type (Ctrl+B and Ctrl+U work too) and prints the same on the PDF. Pasted text comes in as plain text, without fonts or colors from other programs.
+
+## Write with AI [#write-with-ai]
+
+Tap **[AI] Write with AI** at the top of the window, type what the report should say (for example "Sick leave for 3 days from today for acute tonsillitis"), then tap **Write**.
+
+- The AI uses the patient's details (age, gender, allergies, chronic conditions, Facts) and, on the visit page, that visit's record, diagnosis and prescription.
+- The text appears as it is written, already formatted. When it finishes you can edit everything.
+- It never invents findings, results or doses: anything it doesn't know is left as **____** for you to fill.
+- If the report already had text, a bar lets you **Undo** back to it.
+- It uses your monthly [assistant tokens](/doctors/assistant#tokens).
 
 ## AI Review [#ai-review]
 
@@ -72,6 +86,14 @@ The PDF is an A4 page with:
 - a signature line with the doctor's name
 
 A report written mostly in Arabic gets an Arabic page; otherwise the page is in English.
+
+## Report design [#report-design]
+
+Reports have their own paper design in **Settings > Medical report** (doctors: **Settings > Medical report** in the doctor view). It is the same designer as [Prescription design](/settings/prescription): header, logo, color, faint background logo, fields, footer and phone band, with the same rules for who edits what (one design for all doctors, or one per doctor).
+
+- Until a report design is saved, reports print on the **prescription** paper (the doctor's, else the clinic's).
+- The page title comes from each report, so the designer has no title or **R/** option, and **Diagnosis** and **Rx code** don't appear on reports.
+- Changing the design makes the next **Create PDF** produce a fresh PDF.
 
 ## Editing and deleting [#editing-and-deleting]
 
