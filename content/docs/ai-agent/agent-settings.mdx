@@ -1,0 +1,71 @@
+---
+title: 'Agent Settings'
+description: "Set your clinic agent's name, greeting, dialect, tone and rules, see what it knows, and track how it performs"
+---
+
+The **Clinic Agent** page is where you shape the AI that answers your patients: who it is, how it talks, what it must and mustn't do, and what it knows. Open **Clinic Agent** in the sidebar (`/dashboard/ai`). Only owners and admins see this page.
+
+Changes apply from the patient's next message. Tap **Save settings** at the bottom; the button appears as soon as you change something.
+
+## Persona
+
+| Setting | What it does |
+|---------|--------------|
+| **Agent name** | The name the agent introduces itself with. If left empty, it is **Kashfy** (كشفي in Arabic). |
+| **Greeting message** | The first line of every new conversation. If left empty, it is "Welcome to [your clinic], how can I help?". |
+| **Dialect** | **Egyptian** (the default) or **Modern Standard** Arabic (simple فصحى). Patients who write in English are always answered in English. |
+| **Tone** | **Friendly** (warm and short), **Professional** (clear and to the point) or **Formal** (polished and respectful, no emoji). |
+
+Each dialect and tone shows a sample reply so you can pick the one that fits your clinic.
+
+<Info>
+  If you chose the **In-chat booking page** in [WhatsApp Settings](/settings/whatsapp#how-patients-book), a patient who opens with a greeting or "I want to book" gets your greeting message followed by the booking button.
+</Info>
+
+## Knowledge the agent uses
+
+The card shows how many **active doctors**, **active services** and **knowledge base entries** the agent answers from. Tap a row to manage it. The agent only quotes prices, doctors and services that are in your data.
+
+## Test the agent
+
+**Test as a patient** opens a test chat (`/dashboard/ai/new`) where you write as if you were a patient. It uses your real settings and data, but nothing is booked and no real patient is messaged. The **Training** tab in the same chat lets you add rules by chatting. See [Custom Instructions](/ai-agent/custom-instructions).
+
+## Instructions
+
+Collapsed by default. Tap the header to open it.
+
+| Field | Use it for |
+|-------|------------|
+| **Your clinic's instructions** | Policies, offers, payment methods, anything the agent should know or do, written like a brief to a new receptionist |
+| **When to hand off to a human** | Situations where the agent stops and passes the chat to your team (for example a complaint, a refund request or an emergency) |
+| **Forbidden for the agent** | Things it must never do or say (for example offering discounts that don't exist) |
+
+Each field holds up to 4,000 characters. The agent follows them as long as they don't conflict with your clinic's data or its safety rules: it never invents prices and never gives medical advice.
+
+## Knowledge base
+
+Collapsed by default. Add text notes or upload files with information the agent needs. See [Knowledge Base](/ai-agent/knowledge-base).
+
+## Agent performance
+
+The last 30 days:
+
+| Number | Meaning |
+|--------|---------|
+| **Agent replies** | Messages the agent sent to patients |
+| **Avg. response time** | From the patient's message to the agent's reply |
+| **Conversations handled** | Patient chats the agent replied in |
+| **Handoff rate** | Share of those chats handed to your team |
+| **Bookings by the agent** | Bookings the agent made |
+| **Booking rate** | Bookings divided by conversations |
+
+A chart shows the agent's replies per day.
+
+<CardGroup cols={2}>
+  <Card title="Clinic Agent" icon="robot" href="/ai-agent/overview">
+    What the agent does for your patients.
+  </Card>
+  <Card title="Custom Instructions" icon="sliders" href="/ai-agent/custom-instructions">
+    Teach it your rules by chatting.
+  </Card>
+</CardGroup>

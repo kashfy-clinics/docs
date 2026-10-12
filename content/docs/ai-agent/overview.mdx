@@ -1,5 +1,5 @@
 ---
-title: 'AI Agent'
+title: 'Clinic Agent'
 description: "What Kashfy's AI receptionist does for your patients, and when it steps aside"
 ---
 
@@ -51,7 +51,7 @@ A clinic can have a main number (or bot) for every branch and one per branch. Wh
   </Accordion>
 
   <Accordion icon="headset" title="Hand over to a person">
-    If a patient clearly asks to talk to a human, the AI turns itself off for that chat and alerts your team. See [Conversations](/patients/conversations).
+    If a patient clearly asks to talk to a human, or the chat matches one of your **When to hand off to a human** rules, the AI turns itself off for that chat and alerts your team. See [Conversations](/patients/conversations) and [Agent Settings](/ai-agent/agent-settings#instructions).
   </Accordion>
 </AccordionGroup>
 
@@ -64,7 +64,7 @@ A clinic can have a main number (or bot) for every branch and one per branch. Wh
 
 ## Language
 
-The AI replies in the language the patient is using: Egyptian Arabic (never formal فصحى) for Arabic or Franco-Arabic messages, English for English. It also understands voice notes, which are transcribed automatically.
+The AI replies in the language the patient is using: Egyptian Arabic for Arabic or Franco-Arabic messages (or simple Modern Standard Arabic if you choose it in [Agent Settings](/ai-agent/agent-settings#persona)), English for English. It also understands voice notes, which are transcribed automatically.
 
 ## What the AI knows
 
@@ -74,12 +74,13 @@ The AI replies in the language the patient is using: Egyptian Arabic (never form
 | Doctors, fees, working days | **Doctors** |
 | Services and prices | **Services** |
 | Extra info (prices, insurance, FAQs) | [Knowledge Base](/ai-agent/knowledge-base) |
-| Your clinic's rules and style | [Custom Instructions](/ai-agent/custom-instructions) |
+| Its name, greeting, dialect and tone | [Agent Settings](/ai-agent/agent-settings) |
+| Your clinic's rules and style | [Agent Settings](/ai-agent/agent-settings#instructions) and [Custom Instructions](/ai-agent/custom-instructions) |
 | The conversation so far | Recent messages in the chat |
 
 ## Testing the AI
 
-Go to **AI Agent** in the sidebar (owners and admins only). The **Patient** tab lets you chat as if you were a patient.
+Go to **Clinic Agent** in the sidebar (owners and admins only) and tap **Test as a patient**. The **Patient** tab lets you chat as if you were a patient.
 
 <Info>
   Test chats are a safe playground. The AI checks real availability, but nothing is actually booked, cancelled or saved to a real patient.
@@ -108,6 +109,9 @@ The AI pauses on its own in these cases. Your patients' messages still reach **C
   </Card>
   <Card title="Knowledge Base" icon="book" href="/ai-agent/knowledge-base">
     Add info the AI can answer from.
+  </Card>
+  <Card title="Agent Settings" icon="sliders" href="/ai-agent/agent-settings">
+    Name, greeting, dialect, tone and rules.
   </Card>
   <Card title="Custom Instructions" icon="sliders" href="/ai-agent/custom-instructions">
     Teach the AI your clinic's rules.
