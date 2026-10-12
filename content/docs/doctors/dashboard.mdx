@@ -1,0 +1,53 @@
+---
+title: 'Doctor Dashboard'
+description: "Your day and your practice at a glance: today's patients, what needs your attention, trends and recent artifacts"
+---
+
+The Dashboard is the first page of the doctor view (**Dashboard** in the sidebar, `/doctor/dashboard`). It shows your own day and your own patients, not the whole clinic.
+
+At the top, a greeting with today's date and two shortcuts: **Today's appointments** and **Ask the assistant**.
+
+## Numbers
+
+| Tile | Shows |
+|------|-------|
+| **Today** | Today's bookings, and how many are still to see |
+| **Next 7 days** | Open bookings in the coming week |
+| **Your patients** | All your patients, and how many new ones this month compared with last month |
+| **Visits this month** | Visits so far this month, compared with last month |
+| **No-show rate (90 days)** | The share of bookings in the last 90 days where the patient didn't come, and this month's no-shows |
+
+## Today
+
+**Up next today** lists the patients still to come, each with their queue number or time, and **First visit** for new patients. Tap a patient to open their record, or **All appointments** to go to your appointments.
+
+## Needs attention
+
+| Row | Counts |
+|-----|--------|
+| **Follow-ups due** | Patients whose follow-up date has passed |
+| **Doses or rechecks due today** | Injections, doses or rechecks scheduled for today |
+| **Results still pending (30 days)** | Tests and scans ordered in the last 30 days with no result yet |
+| **Files to check** | Patient files from the last 7 days waiting for your review |
+
+Under **Most overdue**, the patients with the longest-overdue follow-ups, with how many days late. Tap one to open their record.
+
+## Trends
+
+- **Visits, last 14 days**: a bar chart of visits per day.
+- **Busiest hours (90 days)**: when your patients usually come.
+- **Top diagnoses (90 days)**: your most common diagnoses and their share.
+- **New vs returning (90 days)**: first visits compared with returning patients.
+
+## Recent artifacts
+
+Your latest [artifacts](/doctors/artifacts), each with a preview. Tap one to open it in the Assistant, or **See all** for the Artifacts page.
+
+<CardGroup cols={2}>
+  <Card title="Artifacts" icon="file-medical" href="/doctors/artifacts">
+    What the Assistant writes for you.
+  </Card>
+  <Card title="Doctor Portal" icon="stethoscope" href="/doctors/doctor-portal">
+    The doctor's own workspace.
+  </Card>
+</CardGroup>
