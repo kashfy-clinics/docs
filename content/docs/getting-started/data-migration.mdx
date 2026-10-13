@@ -1,0 +1,108 @@
+---
+title: 'Data Migration'
+description: 'Bring your patients, doctors and appointments over from your previous clinic software'
+---
+
+Moving from another clinic system? Capture your data from it with the Kashfy Chrome extension, then review and import it from **Dashboard → Data migration**. Nothing is added to your clinic until you press **Import** yourself.
+
+Only owners and admins can open **Data migration**. Any team member signed in to the extension can capture and send pages.
+
+## How it works [#how-it-works]
+
+<Steps>
+  <Step title="Capture">
+    The extension copies the tables on the pages you open in your old software (patients list, appointments, doctors).
+  </Step>
+  <Step title="Send">
+    Captured pages go to Kashfy and are stored exactly as they were, in a holding area. Nothing touches your patients or appointments yet.
+  </Step>
+  <Step title="Review with the assistant">
+    On **Data migration**, the assistant works out what each table is and which column goes where, and shows you a preview: how many rows are new, how many are already in Kashfy, and which rows would be skipped and why.
+  </Step>
+  <Step title="Import">
+    If the preview looks right, press **Import** on its card. The assistant then checks the result and explains every number.
+  </Step>
+</Steps>
+
+## 1. Install the extension [#install]
+
+1. Install [Kashfy Clinic Assistant](https://chromewebstore.google.com/detail/kashfy-clinic-assistant/pkbcalgjofcjgepdobbindaikoibclnk) from the Chrome Web Store. The same link is on the **Data migration** page.
+2. Click the Kashfy icon in Chrome's toolbar and press **سجل دخول** (Sign in). Sign in with your Kashfy account.
+3. If you belong to more than one clinic, choose the clinic under **العيادة** (Clinic). Pages are sent to the clinic selected here.
+
+<Info>
+  The extension sends data with your own Kashfy sign-in, only to a clinic you are a member of. Its session ends after 24 hours; sign in again when asked.
+</Info>
+
+## 2. Capture your pages [#capture]
+
+1. Open your old software and go to a page with your data, for example the patients list.
+2. Open the Kashfy panel (**افتح اللوحة** in the extension menu) and press **ابدأ التسجيل** (Start Recording). The page is added to the panel's list with the number of rows captured.
+3. Repeat for every page you want to bring over: patients, appointments, doctors.
+
+<Tip>
+  Most systems show long lists a page at a time (10, 25 or 50 rows). Capture **every** page of the list, or switch the list to show all rows first if your software allows it. The assistant warns you when a list looks cut off.
+</Tip>
+
+When a page can't be read as text, use **خد سكرين شوت** (Take screenshot). The assistant reads the tables in the picture later.
+
+## 3. Send to Kashfy [#send]
+
+Press **ابعت لكشفي** (Send to Kashfy). You can send up to 30 pages at a time, and send more batches whenever you like: everything goes into the same migration.
+
+Sending the same page twice is safe. Kashfy recognises content it already has and ignores it.
+
+## 4. Review and import [#review-and-import]
+
+Open **Dashboard → Data migration**. At the top you see what arrived: pages and rows received, and one card each for **Patients**, **Doctors** and **Appointments** with how many were found, added, already in Kashfy, waiting, skipped or failed.
+
+Talk to the assistant below, or tap a suggestion such as **شوف البيانات اللي وصلت وقولي فيها إيه** (Look at what arrived and tell me what's in it). The assistant:
+
+- shows a card for each table it sorted: which Kashfy field each column fills, with an example value
+- leaves out rows that aren't clinic records (menus, headers, totals)
+- previews each import and tells you what would be added, merged or skipped
+- points out what looks missing and what to capture next
+
+To import, press the button on a preview card (for example **استورد المرضى**, Import patients). Import in this order: **doctors**, then **patients**, then **appointments**, since appointments are linked to their doctor and patient.
+
+After an import, ask the assistant to check it (**اتأكد إن كل حاجة اتنقلت صح**). It compares the rows captured with what is now in Kashfy and explains any difference.
+
+## What is imported [#what-is-imported]
+
+| Data | Fields |
+|------|--------|
+| Patients | Name, phone, gender, date of birth or age, insurance company and number, allergies, chronic conditions, current medications, referral source |
+| Doctors | Name, specialty, consultation and follow-up prices |
+| Appointments | Date and time, patient, doctor, status, visit type, notes, diagnosis, complaint |
+
+### How duplicates are handled [#duplicates]
+
+- **Patients** are matched by phone number, then by name. A patient already in Kashfy is not added again; only details missing from their record (such as gender or date of birth) are filled in.
+- A new name on a phone number that already belongs to a patient is added as a family member of that patient, the same way [family accounts](/patients/patient-profile) work elsewhere in Kashfy.
+- **Doctors** are matched by name.
+- **Appointments** are matched by patient and start time.
+- You can capture more pages and import again at any time: only what is new is added.
+
+### Appointments [#appointments]
+
+- **Past appointments** are imported as history: completed, cancelled or no-show. They don't count toward your plan's bookings or your trial, and patients get no messages about them.
+- **Upcoming appointments** are imported as booked, and patients get your clinic's normal [reminder](/appointments/reminders) before the visit.
+- An appointment whose patient isn't in Kashfy yet creates that patient.
+- An appointment whose doctor can't be found isn't imported. Import your doctors first, or check the doctor's name.
+
+### Doctors and your plan [#doctors-and-plan]
+
+Doctors beyond your plan's limit are added as **inactive**. Activate them from [Doctors](/doctors/overview) after upgrading, or deactivate another doctor first.
+
+## Not imported yet [#not-imported-yet]
+
+Prescriptions, visit notes per patient, invoices and payments, lab and radiology results, and services can be captured but not imported yet. They stay stored safely in your migration, and the assistant tells you which of them it saw.
+
+<CardGroup cols={2}>
+  <Card title="Clinic Setup" icon="list-checks" href="/getting-started/clinic-setup">
+    The rest of the setup checklist.
+  </Card>
+  <Card title="Patient Profile" icon="user" href="/patients/patient-profile">
+    Where imported patient details appear.
+  </Card>
+</CardGroup>
