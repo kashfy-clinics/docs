@@ -38,6 +38,7 @@
     "doctors/doctor-portal",
     "doctors/dashboard",
     "doctors/assistant",
+    "doctors/assistant-tokens",
     "doctors/artifacts",
     "---المرضى---",
     "patients/overview",
