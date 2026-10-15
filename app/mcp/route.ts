@@ -27,7 +27,8 @@ const TOOLS = [
     inputSchema: {
       type: 'object',
       properties: {
-        query: { type: 'string', description: 'What to search for' },
+        query: { type: 'string', description: 'What to search for. Short keywords work best.' },
+        locale: { type: 'string', enum: ['en', 'ar'], description: 'Docs language. Default: Arabic for an Arabic query, else English.' },
       },
       required: ['query'],
     },
@@ -45,9 +46,34 @@ const TOOLS = [
   },
 ];
 
-function findPage(url: string) {
+type Lang = 'en' | 'ar';
+
+function findPage(url: string, lang: Lang = 'en') {
   const path = url.split('#')[0].replace(/\/+$/, '') || '/';
-  return source.getPages('en').find((p) => p.url === path);
+  return source.getPages(lang).find((p) => p.url === path);
+}
+
+const ARABIC = /[؀-ۿ]/;
+
+// Words that are in almost every Arabic sentence (and Egyptian question
+// words). The search index has no Arabic stop words, so left in they match
+// hundreds of sections and bury the page that actually answers.
+const AR_STOP = new Set([
+  'في', 'على', 'علي', 'من', 'الى', 'إلى', 'الي', 'عن', 'مع', 'او', 'أو', 'و', 'ثم', 'كل', 'بعد', 'قبل', 'لما', 'لو',
+  'ازاي', 'إزاي', 'ازّاي', 'ايه', 'إيه', 'اية', 'فين', 'امتى', 'إمتى', 'ليه', 'مين', 'كام', 'هل', 'كيف', 'ماذا', 'متى', 'لماذا',
+  'انا', 'أنا', 'احنا', 'إحنا', 'انت', 'إنت', 'هو', 'هي', 'ده', 'دي', 'دا', 'دول', 'اللي', 'التي', 'الذي', 'هذا', 'هذه', 'ذلك',
+  'عايز', 'عاوز', 'عايزة', 'محتاج', 'اقدر', 'أقدر', 'ممكن', 'يعني', 'بس', 'كمان', 'برضه', 'لسه', 'خلاص',
+  'اعمل', 'أعمل', 'يا', 'ال', 'ما', 'لا', 'مش', 'مفيش', 'فيه', 'عشان', 'علشان',
+]);
+
+/** Arabic query -> its meaningful words: no diacritics/tatweel/punctuation, no stop words. */
+function arabicKeywords(q: string): string {
+  const words = q
+    .replace(/[ً-ْٰـ]/g, '')
+    .replace(/[؟?!.,،:؛"'()]/g, ' ')
+    .split(/\s+/)
+    .filter((w) => w && !AR_STOP.has(w));
+  return words.join(' ') || q;
 }
 
 async function renderPage(page: NonNullable<ReturnType<typeof findPage>>) {
@@ -56,20 +82,29 @@ async function renderPage(page: NonNullable<ReturnType<typeof findPage>>) {
   return `# ${page.data.title}\nURL: ${siteUrl}${page.url}\n\n${body}`;
 }
 
-async function searchDocs(query: string): Promise<ToolResult> {
-  const results = await searchServer.search(query, { locale: 'en' });
+async function searchIn(lang: Lang, query: string): Promise<ToolResult['content']> {
+  const q = lang === 'ar' ? arabicKeywords(query) : query;
+  const results = await searchServer.search(q, { locale: lang });
   const urls: string[] = [];
   for (const r of results) {
     const url = r.url.split('#')[0];
     if (!urls.includes(url)) urls.push(url);
     if (urls.length >= MAX_PAGES) break;
   }
-
   const content: ToolResult['content'] = [];
   for (const url of urls) {
-    const page = findPage(url);
+    const page = findPage(url, lang);
     if (page) content.push({ type: 'text', text: await renderPage(page) });
   }
+  return content;
+}
+
+// Arabic queries search the Arabic docs (they used to always hit the English
+// index and find nothing), falling back to English when Arabic finds nothing.
+async function searchDocs(query: string, locale?: Lang): Promise<ToolResult> {
+  const lang: Lang = locale ?? (ARABIC.test(query) ? 'ar' : 'en');
+  let content = await searchIn(lang, query);
+  if (content.length === 0 && lang === 'ar') content = await searchIn('en', query);
   if (content.length === 0) content.push({ type: 'text', text: 'No matching documentation found.' });
   return { content };
 }
@@ -84,7 +119,8 @@ async function callTool(name: unknown, args: Record<string, unknown>): Promise<T
   if (name === 'search_kashfy_docs') {
     const query = typeof args.query === 'string' ? args.query.trim().slice(0, 500) : '';
     if (!query) return { content: [{ type: 'text', text: 'query is required' }], isError: true };
-    return searchDocs(query);
+    const locale = args.locale === 'ar' || args.locale === 'en' ? args.locale : undefined;
+    return searchDocs(query, locale);
   }
   if (name === 'get_kashfy_doc_page') {
     const path = typeof args.path === 'string' ? args.path.trim() : '';
