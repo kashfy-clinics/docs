@@ -1,0 +1,44 @@
+---
+title: 'Kashfy AI Can Make Mistakes'
+description: 'Why the Doctor Assistant can sometimes give wrong or misleading answers, and how to check what it tells you'
+---
+
+The [Doctor Assistant](/doctors/assistant) tries to be helpful, and sometimes that means it gives an answer that is wrong or misleading. That's why the line under the message box always starts with **Kashfy AI can make mistakes**.
+
+## Why it happens
+
+The Assistant runs on a large language model. Models like this can produce text that reads well and sounds sure of itself but is not true. This is often called **hallucination**, and it's a known limit of today's AI, not something specific to Kashfy.
+
+In practice, it can:
+
+- **Misread your data.** It looks answers up in Kashfy, but it can pick the wrong patient with a similar name, the wrong visit, or the wrong date.
+- **Fill gaps with guesses.** When a record is missing something, it may guess instead of saying it doesn't know.
+- **Sort a paper wrongly.** An uploaded lab or scan paper can get the wrong type, title or date.
+- **Get medical facts wrong or out of date.** Its general medical knowledge comes from training, can be old, and can be wrong even when it sounds confident.
+- **Misquote.** A number, dose or quote can look exact and still be made up.
+
+## How to use it safely
+
+- **Don't treat it as the only source.** Check anything important against the patient's record, the original paper, or a trusted reference.
+- **You make the clinical decisions.** The Assistant is not a doctor. Diagnoses, prescriptions and doses are your call.
+- **Open the source.** When an answer points to a patient, a visit or a file, open it and check the details yourself.
+- **Read before you confirm.** Nothing is saved to a patient until you tap to confirm. Check the patient, type and date first.
+- **Review artifacts before you share them.** Read every [artifact](/doctors/artifacts) before you print it or send it to a patient.
+
+<Warning>
+  Never rely on the Assistant alone for anything that affects a patient's care, such as a dose, an allergy or a lab value. Always check the record.
+</Warning>
+
+## Tell us when it's wrong
+
+- Tap the **thumbs down** under a reply that was wrong or unhelpful. It helps us improve the Assistant.
+- For anything else, write to [support@kashfy.site](mailto:support@kashfy.site).
+
+<CardGroup cols={2}>
+  <Card title="Doctor Assistant" icon="robot" href="/doctors/assistant">
+    What you can ask and how papers are filed.
+  </Card>
+  <Card title="Assistant Tokens" icon="money-bill" href="/doctors/assistant-tokens">
+    Your monthly allowance and buying more.
+  </Card>
+</CardGroup>

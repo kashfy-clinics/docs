@@ -39,6 +39,7 @@
     "doctors/dashboard",
     "doctors/assistant",
     "doctors/assistant-tokens",
+    "doctors/assistant-mistakes",
     "doctors/artifacts",
     "---المرضى---",
     "patients/overview",
