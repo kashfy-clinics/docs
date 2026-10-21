@@ -14,7 +14,7 @@ export function baseOptions(lang: string): BaseLayoutProps {
     },
     links: [
       { text: ar ? 'الأسعار' : 'Pricing', url: 'https://kashfy.site/pricing', external: true },
-      { text: ar ? 'الدعم' : 'Support', url: 'mailto:support@kashfy.site', external: true },
+      { text: ar ? 'الدعم' : 'Support', url: `https://kashfy.site/${ar ? 'ar' : 'en'}/support`, external: true },
       // The notebook top bar renders every link as plain text, so the
       // "Open App" button is a custom item there and a normal link in the mobile menu.
       {
