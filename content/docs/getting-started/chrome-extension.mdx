@@ -1,0 +1,136 @@
+---
+title: 'Chrome Extension'
+description: 'Kashfy Clinic Assistant reads your old clinic system in Chrome and moves patients, visits, payments and files into Kashfy'
+---
+
+**Kashfy Clinic Assistant** is a Chrome extension that moves your clinic's data from a web-based clinic system into Kashfy. You show it a few screens of your old system once, it learns how the system works, then it copies everything by itself. The data arrives in Kashfy as a draft, and you review and import it on [Data migration](/getting-started/data-migration).
+
+The move has to be started by the clinic's owner or a manager.
+
+<Info>
+  The extension only reads. It never changes or deletes anything in your old system, never takes your password, and nothing enters your clinic until you press **Import** in Kashfy.
+</Info>
+
+## What it moves [#what-it-moves]
+
+- Patients, with what belongs to them (allergies, medical history and the like)
+- Doctors
+- Visits, with their notes
+- Procedures
+- Patients' payments
+- Files and attachments (x-rays, scans, documents)
+- Your services and procedures list, with prices
+
+Settings of the old system (payment methods and the like) are not moved.
+
+If your old system is a desktop program or paper records, you don't need the extension: upload an Excel or CSV export, a database backup, or photos of the pages on [Data migration](/getting-started/data-migration#upload-files).
+
+## 1. Install and sign in [#install]
+
+<Steps>
+  <Step title="Install">
+    Install [Kashfy Clinic Assistant](https://chromewebstore.google.com/detail/kashfy-clinic-assistant/pkbcalgjofcjgepdobbindaikoibclnk) from the Chrome Web Store. The same link is on **Data migration** as **Get the Chrome extension**.
+  </Step>
+  <Step title="Sign in">
+    Click the Kashfy icon in Chrome's toolbar and press **Sign in**. Sign in with your Kashfy account.
+  </Step>
+  <Step title="Pick the clinic">
+    If you belong to more than one clinic, choose it under **Data goes to clinic**. Everything the extension reads goes to that clinic.
+  </Step>
+</Steps>
+
+<Tip>
+  Pin the extension (the puzzle icon in Chrome's toolbar, then the pin) so the Kashfy icon is always one click away.
+</Tip>
+
+## 2. Allow it on your old system [#allow]
+
+1. Open your old clinic system in a tab and sign in to it as usual.
+2. Click the Kashfy icon and press **Allow Kashfy on this site**. Chrome asks for permission for that one site only: Kashfy can't reach any other site.
+3. The page reloads and the Kashfy panel appears in a bottom corner of the page. You can open it again any time with **Open the Kashfy panel**.
+
+To stop, click the Kashfy icon and press **Turn Kashfy off on this site**.
+
+## 3. Teach Kashfy your system [#teach]
+
+The panel first checks whether Kashfy already knows your system:
+
+- **Kashfy knows [system]**: other clinics have moved from it before. Skip to [Try 3 patients](#try).
+- **Kashfy doesn't know this system yet**: press **Show Kashfy the system**. It takes about 3 minutes.
+
+Before teaching, the panel shows **Before we start**: what Kashfy reads and how your data is protected. Tick **I'm responsible for this clinic and agree to move its data to Kashfy** and press **Agree and continue**. The page reloads once.
+
+The panel then asks for one screen at a time. Open each screen in your system the way you normally would; the step closes by itself as soon as Kashfy can use it.
+
+| Step | What to open |
+|------|--------------|
+| **Open the patients list** | The page with all your patients. If it has pages, go to page 2. |
+| **Open a patient's visits** | A patient who has been to the clinic several times, then their visit history. |
+| **Open one visit** | One of those visits, until its diagnosis, notes or prescription show. |
+| **Open a patient's payments** | Where the patient's payments show. |
+| **Open the files** | The patient's attachments, x-rays or files. |
+| **Open the doctors list** | The page with your doctors or staff. |
+| **Open your procedures list** | The procedures your clinic does. |
+| **Open your services price list** | The services your clinic offers, with prices. |
+| **Open the branches list** | The page or menu listing your branches. |
+
+On each step you can also press:
+
+- **I did it, check again**: you opened the screen but the step didn't close.
+- **We don't have this**: your system has no such screen (for example only one branch, or no price list).
+- **Skip**: move on without this screen.
+- **That is enough, learn it**: stop here. The panel then lists what Kashfy hasn't seen yet.
+
+If Kashfy already found your branches on an earlier screen, the last step lists them instead. Press **Yes, continue**, or **No, some are missing** and open the branches list.
+
+When you're done, the panel shows **Kashfy is learning the system** (a few seconds to two minutes), then **Kashfy understood [system]** with what **It will move** and anything that's **Good to know**.
+
+<Info>
+  Kashfy never clicks anything itself. While you click, any button or request that could change data in the old system (save, delete, pay, log out) is blocked before it reaches the system. Kashfy learns from the system's structure only (field names and what kind of value each holds); patient names, numbers and details are removed on your computer before anything is sent.
+</Info>
+
+## 4. Try 3 patients [#try]
+
+Press **Try 3 patients**. Kashfy sends 3 patients with everything they have.
+
+Open [Data migration](/getting-started/data-migration#review-and-import) in Kashfy and check that those patients look right: names, visits, payments and files. Then go back to the panel.
+
+## 5. Start the full move [#full-move]
+
+Press **Start the full move**. The panel shows **Moving your data** with live progress.
+
+- Keep that tab open. You can work in other tabs.
+- **Pause** and **Resume** stop and continue the move. **Stop** ends it; what was already sent stays in Kashfy.
+- If the old system signs you out, the panel shows **The old system signed you out**. Sign in again in the same tab and press **Resume**: the move continues from the same place.
+- If the tab closes, open the panel again and press **Continue where it stopped**, or **Start over**.
+
+### Clinics with several branches [#branches]
+
+Kashfy never changes anything in the old system, not even the branch. Before each branch the panel asks you to **Switch the system to the [name] branch**. Switch it yourself in the old system and press **Switched, continue**, or **Skip this branch**.
+
+When the move ends, the panel shows **Done**, plus any **Things we couldn't fetch** and **Files not downloaded**. Open **Data migration** in Kashfy to review and import.
+
+## Capture a single page [#capture-page]
+
+If a system can't be taught, press **Capture just this page** in the panel to send the page you're looking at. Repeat on every page you need. Kashfy sorts the tables on [Data migration](/getting-started/data-migration).
+
+## If something goes wrong [#troubleshooting]
+
+| The panel says | What to do |
+|----------------|------------|
+| **The system changed since Kashfy learned it** | The old system was updated. Press **Teach again**; it takes about 2 minutes. |
+| **Kashfy couldn't understand the system from these pages** | Teach it again and open more screens. |
+| **This system doesn't serve its data in a way we can read by ourselves** | Capture pages one by one, or export to Excel and upload it on Data migration. |
+| **The old system keeps refusing Kashfy's requests even after signing in again** | Teach Kashfy again, capture pages, or export to Excel. |
+| **We stopped because a request could change something in the old system** | Nothing was changed. [Contact support](/support). |
+| **The clinic owner or a manager has to start the move** | Sign in to the extension with an owner or manager account. |
+| **Your account is not linked to any clinic in Kashfy** | Ask your clinic's owner to [invite you](/team/members). |
+
+<CardGroup cols={2}>
+  <Card title="Data Migration" icon="upload" href="/getting-started/data-migration">
+    Review what arrived and import it.
+  </Card>
+  <Card title="Clinic Setup" icon="list-checks" href="/getting-started/clinic-setup">
+    The rest of the setup checklist.
+  </Card>
+</CardGroup>
