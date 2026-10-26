@@ -93,6 +93,7 @@
     "settings/personal",
     "settings/organization",
     "settings/codes-qr",
+    "settings/referral-source",
     "settings/prescription",
     "settings/modules",
     "settings/insurance",
