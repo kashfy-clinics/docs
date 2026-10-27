@@ -65,8 +65,27 @@ export const metadata: Metadata = {
     default: appName,
     template: `%s - ${appName}`,
   },
-  description: 'Documentation for Kashfy - the AI-powered clinic receptionist for Egyptian clinics',
+  description: 'Documentation for Kashfy Clinics - AI clinic software for Egypt that books patients on WhatsApp',
   icons: { icon: '/favicon.ico' },
+};
+
+// The same entity kashfy.site describes (same @id), so search engines and AI answers
+// treat the docs and the main site as one "Kashfy Clinics", not another Kashfy.
+const organizationLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  '@id': 'https://www.kashfy.site/#organization',
+  name: 'Kashfy Clinics',
+  alternateName: ['Kashfy', 'كشفي للعيادات', 'كشفي'],
+  url: 'https://www.kashfy.site',
+  logo: 'https://www.kashfy.site/icon.png',
+  sameAs: [
+    'https://docs.kashfy.site',
+    'https://www.linkedin.com/company/kashfy-ai',
+    'https://www.instagram.com/kashfy.ai',
+    'https://www.facebook.com/kashfyai',
+    'https://www.youtube.com/@kashfy-ai',
+  ],
 };
 
 export default async function Layout({ params, children }: LayoutProps<'/[lang]'>) {
@@ -77,6 +96,7 @@ export default async function Layout({ params, children }: LayoutProps<'/[lang]'
   return (
     <html lang={lang} dir={dir} suppressHydrationWarning>
       <body className="flex flex-col min-h-screen">
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationLd) }} />
         <RootProvider dir={dir} i18n={provider(lang)}>
           {/* Full-width top bar with logo, search and the Pricing / Support / Open App links */}
           <DocsLayout tree={source.getPageTree(lang)} {...options} nav={{ ...options.nav, mode: 'top', children: <SidebarToggle /> }}>
