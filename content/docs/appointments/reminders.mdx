@@ -51,6 +51,28 @@ When the patient replies, the AI picks up the conversation, so it can confirm, r
 - Reminders are switched off for your clinic
 - Your clinic has no connected WhatsApp number (see [WhatsApp Settings](/settings/whatsapp))
 
+## Follow-up reminders [#follow-up-reminders]
+
+When the doctor sets a follow-up date on a visit (for example with **Come back in** when closing the visit) and the patient hasn't booked it, Kashfy sends one WhatsApp message reminding them and offering to book. The patient replies in the chat and the AI books the visit.
+
+Turn it on in **Settings → Clinic**, under **Patient Reminders**: switch on **Remind patients of their follow-up** and set **Days before the follow-up** (from 1 to 30). It's on by default, 2 days before.
+
+- The message goes out at 10 AM that many days before the follow-up date. If the follow-up is set closer than that, it goes out within the hour. Messages are only sent between 9 AM and 9 PM.
+- It mentions the follow-up date and the doctor.
+- Moving the follow-up date moves the reminder. It's never sent twice.
+
+No follow-up reminder is sent when:
+
+- The patient already has a later visit, booked or done
+- The follow-up was cleared or moved past
+- The patient didn't agree to data use
+- Your clinic has no WhatsApp number of its own
+- The follow-up was set while the switch was off
+
+<Info>
+  If the patient hasn't written to your number in the last 23 hours, WhatsApp requires an approved follow-up reminder template. Until it's approved, only patients who wrote recently get the reminder.
+</Info>
+
 <CardGroup cols={2}>
   <Card title="Managing Appointments" icon="calendar" href="/appointments/managing-appointments">
     Book, move and cancel appointments.

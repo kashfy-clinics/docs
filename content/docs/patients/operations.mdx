@@ -1,0 +1,71 @@
+---
+title: 'Operations'
+description: "Record operations done at outside hospitals on the patient's file, with income, every cost and the net profit, and book the post-op review"
+---
+
+Surgeons who operate at outside hospitals can record each operation on the patient's file: what was done, where, what it brought in and what it cost. Kashfy works out the total cost and the net profit, and the clinic sees every operation together in **Finance → Operations**.
+
+The **Operations** card sits on the **Overview** tab of the [patient profile](/patients/patient-profile).
+
+## Add an operation [#add-operation]
+
+<Steps>
+  <Step title="Tap Add operation">
+    On the patient's **Operations** card, tap **Add operation**.
+  </Step>
+  <Step title="Describe the operation">
+    - **Type of operation** and **Hospital**. Types and hospitals you used before show as chips you can tap.
+    - **Operation date**.
+    - **Surgeon**. It starts on you if you're a doctor, or on the clinic's only surgeon. Owners and admins can pick another doctor when the clinic has several.
+    - **Insurance case**, if an insurer pays for it.
+    - **Payment**: **Received** or **Pending**.
+  </Step>
+  <Step title="Enter the money">
+    **Total income**, then each cost: **Hospital fee**, **Instruments**, **Assistant fee**, **Anaesthesia**, **Nurse fee** and **Other cost** (with a line for what it was). **Total cost** and **Net profit** update as you type.
+  </Step>
+  <Step title="Tap Save">
+    The operation appears on the card with its type, date, hospital and net profit. A net profit below zero shows in red.
+  </Step>
+</Steps>
+
+If the doctor already noted the operation in the surgery section of a visit, a new record starts from that procedure and day.
+
+Tap an operation to see its cost lines, the surgeon, notes and its post-op reviews. **Edit** changes it, and **Delete** removes it after you confirm. Reviews already booked from a deleted operation stay booked.
+
+## Schedule the post-op review [#post-op-review]
+
+Open the operation and tap **Schedule post-op review**. The normal booking sheet opens. The visit is booked with the surgeon as a follow-up and linked to the operation, so it shows under **Post-op reviews** on that operation.
+
+## Finance → Operations [#finance-tab]
+
+Owners and admins see every operation in **Dashboard → Finance → Operations**. The tab shows when the clinic has a doctor who operates (surgery, orthopaedics, gynaecology, urology, andrology, ENT or ophthalmology) or already has operations recorded.
+
+For the selected date range (by operation date):
+
+- **Operations income** with the number of operations, **Total cost**, **Net profit**, and **Pending from insurance**.
+- **Insurance** vs **Cash**: the count, income and net profit of each.
+- A table of every operation: date, patient, surgeon, operation, hospital, income, cost and net profit, with **Insurance** and **Pending** chips. Filter by surgeon, hospital and case type (**All**, **Insurance** or **Cash**).
+- **Where the cost went**: hospital fee, instruments, assistant, anaesthesia, nurse and other, added up.
+
+**Download CSV** gets the same rows with every cost line.
+
+<Info>
+  Operation money is paid at the hospital, so it is not part of [Revenue](/finance/revenue) or [P&L](/finance/pnl).
+</Info>
+
+## Who can see operations [#who-can-see]
+
+| Role | What they see |
+|------|---------------|
+| **Owner and admins** | Every operation on every patient, and the Finance tab |
+| **Doctors** | The card when their specialty operates or they already operated on the patient, and only the operations they did |
+| **Reception** | Nothing. The card and the numbers are hidden |
+
+<CardGroup cols={2}>
+  <Card title="Patient Profile" icon="user" href="/patients/patient-profile">
+    Where the Operations card lives.
+  </Card>
+  <Card title="Finance" icon="calculator" href="/finance/overview">
+    Revenue, expenses and profit.
+  </Card>
+</CardGroup>

@@ -1,0 +1,62 @@
+---
+title: 'Marketing'
+description: 'Record what you spend on ads and see what each new patient cost you and what they paid back, per source'
+---
+
+The Marketing tab shows what your ads cost per new patient, and whether the patients they brought paid it back. Navigate to **Dashboard → Finance → Marketing**. Like the rest of Finance, only the owner and admins see it.
+
+## Add ad spend [#add-spend]
+
+<Steps>
+  <Step title="Tap Add ad spend">
+    The form opens on the Marketing tab.
+  </Step>
+  <Step title="Fill it in">
+    - **Month**.
+    - **Source**: one of your clinic's [How did you hear about us?](/settings/referral-source) choices, or **Another source...** to type one.
+    - **Campaign (optional)**, for example "Whitening offer".
+    - **Amount (EGP)**: the whole month's amount for this source.
+    - **Branch**, when you have more than one.
+  </Step>
+  <Step title="Tap Add">
+    The entry shows under **Recorded spend**. Use the trash icon to delete one.
+  </Step>
+</Steps>
+
+<Tip>
+  Enter one amount per source per month, as the ad platform bills it. A month counts in full whenever part of it falls inside the selected date range.
+</Tip>
+
+## Cards
+
+- **Ad spend** - everything recorded for the period
+- **New patients with a source** - new patient files that have a How did you hear about us? answer
+- **Cost per new patient** - counted only from sources you paid for
+- **They paid so far** - what those patients have paid, with the return
+
+## Per source [#per-source]
+
+One row per source:
+
+| Column | What it shows |
+|--------|---------------|
+| **Spend** | What you recorded for that source |
+| **New patients** | Patient files opened in the period whose How did you hear about us? answer matches the source |
+| **Cost / patient** | Spend divided by new patients |
+| **Paid** | What those patients have paid so far, after discounts, without voided payments |
+| **Return** | (Paid - Spend) / Spend |
+
+### How new patients are matched
+
+Kashfy matches a new patient to a source through their answer to **How did you hear about us?**: on the check-in page, through the AI assistant, or as filled in by your team. Upper and lower case don't matter, so name the spend's source the same as the answer. Patients who booked from a [booking link for ads](/appointments/booking-link#ads-link) on Facebook, Instagram or Google get that answer filled in automatically.
+
+The numbers are for the whole clinic.
+
+<CardGroup cols={2}>
+  <Card title="How did you hear about us?" icon="megaphone" href="/settings/referral-source">
+    The question that ties patients to sources.
+  </Card>
+  <Card title="Booking link for ads" icon="calendar-plus" href="/appointments/booking-link#ads-link">
+    Track bookings from each campaign.
+  </Card>
+</CardGroup>

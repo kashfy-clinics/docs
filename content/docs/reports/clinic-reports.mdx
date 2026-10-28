@@ -1,0 +1,72 @@
+---
+title: 'Clinic Reports'
+description: 'Attendance, waiting time, schedule use and revenue, by branch and provider, with CSV, Excel and PDF export'
+---
+
+Clinic reports show how your clinic runs day to day: who came, how long patients waited, how full the schedule was and, for managers, where the money came from. Navigate to **Dashboard → Analytics** and open the **Clinic reports** tab.
+
+## Period and filters
+
+- **Period**: the same picker as the rest of Analytics (7, 30 or 90 days, or custom dates).
+- **Branch**: follows the branch picked in the sidebar.
+- **Provider**: **All providers** or one doctor.
+- **Service**: **All services**, one procedure, or the visit fee or follow-up fee.
+
+## Tiles
+
+At the top: **Booked**, **Attendance**, **Median wait**, **Utilisation** and, for owners and admins, **Revenue**.
+
+## Waiting time [#waiting-time]
+
+**Waiting time** by branch and provider: the **Average wait** and the **Median wait**, and how many visits were measured.
+
+The wait runs from the moment the patient arrives (checking in with the clinic QR, or reception marking them **Arrived**) to the doctor starting the visit. Visits without both times are left out.
+
+<Info>
+  Waiting time is counted from October 29, 2026, when this report shipped. Earlier visits have no start time, so they don't appear here.
+</Info>
+
+## Utilisation [#utilisation]
+
+**Utilisation** by branch and provider: booked minutes against the minutes the schedule offers, with a chart per provider. The schedule's minutes follow the weekly hours, days off, custom hours and breaks.
+
+For queue (walk-in) days, the report compares booked visits with the daily cap instead. Queue days without a cap are left out and labelled.
+
+## Attendance [#attendance]
+
+**Attendance by branch and provider**: booked, attended, cancelled, no-show, and **Attendance %**. Attendance % counts visits with a known outcome: came / (came + no-show).
+
+## Revenue [#revenue]
+
+Owners and admins also see:
+
+- **Revenue by service**
+- **Revenue by provider**
+- **Revenue by referral source** (the patient's [How did you hear about us?](/settings/referral-source) answer)
+
+Each shows visits, revenue and revenue per visit. A visit's payment goes to its procedures first (by price), and the rest to the visit fee.
+
+<Note>
+  Revenue here is what was collected for the visits in the period, after discounts. [Finance](/finance/revenue) counts payments by the day they were recorded, so the two can differ.
+</Note>
+
+## Branches side by side [#branches]
+
+With two or more branches and **All branches** picked, **Branches side by side** puts each branch in its own column: booked, attended, no-show, cancelled, attendance %, average and median wait, utilisation % and, for managers, revenue and revenue per visit.
+
+## Export [#export]
+
+Use the buttons at the top to export the same tables:
+
+- **CSV**
+- **Excel**
+- **PDF**: opens a print view; choose **Save as PDF**.
+
+<CardGroup cols={2}>
+  <Card title="Finance" icon="calculator" href="/finance/overview">
+    Revenue, expenses and profit.
+  </Card>
+  <Card title="Doctor Schedules" icon="calendar-days" href="/doctors/schedules">
+    The hours that utilisation is measured against.
+  </Card>
+</CardGroup>

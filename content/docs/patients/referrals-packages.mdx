@@ -1,0 +1,89 @@
+---
+title: 'Referrals & Session Packages'
+description: 'Refer a patient to another specialty in your clinic, follow them until they start, and sell and count packages of sessions'
+---
+
+When a doctor sends a patient to another specialty in the same clinic (for example orthopaedics to physiotherapy, or internal medicine to nutrition), Kashfy keeps track of the referral by itself: whether the patient booked, started and finished. Treatments given in several sessions can be sold as a **session package** and counted visit by visit.
+
+## Refer a patient [#refer]
+
+<Steps>
+  <Step title="Tap Refer on the visit">
+    On the [visit page](/appointments/visit), tap **Refer** in the header. Doctors refer from their own visits.
+  </Step>
+  <Step title="Fill in the referral">
+    - **Specialty**: one of your clinic's other specialties.
+    - **Doctor (optional)**: a specific doctor, or **Any doctor of the specialty**.
+    - **Diagnosis**: filled in from the visit; change it if needed.
+    - **Plan and instructions**: what you want done, for example "knee strengthening, no flexion past 90 degrees".
+    - **Suggested sessions (optional)**.
+  </Step>
+  <Step title="Tap Refer">
+    The referral is saved. Referrals already made from this visit are listed under **Referred from this visit**.
+  </Step>
+</Steps>
+
+<Info>
+  If your clinic has no other specialty yet, add that doctor on the Doctors page first.
+</Info>
+
+## Referral statuses [#statuses]
+
+The status changes by itself as the patient moves along:
+
+| Status | When |
+|--------|------|
+| **Not booked yet** | The referral was made, and the patient has no booking with that doctor or specialty yet |
+| **Booked** | The patient has a booking with the doctor, or with any doctor of the specialty |
+| **Started** | That visit was completed, or a session was counted on the referral's package |
+| **Completed** | The referral's package is used up |
+| **Declined** | Closed by hand because the patient declined |
+| **Cancelled** | Closed by hand because the referral was withdrawn |
+
+A cancelled booking puts the referral back to **Not booked yet**. Doctors and managers can close a referral by hand with **Close referral**: **Patient declined** (with an optional reason), **Withdrawn**, or **Done** once the patient has booked or started. **Reopen** brings a declined or withdrawn referral back.
+
+## Session packages [#session-packages]
+
+### Sell a package
+
+Tap **New package** in the visit's **Session package** card, or on the patient file's **Care journey** card. Enter the service, **How many sessions?**, the **Package price (EGP)**, and, for reception and managers, what was **Paid now (optional)** and how. A package sold for a referral is linked to it.
+
+### Count a session
+
+On a visit with that doctor or specialty, tap **Count this session**. The closing sheet offers it too when you finish the visit. Each visit counts once. Tap the undo arrow to take a session off the count. When the last session is counted, the package completes by itself.
+
+### Payment
+
+The package price is the charge. Reception and managers tap **Record payment** to add a payment on the package; it counts in Finance like any other payment. The package shows **Not paid**, **Partly paid** or **Paid**, and what's left.
+
+### Stop and resume
+
+**Stop package** asks why the patient stopped: got better, no improvement, cost, no time, travel or distance, medical reason, went elsewhere, no reason given, or other, with an optional note. **Resume** brings the package back.
+
+## Care journey on the patient file [#care-journey]
+
+The **Care journey** card on the patient file's **Overview** tab shows:
+
+- Each referral: who referred, to what specialty, its status, and links to the referring visit and to the booking or first session.
+- Its packages, with sessions done and left.
+- The pain score over sessions, for physiotherapy and pain-management visits.
+- The next visit or follow-up.
+
+Reception sees the packages and the next visit, but not the referrals.
+
+## The Referrals page [#referrals-page]
+
+Owners and admins open **Referrals** in the sidebar. Doctors have **My referrals**, with only the referrals they wrote or received.
+
+- **Last 90 days**: how many were referred, booked, started and completed, and the **Conversion** rate (patients who started treatment in the other specialty out of all referred).
+- **Referred, not in yet**: patients referred 3, 7, 14 or 30+ days ago who still haven't come, each with **Call**, **WhatsApp** and **Close**.
+- **Packages (last 90 days)**: sold, active, completed and stopped, with **Why they stopped**.
+
+<CardGroup cols={2}>
+  <Card title="The Visit" icon="stethoscope" href="/appointments/visit">
+    Where referrals are made and sessions counted.
+  </Card>
+  <Card title="Patient Profile" icon="user" href="/patients/patient-profile">
+    Where the Care journey card lives.
+  </Card>
+</CardGroup>

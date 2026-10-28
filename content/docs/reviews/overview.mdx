@@ -25,6 +25,29 @@ Each appointment gets one request at most. No request is sent if the patient has
   Review requests go from your clinic's WhatsApp number (the appointment branch's number, or your main number), so they need a connected number. If the patient messaged that number in the last 23 hours, the request is a normal WhatsApp message. Otherwise WhatsApp requires the review template approved on your account (see [Message templates](/settings/whatsapp#message-templates)); until it's approved, review requests only go to patients who messaged recently.
 </Info>
 
+## Satisfaction survey [#satisfaction-survey]
+
+Instead of asking the patient to reply with a number in the chat, Kashfy can send a link to a short survey page.
+
+<Steps>
+  <Step title="Open Settings → Clinic">
+    Go to the **Patient Reminders** section.
+  </Step>
+  <Step title="Switch on Satisfaction survey after the visit">
+    The review request now goes out as a link instead of a chat question.
+  </Step>
+</Steps>
+
+The page asks for a rating from 1 to 5 stars and an optional comment. The answer shows on the Reviews page straight away. Each link works once, for 30 days. Survey links go out between 9 AM and 9 PM; a visit finished later is asked the next morning.
+
+<Info>
+  If the patient hasn't written to your number in the last 23 hours, WhatsApp requires an approved survey template. Until it's approved, only patients who wrote recently get the survey, and the others aren't asked, because the chat question is off in survey mode.
+</Info>
+
+### Patient satisfaction card
+
+Once you have Kashfy reviews, the **Patient satisfaction** card above the list shows the average score, the split from 5 to 1 stars and the three latest comments. Switch between **By provider** and, when you have more than one branch, **By branch**. It counts Kashfy reviews only (chat answers and the survey), not imported Google reviews.
+
 ## The Reviews page
 
 Open **Reviews** in the sidebar (owners, admins and staff; doctors don't see it). The header shows the total number of reviews and the average score. Each review shows:
