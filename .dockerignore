@@ -1,0 +1,28 @@
+# deps and build output (rebuilt inside the image)
+node_modules
+.next
+.source
+out
+build
+coverage
+*.tsbuildinfo
+next-env.d.ts
+
+# git, editor, OS
+.git
+.gitignore
+.vscode
+.idea
+.DS_Store
+
+# local env and platform files
+.env*
+.vercel
+*.pem
+
+# docker and docs about deploying (not needed in the image)
+Dockerfile
+.dockerignore
+DEPLOY-COOLIFY.md
+README.md
+npm-debug.log*
