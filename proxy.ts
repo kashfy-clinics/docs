@@ -40,7 +40,7 @@ export default function proxy(request: NextRequest) {
 }
 
 export const config = {
-  // Skip API/MCP/LLM routes, Next internals and static files (anything with an
+  // Skip API/MCP/LLM routes, the health check, Next internals and static files (anything with an
   // extension), but still handle "*.md".
-  matcher: ['/((?!api|mcp|llms|_next|.*\\.(?!md$)[^/]+$).*)'],
+  matcher: ['/((?!api|mcp|llms|healthz|_next|.*\\.(?!md$)[^/]+$).*)'],
 };

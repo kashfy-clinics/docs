@@ -2,6 +2,7 @@
   "name": "kashfy-docs",
   "version": "1.0.0",
   "private": true,
+  "packageManager": "pnpm@11.21.0",
   "scripts": {
     "build": "next build",
     "dev": "next dev",

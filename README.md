@@ -27,3 +27,7 @@ Pages without a translation show the English version under `/ar`.
 - `/llms.txt` and `/llms-full.txt`
 - Any page as Markdown: add `.md` to the URL, e.g. `/lab/intake.md`
 - MCP server at `/mcp` with `search_kashfy_docs` and `get_kashfy_doc_page` (used by the dashboard help assistant)
+
+## Deploying
+
+Hosted on Coolify from the `Dockerfile` (Next.js standalone server on port 3000, health check `/healthz`). See [DEPLOY-COOLIFY.md](DEPLOY-COOLIFY.md).
