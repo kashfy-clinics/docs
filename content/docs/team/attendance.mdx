@@ -1,0 +1,101 @@
+---
+title: 'Attendance & Leave'
+description: 'Let your team check in and out, choose how they do it, see the monthly sheet, fix and restore days, and handle leave requests'
+---
+
+Open **Attendance** in the sidebar (under **Today**). Doctors who work in the doctor view find it as **My attendance**. Attendance is off until you turn it on, and you decide everything about it: whether the team records attendance, how they check in, and, on the [Payroll](/team/payroll) page, whether it changes their salaries.
+
+<Note>
+  Attendance is on the **Team plan and above**. On Solo, the page shows **Available on the Team plan and above** with **View plans**. A clinic still on its free trial has it. See [Plans & Pricing](/billing/plans).
+</Note>
+
+The **Sheet**, **Leave**, **Team hours** and **Settings** tabs are for anyone with **Manage attendance and leave** (see [Roles & Permissions](/team/roles#permissions)). You can also set the main choices in [Clinic decisions](/settings/decisions).
+
+## Settings [#settings]
+
+On the **Settings** tab:
+
+- **The team records attendance**: turn attendance on or off for the whole clinic.
+- **How they check in (one or more)**:
+  - **A button in the app**: the simplest, but it can be pressed from anywhere.
+  - **A code at reception**: a reception screen shows a code that changes every 30 seconds, so they have to be there. See [Attendance code (QR)](#qr).
+  - **Location**: check-in works only when the phone is within the distance you set (150 metres by default) of the branch. The branch needs its map location; Kashfy lists the branches that don't have one. Only the distance is kept, never the person's position.
+- **Late after**: minutes of grace past each person's start time (10 by default). Past the grace, every minute from the start time counts as late.
+- **Leave requests**: let the team ask for leave in the app, with the yearly **Annual leave** and **Sick leave** days.
+
+<Note>
+  Whether attendance changes salaries is set on **Payroll → Deduction rules** (the **Attendance and salaries** line here links to it). See [Payroll](/team/payroll#deductions).
+</Note>
+
+## Team hours [#hours]
+
+On **Team hours**, open a person to set:
+
+- **Records attendance**: everyone is on the list except the owner, doctors included. Turn it off for anyone who shouldn't check in.
+- **Hours** for each weekday. Lateness and absence are counted against these hours. A doctor with no hours here is counted against their working hours from the doctors' schedule.
+
+Someone with no hours at all can still check in, but gets no lateness or absence.
+
+### Working days [#working-days]
+
+Absence and leave count only a person's working days:
+
+1. Their own shift days from **Team hours**.
+2. With no shifts, their branch's working days. For a clinic branch that has none set, the days its doctors work there in the booking schedule.
+3. When neither exists, Saturday to Thursday.
+
+## Checking in and out [#check-in]
+
+Everyone on the list sees **My attendance**: today's hours, the ways your clinic allows, and **This month**: days present, late, absent, leave, and each day.
+
+- **A button in the app**: **Check in**, then **Check out** when leaving, with a branch picker when there are two or more branches.
+- **Location**: **Check in with location** and **Check out with location**. The phone asks to share its location; check-in works only within the distance set in [Settings](#settings).
+- **A code at reception**: scan the attendance code on the reception screen with the phone camera. See [Attendance code (QR)](#qr).
+
+## Attendance code (QR) [#qr]
+
+With **A code at reception** on, open **Open the code screen (on the reception computer or tablet)** from the Settings tab. The screen shows **Check in here** and a code that changes every 30 seconds; with several branches it first asks you to **Pick the branch**.
+
+The team opens their phone camera and scans the code. The first scan of the day checks in, a later one checks out. A second scan within 5 minutes of checking in is ignored (**You already checked in today**), so a double scan never turns into a one-minute shift.
+
+## The attendance sheet [#sheet]
+
+**Sheet** shows the month for everyone: days present, late, absent, leave and hours worked. Open a person to see each day, then **Edit** a day to set it as **Present** (with check-in and check-out times), **Paid day off**, or **Absent**. A reason is required and kept with the change. Nobody can edit their own days except the owner.
+
+A day is counted as:
+
+| Status | When |
+|---|---|
+| **Present** | They checked in. Late if they came past the grace. |
+| **Absent** | A working day that has ended with no check-in. |
+| **Leave** | An approved leave covers it. |
+| **Paid day off** | A manager marked it so. |
+
+- **Forgot to check out**: a past day with a check-in and no check-out counts **0 hours** until a manager fixes the day. The sheet flags it, and the month's payroll lists everyone who still has one.
+- People who left during the month still show, marked **Left the clinic**, for the days they were members. Days before someone joined or after they left read **Not on the team**.
+
+## Changes log [#edits]
+
+Under the sheet, **Changes** lists every edit to a day and every leave decision: who made it, when, and the before and after. **Restore** puts one back the way it was.
+
+The sheet and leave stay editable after the month's payroll is approved or paid. A change made after that is marked:
+
+- **After payroll was approved**: reopen and rebuild the payroll so it follows the new attendance ([Payroll](/team/payroll#run)).
+- **After payroll was paid**: the difference goes into next month's payroll by itself.
+
+## Leave [#leave]
+
+With leave requests on, anyone on the list can press **Ask for leave** under **My leave**, pick the kind (annual, sick, unpaid or other), the dates and a reason. Annual and sick leave can't go past what's left of the yearly days.
+
+Leave counts [working days](#working-days), not calendar days: a week off from Saturday to Friday uses 6 days when Friday is a rest day. A leave that covers only rest days is refused. A rest day inside a leave stays a rest day on the sheet and in pay.
+
+Managers are notified and answer on the **Leave** tab with **Approve** or **Decline**. The person is told the answer. An approved leave can still be cancelled.
+
+<CardGroup cols={2}>
+  <Card title="Payroll" icon="wallet" href="/team/payroll">
+    Pay per person, deductions and paying the month.
+  </Card>
+  <Card title="Roles & Permissions" icon="shield" href="/team/roles">
+    Who can manage attendance.
+  </Card>
+</CardGroup>

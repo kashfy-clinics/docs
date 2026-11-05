@@ -1,0 +1,56 @@
+---
+title: "Doctor's Assistants"
+description: 'Add an assistant who works with chosen doctors; each doctor decides what their assistant sees and does, and for which patients'
+---
+
+**Doctor's assistant** is one of the built-in roles, next to Manager, Reception and Finance manager. An assistant calls the queue and checks patients in for the doctors they work with. They also see patients and use the stock, but they don't book or cancel visits.
+
+## Adding an assistant [#add]
+
+<Steps>
+  <Step title="Pick the role">
+    Go to **Settings → Team**, and under **Invite to the team** pick **Doctor's assistant**. The card shows when the clinic has doctors.
+  </Step>
+  <Step title="Pick their doctors">
+    Under **Works with**, pick at least one doctor, then enter the email and press **Invite**.
+  </Step>
+</Steps>
+
+An assistant always works with at least one doctor: the invite, moving someone into the role and **Change** all ask for one.
+
+In the team list, an assistant shows **With:** and their doctors. Press **Change** to pick other doctors.
+
+<Note>
+  Moving an assistant to another role, or removing them from the team, removes their doctor links and the doctors' choices for them. If they come back to the role, they start fresh.
+</Note>
+
+## What the doctor decides [#doctor-decides]
+
+Each doctor opens **My assistants** in their sidebar and sets, for every assistant who works with them:
+
+- **Can see the full record**: diagnoses, prescriptions, labs and scans. Off by default: the assistant sees the front-desk details only.
+- **Can take payments**: records payments like reception. Off by default.
+
+The other things an assistant can do (check-in, see patients, use the stock) come from the role, which you can change on the [Roles](/team/roles) tab.
+
+## For which patients [#which-patients]
+
+Under the two switches, **For which patients?** sets where they apply:
+
+| Choice | The assistant can... |
+|---|---|
+| **My patients only** (the default) | See the record and take payments only for this doctor's patients |
+| **Every patient in the clinic** | See the record and take payments for any patient in the clinic |
+
+The choice applies to both the record and payments. The starting choice for new assistants is set by the owner in [Clinic decisions](/settings/decisions); each doctor can still change it for their own assistant.
+
+A doctor who is no longer active at the clinic gives their assistant nothing. On the appointments board, the clinical side of other doctors' visits stays hidden.
+
+<CardGroup cols={2}>
+  <Card title="Roles & Permissions" icon="shield" href="/team/roles">
+    All roles and what they can do.
+  </Card>
+  <Card title="Team Members" icon="users" href="/team/members">
+    Inviting and removing people.
+  </Card>
+</CardGroup>

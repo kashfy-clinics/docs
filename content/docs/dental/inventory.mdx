@@ -24,8 +24,19 @@ Each item shows its quantity, its minimum, a level bar, its unit price and a sta
 ## Changing quantities
 
 - **− / +** next to the quantity adds or removes one. Taps show at once and save a moment after you stop tapping.
-- **Receive stock**: pick the item (or create a new one), the quantity, unit price and supplier, and the lot number for items that track lots, such as implants. With a price, it's recorded as an expense under **Supplies** in [Finance](/finance/expenses), unless you turn that off.
+- **Receive stock**: pick the item (or create a new one), the quantity, **Cost per unit (EGP)** and supplier, and the lot number for items that track lots, such as implants. With a cost, it's recorded as an expense under **Supplies** in [Finance](/finance/expenses), unless you turn that off. See [Cost and sell price when receiving](#receive-prices) below.
 - **Count / adjust** in an item's history corrects the quantity after a stock count.
+
+## Cost and sell price when receiving [#receive-prices]
+
+The **Receive stock** sheet asks two prices, for a new item and for one you already have:
+
+- **Cost per unit (EGP)**: what you paid for each unit in this delivery.
+- **Sell price per unit (EGP)**: what patients pay for one unit. It starts with the item's current sell price, and it's required when the item is sold on its own. If you change it, the item's sell price changes too, and the change is kept in the item's price history.
+
+Managers also see **Profit per unit** and, once the quantity is filled, **If all are sold**. Profit is counted when items are actually sold, not when they're received: it shows in **Finance → Stock profit** under **Profit from items sold**.
+
+## Item history
 
 Click an item to see its history: every receipt, adjustment and use, with the patient for anything used in treatment.
 

@@ -1,0 +1,74 @@
+---
+title: 'Cash Flow'
+description: 'The money that actually came in and went out, by payment method, payments from insurers, and the cash count when ending the day'
+---
+
+Revenue isn't the same as cash: a patient's wallet deposit is cash but not revenue yet, and insurance coverage is revenue but not cash yet. The Cash flow tab follows the money itself. Navigate to **Dashboard → Finance → Cash flow**.
+
+<Note>
+  Cash flow is on the **Team plan and above**, like the [Income statement](/finance/pnl). On Solo the tab shows **Available on the Team plan and above**, and the cash count when ending the day is off. With several branches, the same branch picker as the Income statement applies.
+</Note>
+
+## Summary cards [#summary]
+
+- **Cash in**: what patients paid, wallet deposits, and **From insurers**
+- **Cash out**: expenses, and wallet refunds
+- **Net cash**: cash in minus cash out
+- **Owed by insurers**: still owed at the end of the period: everything billed to insurers so far, minus what they paid
+
+## By payment method [#methods]
+
+A table with **In**, **Out** and **Net** for each payment method: cash, card, InstaPay, transfer and other. Expenses count under the method you picked when you entered them.
+
+## Day by day [#days]
+
+Each day of the range with its net per payment method, then in, out and net. **Download CSV** gets the same rows.
+
+<Info>
+  Patient payments count without the insurance part and without payments made from the patient's wallet: that cash was already counted when it was deposited. A wallet refund is cash out; a wallet correction is never cash.
+</Info>
+
+## Payments from insurers [#insurers]
+
+The **From insurers** card lists the period's payments from insurance companies: day, insurer, amount, method and reference.
+
+<Steps>
+  <Step title="Press Record a payment">
+    You need **Add and edit expenses** for this ([Roles & Permissions](/team/roles#permissions)).
+  </Step>
+  <Step title="Fill in the payment">
+    Pick the insurer from your accepted list, or **Another insurer** to type the name. Then the amount, the method (transfer by default), **Received on**, the branch (with several branches), and an optional reference (transfer or claim number) and note.
+  </Step>
+</Steps>
+
+An insurer payment counts as cash in and lowers **Owed by insurers**. It's never counted as revenue again: the visit already counted it. If you recorded one by mistake, the trash icon (**Remove the payment**) takes it out; it's kept as voided.
+
+## Cash count when ending the day [#cash-count]
+
+Turn on **Cash count when ending the day** on this tab. Anyone who sees Finance (owner, managers, finance managers, or any role with **See Finance**) has the switch. From then on:
+
+<Steps>
+  <Step title="End the day asks for the drawer">
+    When reception presses **End the day**, Kashfy asks for **Cash in the drawer now** and an optional note. The day can't be ended without it.
+  </Step>
+  <Step title="The count is blind">
+    Reception types only what they counted; they never see what Kashfy expects. While the day is open and the count is on, their **Day summary** shows no totals row: **Totals show once the day is ended, because of the cash count.**
+  </Step>
+  <Step title="Kashfy compares">
+    Kashfy works out what should be in the drawer: the cash paid that day on the branch, plus cash wallet deposits, minus cash wallet refunds, plus cash from insurers, minus that day's cash expenses for the branch.
+  </Step>
+</Steps>
+
+Each count is listed on the Cash flow tab with **Expected**, **Counted** and **Difference**: red when short, amber when over, **Exact** when it matches. If the drawer is short by more than 1 EGP, everyone who sees Finance for that branch is notified, once per day: reopening and ending short again doesn't send a second alert. Reopening the day clears its count.
+
+### Several branches [#branches]
+
+With one branch, every cash payment counts. With several, cash that isn't recorded on any branch is in no drawer: the End the day window says so, and the counts table shows it in a **No branch** column. New payments and wallet entries get their branch automatically: the visit's branch, the only branch of the person recording it, or the one branch whose day is open.
+
+### After midnight [#after-midnight]
+
+If the day was opened yesterday and never ended, the button reads **End yesterday** and the window names the day. Ending it closes yesterday, with its cash count; then today can be opened.
+
+<Tip>
+  A short day isn't always a mistake. A payment recorded with the wrong method (cash instead of InstaPay) shows up as a short drawer. Check the day in the table above.
+</Tip>

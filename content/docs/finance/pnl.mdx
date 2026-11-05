@@ -1,26 +1,64 @@
 ---
-title: 'Profit &amp; Loss'
-description: 'Net profit and an expense breakdown for any date range'
+title: 'Income Statement'
+description: 'Revenue, direct costs, gross profit, running costs and net profit, compared with the period before'
 ---
 
-The P&L tab puts revenue and expenses side by side to answer "did we make money?" and "where does it go?". Navigate to **Dashboard → Finance → P&L**.
+The Income statement tab answers "did we make money, and where did it go?". It replaced the old P&L tab. Navigate to **Dashboard → Finance → Income statement**.
 
-## Summary
+<Note>
+  The Income statement and [Cash flow](/finance/cash-flow) tabs are on the **Team plan and above**. On Solo they show **Available on the Team plan and above** with **View plans**; the other Finance tabs stay. See [Plans & Pricing](/billing/plans).
+</Note>
 
-Three numbers for the selected range:
+## Branches [#branches]
 
-- **Total revenue** - payments recorded, minus discounts
-- **Total expenses**
-- **Net profit** - revenue minus expenses
+With two or more branches, a picker beside the title shows **All branches** or one branch. A member limited to some branches sees **All my branches** instead, and only ever sees those branches: no clinic-wide money (expenses for all branches, or payments with no branch).
 
-## Expense breakdown
+## Summary cards [#summary]
 
-A bar for each expense category with its share of total spending, so you can see what's eating into your margin.
+- **Revenue**
+- **Gross profit**: revenue minus direct costs
+- **Net profit**: gross profit minus running costs
+- **Net margin**: net profit as a share of revenue, with the previous period's margin under it
 
-<Tip>
-  If one category looks too high, go to [Expenses](/finance/expenses) and filter by that category to see the entries behind it.
-</Tip>
+## The statement [#statement]
+
+Every line shows **This period**, **Before** and **Change**. Change is green when it's good: revenue up, or costs down.
+
+**Before** is the previous calendar month when you pick a whole month (October compares with September), or the same number of whole months before. For any other range, it's the same number of days just before.
+
+| Section | What's in it |
+|---|---|
+| **Revenue** | **Visits and procedures**, **Treatment plans (dental)** and **Session packages** |
+| **Direct costs (labs, supplies, doctor shares)** | The expense categories for the work itself: **Dental labs**, **Supplies** and **Doctor shares**. That covers dental lab orders, stock received, doctor share payouts and the doctors' variable fees from [payroll](/team/payroll#run) |
+| **Gross profit** | Revenue minus direct costs |
+| **Running costs** | Every other expense category (rent, **Salaries**, utilities...), plus **Ad spend (Marketing tab)** |
+| **Net profit** | Gross profit minus running costs |
+
+**Ad spend** is entered per month on the [Marketing](/finance/marketing) tab and counted here by the days of each month inside the period: a 30-day range across two months takes part of each month.
+
+<Warning>
+  Ad spend entered on the Marketing tab is counted here. Don't enter it again as an expense, or it will count twice.
+</Warning>
 
 <Info>
-  Revenue counts when a payment is recorded, and expenses on the date you enter, so the P&L follows money as it actually moves.
+  If salaries are hidden from you (see [Salaries in Expenses](/finance/expenses#salaries)), they're still counted, inside **Other running costs**, so the profit is the same for everyone.
+</Info>
+
+## Revenue by doctor and by branch [#breakdown]
+
+Under the statement:
+
+- **Revenue by doctor**: the revenue from each doctor's work.
+- **By branch** (with two or more branches in view): revenue, expenses and the difference per branch.
+
+## Insurance [#insurance]
+
+A line under the statement shows how much of the revenue was billed to insurers, and how much they still owed at the end of the period. That money is revenue, but it isn't in the drawer until the insurer pays; see [Cash Flow](/finance/cash-flow#insurers).
+
+## Download [#download]
+
+**Download CSV** gets the whole statement with both periods, for your accountant.
+
+<Info>
+  Revenue is after discounts, and voided payments are left out. A visit paid from the patient's wallet counts as revenue when it's paid. Operations at outside hospitals are paid there, so they aren't in the statement. A period with too many entries asks you to pick a shorter one.
 </Info>

@@ -82,19 +82,41 @@ async function renderPage(page: NonNullable<ReturnType<typeof findPage>>) {
   return `# ${page.data.title}\nURL: ${siteUrl}${page.url}\n\n${body}`;
 }
 
+// How well a page answers the query: every term counts, a term in the title
+// counts most. Substring match, so "role" also hits "roles".
+function relevance(title: string, text: string, terms: string[]): number {
+  const t = title.toLowerCase();
+  const body = text.toLowerCase();
+  let score = 0;
+  for (const term of terms) {
+    if (t.includes(term)) score += 10;
+    score += Math.min(body.split(term).length - 1, 10);
+  }
+  return score;
+}
+
 async function searchIn(lang: Lang, query: string): Promise<ToolResult['content']> {
   const q = lang === 'ar' ? arabicKeywords(query) : query;
   const results = await searchServer.search(q, { locale: lang });
+  // Pages come back grouped in docs-tree order, not by relevance (the first
+  // section won every loose match), so re-rank the candidates ourselves.
   const urls: string[] = [];
   for (const r of results) {
     const url = r.url.split('#')[0];
     if (!urls.includes(url)) urls.push(url);
-    if (urls.length >= MAX_PAGES) break;
   }
-  const content: ToolResult['content'] = [];
-  for (const url of urls) {
+  const terms = q.toLowerCase().split(/\s+/).filter((w) => w.length > 1);
+  const ranked: { page: NonNullable<ReturnType<typeof findPage>>; score: number; order: number }[] = [];
+  for (const [order, url] of urls.entries()) {
     const page = findPage(url, lang);
-    if (page) content.push({ type: 'text', text: await renderPage(page) });
+    if (!page) continue;
+    const text = await page.data.getText('processed');
+    ranked.push({ page, score: relevance(page.data.title, text, terms), order });
+  }
+  ranked.sort((a, b) => b.score - a.score || a.order - b.order);
+  const content: ToolResult['content'] = [];
+  for (const { page } of ranked.slice(0, MAX_PAGES)) {
+    content.push({ type: 'text', text: await renderPage(page) });
   }
   return content;
 }
