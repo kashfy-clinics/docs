@@ -43,6 +43,7 @@ All the parts add up. The editor shows what the plan gives for this month so far
 - Counts start at 1 and use whole numbers.
 - The last band is always open (**and above**), so in both modes everything above it is paid at its rate.
 - Switching a tier between money and counts starts the bands over.
+- Each band is paid as a rate (**%** for money, **EGP each** for counts) or as an **EGP fixed amount**, picked next to the band. A fixed amount is paid once the band is reached: with **Each band at its own rate** it's added for every band reached; with **All at the band reached** the reached band's amount is paid instead of a rate on the whole amount. For example, "0 to 100,000 → 10,000 EGP fixed amount, 100,000 and above → 20%".
 - An empty field is refused, never saved as 0.
 
 ## Doctor share [#doctor-share]
