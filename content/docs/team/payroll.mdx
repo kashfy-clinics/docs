@@ -1,0 +1,109 @@
+---
+title: 'Payroll'
+description: 'Every employee and doctor on one page: salaries, doctor fees (fixed, per visit, percentage and tiers), deductions and paying the month'
+---
+
+Open **Payroll** in the sidebar (under **Business**). It has everyone the clinic pays: the team's salaries and each doctor's fees. Only the owner sees it, unless the owner gives **See and pay salaries** to a role ([Roles & Permissions](/team/roles#sensitive)). Managers don't have it by default.
+
+<Note>
+  Payroll is on the **Team plan and above**. On Solo, the page shows **Available on the Team plan and above** with **View plans**. A clinic still on its free trial has it. See [Plans & Pricing](/billing/plans).
+</Note>
+
+The page has four tabs: **Monthly payroll**, **Doctor share**, **Pay and fees** and **Deduction rules**. Each has its own link, for example `/dashboard/payroll?t=share`. The old Doctor share page now opens here.
+
+## The team's pay [#pay]
+
+On **Pay and fees**, under **Team**, set each person's pay:
+
+| Pay | How it's counted |
+|---|---|
+| **Monthly** | The full amount each month. |
+| **Daily** | The amount for each day present, paid day off or paid leave day. |
+| **Hourly** | The amount for each hour worked, plus their usual hours on paid days. |
+
+Daily and hourly pay are counted from [attendance](/team/attendance), so they need attendance turned on and the person on the attendance list. Otherwise they come to 0, and Kashfy warns you next to the person.
+
+## Doctor fees [#doctor-fees]
+
+Under **Doctors** (every active doctor, with or without an account), open a doctor and build their fees from any mix of:
+
+- **Fixed amount**: a set amount a month (the doctor's fixed salary).
+- **Per visit or procedure**: an amount per visit, per new patient, per follow-up, or per procedure (**Any procedure**, or one you pick).
+- **Percentage**: a % of the money collected or of the work billed. Turn on **Take off lab costs first** and **Take off materials used in procedures first** if you want. Products sold on the visit are not materials.
+- **Tiers**: bands, such as "from 1 to 100 visits → X EGP each, 101 and above → Y". Tiers can count money (**Tiers on collected** or **Tiers on billed**, the rate is a %) or numbers (**Tiers on visits** or **Tiers on procedures**, the rate is EGP each). Pick how they pay:
+  - **Each band at its own rate**: like income tax, the part inside each band gets that band's rate.
+  - **All at the band reached**: once a band is reached, the whole amount gets its rate.
+- **Monthly minimum** (optional): the doctor gets at least this much. Leave it empty for no minimum.
+
+All the parts add up. The editor shows what the plan gives for this month so far, with the doctor's visits, procedures, money collected and billed, lab and materials. Press **Save fees**.
+
+### Tier rules [#tiers]
+
+- Bands follow on with no gaps. Only the first band's **From** is typed; each next **From** is filled in for you: the previous band's **To** for money, or **To** + 1 for counts.
+- Counts start at 1 and use whole numbers.
+- The last band is always open (**and above**), so in both modes everything above it is paid at its rate.
+- Switching a tier between money and counts starts the bands over.
+- An empty field is refused, never saved as 0.
+
+## Doctor share [#doctor-share]
+
+**Doctor share** shows each doctor's month from their fees: visits, new patients, follow-ups, procedures, money collected and billed, lab and materials, each fee line, the total, what was **Paid out** and what's **Owed**.
+
+Press **Pay out** to pay part or all of it during the month. It's recorded as a **Doctor shares** expense, and the month's payroll takes it off the doctor's fees so it isn't paid twice.
+
+- A payout can't be more than what's still owed.
+- Once the month's payroll is approved or paid, payouts for that month are refused.
+- If the payout's expense is deleted, the payout no longer counts.
+
+Doctors see their own month on **My share**, in every specialty.
+
+## Deduction rules [#deductions]
+
+The two rules, absent days and lateness, are separate.
+
+**Deduct absent days**: on or off. When on, a working day with no check-in and an unpaid leave day come off at one day's pay (the monthly pay divided by the month's working days). Paid leave doesn't.
+
+### Lateness [#lateness]
+
+Under **Lateness**, pick one:
+
+- **No deduction for lateness**: it only shows on the attendance sheet.
+- **An amount per late minute**: you type the amount; it's multiplied by the month's late minutes.
+- **The minutes' share of a day's pay**: for example, a 300 EGP day over an 8-hour shift makes a minute 0.63 EGP.
+- **A fixed amount per late day**: the same amount for each late day, however many minutes.
+
+Someone is late after the grace minutes set in the [attendance settings](/team/attendance#settings). Lateness never takes more than what's left of the base after absences, and never touches a doctor's variable fees. Hourly pay has no lateness deduction, since it already pays only the hours worked. Nothing is deducted while attendance is off.
+
+Doctors are on the attendance list by default, so these rules apply to a doctor's **Fixed amount** too. Take a doctor off the list on **Attendance → Team hours** if they shouldn't be tracked.
+
+## Paying the month [#run]
+
+<Steps>
+  <Step title="Start the payroll">
+    Open **Monthly payroll**, pick the month and press **Start this month's payroll**. Kashfy works out everyone's base, deductions and **Doctor fees** (each fee line is shown).
+  </Step>
+  <Step title="Add bonuses and deductions">
+    Enter a **Bonus** or an **Extra deduction** and a note for anyone, then **Save**. **Update from attendance** recalculates everything in one go and keeps what you entered.
+  </Step>
+  <Step title="Approve">
+    **Approve** locks the list. **Back to draft** unlocks it. If a doctor share was paid out after the draft was built, Approve is refused until you press **Update from attendance**, so it can't be paid twice.
+  </Step>
+  <Step title="Mark as paid">
+    **Mark as paid** records two expenses, once: **Salaries** (the team's pay and the doctors' fixed part) and **Doctor shares** (the doctors' variable fees: per visit, percentage, tiers and minimum top-up). They show in [Expenses](/finance/expenses) and the [Income Statement](/finance/pnl). A double click or a second tab posts nothing more. Paid payroll can't be changed.
+  </Step>
+</Steps>
+
+### What the run takes into account [#run-details]
+
+- **Joiners and leavers** get the monthly pay for the working days they were members. Someone removed mid-month still appears for that month, marked **Joined or left mid-month** or **Left the clinic this month**.
+- **Overpaid**: when someone's month comes out below 0 (for example a doctor was paid out mid-month, then absences came off the fixed part), the net is 0 and the row shows **Carried to next month**. The next paid month takes it off, as **Overpaid before**.
+- Warnings above the table list: forgotten check-outs (those days count 0 hours until fixed on the [attendance sheet](/team/attendance#sheet)), daily or hourly pay for someone whose attendance isn't recorded, doctor share payouts made after the draft, and attendance changed after approval (**Reopen and rebuild**) or after payment (the difference goes into next month's payroll automatically). See [Changes log](/team/attendance#edits).
+
+<CardGroup cols={2}>
+  <Card title="Attendance & Leave" icon="clock" href="/team/attendance">
+    Check-in ways, the sheet and leave.
+  </Card>
+  <Card title="Expenses" icon="receipt" href="/finance/expenses">
+    Where paid salaries are recorded.
+  </Card>
+</CardGroup>

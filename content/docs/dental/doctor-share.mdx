@@ -1,34 +1,21 @@
 ---
 title: 'Doctor Share'
-description: "Each doctor's percentage of their work, what's paid out and what's still owed, month by month"
+description: "Each doctor's fees for their work, what's paid out and what's still owed, month by month, now on the Payroll page"
 ---
 
-Many clinics pay doctors a percentage of their work. **Doctor share** works it out each month.
+Doctor share is now part of [Payroll](/team/payroll), for every specialty, not only dentists. The old **Doctor share** page opens **Payroll → Doctor share**.
 
-Owners and admins open it from **Doctor share** in the sidebar. Each doctor sees their own numbers under **My share** in the doctor portal.
+- **Set each doctor's fees** on **Payroll → Pay and fees**: a fixed amount, an amount per visit or procedure, a percentage of the money collected or the work billed (with [dental lab](/dental/dental-lab) costs and materials taken off first if you want), tiers, and a monthly minimum. The two percentages the old page had were kept as percentage fees. See [Doctor fees](/team/payroll#doctor-fees).
+- **See and pay the month** on **Payroll → Doctor share**: each doctor's numbers, fee lines, total, paid out and owed, with **Pay out**. A payout is recorded as a **Doctor shares** expense in [Finance](/finance/expenses), and can't be more than what's owed. See [Doctor share](/team/payroll#doctor-share).
+- **Doctors** still see their own month under **My share** in the doctor portal.
 
-## Setting it up
+Payroll is on the Team plan and above, and only the owner sees it unless they give **See and pay salaries** to a role.
 
-- **Percentage**: type each doctor's percentage in the table. It saves when you click away. A doctor without a percentage gets no share.
-- **On collected** or **On billed**:
-  - **Collected** is the money actually paid for the doctor's work: visit payments for their appointments and payments on their treatment plans.
-  - **Billed** is the work done: the prices of plan lines they marked done, plus what was paid for their other visits.
-- **Deduct lab cost first**: takes the doctor's [dental lab](/dental/dental-lab) costs for the month off before the percentage.
-
-## Reading the table
-
-For the chosen month, each doctor has:
-
-| Column | Meaning |
-|--------|---------|
-| **Collected** or **Billed** | The base, depending on your setting |
-| **Lab** | Their lab costs this month, faded when not deducted |
-| **Share** | (Base − lab) × percentage |
-| **Paid out** | What's been paid to them for this month |
-| **Owed** | Share minus paid out |
-
-Use the arrows to move between months.
-
-## Paying a doctor
-
-Click **Pay** next to the doctor. The amount starts at what's owed. Pick the method and confirm. The payout is recorded as an expense under **Doctor shares** in [Finance](/finance/expenses).
+<CardGroup cols={2}>
+  <Card title="Payroll" icon="wallet" href="/team/payroll">
+    Salaries, doctor fees and paying the month.
+  </Card>
+  <Card title="Dental Lab" icon="flask" href="/dental/dental-lab">
+    Lab orders and their costs.
+  </Card>
+</CardGroup>

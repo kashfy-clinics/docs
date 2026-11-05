@@ -1,18 +1,26 @@
 ---
 title: 'Team Members'
-description: 'Invite reception staff and admins, limit them to branches, change roles, transfer ownership, and remove access'
+description: 'Invite reception, managers, assistants and finance managers, limit them to branches, change roles, transfer ownership, and remove access'
 ---
 
-Navigate to **Dashboard → Settings → Team**. Owners and admins can invite and remove members. Everyone else sees the list.
+Navigate to **Dashboard → Settings → Team**. Owners and managers can invite and remove members. Everyone else sees the list.
 
-## Inviting a staff member or admin
+## Inviting a team member [#inviting-a-staff-member-or-admin]
 
 <Steps>
   <Step title="Pick a role">
-    Choose **Employee** (reception, manages bookings) or **Admin** (same access as the owner). Only the owner can add admins. See [Roles & Permissions](/team/roles).
+    Under **Invite to the team**, pick a card:
+
+    - **Doctor**: sees patients, writes notes. It opens the Doctors page, where doctors are added.
+    - **Manager**: everything except salaries. Only the owner can add a manager.
+    - **Reception**: bookings, check-in and payments.
+    - **Doctor's assistant**: works with chosen doctors: queue and check-in. Shown when the clinic has doctors. Pick their doctors under **Works with** (at least one). See [Doctor's Assistants](/team/assistants).
+    - **Finance manager**: Finance, expenses and payments. Shown to the owner only.
+
+    The cards show your clinic's names for these roles. If your clinic made its own roles, pick one under **Or one of your clinic's roles**. See [Roles & Permissions](/team/roles).
   </Step>
   <Step title="Choose branches (optional)">
-    If you have more than one branch, tap the branches this person works at. If you choose none, they see all branches.
+    If you have more than one branch, tap the branches this person works at under **Branch access**. If you choose none, they see all branches.
   </Step>
   <Step title="Enter their email and tap Invite">
     What happens next depends on whether they already use Kashfy (see below).
@@ -30,21 +38,25 @@ Navigate to **Dashboard → Settings → Team**. Owners and admins can invite an
 
 Tap **Roles explained** on the page for a quick summary of what each role can do.
 
-## The team list
+## The team list [#the-team-list]
 
-Shows each member's name, email or phone, role (**Owner**, **Admin**, **Doctor**, or **Member** for employees), and branches (**All branches** when unrestricted).
+Shows each member's name, email or phone, role, and branches (**All branches** when unrestricted). The role is shown by your clinic's name for it: **Owner**, **Manager**, **Doctor**, **Reception**, or a role your clinic renamed or made.
 
-## Removing a member
+A doctor's assistant also shows **With:** and their doctors, with **Change** to pick other doctors.
+
+## Removing a member [#removing-a-member]
 
 Tap the remove (trash) icon next to the member and confirm. They lose access immediately. Their past work (bookings, notes, payments) stays in the system.
 
-You can't remove the owner or yourself, and only the owner can remove an admin.
+You can't remove the owner or yourself, and only the owner can remove a manager.
 
-## Changing a member's role
+## Changing a member's role [#changing-a-members-role]
 
-Owners and admins can switch a member between **Admin** and **Member** (employee) using the role dropdown in the team list. The change applies right away.
+Owners and managers can change a member's role with the role menu in the team list: any of your clinic's roles, including the ones you made on the [Roles](/team/roles#new-role) tab. The change applies right away.
 
-- Only the owner can make someone an admin, or change an admin's role.
+- Only the owner can give a Manager-level role, or change the role of someone who has one.
+- Only the owner can move someone into or out of a role that sees the money or salaries, such as **Finance manager**. A lock icon marks the members a manager can't change.
+- Moving someone to **Doctor's assistant** asks for their doctors first. Moving an assistant to another role removes their doctor links; if they come back to the role, they start fresh.
 - You can't change your own role or the owner's role.
 - A doctor's role can't be changed here, because it is tied to their doctor profile.
 
@@ -52,18 +64,18 @@ Owners and admins can switch a member between **Admin** and **Member** (employee
   Branch access is set when you invite. To change someone's branches, remove them and invite them again.
 </Note>
 
-## Clinic owner
+## Clinic owner [#clinic-owner]
 
 The owner is the account that created the organization. The owner can hand the organization to another member.
 
-### Transferring ownership
+### Transferring ownership [#transferring-ownership]
 
 <Steps>
   <Step title="Tap the crown next to the member">
     **Make owner** (the crown icon) appears next to every other member. Only the owner sees it.
   </Step>
   <Step title="Choose your new role">
-    Under **And you become:**, pick **Admin** (same as owner) or **Member** (reception / bookings).
+    Under **And you become:**, pick **Manager** (everything except salaries) or **Reception** (bookings and payments).
   </Step>
   <Step title="Tap Transfer">
     The member becomes the owner, with every permission including billing, and you get the role you chose. The page reloads with your new permissions.

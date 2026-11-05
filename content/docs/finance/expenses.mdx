@@ -3,7 +3,7 @@ title: 'Expenses'
 description: 'Record clinic spending, sort it by category and branch, and automate recurring bills'
 ---
 
-Record everything going out: rent, salaries, supplies, utilities, one-off purchases. Expenses feed the [P&L](/finance/pnl). Navigate to **Dashboard → Finance → Expenses**.
+Record everything going out: rent, salaries, supplies, utilities, one-off purchases. Expenses feed the [Income statement](/finance/pnl) and [Cash flow](/finance/cash-flow). Navigate to **Dashboard → Finance → Expenses**.
 
 The tab shows **Total expenses** for the selected range above the list.
 
@@ -44,3 +44,20 @@ Tap the pencil icon on any expense to edit it, or the delete icon to remove it. 
 - **This occurrence only**
 - **Stop recurring (keep past)**
 - **Delete everything**
+
+Adding, editing and deleting expenses needs the **Add and edit expenses** permission ([Roles & Permissions](/team/roles#permissions)). Seeing the tab needs **See Finance**. A member limited to some branches sees only those branches' expenses (not the ones for all branches), and can't record one for another branch.
+
+## Automatic expenses [#automatic]
+
+Kashfy adds some expenses by itself: dental lab orders (**Dental labs**), stock received (**Supplies**), doctor share payouts (**Doctor shares**), and paid [payroll](/team/payroll#run) (**Salaries** and **Doctor shares**).
+
+## Salaries [#salaries]
+
+Above the list, the owner sees the switch **Show salaries to everyone who sees Finance**. It's off by default.
+
+- **Off**: **Salaries** expenses show only to the owner and whoever has **See and pay salaries**. Others don't see those rows or the Salaries category, and the [Income statement](/finance/pnl) adds them to **Other running costs**, so the totals stay right.
+- **On**: everyone who sees Finance sees the salaries.
+
+<Tip>
+  With a small team, a salaries total tells everyone what each person earns. Keep it off unless your finance people need the detail. You can also answer this in [Clinic decisions](/settings/decisions).
+</Tip>
