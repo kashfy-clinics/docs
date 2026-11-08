@@ -104,6 +104,7 @@
     "settings/organization",
     "settings/codes-qr",
     "settings/decisions",
+    "settings/waiting-screen",
     "settings/referral-source",
     "settings/prescription",
     "settings/modules",
