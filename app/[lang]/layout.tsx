@@ -66,7 +66,14 @@ export const metadata: Metadata = {
     template: `%s - ${appName}`,
   },
   description: 'Documentation for Kashfy Clinics - AI clinic software for Egypt that books patients on WhatsApp',
-  icons: { icon: '/favicon.ico' },
+  // Same mark as the app: favicon.ico for old browsers, icon.svg sharp at any size.
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: '48x48' },
+      { url: '/icon.svg', type: 'image/svg+xml' },
+    ],
+    apple: '/apple-icon.png',
+  },
 };
 
 // The same entity kashfy.site describes (same @id), so search engines and AI answers
