@@ -6,8 +6,8 @@ export function baseOptions(lang: string): BaseLayoutProps {
     nav: {
       title: (
         <>
-          <img src="/logo/logo-dark.svg" alt="Docistra" className="h-6 w-auto dark:hidden" />
-          <img src="/logo/logo-light.svg" alt="Docistra" className="h-6 w-auto hidden dark:block" />
+          <img src={ar ? "/logo/logo-ar-dark.svg" : "/logo/logo-dark.svg"} alt={ar ? "دوكسترا" : "Docistra"} className="h-6 w-auto dark:hidden" />
+          <img src={ar ? "/logo/logo-ar-light.svg" : "/logo/logo-light.svg"} alt={ar ? "دوكسترا" : "Docistra"} className="h-6 w-auto hidden dark:block" />
         </>
       ),
       url: ar ? '/ar' : '/',
