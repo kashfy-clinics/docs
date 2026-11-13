@@ -81,11 +81,11 @@ export const metadata: Metadata = {
 const organizationLd = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
-  '@id': 'https://www.docistra.com/#organization',
+  '@id': 'https://docistra.com/#organization',
   name: 'Docistra Clinics',
   alternateName: ['Docistra', 'دوكسترا للعيادات', 'دوكسترا'],
-  url: 'https://www.docistra.com',
-  logo: 'https://www.docistra.com/icon.png',
+  url: 'https://docistra.com',
+  logo: 'https://docistra.com/icon.png',
   sameAs: [
     'https://help.docistra.com',
     'https://www.linkedin.com/company/kashfy-ai',
