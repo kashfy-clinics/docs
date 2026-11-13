@@ -1,6 +1,6 @@
 import { siteUrl } from './shared';
 
-const mainSite = 'https://www.docistra.com';
+const mainSite = 'https://docistra.com';
 
 /**
  * Header for /llms.txt and /llms-full.txt (llmstxt.org format: H1, blockquote summary, key facts, link sections).
