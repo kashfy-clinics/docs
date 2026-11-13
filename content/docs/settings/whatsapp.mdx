@@ -37,10 +37,10 @@ You need an app on Meta for Developers with your WhatsApp number added to it. In
     From **App settings → Basic**, copy the **App secret**. From **WhatsApp → API setup**, copy the **WhatsApp Business Account ID** and the **Phone number ID**.
   </Step>
   <Step title="Connect">
-    Paste the **Access token**, **App secret**, **WhatsApp Business Account ID** and **Phone number ID**, then click **Connect number**. Kashfy checks the number with Meta and points its messages to your account. The token and secret are stored encrypted and never shown again.
+    Paste the **Access token**, **App secret**, **WhatsApp Business Account ID** and **Phone number ID**, then click **Connect number**. Docistra checks the number with Meta and points its messages to your account. The token and secret are stored encrypted and never shown again.
   </Step>
   <Step title="Set the webhook in your app">
-    The card shows **Webhook details for your app**: a **Callback URL** and a **Verify token**, each with a copy button. In your Meta app, open **WhatsApp → Configuration**, paste both, click **Verify and save**, and subscribe to `messages` and `message_template_status_update`. While Kashfy waits it shows **Waiting for Meta to verify the webhook...**; as soon as Meta verifies it, you see a green **Success** with the time and the **Last event**. You can do this step before or after connecting.
+    The card shows **Webhook details for your app**: a **Callback URL** and a **Verify token**, each with a copy button. In your Meta app, open **WhatsApp → Configuration**, paste both, click **Verify and save**, and subscribe to `messages` and `message_template_status_update`. While Docistra waits it shows **Waiting for Meta to verify the webhook...**; as soon as Meta verifies it, you see a green **Success** with the time and the **Last event**. You can do this step before or after connecting.
   </Step>
   <Step title="Go live">
     Switch your Meta app to **Live**. Meta doesn't deliver every message while the app is in Development.
@@ -51,14 +51,14 @@ Once a number is connected, this card is called **Your number's connection** and
 
 **Remove credentials** deletes the saved token and secret. The assistant stops answering on WhatsApp until you connect the number again. Past conversations stay.
 
-If connecting fails, the card tells you why, for example **This number is connected to another Kashfy account.** or **This Phone number ID doesn't belong to that WABA ID.**
+If connecting fails, the card tells you why, for example **This number is connected to another Docistra account.** or **This Phone number ID doesn't belong to that WABA ID.**
 
 ## Let us connect it for you
 
-If you'd rather not set up the Meta app, Kashfy does it for **500 EGP**, paid offline. The **Let us connect it for you (500 EGP)** card is shown while the number isn't connected:
+If you'd rather not set up the Meta app, Docistra does it for **500 EGP**, paid offline. The **Let us connect it for you (500 EGP)** card is shown while the number isn't connected:
 
 1. Open business.facebook.com → **Settings → Users → People → Add**.
-2. Add `integrations@kashfy.site` with **Full control** (Admin).
+2. Add `integrations@docistra.com` with **Full control** (Admin).
 3. Fill in **Phone to reach you** (and **Notes (optional)**) and click **Send request**.
 
 The card then shows the request status. We call you to confirm payment, connect the number, and let you know when it's done. You can **Cancel request** until it's paid.
@@ -84,7 +84,7 @@ When your clinic has more than one branch (or more than one number), the page st
   </Step>
 </Steps>
 
-**Remove number** removes the open number from Kashfy (only when you have more than one). The assistant stops answering on it, and its templates and Flows are removed from Kashfy.
+**Remove number** removes the open number from Docistra (only when you have more than one). The assistant stops answering on it, and its templates and Flows are removed from Docistra.
 
 ### How messages are routed [#how-routing-works]
 
@@ -101,9 +101,9 @@ When your clinic has more than one branch (or more than one number), the page st
 
 ## Message templates
 
-Once the open number is connected, the **Message templates** card lists the Kashfy templates on that number's WhatsApp account and their status: **Approved**, **Pending review** or **Rejected**. Other templates on your Meta account aren't listed, only counted ("not used by Kashfy").
+Once the open number is connected, the **Message templates** card lists the Docistra templates on that number's WhatsApp account and their status: **Approved**, **Pending review** or **Rejected**. Other templates on your Meta account aren't listed, only counted ("not used by Docistra").
 
-Reminders, results and review requests sent more than 24 hours after a patient's last message need an approved template on your account. Until Meta approves one, that message isn't sent. Click **Refresh** to update the statuses and to submit Kashfy's templates to Meta for review.
+Reminders, results and review requests sent more than 24 hours after a patient's last message need an approved template on your account. Until Meta approves one, that message isn't sent. Click **Refresh** to update the statuses and to submit Docistra's templates to Meta for review.
 
 ## WhatsApp messages this month [#usage]
 
@@ -132,13 +132,13 @@ The **How do patients book?** card (clinics only) chooses how the assistant book
 Under the options, the **WhatsApp Flows** box shows whether the open number can show the booking form inside WhatsApp:
 
 - **Eligible**: **The booking form opens inside WhatsApp (WhatsApp Flow)**. Patients book, change appointments and rate visits without leaving WhatsApp.
-- **Not eligible** or **Not checked**: **The booking form opens as a Kashfy page in the browser**. The box says why (for example your Meta Business account isn't verified yet, or your number's display name isn't approved) and lists Meta's checks: **Business verification**, **Account review**, **Display name**, **Number quality** and **Number status**.
+- **Not eligible** or **Not checked**: **The booking form opens as a Docistra page in the browser**. The box says why (for example your Meta Business account isn't verified yet, or your number's display name isn't approved) and lists Meta's checks: **Business verification**, **Account review**, **Display name**, **Number quality** and **Number status**.
 
-Kashfy checks right after you connect a number and switches to WhatsApp automatically once it is eligible. Click **Check WhatsApp Flows eligibility** to check again.
+Docistra checks right after you connect a number and switches to WhatsApp automatically once it is eligible. Click **Check WhatsApp Flows eligibility** to check again.
 
 ## Import your old WhatsApp chats [#import-chat-history]
 
-Connecting a number to Kashfy removes it from the WhatsApp Business app, chats included. Use the **Import your old WhatsApp chats** card (owners and admins) to move them first. Imported chats show on the [Conversations](/patients/conversations) page tagged **Imported**, and new messages from the same patient continue below them.
+Connecting a number to Docistra removes it from the WhatsApp Business app, chats included. Use the **Import your old WhatsApp chats** card (owners and admins) to move them first. Imported chats show on the [Conversations](/patients/conversations) page tagged **Imported**, and new messages from the same patient continue below them.
 
 The chats are imported into **the number that is open**. With several numbers, the card shows **Importing into:** and the number's name, so open the right number in the **Your numbers** bar first.
 
@@ -160,7 +160,7 @@ Pick **Android** or **iPhone** and open **Steps**:
 
 No computer, or just a few chats? Click **No computer, or just a few chats? Export them one by one**, use WhatsApp's **Export chat > Without media** for each chat, then **Choose files**.
 
-Kashfy lists the chats it found. Untick any you don't want (personal chats, for example), fill in **Patient's number** or **Who is the patient?** where asked, and click **Import**. Keep the page open until it finishes.
+Docistra lists the chats it found. Untick any you don't want (personal chats, for example), fill in **Patient's number** or **Who is the patient?** where asked, and click **Import**. Keep the page open until it finishes.
 
 <Info>
   The backup and key never leave your device: they're read in the browser, and only the chats you pick are sent. Photos and files aren't moved; the chat shows where one was sent. Uploading the same file again never adds a chat twice.

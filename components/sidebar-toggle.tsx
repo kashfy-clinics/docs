@@ -16,7 +16,7 @@ export function SidebarToggle() {
 
   return (
     <Trigger
-      data-kashfy-sidebar-toggle=""
+      data-docistra-sidebar-toggle=""
       className={`${buttonVariants({ variant: 'ghost', size: 'icon-sm' })} order-first me-2 -ms-1.5 cursor-pointer text-fd-muted-foreground max-md:hidden`}
     >
       <Sidebar />

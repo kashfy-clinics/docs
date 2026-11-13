@@ -1,5 +1,5 @@
-export const appName = 'Kashfy Docs';
-export const siteUrl = 'https://docs.kashfy.site';
+export const appName = 'Docistra Docs';
+export const siteUrl = 'https://help.docistra.com';
 export const docsContentRoute = '/llms.mdx';
 
 export const gitConfig = {

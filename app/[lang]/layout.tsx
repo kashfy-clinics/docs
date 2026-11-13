@@ -65,7 +65,7 @@ export const metadata: Metadata = {
     default: appName,
     template: `%s - ${appName}`,
   },
-  description: 'Documentation for Kashfy Clinics - AI clinic software for Egypt that books patients on WhatsApp',
+  description: 'Documentation for Docistra Clinics - AI clinic software for Egypt that books patients on WhatsApp',
   // Same mark as the app: favicon.ico for old browsers, icon.svg sharp at any size.
   icons: {
     icon: [
@@ -76,18 +76,18 @@ export const metadata: Metadata = {
   },
 };
 
-// The same entity kashfy.site describes (same @id), so search engines and AI answers
-// treat the docs and the main site as one "Kashfy Clinics", not another Kashfy.
+// The same entity docistra.com describes (same @id), so search engines and AI answers
+// treat the docs and the main site as one "Docistra Clinics", not another Docistra.
 const organizationLd = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
-  '@id': 'https://www.kashfy.site/#organization',
-  name: 'Kashfy Clinics',
-  alternateName: ['Kashfy', 'كشفي للعيادات', 'كشفي'],
-  url: 'https://www.kashfy.site',
-  logo: 'https://www.kashfy.site/icon.png',
+  '@id': 'https://www.docistra.com/#organization',
+  name: 'Docistra Clinics',
+  alternateName: ['Docistra', 'دوكسترا للعيادات', 'دوكسترا'],
+  url: 'https://www.docistra.com',
+  logo: 'https://www.docistra.com/icon.png',
   sameAs: [
-    'https://docs.kashfy.site',
+    'https://help.docistra.com',
     'https://www.linkedin.com/company/kashfy-ai',
     'https://www.instagram.com/kashfy.ai',
     'https://www.facebook.com/kashfyai',
