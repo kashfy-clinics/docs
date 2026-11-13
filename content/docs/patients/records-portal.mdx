@@ -15,7 +15,7 @@ The Records Portal lets a patient see their own medical history, and share it wi
     The first time, the AI asks the patient to choose a 4-digit PIN.
   </Step>
   <Step title="Patient gets the link">
-    The AI sends a personal link on `patients.kashfy.site`.
+    The AI sends a personal link on `patients.docistra.com`.
   </Step>
   <Step title="Open and enter the PIN">
     Anyone with the link and the PIN can open the records in a browser.
@@ -37,7 +37,7 @@ The portal is read-only. Records are only changed by the clinic in the dashboard
 Adding `?pin=1234` to the link verifies automatically when it opens, then removes the PIN from the address bar:
 
 ```
-https://patients.kashfy.site/ar/<patient-id>?pin=1234
+https://patients.docistra.com/ar/<patient-id>?pin=1234
 ```
 
 <Info>
@@ -52,7 +52,7 @@ The patient sends something like "نسيت الكود" to the clinic on WhatsApp
 
 <AccordionGroup>
   <Accordion icon="lock" title="PINs aren't stored as plain text">
-    Kashfy stores a one-way hash of the PIN, tied to that patient.
+    Docistra stores a one-way hash of the PIN, tied to that patient.
   </Accordion>
   <Accordion icon="clock" title="24-hour sessions">
     After a correct PIN, the browser stays signed in for 24 hours. Resetting the PIN ends all sessions.

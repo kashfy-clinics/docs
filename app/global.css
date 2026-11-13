@@ -3,14 +3,14 @@
 @import 'fumadocs-ui/css/preset.css';
 
 @font-face {
-  font-family: 'KashfySans';
-  src: url('/fonts/KashfySansBody.woff2') format('woff2');
+  font-family: 'DocistraSans';
+  src: url('/fonts/DocistraSansBody.woff2') format('woff2');
   font-weight: 100 900;
   font-display: swap;
 }
 
 /* Arabic: Thmanyah Sans, same as the app. unicode-range keeps it to Arabic
- * characters, so it can sit first in the stack and Latin text still uses KashfySans. */
+ * characters, so it can sit first in the stack and Latin text still uses DocistraSans. */
 @font-face {
   font-family: 'ThmanyahForArabic';
   src: url('/fonts/thmanyahsans-Light.woff2') format('woff2');
@@ -48,10 +48,10 @@
 }
 
 @theme {
-  --font-sans: 'ThmanyahForArabic', 'KashfySans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-sans: 'ThmanyahForArabic', 'DocistraSans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --font-mono: Consolas, 'Courier New', monospace;
 
-  /* Kashfy green */
+  /* Docistra green */
   --color-fd-primary: #0d6b5e;
   --color-fd-primary-foreground: #ffffff;
   --color-fd-ring: #0d6b5e;
@@ -64,7 +64,7 @@
 }
 
 /* Our toggle sits by the logo (components/sidebar-toggle.tsx); hide the layout's default one at the end of the top bar. */
-#nd-subnav button[aria-controls='nd-sidebar'][data-collapsed]:not([data-kashfy-sidebar-toggle]) {
+#nd-subnav button[aria-controls='nd-sidebar'][data-collapsed]:not([data-docistra-sidebar-toggle]) {
   display: none;
 }
 

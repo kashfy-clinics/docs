@@ -3,7 +3,7 @@ title: 'Data Migration'
 description: 'Bring your patients, doctors, visits, payments and files over from your previous clinic software'
 ---
 
-Moving from another clinic system? Bring your data into Kashfy, then review and import it from **Dashboard → Data migration**. Nothing is added to your clinic until you press **Import** yourself.
+Moving from another clinic system? Bring your data into Docistra, then review and import it from **Dashboard → Data migration**. Nothing is added to your clinic until you press **Import** yourself.
 
 Only owners and managers can open **Data migration**.
 
@@ -14,7 +14,7 @@ Only owners and managers can open **Data migration**.
     Use the Chrome extension for a web-based system, or upload files (Excel, CSV, a database backup, or photos of paper records). The data waits in a holding area; nothing touches your patients or appointments yet.
   </Step>
   <Step title="Review">
-    Kashfy works out what each table is and which column goes where, and shows a preview: what will be added, what is already in Kashfy, and what would be skipped and why.
+    Docistra works out what each table is and which column goes where, and shows a preview: what will be added, what is already in Docistra, and what would be skipped and why.
   </Step>
   <Step title="Import">
     If the preview looks right, press **Import** on its card. You can then ask the assistant to check the result.
@@ -25,7 +25,7 @@ Only owners and managers can open **Data migration**.
 
 ### From a web-based system: the Chrome extension [#extension]
 
-The [Kashfy Chrome extension](/getting-started/chrome-extension) reads your old system for you. You show it a few screens once (about 3 minutes), it tries 3 patients so you can check them here, then it moves everything by itself: patients, doctors, visits, procedures, payments, files and your price list. It only reads, and never changes anything in the old system.
+The [Docistra Chrome extension](/getting-started/chrome-extension) reads your old system for you. You show it a few screens once (about 3 minutes), it tries 3 patients so you can check them here, then it moves everything by itself: patients, doctors, visits, procedures, payments, files and your price list. It only reads, and never changes anything in the old system.
 
 Press **Get the Chrome extension** on **Data migration**, then follow the [Chrome extension guide](/getting-started/chrome-extension).
 
@@ -34,7 +34,7 @@ Press **Get the Chrome extension** on **Data migration**, then follow the [Chrom
 Press **Upload files** and pick one or more files:
 
 - **An export from your old program**: Excel (.xlsx), CSV, or a SQLite database backup. The file is read in your browser and only its rows are sent. Save old .xls and Access files as .xlsx or CSV first.
-- **Photos or PDFs of paper records**: patient files, notebooks, forms or receipts, handwritten or printed, in any layout (up to 40 MB and 400 pages per file). On a phone the same button opens the camera. Kashfy reads each page and sorts what it finds into patients, visits, procedures and payments. A page about one patient is also saved in that patient's files.
+- **Photos or PDFs of paper records**: patient files, notebooks, forms or receipts, handwritten or printed, in any layout (up to 40 MB and 400 pages per file). On a phone the same button opens the camera. Docistra reads each page and sorts what it finds into patients, visits, procedures and payments. A page about one patient is also saved in that patient's files.
 
 <Tip>
   Handwriting can be misread, so check a few rows in the preview before you import. If a page can't be read, photograph it again in better light and upload it again.
@@ -52,14 +52,14 @@ Open **Dashboard → Data migration**. The **Summary** shows what arrived: pages
 
 Talk to the assistant below, or tap a suggestion such as **شوف البيانات اللي وصلت وقولي فيها إيه** (Look at what arrived and tell me what's in it). It:
 
-- shows how each table was sorted: which Kashfy field each column fills, with an example value (data the extension read usually arrives already sorted)
+- shows how each table was sorted: which Docistra field each column fills, with an example value (data the extension read usually arrives already sorted)
 - leaves out rows that aren't clinic records (menus, headers, totals)
-- previews each import: **Will be added**, **Already in Kashfy**, **Will be skipped** and **Will fail**, with reasons
+- previews each import: **Will be added**, **Already in Docistra**, **Will be skipped** and **Will fail**, with reasons
 - points out what looks missing
 
 To import, press the button on a preview card. Import in this order: **doctors**, then **patients**, then **appointments**, then **procedures** and **payments**, then **files**, since each is linked to the ones before it. The assistant never imports anything by itself.
 
-After an import, ask the assistant to check it (**اتأكد إن كل حاجة اتنقلت صح**). It compares what arrived with what is now in Kashfy and explains any difference.
+After an import, ask the assistant to check it (**اتأكد إن كل حاجة اتنقلت صح**). It compares what arrived with what is now in Docistra and explains any difference.
 
 If an import fails, nothing changes and you can try again.
 
@@ -79,8 +79,8 @@ Settings of the old system (payment methods and the like) are not moved.
 
 ### How duplicates are handled [#duplicates]
 
-- **Patients** are matched by phone number, then by name. A patient already in Kashfy is not added again; only details missing from their record (such as gender or date of birth) are filled in.
-- A new name on a phone number that already belongs to a patient is added as a family member of that patient, the same way [family accounts](/patients/patient-profile) work elsewhere in Kashfy.
+- **Patients** are matched by phone number, then by name. A patient already in Docistra is not added again; only details missing from their record (such as gender or date of birth) are filled in.
+- A new name on a phone number that already belongs to a patient is added as a family member of that patient, the same way [family accounts](/patients/patient-profile) work elsewhere in Docistra.
 - **Doctors** are matched by name.
 - **Appointments** are matched by patient and start time.
 - You can bring in more data and import again at any time: only what is new is added.
@@ -89,7 +89,7 @@ Settings of the old system (payment methods and the like) are not moved.
 
 - **Past appointments** are imported as history: completed, cancelled or no-show. They don't count toward your plan's bookings or your trial, and patients get no messages about them.
 - **Upcoming appointments** are imported as booked, and patients get your clinic's normal [reminder](/appointments/reminders) before the visit.
-- An appointment whose patient isn't in Kashfy yet creates that patient.
+- An appointment whose patient isn't in Docistra yet creates that patient.
 - An appointment whose doctor can't be found isn't imported. Import your doctors first, or check the doctor's name.
 
 ### Doctors and your plan [#doctors-and-plan]

@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:1
-# Kashfy Docs: Next.js standalone server (Coolify). Works on linux/arm64 and linux/amd64.
+# Docistra Docs: Next.js standalone server (Coolify). Works on linux/arm64 and linux/amd64.
 
 ARG NODE_VERSION=22-alpine
 

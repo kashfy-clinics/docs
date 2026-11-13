@@ -1,16 +1,16 @@
 import { siteUrl } from './shared';
 
-const mainSite = 'https://www.kashfy.site';
+const mainSite = 'https://www.docistra.com';
 
 /**
  * Header for /llms.txt and /llms-full.txt (llmstxt.org format: H1, blockquote summary, key facts, link sections).
  * Prices are not repeated here: they live in the plans table and are served by the main site's /llms.txt.
  */
-export const llmsIntro = `# Kashfy
+export const llmsIntro = `# Docistra
 
-> Kashfy is AI clinic software for doctors, clinics, labs and radiology centers in Egypt. An AI receptionist answers patients on the clinic's own WhatsApp number in Egyptian Arabic and English, 24/7, and books them into the schedule. Visits, prescriptions, lab and radiology results, finance and the team run from one dashboard. Clinics pay per booking, not per doctor.
+> Docistra is AI clinic software for doctors, clinics, labs and radiology centers in Egypt. An AI receptionist answers patients on the clinic's own WhatsApp number in Egyptian Arabic and English, 24/7, and books them into the schedule. Visits, prescriptions, lab and radiology results, finance and the team run from one dashboard. Clinics pay per booking, not per doctor.
 
-These are the Kashfy user docs (${siteUrl}). Arabic versions of every page are under ${siteUrl}/ar.
+These are the Docistra user docs (${siteUrl}). Arabic versions of every page are under ${siteUrl}/ar.
 
 Key facts:
 - Pricing is per booking, not per doctor or per message. Plans start at 799 EGP/month (Solo). Every plan includes every feature.
@@ -24,7 +24,7 @@ Key facts:
 ## Current plans and prices
 
 - [Pricing page](${mainSite}/en/pricing): live plans, prices, included bookings, doctor limits and overage
-- [Kashfy llms.txt](${mainSite}/llms.txt): product summary with the live price list, generated from the plans table
+- [Docistra llms.txt](${mainSite}/llms.txt): product summary with the live price list, generated from the plans table
 - [Plans & Pricing docs](${siteUrl}/billing/plans): the free trial, what counts as a booking, extra bookings, fair use, activating a plan
 `;
 

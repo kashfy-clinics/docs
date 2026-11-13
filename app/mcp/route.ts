@@ -3,7 +3,7 @@ import { source } from '@/lib/source';
 import { siteUrl } from '@/lib/shared';
 
 // Stateless MCP server (JSON-RPC over HTTP, JSON responses).
-// The Kashfy dashboard help assistant calls `search_kashfy_docs` here
+// The Docistra dashboard help assistant calls `search_docistra_docs` here
 // (kashfy-app/src/app/api/dashboard/help/route.ts), so keep the tool name.
 
 const PROTOCOL_VERSION = '2025-06-18';
@@ -21,9 +21,9 @@ type ToolResult = { content: { type: 'text'; text: string }[]; isError?: boolean
 
 const TOOLS = [
   {
-    name: 'search_kashfy_docs',
+    name: 'search_docistra_docs',
     description:
-      'Search the Kashfy documentation (clinic management: appointments, AI agent, WhatsApp, patients, dental, lab, radiology, finance, billing, settings). Returns the most relevant pages as Markdown.',
+      'Search the Docistra documentation (clinic management: appointments, AI agent, WhatsApp, patients, dental, lab, radiology, finance, billing, settings). Returns the most relevant pages as Markdown.',
     inputSchema: {
       type: 'object',
       properties: {
@@ -34,8 +34,8 @@ const TOOLS = [
     },
   },
   {
-    name: 'get_kashfy_doc_page',
-    description: 'Get one Kashfy documentation page as Markdown by its path, e.g. "/lab/intake".',
+    name: 'get_docistra_doc_page',
+    description: 'Get one Docistra documentation page as Markdown by its path, e.g. "/lab/intake".',
     inputSchema: {
       type: 'object',
       properties: {
@@ -138,13 +138,13 @@ async function getDocPage(path: string): Promise<ToolResult> {
 }
 
 async function callTool(name: unknown, args: Record<string, unknown>): Promise<ToolResult> {
-  if (name === 'search_kashfy_docs') {
+  if (name === 'search_docistra_docs') {
     const query = typeof args.query === 'string' ? args.query.trim().slice(0, 500) : '';
     if (!query) return { content: [{ type: 'text', text: 'query is required' }], isError: true };
     const locale = args.locale === 'ar' || args.locale === 'en' ? args.locale : undefined;
     return searchDocs(query, locale);
   }
-  if (name === 'get_kashfy_doc_page') {
+  if (name === 'get_docistra_doc_page') {
     const path = typeof args.path === 'string' ? args.path.trim() : '';
     if (!path) return { content: [{ type: 'text', text: 'path is required' }], isError: true };
     return getDocPage(path);
