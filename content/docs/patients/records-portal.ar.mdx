@@ -15,7 +15,7 @@ description: 'يحصل المرضى على رابط محمي برمز PIN لعر
     في المرة الأولى، يطلب الذكاء الاصطناعي من المريض اختيار رمز PIN من 4 أرقام.
   </Step>
   <Step title="يحصل المريض على الرابط">
-    يرسل الذكاء الاصطناعي رابطًا شخصيًا على `patients.kashfy.site`.
+    يرسل الذكاء الاصطناعي رابطًا شخصيًا على `patients.docistra.com`.
   </Step>
   <Step title="افتح الرابط وأدخل رمز PIN">
     يمكن لأي شخص لديه الرابط ورمز PIN فتح السجلات في المتصفح.
@@ -37,7 +37,7 @@ description: 'يحصل المرضى على رابط محمي برمز PIN لعر
 عند إضافة `?pin=1234` إلى الرابط، يتم التحقق تلقائيًا عند فتحه، ثم يُحذف رمز PIN من شريط العنوان:
 
 ```
-https://patients.kashfy.site/ar/<patient-id>?pin=1234
+https://patients.docistra.com/ar/<patient-id>?pin=1234
 ```
 
 <Info>
@@ -52,7 +52,7 @@ https://patients.kashfy.site/ar/<patient-id>?pin=1234
 
 <AccordionGroup>
   <Accordion icon="lock" title="لا تُخزَّن رموز PIN كنص صريح">
-    يخزن كشفي تجزئة أحادية الاتجاه (hash) لرمز PIN، مرتبطة بذلك المريض.
+    يخزن دوكسترا تجزئة أحادية الاتجاه (hash) لرمز PIN، مرتبطة بذلك المريض.
   </Accordion>
   <Accordion icon="clock" title="جلسات مدتها 24 ساعة">
     بعد إدخال رمز PIN صحيح، يظل المتصفح مسجَّل الدخول لمدة 24 ساعة. وتؤدي إعادة تعيين الرمز إلى إنهاء جميع الجلسات.

@@ -1,6 +1,6 @@
-# Kashfy Docs
+# Docistra Docs
 
-Source of [docs.kashfy.site](https://docs.kashfy.site), built with [Fumadocs](https://fumadocs.dev) on Next.js.
+Source of [docs.docistra.com](https://docs.docistra.com), built with [Fumadocs](https://fumadocs.dev) on Next.js.
 
 ```bash
 pnpm install
@@ -26,7 +26,7 @@ Pages without a translation show the English version under `/ar`.
 
 - `/llms.txt` and `/llms-full.txt`
 - Any page as Markdown: add `.md` to the URL, e.g. `/lab/intake.md`
-- MCP server at `/mcp` with `search_kashfy_docs` and `get_kashfy_doc_page` (used by the dashboard help assistant)
+- MCP server at `/mcp` with `search_docistra_docs` and `get_docistra_doc_page` (used by the dashboard help assistant)
 
 ## Deploying
 
