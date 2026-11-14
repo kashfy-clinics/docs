@@ -20,6 +20,11 @@ const config = {
       },
       { source: '/settings/clinic', destination: '/settings/organization', permanent: true },
       { source: '/ar/settings/clinic', destination: '/ar/settings/organization', permanent: true },
+      // The docs only cover clinics now; lab, radiology and modules pages were removed.
+      { source: '/:section(lab|radiology)/:path*', destination: '/', permanent: true },
+      { source: '/ar/:section(lab|radiology)/:path*', destination: '/ar', permanent: true },
+      { source: '/settings/:page(modules|insurance)', destination: '/settings/overview', permanent: true },
+      { source: '/ar/settings/:page(modules|insurance)', destination: '/ar/settings/overview', permanent: true },
     ];
   },
 };

@@ -17,7 +17,7 @@ const docs = defineDocs({
   },
 });
 
-// Docs are served from the root: /quickstart, /lab/intake, ...
+// Docs are served from the root: /quickstart, /appointments/visit, ...
 export const source = loader({
   baseUrl: '/',
   i18n,

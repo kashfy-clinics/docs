@@ -23,7 +23,7 @@ const TOOLS = [
   {
     name: 'search_docistra_docs',
     description:
-      'Search the Docistra documentation (clinic management: appointments, AI agent, WhatsApp, patients, dental, lab, radiology, finance, billing, settings). Returns the most relevant pages as Markdown.',
+      'Search the Docistra documentation (clinic management: appointments, AI agent, WhatsApp, patients, dental, finance, billing, settings). Returns the most relevant pages as Markdown.',
     inputSchema: {
       type: 'object',
       properties: {
@@ -35,7 +35,7 @@ const TOOLS = [
   },
   {
     name: 'get_docistra_doc_page',
-    description: 'Get one Docistra documentation page as Markdown by its path, e.g. "/lab/intake".',
+    description: 'Get one Docistra documentation page as Markdown by its path, e.g. "/appointments/visit".',
     inputSchema: {
       type: 'object',
       properties: {
