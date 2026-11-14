@@ -1,6 +1,6 @@
 import { defineI18n } from 'fumadocs-core/i18n';
 
-// English stays at the root (/lab/intake) so links from the app keep working.
+// English stays at the root (/appointments/visit) so links from the app keep working.
 // Arabic lives under /ar and falls back to the English page until it's translated.
 export const i18n = defineI18n({
   languages: ['en', 'ar'],

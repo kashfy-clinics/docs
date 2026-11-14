@@ -8,7 +8,7 @@ const mainSite = 'https://docistra.com';
  */
 export const llmsIntro = `# Docistra
 
-> Docistra is AI clinic software for doctors, clinics, labs and radiology centers in Egypt. An AI receptionist answers patients on the clinic's own WhatsApp number in Egyptian Arabic and English, 24/7, and books them into the schedule. Visits, prescriptions, lab and radiology results, finance and the team run from one dashboard. Clinics pay per booking, not per doctor.
+> Docistra is AI clinic software for doctors and clinics in Egypt. An AI receptionist answers patients on the clinic's own WhatsApp number in Egyptian Arabic and English, 24/7, and books them into the schedule. Visits, prescriptions, patient files, finance and the team run from one dashboard. Clinics pay per booking, not per doctor.
 
 These are the Docistra user docs (${siteUrl}). Arabic versions of every page are under ${siteUrl}/ar.
 

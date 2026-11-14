@@ -6,7 +6,7 @@ import { docsContentRoute } from '@/lib/shared';
 
 const i18nMiddleware = createI18nMiddleware(i18n);
 
-/** "/ar/lab/intake" -> ["ar", "lab/intake"], "/lab/intake" -> ["en", "lab/intake"] */
+/** "/ar/appointments/visit" -> ["ar", "appointments/visit"], "/appointments/visit" -> ["en", "appointments/visit"] */
 function splitLocale(pathname: string): [string, string] {
   const [first, ...rest] = pathname.replace(/^\/+|\/+$/g, '').split('/');
   if ((i18n.languages as string[]).includes(first) && first !== i18n.defaultLanguage) {
@@ -22,7 +22,7 @@ function markdownRoute(lang: string, path: string) {
 export default function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
-  // "/lab/intake.md" -> raw Markdown of that page
+  // "/appointments/visit.md" -> raw Markdown of that page
   if (pathname.endsWith('.md')) {
     const [lang, path] = splitLocale(pathname.slice(0, -3));
     return NextResponse.rewrite(new URL(markdownRoute(lang, path), request.nextUrl));

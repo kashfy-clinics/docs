@@ -15,7 +15,7 @@ import { createRelativeLink } from 'fumadocs-ui/mdx';
 import { getPageMarkdownUrl } from '@/lib/shared';
 import { dirOf, i18n } from '@/lib/i18n';
 
-/** Content links are written as "/lab/intake"; keep readers in their language. */
+/** Content links are written as "/appointments/visit"; keep readers in their language. */
 function localizeHref(href: string | undefined, lang: string) {
   if (!href || lang === i18n.defaultLanguage || !href.startsWith('/') || href.startsWith('//')) return href;
   if (href === `/${lang}` || href.startsWith(`/${lang}/`) || href.startsWith(`/${lang}#`)) return href;
