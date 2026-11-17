@@ -30,6 +30,17 @@ The card shows how many **active doctors**, **active services** and **knowledge 
 
 **Test as a patient** opens a test chat (`/dashboard/ai/new`) where you write as if you were a patient. It uses your real settings and data, but nothing is booked and no real patient is messaged. The **Training** tab in the same chat lets you add rules by chatting. See [Custom Instructions](/ai-agent/custom-instructions).
 
+## Questions after booking [#questions-after-booking]
+
+Once a patient books, the agent asks one short question in the booking confirmation so the doctor doesn't spend the visit on it. The answers show to the doctor on the booking. Two switches decide what it asks:
+
+| Switch | What the agent asks |
+|--------|---------------------|
+| **Ask about the complaint** | "What's the main complaint?" |
+| **Ask about chronic diseases** | "Do you have diabetes or high blood pressure?" |
+
+Both are on by default. Turn one off and the agent asks only the other; turn both off and it asks nothing after a booking. A switch saves the moment you tap it. The agent never asks for a psychiatry visit, asks only once, and never comments on the answer or diagnoses.
+
 ## Instructions
 
 Collapsed by default. Tap the header to open it.
